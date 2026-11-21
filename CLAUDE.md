@@ -15,6 +15,7 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 - Structure: hook (open loop, "tunggu angkanya") -> 2 message beats -> gong (`[[2,47]]` counts up, or `((keyword))` highlighted; markers must open AND close on the same line) -> CTA.
 - Facts only from the article; every number must be inside a verbatim quote; superlatives (rekor/terbesar/...) need a hedge (estimasi/tercatat/menurut/data); no dates on screen; no itemku product/price claims.
 - CTA: "Cek Itemku buat\nkebutuhan {MLBB|Roblox|game} kamu" (A) or "Follow Itemku\nuntuk berita game" (B, 20% experiment). "Itemku" same size, capital I only. Source line on the last slide carries no date.
+- **Reel cover is always the frame at second 2**: `publish.py` sends `thumb_offset=2000` (ms) on every container (`config.json -> cover_offset_ms`; Meta ignores it only if a `cover_url` is also sent, so never send one). The template shows the hook text by then.
 - Video is silent by default (a silent AAC track is added); music only from licensed tracks in `auto/music/catalog.json`.
 
 ## Map

@@ -12,7 +12,7 @@ UID=os.environ.get('IG_USER_ID','<IG_USER_ID>'); TOK=os.environ.get('IG_ACCESS_T
 def rj(f): return json.loads((ST/f).read_text())
 def wj(f,d): (ST/f).write_text(json.dumps(d,ensure_ascii=False,indent=1))
 def call(method,url,data=None,headers=None,raw=None):
-    if DRY: print(f'  [dry-run] {method} {url.split("?")[0]}  {json.dumps({k:("***" if k=="access_token" else v) for k,v in data.items()})[:140] if data else ""}'); return {'id':'DRY','uri':'https://rupload.example/DRY','status_code':'FINISHED','permalink':'https://instagram.com/reel/DRY'}
+    if DRY: print(f'  [dry-run] {method} {url.split("?")[0]}  {json.dumps({k:("***" if k=="access_token" else (str(v)[:24]+"..." if k=="caption" else v)) for k,v in data.items()}) if data else ""}'); return {'id':'DRY','uri':'https://rupload.example/DRY','status_code':'FINISHED','permalink':'https://instagram.com/reel/DRY'}
     body=raw if raw is not None else (urllib.parse.urlencode(data).encode() if data else None)
     req=urllib.request.Request(url,data=body,method=method,headers=headers or {}); 
     try: return json.loads(urllib.request.urlopen(req,timeout=120).read().decode())
@@ -28,8 +28,8 @@ def main():
     print(f"posting: {it['id']} ({vid.name}, {vid.stat().st_size/1e6:.1f}MB)")
     base=f'https://{HOST}/{VER}/{UID}'
     if not it.get('container'):
-        body={'media_type':'REELS','upload_type':'resumable','caption':caption,'share_to_feed':'true','access_token':TOK}
         cfg=json.loads((ROOT/'config.json').read_text())
+        body={'media_type':'REELS','upload_type':'resumable','caption':caption,'share_to_feed':'true','thumb_offset':str(int(cfg.get('cover_offset_ms',2000))),'access_token':TOK}   # RULE: cover = frame at second 2 (thumb_offset, ms)
         if cfg.get('audio',{}).get('enabled'):                                          # trending/mood track from Instagram's Audio API (opt-in until proven live)
             import ig_audio
             def search(q):
