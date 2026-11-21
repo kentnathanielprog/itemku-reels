@@ -1,0 +1,78 @@
+{
+ "day": "2026-11-21",
+ "ok": [
+  "zeldas-ocarina-remake-is-one-of-metacr-1121",
+  "gta-6-earns-3-79-billion-in-one-day-as-1121"
+ ],
+ "calls": [
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 3656,
+    "cache_read": 0,
+    "cache_write": 9169,
+    "usd": 0.0,
+    "list_usd": 0.14648
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 6380,
+    "cache_read": 0,
+    "cache_write": 9613,
+    "usd": 0.0,
+    "list_usd": 0.20451
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 657,
+    "cache_read": 3323,
+    "cache_write": 2970,
+    "usd": 0.0,
+    "list_usd": 0.03757
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1594,
+    "cache_read": 3035,
+    "cache_write": 2471,
+    "usd": 0.0,
+    "list_usd": 0.05226
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 574,
+    "cache_read": 6007,
+    "cache_write": 6934,
+    "usd": 0.0,
+    "list_usd": 0.06817
+   }
+  ]
+ ],
+ "lines": [
+  "== produce 2026-11-21 | model penulis claude-opus-5-5 / QC claude-opus-5-5 | maks revisi 1",
+  "  berita terpilih: 3",
+  "    - [general/zelda] Zelda's Ocarina Remake Is One Of Metacritic's Highest-Rated Games In 2026, Accor (Nintendo Life, 1 gambar)",
+  "    - [gta/gta] GTA 6 earns $3.79 billion in one day as ‘the biggest entertainment launch in his (VGC, 1 gambar)",
+  "    - [mlbb/mlbb] Mobile Legends Raih Esports Mobile Game of the Year di Esports Awards 2026 (medcom.id, 1 gambar)",
+  "  [a0] zeldas-ocarina-remake-is-one-of-metacr-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a0] gta-6-earns-3-79-billion-in-one-day-as-1121: GAGAL — Caption has a superlative ('peluncuran hiburan terbesar sepanjang sejarah') whose hedge is",
+  "  [a0] mobile-legends-raih-esports-mobile-gam-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a1] gta-6-earns-3-79-billion-in-one-day-as-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] mobile-legends-raih-esports-mobile: gambar dibuang AI #0:text_card",
+  "  x mobile-legends-raih-esports-mobile: dibuang, tidak ada gambar tersisa",
+  "== selesai: 2/3 video siap/antre | 5 panggilan API | 43534 token masuk, 12861 keluar | biaya ~US$0.000"
+ ]
+}

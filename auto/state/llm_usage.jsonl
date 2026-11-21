@@ -1,0 +1,5 @@
+{"t": 1795245451.9512298, "role": "writer", "model": "claude-opus-5-5", "backend": "claude_cli", "turns": 2, "in": 2, "out": 3656, "cache_read": 0, "cache_write": 9169, "usd": 0.0, "list_usd": 0.14648}
+{"t": 1795245501.6038604, "role": "qc", "model": "claude-opus-5-5", "backend": "claude_cli", "turns": 2, "in": 2, "out": 6380, "cache_read": 0, "cache_write": 9613, "usd": 0.0, "list_usd": 0.20451}
+{"t": 1795245508.0954506, "role": "writer", "model": "claude-opus-5-5", "backend": "claude_cli", "turns": 2, "in": 2, "out": 657, "cache_read": 3323, "cache_write": 2970, "usd": 0.0, "list_usd": 0.03757}
+{"t": 1795245521.719855, "role": "qc", "model": "claude-opus-5-5", "backend": "claude_cli", "turns": 2, "in": 2, "out": 1594, "cache_read": 3035, "cache_write": 2471, "usd": 0.0, "list_usd": 0.05226}
+{"t": 1795245528.7695196, "role": "visual", "model": "claude-opus-5-5", "backend": "claude_cli", "turns": 5, "in": 4, "out": 574, "cache_read": 6007, "cache_write": 6934, "usd": 0.0, "list_usd": 0.06817}

@@ -1,0 +1,65 @@
+{
+ "images": [
+  "out/gta-6-earns-3-79-billion-in-one-day-as-1121/imgs/img1.jpg"
+ ],
+ "out": "short-gta-6-earns-3-79-billion-in-one-day-as-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "VGC",
+ "credit": "Rockstar Games",
+ "hashtags": [
+  "gta6",
+  "grandtheftauto",
+  "rockstargames",
+  "gamingnews",
+  "ps5"
+ ],
+ "hook": {
+  "text": "GTA 6 nyetak duit berapa\ndi hari pertama?\nTunggu angkanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Menurut Rockstar, GTA 6\ndi-pre-order lebih\ndari 32 juta kali",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Skor Metacritic-nya\ntercatat 99 dari 100",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Penjualan retail hari\npertama: US$[[3,79]]\nmiliar, klaim Rockstar",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "GTA 6 Earns $3.79 Billion on Day One",
+ "cat": "gta",
+ "hook_type": "number",
+ "caption_text": "Menurut Rockstar dan Take-Two, GTA 6 tembus US$3,79 miliar penjualan retail di hari pertama, dan mereka sebut ini peluncuran hiburan terbesar sepanjang sejarah. Kamu udah main belum?",
+ "experiment": null
+}

@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/zeldas-ocarina-remake-is-one-of-metacr-1121/imgs/img1.jpg"
+ ],
+ "out": "short-zeldas-ocarina-remake-is-one-of-metacr-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Nintendo Life",
+ "credit": "Nintendo Life",
+ "hashtags": [
+  "zelda",
+  "ocarinaoftime",
+  "gta6",
+  "metacritic",
+  "nintendoswitch2"
+ ],
+ "hook": {
+  "text": "Skor user Ocarina remake\nvs GTA 6 di Metacritic?\nTunggu angkanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Ocarina remake dapet\nskor user 9,2/10 dari\nlebih dari 25 ribu ulasan",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Padahal di skor kritikus,\nGTA 6 ada di atas\nOcarina remake",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Skor user GTA 6 tercatat\n[[5,5]]/10, dari lebih\ndari 30 ribu ulasan",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Ocarina Remake vs GTA 6 Metacritic User Scores",
+ "cat": "general",
+ "hook_type": "contrast",
+ "caption_text": "Menurut Metacritic, Ocarina remake dapet skor user 9,2/10, sementara GTA 6 tercatat 5,5/10 dari lebih dari 30 ribu ulasan. Menurut kamu, skor user bisa dipercaya nggak?",
+ "experiment": {
+  "id": "cta",
+  "variant": "A"
+ }
+}
