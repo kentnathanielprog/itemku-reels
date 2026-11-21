@@ -1,0 +1,27 @@
+{
+ "version": 0,
+ "updated": null,
+ "kpi": {
+  "primary": "views",
+  "secondary": [
+   "likes",
+   "shares",
+   "comments"
+  ]
+ },
+ "experiments": {
+  "share": 0.2,
+  "active": [
+   {
+    "id": "cta",
+    "variants": {
+     "A": "Cek Itemku buat\nkebutuhan {game} kamu",
+     "B": "Follow Itemku\nuntuk berita game"
+    }
+   }
+  ]
+ },
+ "lessons": [],
+ "notes": "Learner agent rewrites this weekly. It may NOT override QC rules or the topic denylist.",
+ "cat_weights": {}
+}

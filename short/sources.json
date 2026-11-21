@@ -1,0 +1,85 @@
+{
+ "mlbb": {
+  "keywords": [
+   "mlbb",
+   "mobile-legends",
+   "mobile legends",
+   "mpl-id",
+   "mpl id",
+   "moonton",
+   "m8-world",
+   "m7-world",
+   "m8 world",
+   "m7 world",
+   "msc-2026",
+   "msc 2026"
+  ],
+  "pages": [
+   {
+    "url": "https://www.ligagame.tv/esports/mlbb/",
+    "trusted": true
+   },
+   {
+    "url": "https://www.bola.com/tag/mlbb",
+    "trusted": true
+   },
+   {
+    "url": "https://www.gamebrott.com/tag/mobile-legends",
+    "trusted": true
+   },
+   "https://www.medcom.id/teknologi/esports",
+   "https://www.gamedaim.com/",
+   "https://www.liputan6.com/tag/mobile-legends",
+   "https://www.detik.com/tag/mlbb"
+  ]
+ },
+ "roblox": {
+  "keywords": [
+   "roblox"
+  ],
+  "pages": [
+   {
+    "url": "https://rblxstat.com/blog",
+    "trusted": true
+   },
+   "https://www.ggrecon.com/articles/",
+   "https://www.dexerto.com/gaming/",
+   "https://www.gamesradar.com/",
+   "https://www.gamebrott.com/"
+  ]
+ },
+ "gta": {
+  "keywords": [
+   "gta",
+   "grand-theft-auto",
+   "rockstar"
+  ],
+  "pages": [
+   "https://www.videogameschronicle.com/category/news/",
+   "https://www.gamesradar.com/gta-6/",
+   "https://www.ign.com/news",
+   "https://www.kotaku.com/",
+   "https://www.pcgamesn.com/",
+   "https://www.dexerto.com/gaming/",
+   "https://www.eurogamer.net/news"
+  ]
+ },
+ "general": {
+  "keywords": [],
+  "pages": [
+   "https://www.videogameschronicle.com/category/news/",
+   "https://www.ign.com/news",
+   "https://www.eurogamer.net/news",
+   "https://www.gamesindustry.biz/",
+   "https://www.kotaku.com/",
+   "https://www.pcgamesn.com/",
+   "https://www.dexerto.com/gaming/",
+   "https://www.rockpapershotgun.com/news",
+   "https://www.nintendolife.com/news",
+   "https://www.purexbox.com/news",
+   "https://www.pushsquare.com/news",
+   "https://www.gamedaim.com/",
+   "https://www.gamebrott.com/"
+  ]
+ }
+}

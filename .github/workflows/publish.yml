@@ -1,0 +1,45 @@
+name: publish
+# 07:33, 12:07, 17:03 WIB = 00:33, 05:07, 10:03 UTC. No LLM, no browser: only python stdlib + the Meta Graph API. UNTESTED live.
+on:
+  schedule: [{ cron: '33 0 * * *' }, { cron: '7 5 * * *' }, { cron: '3 10 * * *' }]
+  workflow_dispatch:
+    inputs:
+      dry_run: { description: 'Print the Graph API calls only', type: boolean, default: true }
+      force: { description: 'Ignore the slot time (manual test: post the oldest queued item now)', type: boolean, default: false }
+permissions: { contents: write, actions: read }
+concurrency: { group: reels-state, cancel-in-progress: false }
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env: { GH_TOKEN: '${{ github.token }}', STOP: '${{ vars.STOP }}' }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Fetch the videos produced by the latest successful produce runs
+        run: |
+          for id in $(gh run list --workflow produce.yml --status success --limit 3 --json databaseId -q '.[].databaseId'); do
+            gh run download "$id" -n "videos-$id" -D out 2>/dev/null || true   # extracts short-<id>/short.mp4 straight into out/
+          done; ls out 2>/dev/null | head
+      - name: Publish the oldest due item
+        env:
+          IG_USER_ID: '${{ secrets.IG_USER_ID }}'
+          IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}'
+          GRAPH_HOST: '${{ vars.GRAPH_HOST || ''graph.instagram.com'' }}'
+          GRAPH_VERSION: '${{ vars.GRAPH_VERSION || ''v21.0'' }}'
+        run: python3 auto/publish.py ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '--dry-run' || '' }} ${{ (github.event_name == 'workflow_dispatch' && inputs.force) && '--force' || '' }}
+      - name: Collect Insights for older posts
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+        env:
+          IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}'
+          GRAPH_HOST: '${{ vars.GRAPH_HOST || ''graph.instagram.com'' }}'
+          GRAPH_VERSION: '${{ vars.GRAPH_VERSION || ''v21.0'' }}'
+        run: python3 auto/insights.py
+      - name: Commit state
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+        run: |
+          git config user.name "reels-bot"; git config user.email "reels-bot@users.noreply.github.com"
+          git add auto/state
+          git diff --cached --quiet || git commit -m "state: publish $(date -u +%FT%H:%M)"
+          git pull --rebase -q && git push -q

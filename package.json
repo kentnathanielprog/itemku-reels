@@ -1,0 +1,6 @@
+{
+  "name": "itemku-reels",
+  "private": true,
+  "description": "Automated Instagram Reels news pipeline for itemku",
+  "dependencies": { "playwright": "^1.63.0" }
+}

@@ -1,0 +1,11 @@
+{
+ "video": "short/clip.mp4",
+ "out": "nama-konten",
+ "audio": "none",
+ "mode": "blur",
+ "hook":    "HOOK: bikin penasaran\n(max 3 baris)",
+ "message": ["PESAN 1: fakta utama\nyang paling penting", "PESAN 2: konteks\nkenapa ini penting"],
+ "gong":    "HYPE / GONG:\nangka / twist / reveal\nyang dijanjikan hook",
+ "cta":     "FOLLOW ITEMKU\nUNTUK BERITA GAME",
+ "timing":  {"hook": 3, "message": 3, "gong": 3.5, "cta": 2.3}
+}

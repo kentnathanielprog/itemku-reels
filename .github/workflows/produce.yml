@@ -1,0 +1,34 @@
+name: produce
+# 05:27 WIB = 22:27 UTC (previous day). UNTESTED on GitHub: run it once with "Run workflow" and read the log before trusting the schedule.
+on:
+  schedule: [{ cron: '27 22 * * *' }]
+  workflow_dispatch:
+    inputs:
+      dry_run: { description: 'Only scout + cost estimate (no API calls)', type: boolean, default: false }
+permissions: { contents: write, actions: read }
+concurrency: { group: reels-state, cancel-in-progress: false }
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: bash scripts/setup.sh
+      - name: Offline self-test (no API) - stop early if the pipeline itself is broken
+        run: bash tests/offline_test.sh
+      - name: Produce
+        env: { ANTHROPIC_API_KEY: '${{ secrets.ANTHROPIC_API_KEY }}' }
+        run: python3 auto/produce.py ${{ inputs.dry_run && '--dry-run' || '' }}
+      - name: Commit state (queue, history, stories, usage log)
+        run: |
+          git config user.name "reels-bot"; git config user.email "reels-bot@users.noreply.github.com"
+          git add auto/state short/stories
+          git diff --cached --quiet || git commit -m "state: produce $(date -u +%F)"
+          git pull --rebase -q && git push -q
+      - name: Upload rendered videos (the publisher downloads them)
+        uses: actions/upload-artifact@v4
+        with: { name: 'videos-${{ github.run_id }}', path: 'out/short-*/short.mp4', retention-days: 5, if-no-files-found: ignore }

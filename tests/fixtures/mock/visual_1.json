@@ -1,0 +1,21 @@
+{
+ "reports": [
+  {
+   "id": "test-story",
+   "images": [
+    {
+     "index": 0,
+     "verdict": "ok",
+     "problem": "none",
+     "note": ""
+    },
+    {
+     "index": 1,
+     "verdict": "ok",
+     "problem": "none",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

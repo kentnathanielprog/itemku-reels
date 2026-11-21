@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:'Inter','Helvetica Neue',Arial,sans-serif}
+:root{--e:cubic-bezier(.2,.9,.2,1)}
+.text{position:absolute;left:147px;top:1208px;height:388px;display:flex;flex-direction:column;justify-content:center;width:790px;color:#fff;font-weight:800;line-height:1.28;letter-spacing:.5px}
+.line{overflow:hidden;padding:2px 0;white-space:nowrap}
+.line i{display:inline-block;font-style:normal;animation:up .6s calc({{DELAY}}s + var(--i)*.12s) both var(--e),out .3s 5s forwards cubic-bezier(.5,0,.8,.4)}
+.big{font-size:1.6em;font-weight:900;letter-spacing:-.5px;line-height:1}
+.hl{color:#ffd23f;animation:pop .45s var(--cs,1.0s) both var(--e);display:inline-block}
+.num{color:#ffd23f;display:inline-block;margin-right:.02em;transform-origin:left center;font-size:1.22em;animation:pop .45s var(--cs,1.9s) both var(--e)}
+@keyframes pop{0%{transform:scale(1);text-shadow:none}40%{transform:scale(1.06);text-shadow:0 0 28px rgba(255,210,63,.95)}100%{transform:scale(1);text-shadow:none}}
+.flash{position:fixed;inset:0;background:#fff;opacity:0;animation:fl .3s var(--cs,1.9s) forwards}
+@keyframes fl{from{opacity:.55}to{opacity:0}}
+.src{position:absolute;left:147px;top:1625px;color:rgba(255,255,255,.85);font-weight:600;font-size:26px;letter-spacing:.5px;animation:sf .6s .9s both}
+@keyframes sf{from{opacity:0}to{opacity:1}}
+@keyframes up{from{transform:translateY(115%)}to{transform:none}}
+@keyframes out{from{transform:none}to{transform:translateY(-115%)}}
+</style></head><body>
+<div class="text" id="t">{{LINES}}</div>{{SRC}}
+<script>
+const t=document.getElementById('t');let fs={{FS}};t.style.fontSize=fs+'px';
+const CS=.9,CD=1.0;
+window.__tick=ms=>{const p=Math.min(Math.max((ms/1000-CS)/CD,0),1),e=1-Math.pow(1-p,3);
+ document.querySelectorAll('.num').forEach(n=>{const raw=n.dataset.v,dec=(raw.split(',')[1]||'').length,v=parseFloat(raw.replace(',','.'))*e;n.textContent=v.toFixed(dec).replace('.',',')})};
+window.__tick(1e6);
+document.fonts.ready.then(()=>{const lines=[...t.querySelectorAll('i')];
+ const w=()=>Math.max(...lines.map(l=>{const r=document.createRange();r.selectNodeContents(l);return r.getBoundingClientRect().width}));
+ while(w()>780&&fs>30){fs-=2;t.style.fontSize=fs+'px'}document.body.dataset.ready=1});
+</script></body></html>

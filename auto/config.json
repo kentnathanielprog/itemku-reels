@@ -1,0 +1,166 @@
+{
+ "timezone": "Asia/Jakarta",
+ "slots": [
+  {
+   "time": "07:30"
+  },
+  {
+   "time": "12:00"
+  },
+  {
+   "time": "17:00"
+  }
+ ],
+ "freshness_hours": 72,
+ "dup_days": 7,
+ "experiment_share": 0.2,
+ "min_images": 1,
+ "min_image_width": 1000,
+ "denylist": [
+  "leak",
+  "leaked",
+  "bocor",
+  "cyberleek",
+  "piracy",
+  "bajakan",
+  "crack",
+  "cheat",
+  "cheating",
+  "hack",
+  "hacked",
+  "censor",
+  "censors",
+  "censored",
+  "sensor",
+  "nudity",
+  "nude",
+  "naked",
+  "porn",
+  "sex",
+  "suicide",
+  "bunuh diri",
+  "tewas",
+  "meninggal",
+  "lawsuit",
+  "gugatan",
+  "scandal",
+  "skandal",
+  "gambling",
+  "judi",
+  "casino",
+  "politic",
+  "election",
+  "pemilu",
+  "partai",
+  "layoff",
+  "layoffs",
+  "phk",
+  "bundle",
+  "deal",
+  "deals",
+  "discount",
+  "sale",
+  "coupon",
+  "giveaway",
+  "sponsored",
+  "affiliate",
+  "black friday",
+  "cyber monday",
+  "preorder bonus",
+  "win a",
+  "redeem code",
+  "redeem codes",
+  "kode redeem",
+  "promo code",
+  "gift code",
+  "giftcode",
+  "daftar redeem"
+ ],
+ "categories": [
+  "mlbb",
+  "roblox",
+  "gta",
+  "general"
+ ],
+ "per_day": 3,
+ "max_per_cat_per_day": 2,
+ "entities": [
+  "gta",
+  "grand theft auto",
+  "rockstar",
+  "mlbb",
+  "mobile legends",
+  "mpl",
+  "roblox",
+  "zelda",
+  "pokemon",
+  "nintendo",
+  "playstation",
+  "ps5",
+  "xbox",
+  "genshin",
+  "valorant",
+  "free fire",
+  "pubg",
+  "fortnite",
+  "minecraft",
+  "ubisoft",
+  "baldur"
+ ],
+ "max_per_entity_per_day": 1,
+ "freshness_override": {
+  "mlbb": 120
+ },
+ "imagepool_entities": [
+  "gta",
+  "pokemon",
+  "zelda",
+  "nintendo",
+  "playstation",
+  "xbox",
+  "minecraft",
+  "fortnite"
+ ],
+ "weak_image_domains": [
+  "rblxstat.com"
+ ],
+ "llm": {
+  "writer_model": "claude-opus-5-5",
+  "qc_model": "claude-opus-5-5",
+  "writer_effort": "medium",
+  "qc_effort": "high",
+  "article_chars": 6000,
+  "max_rewrite_rounds": 1,
+  "max_replacements": 1,
+  "vision_model": "claude-opus-5-5"
+ },
+ "cta": {
+  "A": "Cek Itemku buat\nkebutuhan {game} kamu",
+  "B": "Follow Itemku\nuntuk berita game"
+ },
+ "game_label": {
+  "mlbb": "MLBB",
+  "roblox": "Roblox",
+  "gta": "game",
+  "general": "game"
+ },
+ "music_mood": {
+  "mlbb": [
+   "hype",
+   "edm"
+  ],
+  "roblox": [
+   "fun",
+   "upbeat"
+  ],
+  "gta": [
+   "dark",
+   "trap"
+  ],
+  "general": [
+   "chill",
+   "upbeat"
+  ]
+ },
+ "entity_cooldown_h": 24
+}

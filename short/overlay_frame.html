@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0}html,body{width:1080px;height:1920px;background:transparent;overflow:hidden}
+:root{--e:cubic-bezier(.2,.9,.2,1)}
+.frame{position:absolute;inset:0;background:url({{FG}}) 0 0/1080px 1920px no-repeat;animation:rise .7s 0s both var(--e)}
+@keyframes rise{from{transform:translateY(420px);opacity:0}to{transform:none;opacity:1}}
+.glint{position:absolute;inset:0;-webkit-mask:url({{FG}}) 0 0/1080px 1920px no-repeat;mask:url({{FG}}) 0 0/1080px 1920px no-repeat;overflow:hidden}
+.glint i{position:absolute;top:1100px;left:-300px;width:170px;height:560px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:gl .8s .75s both ease-in-out}
+@keyframes gl{from{left:-300px}to{left:1300px}}
+</style></head><body data-ready="1"><div class="frame"></div><div class="glint"><i></i></div></body></html>

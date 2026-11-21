@@ -1,0 +1,20 @@
+S={"type":"string"}
+CAP={"type":"object","properties":{"text":S,"img":{"type":"array","items":{"type":"integer"}}},"required":["text","img"],"additionalProperties":False}
+WRITER={"type":"object","properties":{"stories":{"type":"array","items":{"type":"object","properties":{
+  "id":S,"hook":CAP,"message":{"type":"array","items":CAP},"gong":CAP,"credit":S,"hashtags":{"type":"array","items":S},"topic":S,
+  "hook_type":{"type":"string","enum":["number","question","contrast","record","news"]},"caption_text":S},
+  "required":["id","hook","message","gong","credit","hashtags","topic","hook_type","caption_text"],"additionalProperties":False}}},
+  "required":["stories"],"additionalProperties":False}
+QC={"type":"object","properties":{"reports":{"type":"array","items":{"type":"object","properties":{
+  "id":S,"verdict":{"type":"string","enum":["PASS","FAIL"]},
+  "claims":{"type":"array","items":{"type":"object","properties":{"text":S,"evidence":S,"calc_expr":S,"count_items":{"type":"array","items":S},"count_value":{"type":"integer"}},
+    "required":["text","evidence","calc_expr","count_items","count_value"],"additionalProperties":False}},
+  "issues":{"type":"array","items":S},"fixes":{"type":"array","items":S}},
+  "required":["id","verdict","claims","issues","fixes"],"additionalProperties":False}}},
+  "required":["reports"],"additionalProperties":False}
+
+VISUAL={"type":"object","properties":{"reports":{"type":"array","items":{"type":"object","properties":{"id":S,"images":{"type":"array","items":{"type":"object","properties":{
+  "index":{"type":"integer"},"verdict":{"type":"string","enum":["ok","drop"]},
+  "problem":{"type":"string","enum":["none","text_card","ad_or_unrelated","off_topic","low_quality","graphic_content","logo_only"]},"note":S},
+  "required":["index","verdict","problem","note"],"additionalProperties":False}}},
+  "required":["id","images"],"additionalProperties":False}}},"required":["reports"],"additionalProperties":False}

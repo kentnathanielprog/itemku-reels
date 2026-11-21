@@ -1,0 +1,9 @@
+# rendered media and downloaded articles (re-creatable; videos travel as CI artifacts)
+out/
+node_modules/
+__pycache__/
+*.pyc
+# secrets - NEVER commit
+.env
+.env.*
+!.env.example

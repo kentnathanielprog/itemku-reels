@@ -1,0 +1,37 @@
+{
+ "reports": [
+  {
+   "id": "test-story",
+   "verdict": "PASS",
+   "issues": [],
+   "fixes": [],
+   "claims": [
+    {
+     "text": "Nova Games merilis update Starlight untuk Nova Arena hari Jumat",
+     "evidence": "Nova Games merilis update besar bernama Starlight untuk game Nova Arena pada hari Jumat.",
+     "calc_expr": "",
+     "count_items": [],
+     "count_value": 0
+    },
+    {
+     "text": "2,5 juta pemain mencoba mode Arena Bintang di minggu pertama",
+     "evidence": "Dalam minggu pertama, 2,5 juta pemain mencoba mode baru bernama Arena Bintang, menurut data resmi studio.",
+     "calc_expr": "",
+     "count_items": [],
+     "count_value": 0
+    },
+    {
+     "text": "Ada 3 map baru",
+     "evidence": "Update ini membawa 3 map baru: Pantai Senja, Kota Neon, dan Hutan Kristal.",
+     "calc_expr": "",
+     "count_items": [
+      "Pantai Senja",
+      "Kota Neon",
+      "Hutan Kristal"
+     ],
+     "count_value": 3
+    }
+   ]
+  }
+ ]
+}

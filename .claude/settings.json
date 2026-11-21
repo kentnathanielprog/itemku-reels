@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 auto/produce.py:*)",
+      "Bash(python3 auto/scout.py:*)",
+      "Bash(python3 auto/publish.py --dry-run:*)",
+      "Bash(python3 auto/insights.py --dry-run:*)",
+      "Bash(python3 auto/visual.py:*)",
+      "Bash(python3 short/make_video.py:*)",
+      "Bash(python3 short/find_news.py:*)",
+      "Bash(python3 short/fetch_news.py:*)",
+      "Bash(python3 scripts/status.py:*)",
+      "Bash(bash tests/offline_test.sh:*)",
+      "Bash(bash scripts/setup.sh:*)",
+      "Bash(ffprobe:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(rm -rf:*)"
+    ]
+  }
+}

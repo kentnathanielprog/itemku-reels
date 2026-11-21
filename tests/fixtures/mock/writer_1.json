@@ -1,0 +1,46 @@
+{
+ "stories": [
+  {
+   "id": "test-story",
+   "hook": {
+    "text": "Update baru Nova Arena\nbikin heboh minggu ini!\nTunggu angkanya",
+    "img": [
+     0,
+     1
+    ]
+   },
+   "message": [
+    {
+     "text": "Nova Games rilis update\nStarlight buat Nova Arena\nhari Jumat",
+     "img": [
+      1
+     ]
+    },
+    {
+     "text": "Ada 3 map baru: Pantai\nSenja, Kota Neon, dan\nHutan Kristal",
+     "img": [
+      0,
+      1
+     ]
+    }
+   ],
+   "gong": {
+    "text": "[[2,5]] juta pemain nyoba\nmode Arena Bintang\ndi minggu pertama",
+    "img": [
+     1,
+     0
+    ]
+   },
+   "credit": "Nova Games",
+   "hashtags": [
+    "NovaArena",
+    "gaming",
+    "itemku",
+    "update"
+   ],
+   "topic": "Nova Arena Starlight update draws 2.5 million players",
+   "hook_type": "number",
+   "caption_text": "Nova Arena baru rilis update Starlight dan 2,5 juta pemain langsung nyoba mode barunya. Kamu udah coba belum? Cerita di komentar ya!"
+  }
+ ]
+}
