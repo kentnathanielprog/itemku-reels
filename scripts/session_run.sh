@@ -5,7 +5,11 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 MODE=${1:?produce|publish}; shift || true
 DRY=0; for a in "$@"; do [ "$a" = "--dry-run" ] && DRY=1; done      # dry-run must never write or push state
-git checkout -q main && git pull -q --ff-only origin main
+git checkout -q main && git pull -q --ff-only origin main || echo "PERINGATAN: git pull gagal"
+# State only survives if this session can push. Live runs abort (a post that cannot be recorded would be posted again next time); dry-run just reports.
+if git push --dry-run -q origin HEAD:main >/tmp/_pf.log 2>&1; then echo "PUSH: ok"; else
+  echo "PUSH: GAGAL ($(tail -1 /tmp/_pf.log | cut -c1-160))"; [ $DRY = 1 ] || { echo "ABORT: sesi ini tidak bisa menyimpan state ke GitHub (tambahkan repo ke sumber routine). Tidak ada yang diproses."; exit 3; }
+fi
 [ -d node_modules/playwright ] || bash scripts/setup.sh >/dev/null 2>&1
 save() { git config user.name reels-bot; git config user.email reels-bot@users.noreply.github.com
   git add auto/state short/stories; git diff --cached --quiet || git commit -q -m "state: $MODE $(date -u +%FT%H:%M)"

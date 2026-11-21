@@ -68,5 +68,11 @@ H1=$(md5sum auto/state/queue.json|cut -d' ' -f1); IG_USER_ID=1 python3 auto/publ
 [ "$H1" = "$H2" ] && ok "publisher dry-run tidak mengubah antrean" || bad "dry-run mengubah antrean"
 grep -q '"thumb_offset": "2000"' /tmp/_pub.log && ok "cover wajib detik ke-2 (thumb_offset=2000) ikut dikirim ke Instagram" || bad "thumb_offset 2000 tidak terkirim"
 python3 -c "import json;c=json.load(open('auto/config.json'));assert list(c['cta'])==['A'] and c['experiment_share']==0" && ok "CTA hanya 'Cek Itemku buat kebutuhan game kamu' (tanpa Follow)" || bad "CTA masih ada varian Follow"
+python3 - <<'PY' && ok "CTA menyebut nama game hanya jika terverifikasi di artikel" || bad "game_for_cta"
+import re,json
+src=open('auto/produce.py').read(); ns={'re':re,'cfg':json.load(open('auto/config.json'))}; exec(src[src.index('def game_for_cta'):src.index('def cta_for')],ns)
+a={'title':'Free Fire adds a map','fulltext':'Garena said Free Fire players','clean':''}; f=ns['game_for_cta']
+assert f({'cat':'popular','art':a},{'game_name':'Free Fire'})=='Free Fire' and f({'cat':'popular','art':a},{'game_name':'Genshin'})=='game' and f({'cat':'mlbb','art':a},{'game_name':'Free Fire'})=='MLBB' and f({'cat':'general','art':a},{})=='game'
+PY
 touch auto/STOP; python3 auto/publish.py --dry-run --force 2>&1 | grep -q "STOP aktif" && ok "tombol STOP menghentikan posting" || bad "tombol STOP"; rm -f auto/STOP
 echo; echo "HASIL: $PASS lulus, $FAIL gagal"; [ $FAIL -eq 0 ]
