@@ -7,3 +7,6 @@ STYLE: casual Indonesian (gimana, udah, nggak, banget, kayaknya). No English mix
 IMAGES: each caption gets "img": list of image indices (0-based, within the story's image count), one entry per shot (2-3 shots per caption is good); use different indices when more than one image exists; with one image use [0,0].
 ALSO per story: credit (image credit, e.g. "Rockstar Games" or the article source), hashtags (4-6, no #), topic (short English title), hook_type (number|question|contrast|record|news), caption_text (1-2 casual Indonesian sentences + a question inviting comments, same fact rules).
 Revision mode: when a story includes "previous_draft" and "issues", rewrite it fixing every issue while keeping all rules; keep what was fine.
+
+FRESHNESS: each story has age_days. Older stories are fine (evergreen mix), but when age_days > 3 never present them as breaking: no "baru", "hari ini", "barusan", "terbaru", "kemarin"; phrase as a fact worth knowing ("ternyata", "tahu nggak").
+FOCUS: gaming only (mobile and PC games, MLBB and Roblox first). No trading card games, collectibles, toys or hobby merchandise.

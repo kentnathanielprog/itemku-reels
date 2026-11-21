@@ -1,56 +1,5 @@
 [
  {
-  "id": "zeldas-ocarina-remake-is-one-of-metacr-1121",
-  "status": "ready",
-  "not_before": "2026-11-21T00:30:00+00:00",
-  "video": "out/short-zeldas-ocarina-remake-is-one-of-metacr-1121/short.mp4",
-  "caption": "Menurut Metacritic, Ocarina remake dapet skor user 9,2/10, sementara GTA 6 tercatat 5,5/10 dari lebih dari 30 ribu ulasan. Menurut kamu, skor user bisa dipercaya nggak?\n\nSumber: Nintendo Life | Gambar: Nintendo Life\n\n#zelda #ocarinaoftime #gta6 #metacritic #nintendoswitch2",
-  "cat": "general",
-  "topic": "Ocarina Remake vs GTA 6 Metacritic User Scores",
-  "source_url": "https://www.nintendolife.com/news/2026/11/zeldas-ocarina-remake-is-one-of-metacritics-highest-rated-games-in-2026-according-to-user-scores",
-  "hook_type": "contrast",
-  "music": null,
-  "experiment": {
-   "id": "cta",
-   "variant": "A"
-  },
-  "n_images": 1,
-  "posted_slot": "07:30"
- },
- {
-  "id": "gta-6-earns-3-79-billion-in-one-day-as-1121",
-  "status": "ready",
-  "not_before": "2026-11-21T05:00:00+00:00",
-  "video": "out/short-gta-6-earns-3-79-billion-in-one-day-as-1121/short.mp4",
-  "caption": "Menurut Rockstar dan Take-Two, GTA 6 tembus US$3,79 miliar penjualan retail di hari pertama, dan mereka sebut ini peluncuran hiburan terbesar sepanjang sejarah. Kamu udah main belum?\n\nSumber: VGC | Gambar: Rockstar Games\n\n#gta6 #grandtheftauto #rockstargames #gamingnews #ps5",
-  "cat": "gta",
-  "topic": "GTA 6 Earns $3.79 Billion on Day One",
-  "source_url": "https://www.videogameschronicle.com/news/gta-6-earns-3-79-billion-in-one-day-as-the-biggest-entertainment-launch-in-history/",
-  "hook_type": "number",
-  "music": null,
-  "experiment": null,
-  "n_images": 1,
-  "posted_slot": "12:00"
- },
- {
-  "id": "update-10-3-terrifier-balance-changes-1121",
-  "status": "ready",
-  "not_before": "2026-11-21T10:00:00+00:00",
-  "video": "out/short-update-10-3-terrifier-balance-changes-1121/short.mp4",
-  "caption": "Behaviour Interactive umumin perubahan buat The Terrifier di Dead by Daylight setelah PTB. Menurut kamu, perubahan mana yang paling pas?\n\nSumber: PCGamesN | Gambar: Behaviour Interactive\n\n#DeadByDaylight #DBD #TheTerrifier #ArtTheClown #GameNews",
-  "cat": "general",
-  "topic": "Dead by Daylight Terrifier changes after PTB",
-  "source_url": "https://www.pcgamesn.com/dead-by-daylight/update-10-3-terrifier-balance-changes",
-  "hook_type": "news",
-  "music": null,
-  "experiment": {
-   "id": "cta",
-   "variant": "A"
-  },
-  "n_images": 1,
-  "posted_slot": "17:00"
- },
- {
   "id": "sakurai-celebrates-kirby-air-riders-fi-1121",
   "status": "ready",
   "not_before": "2026-11-22T00:30:00+00:00",
@@ -141,11 +90,62 @@
   "posted_at": "2026-11-21T10:31:37.247534+00:00"
  },
  {
+  "id": "zeldas-ocarina-remake-is-one-of-metacr-1121",
+  "status": "ready",
+  "not_before": "2026-11-21T00:30:00+00:00",
+  "video": "out/short-zeldas-ocarina-remake-is-one-of-metacr-1121/short.mp4",
+  "caption": "Menurut Metacritic, Ocarina remake dapet skor user 9,2/10, sementara GTA 6 tercatat 5,5/10 dari lebih dari 30 ribu ulasan. Menurut kamu, skor user bisa dipercaya nggak?\n\nSumber: Nintendo Life | Gambar: Nintendo Life\n\n#zelda #ocarinaoftime #gta6 #metacritic #nintendoswitch2 #itemku",
+  "cat": "general",
+  "topic": "Ocarina Remake vs GTA 6 Metacritic User Scores",
+  "source_url": "https://www.nintendolife.com/news/2026/11/zeldas-ocarina-remake-is-one-of-metacritics-highest-rated-games-in-2026-according-to-user-scores",
+  "hook_type": "contrast",
+  "music": null,
+  "experiment": {
+   "id": "cta",
+   "variant": "A"
+  },
+  "n_images": 1,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "gta-6-earns-3-79-billion-in-one-day-as-1121",
+  "status": "ready",
+  "not_before": "2026-11-21T05:00:00+00:00",
+  "video": "out/short-gta-6-earns-3-79-billion-in-one-day-as-1121/short.mp4",
+  "caption": "Menurut Rockstar dan Take-Two, GTA 6 tembus US$3,79 miliar penjualan retail di hari pertama, dan mereka sebut ini peluncuran hiburan terbesar sepanjang sejarah. Kamu udah main belum?\n\nSumber: VGC | Gambar: Rockstar Games\n\n#gta6 #grandtheftauto #rockstargames #gamingnews #ps5 #itemku",
+  "cat": "gta",
+  "topic": "GTA 6 Earns $3.79 Billion on Day One",
+  "source_url": "https://www.videogameschronicle.com/news/gta-6-earns-3-79-billion-in-one-day-as-the-biggest-entertainment-launch-in-history/",
+  "hook_type": "number",
+  "music": null,
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00"
+ },
+ {
+  "id": "update-10-3-terrifier-balance-changes-1121",
+  "status": "ready",
+  "not_before": "2026-11-21T10:00:00+00:00",
+  "video": "out/short-update-10-3-terrifier-balance-changes-1121/short.mp4",
+  "caption": "Behaviour Interactive umumin perubahan buat The Terrifier di Dead by Daylight setelah PTB. Menurut kamu, perubahan mana yang paling pas?\n\nSumber: PCGamesN | Gambar: Behaviour Interactive\n\n#DeadByDaylight #DBD #TheTerrifier #ArtTheClown #GameNews #itemku",
+  "cat": "general",
+  "topic": "Dead by Daylight Terrifier changes after PTB",
+  "source_url": "https://www.pcgamesn.com/dead-by-daylight/update-10-3-terrifier-balance-changes",
+  "hook_type": "news",
+  "music": null,
+  "experiment": {
+   "id": "cta",
+   "variant": "A"
+  },
+  "n_images": 1,
+  "posted_slot": "17:00"
+ },
+ {
   "id": "talking-point-what-are-you-playing-thi-1121",
   "status": "ready",
   "not_before": "2026-11-22T10:00:00+00:00",
   "video": "out/short-talking-point-what-are-you-playing-thi-1121/short.mp4",
-  "caption": "Sejauh ini di poll Nintendo Life, Ocarina of Time (Switch 2) tercatat dapat 17 suara dari 59 suara. Kalau kamu, weekend ini main apa?\n\nSumber: Nintendo Life | Gambar: Nintendo Life\n\n#nintendo #nintendoswitch2 #ocarinaoftime #nintendolife #gaming",
+  "caption": "Sejauh ini di poll Nintendo Life, Ocarina of Time (Switch 2) tercatat dapat 17 suara dari 59 suara. Kalau kamu, weekend ini main apa?\n\nSumber: Nintendo Life | Gambar: Nintendo Life\n\n#nintendo #nintendoswitch2 #ocarinaoftime #nintendolife #gaming #itemku",
   "cat": "general",
   "topic": "Nintendo Life weekend poll: Ocarina of Time (Switch 2) votes",
   "source_url": "https://www.nintendolife.com/features/talking-point-what-are-you-playing-this-weekend-21st-november",
@@ -163,7 +163,7 @@
   "status": "ready",
   "not_before": "2026-11-23T00:30:00+00:00",
   "video": "out/short-dev-says-their-steam-sales-were-148-ti-1121/short.mp4",
-  "caption": "Buat banyak dev indie, Steam tetap jadi tempat jualan utama, tapi Kernel Hearts punya cerita sebaliknya berkat skin Fortnite. Menurut kalian, Steam atau Epic yang lebih menguntungkan buat dev kecil?\n\nSumber: GamesRadar+ | Gambar: Ephemera Games\n\n#steam #epicgames #kernelhearts #tinyterraces #gamedev #fortnite",
+  "caption": "Buat banyak dev indie, Steam tetap jadi tempat jualan utama, tapi Kernel Hearts punya cerita sebaliknya berkat skin Fortnite. Menurut kalian, Steam atau Epic yang lebih menguntungkan buat dev kecil?\n\nSumber: GamesRadar+ | Gambar: Ephemera Games\n\n#steam #epicgames #kernelhearts #tinyterraces #gamedev #fortnite #itemku",
   "cat": "popular",
   "topic": "Steam vs Epic Store sales for indie devs",
   "source_url": "https://www.gamesradar.com/games/dev-says-their-steam-sales-were-148-times-larger-than-on-the-epic-games-store-but-another-studio-says-epic-saved-them-a-fortune-that-would-have-gone-into-valves-pockets/",

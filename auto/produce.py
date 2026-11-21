@@ -55,7 +55,7 @@ def prep(p):
     art=json.loads(f.read_text()); imgs=[str(pathlib.Path(i['file']).relative_to(BASE)) for i in art['images'] if i['w']>=1000]
     if len(imgs)<3 and p.get('entity'): imgs+=imagepool.pool(p['entity'],3-len(imgs),exclude=tuple(imgs))
     if len(imgs)<cfg.get('min_images',1) or len(art.get('fulltext',''))<500: say(f"  - lewati {name}: gambar/teks kurang"); return None
-    it={'id':name,'cat':p['cat'],'entity':p.get('entity'),'images':imgs,'art':art,'url':p['url']}
+    it={'id':name,'cat':p['cat'],'entity':p.get('entity'),'images':imgs,'art':art,'url':p['url'],'age_h':p.get('age_h')}
     if not clean_images(it): return None
     return it if early_screen(it) else None
 def early_screen(it):
@@ -71,7 +71,7 @@ def early_screen(it):
 def writer_call(items,prev=None):
     payload=[]
     for it in items:
-        d={'id':it['id'],'category':it['cat'],'image_count':len(it['images']),'source':it['art'].get('site',''),'title':it['art'].get('title',''),'article_text':article_text(it['art'])}
+        d={'id':it['id'],'category':it['cat'],'image_count':len(it['images']),'age_days':(round(it['age_h']/24,1) if it.get('age_h') is not None else None),'source':it['art'].get('site',''),'title':it['art'].get('title',''),'article_text':article_text(it['art'])}
         if prev and it['id'] in prev: d['previous_draft']=prev[it['id']]['draft']; d['issues']=prev[it['id']]['issues']
         payload.append(d)
     user=json.dumps({'stories':payload},ensure_ascii=False)

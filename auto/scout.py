@@ -66,7 +66,7 @@ def scout(cat,n=5,maxcheck=18):
 IMPACT=re.compile(r'record|rekor|champion|juara|release|rilis|update|launch|billion|miliar|million|juta|\d+%|viral|fastest|terbesar|new|baru',re.I)
 def score(x,pb):
     weak=-30 if any(d in x['url'] for d in cfg.get('weak_image_domains',[])) else 0   # sources whose only image is a text card look poor when cropped
-    return weak+min(100-x['age_h'],100)+pb.get('cat_weights',{}).get(x['cat'],0)*10+(8 if IMPACT.search(x['title']) else 0)
+    return weak+max(min(100-x['age_h'],100),-60)+pb.get('cat_weights',{}).get(x['cat'],0)*10+cfg.get('cat_bonus',{}).get(x['cat'],0)+(8 if IMPACT.search(x['title']) else 0)
 def select(pool,pb,k,maxc):
     """greedy, diversity-aware: each pick of a category lowers the next pick of the same category; hard cap per category"""
     chosen=[]; cnt={}; ents=set()

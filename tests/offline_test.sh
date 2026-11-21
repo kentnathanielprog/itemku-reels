@@ -62,7 +62,7 @@ s=json.load(open('short/stories/test-story.json')); I,info=qa.run('out/short-tes
 st=subprocess.run(['ffprobe','-v','error','-show_entries','stream=codec_type','-of','csv=p=0','out/short-test-story/short.mp4'],capture_output=True,text=True).stdout.split(); assert 'audio' in st and 'video' in st
 PY
 python3 - <<'PY' && ok "antrean berisi video siap + caption" || bad "antrean"
-import json; q=json.load(open('auto/state/queue.json')); x=[i for i in q if i['id']=='test-story']; assert x and x[0]['status']=='ready' and 'Sumber: TestSite' in x[0]['caption'],x
+import json; q=json.load(open('auto/state/queue.json')); x=[i for i in q if i['id']=='test-story']; assert x and x[0]['status']=='ready' and 'Sumber: TestSite' in x[0]['caption'] and '#itemku' in x[0]['caption'],x
 PY
 H1=$(md5sum auto/state/queue.json|cut -d' ' -f1); IG_USER_ID=1 python3 auto/publish.py --dry-run --force >/tmp/_pub.log 2>&1 || bad "publish dry-run crash (lihat /tmp/_pub.log)"; H2=$(md5sum auto/state/queue.json|cut -d' ' -f1)
 [ "$H1" = "$H2" ] && ok "publisher dry-run tidak mengubah antrean" || bad "dry-run mengubah antrean"

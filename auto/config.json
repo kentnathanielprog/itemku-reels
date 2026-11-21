@@ -11,7 +11,7 @@
    "time": "17:00"
   }
  ],
- "freshness_hours": 72,
+ "freshness_hours": 168,
  "dup_days": 7,
  "experiment_share": 0.2,
  "min_images": 1,
@@ -74,7 +74,29 @@
   "promo code",
   "gift code",
   "giftcode",
-  "daftar redeem"
+  "daftar redeem",
+  "tcg",
+  "trading card",
+  "trading cards",
+  "card pack",
+  "booster pack",
+  "collectible",
+  "collectibles",
+  "figurine",
+  "figurines",
+  "amiibo",
+  "lego",
+  "board game",
+  "tabletop",
+  "toy",
+  "toys",
+  "plush",
+  "plushie",
+  "merch",
+  "merchandise",
+  "cosplay",
+  "manga",
+  "anime figure"
  ],
  "categories": [
   "mlbb",
@@ -119,7 +141,9 @@
  ],
  "max_per_entity_per_day": 1,
  "freshness_override": {
-  "mlbb": 120
+  "mlbb": 720,
+  "roblox": 720,
+  "popular": 336
  },
  "imagepool_entities": [
   "gta",
@@ -228,5 +252,12 @@
   ],
   "video_url_base": "https://raw.githubusercontent.com/kentnathanielprog/itemku-reels/media"
  },
- "cover_offset_ms": 2000
+ "cover_offset_ms": 2000,
+ "cat_bonus": {
+  "mlbb": 30,
+  "roblox": 30,
+  "popular": 0,
+  "gta": -10,
+  "general": -15
+ }
 }

@@ -15,7 +15,9 @@ def enqueue(story_path,slot,day=None):
     hh,mm=map(int,slot.split(':')); wib=dt.timezone(dt.timedelta(hours=7))
     d=dt.date.fromisoformat(day) if day else dt.datetime.now(wib).date()
     nb=dt.datetime(d.year,d.month,d.day,hh,mm,tzinfo=wib).astimezone(dt.timezone.utc)
-    tags=' '.join('#'+h.lstrip('#') for h in s.get('hashtags',[]))
+    hs=[h.lstrip('#') for h in s.get('hashtags',[])]
+    if 'itemku' not in [h.lower() for h in hs]: hs.append('itemku')               # RULE: every caption carries #itemku
+    tags=' '.join('#'+h for h in hs)
     cap=f"{s['caption_text']}\n\nSumber: {s['source']}"+(f" | Gambar: {s['credit']}" if s.get('credit') else '')+f"\n\n{tags}"
     q=json.loads((ST/'queue.json').read_text()); q=[x for x in q if x['id']!=name]
     q.append({'id':name,'status':'ready','not_before':nb.isoformat(),'video':str(vid),'caption':cap,'cat':s.get('cat'),'topic':s.get('topic'),
