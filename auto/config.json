@@ -199,8 +199,9 @@
  },
  "entity_cooldown_h": 24,
  "audio": {
-  "enabled": false,
+  "enabled": true,
   "audio_volume": 70,
+  "video_volume": 1,
   "queries": {
    "mlbb": [
     "edm",

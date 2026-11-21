@@ -20,7 +20,7 @@ def denied(x,cfg):
     return any(re.search(p if '\\' in p else r'\b'+re.escape(p)+r'\b',hay) for p in pats)
 def pick(search,cat,cfg,posts,min_ms=20000,rng=random):
     """search(query|None) -> list of audio dicts. Tries mood queries for the category, then trending. Skips recently used / too short / unknown ids.
-    Returns {'audio_id','title','artist','audio_volume','video_volume'} or None (then the Reel is posted silent)."""
+    Returns {'audio_id','title','artist','audio_volume','video_volume'} or None (then publish.py falls back to the video's own synthesized music)."""
     a=cfg.get('audio',{}); qs=list(a.get('queries',{}).get(cat) or a.get('queries',{}).get('default') or []); rng.shuffle(qs); used=recent_ids(posts)
     for q in qs[:3]+[None]:
         try: res=search(q) or []
@@ -29,6 +29,6 @@ def pick(search,cat,cfg,posts,min_ms=20000,rng=random):
         if ok:
             ok.sort(key=lambda x:0 if x.get('is_ads_eligible') else 1)       # prefer tracks that can also be boosted as ads
             x=rng.choice(ok[:5])
-            return {'audio_id':str(x['audio_id']),'title':x.get('title',''),'artist':x.get('display_artist',''),'audio_volume':int(a.get('audio_volume',70)),'video_volume':100}
+            return {'audio_id':str(x['audio_id']),'title':x.get('title',''),'artist':x.get('display_artist',''),'audio_volume':int(a.get('audio_volume',70)),'video_volume':max(1,min(100,int(a.get('video_volume',1))))}   # video_volume 1..100: the rendered video already carries our own music bed (fallback), keep it ~silent under the Instagram song
     return None
 def config_param(sel): return json.dumps({'audio_id':sel['audio_id'],'audio_volume':sel['audio_volume'],'video_volume':sel['video_volume']})

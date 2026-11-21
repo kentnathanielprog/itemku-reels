@@ -9,6 +9,7 @@ env: IG_USER_ID, IG_ACCESS_TOKEN, GRAPH_HOST (default graph.facebook.com), GRAPH
 Idempotent: a half-finished post (container created) is resumed, never duplicated. Kill switch: file auto/STOP or env STOP=1.
 !! Endpoint/field names follow Meta's public docs at time of writing - verify against the current Reels publishing docs. !!"""
 import json,os,sys,time,re,pathlib,datetime as dt,urllib.request,urllib.parse
+import ig_audio
 ROOT=pathlib.Path(__file__).resolve().parent; BASE=ROOT.parent; ST=ROOT/'state'
 DRY='--dry-run' in sys.argv; FORCE='--force' in sys.argv; IGNORE_BURST='--ignore-burst' in sys.argv; ALLOW_DUP='--allow-duplicate' in sys.argv
 HOST=os.environ.get('GRAPH_HOST','graph.facebook.com'); VER=os.environ.get('GRAPH_VERSION','v21.0')
@@ -50,6 +51,25 @@ def burst_block(q,now):
     if len(today)>=mx: return f'batas {mx} posting per hari (WIB) tercapai: {len(today)} sudah terbit hari ini'
     if seen and now-seen[-1]<dt.timedelta(minutes=gap): return f'jarak minimal {gap} menit antar posting belum terpenuhi: posting terakhir {int((now-seen[-1]).total_seconds()//60)} menit lalu'
     return None
+def choose_ig_song(it,cfg,vid):
+    """Pick a song from Instagram's Audio API for this Reel and make sure Meta can fetch the video by URL. Returns the selection (with 'url') or None -> caller uses our own track."""
+    import hashlib
+    def search(q):
+        if DRY and not TOK: return [{'audio_id':'DRY','title':'(dry-run, tanpa token)','display_artist':'','duration_in_ms':60000}]
+        u=f"https://{HOST}/{VER}/ig_audio?audio_type=music&user_id={UID}&access_token={TOK}"+(f"&search_query={urllib.parse.quote(q)}" if q else '')
+        try: return (json.loads(urllib.request.urlopen(u,timeout=30).read()) if DRY else call('GET',u)).get('audio',[])
+        except SystemExit as e: print(f'  (cari lagu Instagram gagal: {str(e)[:100]})'); return []
+        except Exception as e: print(f'  (cari lagu Instagram gagal: {type(e).__name__})'); return []
+    sel=ig_audio.pick(search,it.get('cat'),cfg,rj('posts.json'))
+    if not sel: print('  musik Instagram: tidak ada lagu yang cocok: pakai lagu buatan sendiri'); return None
+    vb=cfg['audio'].get('video_url_base','').rstrip('/')
+    if not vb or not vid.exists(): print('  musik Instagram: video_url tidak tersedia: pakai lagu buatan sendiri'); return None
+    data=vid.read_bytes(); url=f"{vb}/{it['video']}?v={hashlib.sha1(data).hexdigest()[:12]}"           # cache-bust: raw.githubusercontent caches ~5 min and the path was reused
+    if DRY and not TOK: print('  [dry-run, tanpa token] video_url tidak diperiksa'); sel['url']=url; return sel               # offline self-test must not touch the network
+    try: h=urllib.request.urlopen(urllib.request.Request(url,method='HEAD'),timeout=30); ok=h.status==200 and int(h.headers.get('Content-Length','0'))==len(data)    # Meta fetches it itself: must be public AND be exactly this file
+    except Exception as e: print(f'  (video_url tidak bisa diambil: {type(e).__name__})'); ok=False
+    if not ok: print('  musik Instagram: video_url belum menyajikan berkas yang benar: pakai lagu buatan sendiri'); return None
+    sel['url']=url; return sel
 def main():
     if (ROOT/'STOP').exists() or os.environ.get('STOP')=='1': print('STOP aktif: tidak ada posting.'); return 0
     if ALLOW_DUP and (os.environ.get('ALLOW_FORCE')!='1' or '--id' not in sys.argv): print('ABORT: --allow-duplicate hanya untuk panggilan manual: butuh env ALLOW_FORCE=1 dan --id <id item>. Tidak ada yang diposting.'); return 2
@@ -76,43 +96,37 @@ def main():
             try: when=dt.datetime.fromisoformat(m['timestamp'])
             except Exception: when=now
             record_posted(q,it,m['id'],m.get('permalink'),when); print(f"sudah tayang di Instagram, status dipulihkan tanpa posting ulang: {it['id']} {m.get('permalink')}"); return 0
-    base=f'https://{HOST}/{VER}/{UID}'
-    if not it.get('container'):
-        cfg=json.loads((ROOT/'config.json').read_text())
+    base=f'https://{HOST}/{VER}/{UID}'; cfg=json.loads((ROOT/'config.json').read_text())
+    def poll(cid):                                                               # wait until Meta finished processing the video
+        for _ in range(60):
+            st=call('GET',f"https://{HOST}/{VER}/{cid}?fields=status_code&access_token={TOK}").get('status_code')
+            if st=='FINISHED' or st in ('ERROR','EXPIRED'): return st
+            time.sleep(5)
+        return 'TIMEOUT'
+    def make_container(sel):
         body={'media_type':'REELS','upload_type':'resumable','caption':caption,'share_to_feed':'true','thumb_offset':str(int(cfg.get('cover_offset_ms',2000))),'access_token':TOK}   # RULE: cover = frame at second 2 (thumb_offset, ms)
-        use_url=False
-        if cfg.get('audio',{}).get('enabled'):                                          # trending/mood track from Instagram's Audio API (opt-in until proven live)
-            import ig_audio
-            def search(q):
-                if DRY and not TOK: return [{'audio_id':'DRY','title':'(dry-run, tanpa token)','display_artist':'','duration_in_ms':60000}]
-                u=f"https://{HOST}/{VER}/ig_audio?audio_type=music&user_id={UID}&access_token={TOK}"+(f"&search_query={urllib.parse.quote(q)}" if q else '')
-                if DRY:                                                                  # read-only GET is safe in dry-run
-                    try: return json.loads(urllib.request.urlopen(u,timeout=30).read()).get('audio',[])
-                    except Exception as e: print(f'  (cari lagu gagal: {type(e).__name__})'); return []
-                return call('GET',u).get('audio',[])
-            sel=ig_audio.pick(search,it.get('cat'),cfg,rj('posts.json'))
-            if sel:
-                vb=cfg['audio'].get('video_url_base','').rstrip('/'); url=f"{vb}/{it['video']}" if vb else ''
-                ok_url=False
-                if url:                                                                  # Meta fetches video_url itself: it must be public and really serve the file
-                    try: h=urllib.request.urlopen(urllib.request.Request(url,method='HEAD'),timeout=30); ok_url=h.status==200 and int(h.headers.get('Content-Length','0'))>100000
-                    except Exception as e: print(f'  (video_url tidak bisa diambil: {type(e).__name__})')
-                if ok_url:     # audio_configuration is only documented with video_url, NOT with upload_type=resumable (it was silently ignored there, tested 2026-11-21)
-                    body.pop('upload_type'); body['video_url']=url; body['audio_configuration']=ig_audio.config_param(sel); use_url=True
-                    it['music']={k:sel[k] for k in ('audio_id','title','artist')}; print(f"  musik: {sel['title']} - {sel['artist']} (via video_url)")
-                else: print('  musik: video_url tidak tersedia, diposting senyap lewat unggah bertahap')
-            else: print('  musik: tidak ada yang cocok, diposting senyap')
+        if sel: body.pop('upload_type'); body['video_url']=sel['url']; body['audio_configuration']=ig_audio.config_param(sel)    # Instagram song: only documented together with video_url
         r=call('POST',base+'/media',body)
         it['container']=r['id']; it['status']='publishing'
-        if not DRY: wj('queue.json',q)                      # dry-run must never touch state
-        if not use_url:
-            size=vid.stat().st_size
-            call('POST',r['uri'],headers={'Authorization':f'OAuth {TOK}','offset':'0','file_size':str(size)},raw=None if DRY else vid.read_bytes())
-    for _ in range(60):                                                          # wait until Meta finished processing the video
-        s=call('GET',f"https://{HOST}/{VER}/{it['container']}?fields=status_code&access_token={TOK}")
-        if s.get('status_code')=='FINISHED': break
-        if s.get('status_code') in ('ERROR','EXPIRED'): it['status']='failed'; wj('queue.json',q); raise SystemExit(f'processing {s}')
-        time.sleep(5)
+        if not DRY: wj('queue.json',q)                                           # dry-run must never touch state
+        if not sel: call('POST',r['uri'],headers={'Authorization':f'OAuth {TOK}','offset':'0','file_size':str(vid.stat().st_size)},raw=None if DRY else vid.read_bytes())   # video carries our own synthesized music
+        return r['id']
+    if it.get('container'):                                                      # resume a half-finished post (container already exists): never create another
+        res=poll(it['container'])
+        if res in ('ERROR','EXPIRED'): it['status']='failed'; wj('queue.json',q); raise SystemExit(f'processing {res}')
+    else:
+        sel=choose_ig_song(it,cfg,vid) if cfg.get('audio',{}).get('enabled') else None     # PRIMARY: a song picked from Instagram's own catalog
+        for mode in (['ig'] if sel else [])+['own']:                             # FALLBACK: the video's own synthesized track (resumable upload). Both happen strictly BEFORE media_publish, so a failed attempt can never double-post.
+            try: cid=make_container(sel if mode=='ig' else None)
+            except SystemExit as e:
+                if mode=='ig': print(f"  musik Instagram GAGAL saat membuat container ({str(e)[:140]}): pakai lagu buatan sendiri"); it['container']=None; continue
+                raise
+            res=poll(cid)
+            if mode=='ig':
+                if res=='FINISHED': it['music']={k:sel[k] for k in ('audio_id','title','artist')}; print(f"  musik: {sel['title']} - {sel['artist']} (lagu Instagram, via video_url)"); break
+                print(f'  musik Instagram GAGAL (container {res}): pakai lagu buatan sendiri'); it['container']=None; continue
+            if res in ('ERROR','EXPIRED'): it['status']='failed'; wj('queue.json',q); raise SystemExit(f'processing {res}')
+            print('  musik: lagu buatan sendiri (trek sintesis di dalam video)')
     pub=call('POST',base+'/media_publish',{'creation_id':it['container'],'access_token':TOK})
     info=call('GET',f"https://{HOST}/{VER}/{pub['id']}?fields=permalink,timestamp&access_token={TOK}")
     if DRY: print('  [dry-run] selesai, antrean TIDAK diubah.'); return 0
