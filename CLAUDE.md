@@ -40,6 +40,11 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 - `claude_cli` (path B, used by `produce.yml` via `LLM_BACKEND=claude_cli`): shells out to `claude -p` with `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`, run once in a terminal) = Claude subscription, no API balance, but it consumes subscription limits (about 4k tokens fixed overhead per call; 3 calls/day). Runs in a clean temp dir, tools off (Read only for vision). Probed locally with haiku (JSON + vision OK); not yet proven inside GitHub Actions. Check Anthropic's current terms for automated use of subscription tokens.
 - Offline test: `bash tests/offline_test.sh` stubs the CLI (no network).
 
+## Music (Instagram Audio API, `auto/ig_audio.py`)
+- Official API (docs read 2026-11-21): `GET /ig_audio?audio_type=music` returns trending (no `search_query`) or keyword results; the Reel gets `audio_configuration={audio_id,audio_volume,video_volume}` at container creation. Rights are handled by Instagram (only third-party-authorized tracks are returned).
+- Needs Facebook Login / Unified Login (not Instagram Login), IG Business/Creator + connected Facebook Page, `instagram_basic` + `instagram_content_publish`. `publish.py` default host is now `graph.facebook.com`.
+- Opt-in: `config.json -> audio.enabled` (false = silent). NOT verified live: Indonesian availability, resumable upload combined with `audio_configuration`, `is_ads_eligible` (brand account: check before boosting a post).
+
 ## Status / honest gaps
 - **Not yet proven live:** Claude API calls from `llm.py` (structured output + `fallbacks`; falls back to a plain call if rejected), vision call, Meta Graph publishing + Insights field names, GitHub Actions workflows.
 - **Not built yet:** weekly learner (`auto/learn.py`; spec in `auto/agents/learner.md`, `playbook.json` already exists), licensed music catalog (empty), visual check of the final rendered video beyond blank-frame detection.

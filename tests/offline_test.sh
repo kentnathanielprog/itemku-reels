@@ -39,6 +39,16 @@ try: llm.call_json('stub','s','u',{"type":"object","required":["hilang"]},'claud
 except llm.LLMError: pass
 PY
 rm -rf $STUB
+python3 - <<'PY' && ok "pemilih musik IG: hindari lagu baru dipakai, terlalu pendek, atau kosong" || bad "ig_audio"
+import sys,random; sys.path.insert(0,'auto'); import ig_audio as A
+cfg={'audio':{'queries':{'default':['edm']},'audio_volume':70}}
+res=[{'audio_id':'1','title':'a','duration_in_ms':5000},{'audio_id':'2','title':'b','duration_in_ms':90000},{'audio_id':'3','title':'c','duration_in_ms':90000}]
+posts=[{'music':{'audio_id':'2'}}]
+sel=A.pick(lambda q:res,'mlbb',cfg,posts,rng=random.Random(1)); assert sel and sel['audio_id']=='3',sel
+assert A.pick(lambda q:[],'mlbb',cfg,[]) is None
+def boom(q): raise RuntimeError('x')
+assert A.pick(boom,'mlbb',cfg,[]) is None and '"audio_id": "3"' in A.config_param(sel)
+PY
 echo "== producer offline (writer + QC + vision = jawaban tiruan; render + antrean sungguhan)"
 LLM_MOCK_DIR=tests/fixtures/mock python3 auto/produce.py --day 1999-01-01 --picks-file tests/fixtures/picks.json > /tmp/_produce.log 2>&1
 grep -q "LULUS" /tmp/_produce.log && ok "QC PASS + bukti terverifikasi" || bad "produser tidak meluluskan (lihat /tmp/_produce.log)"

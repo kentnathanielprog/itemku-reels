@@ -174,5 +174,31 @@
    "upbeat"
   ]
  },
- "entity_cooldown_h": 24
+ "entity_cooldown_h": 24,
+ "audio": {
+  "enabled": false,
+  "audio_volume": 70,
+  "queries": {
+   "mlbb": [
+    "edm",
+    "hype",
+    "phonk"
+   ],
+   "roblox": [
+    "fun",
+    "upbeat",
+    "edm"
+   ],
+   "gta": [
+    "trap",
+    "hype",
+    "phonk"
+   ],
+   "default": [
+    "edm",
+    "gaming",
+    "upbeat"
+   ]
+  }
+ }
 }

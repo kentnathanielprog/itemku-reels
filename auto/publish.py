@@ -7,7 +7,7 @@ Idempotent: a half-finished post (container created) is resumed, never duplicate
 import json,os,sys,time,pathlib,datetime as dt,urllib.request,urllib.parse
 ROOT=pathlib.Path(__file__).resolve().parent; BASE=ROOT.parent; ST=ROOT/'state'
 DRY='--dry-run' in sys.argv; FORCE='--force' in sys.argv
-HOST=os.environ.get('GRAPH_HOST','graph.instagram.com'); VER=os.environ.get('GRAPH_VERSION','v21.0')
+HOST=os.environ.get('GRAPH_HOST','graph.facebook.com')   # Audio API needs Facebook Login host (not Instagram Login); VER=os.environ.get('GRAPH_VERSION','v21.0')
 UID=os.environ.get('IG_USER_ID','<IG_USER_ID>'); TOK=os.environ.get('IG_ACCESS_TOKEN','')
 def rj(f): return json.loads((ST/f).read_text())
 def wj(f,d): (ST/f).write_text(json.dumps(d,ensure_ascii=False,indent=1))
@@ -26,7 +26,18 @@ def main():
     print(f"posting: {it['id']} ({vid.name}, {vid.stat().st_size/1e6:.1f}MB)")
     base=f'https://{HOST}/{VER}/{UID}'
     if not it.get('container'):
-        r=call('POST',base+'/media',{'media_type':'REELS','upload_type':'resumable','caption':caption,'share_to_feed':'true','access_token':TOK})
+        body={'media_type':'REELS','upload_type':'resumable','caption':caption,'share_to_feed':'true','access_token':TOK}
+        cfg=json.loads((ROOT/'config.json').read_text())
+        if cfg.get('audio',{}).get('enabled'):                                          # trending/mood track from Instagram's Audio API (opt-in until proven live)
+            import ig_audio
+            def search(q):
+                if DRY: return [{'audio_id':'DRY','title':'(dry-run)','display_artist':'','duration_in_ms':60000}]
+                u=f"https://{HOST}/{VER}/ig_audio?audio_type=music&user_id={UID}&access_token={TOK}"+(f"&search_query={urllib.parse.quote(q)}" if q else '')
+                return call('GET',u).get('audio',[])
+            sel=ig_audio.pick(search,it.get('cat'),cfg,rj('posts.json'))
+            if sel: body['audio_configuration']=ig_audio.config_param(sel); it['music']={k:sel[k] for k in ('audio_id','title','artist')}; print(f"  musik: {sel['title']} - {sel['artist']}")
+            else: print('  musik: tidak ada yang cocok, diposting senyap')
+        r=call('POST',base+'/media',body)
         it['container']=r['id']; it['status']='publishing'
         if not DRY: wj('queue.json',q)                      # dry-run must never touch state
         size=vid.stat().st_size
