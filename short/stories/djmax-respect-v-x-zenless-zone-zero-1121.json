@@ -3,7 +3,7 @@
   "out/djmax-respect-v-x-zenless-zone-zero-1121/imgs/img1.jpg"
  ],
  "out": "short-djmax-respect-v-x-zenless-zone-zero-1121",
- "audio": "none",
+ "audio": "assets/audio/pulse-arena.m4a",
  "mode": "blur",
  "center_y": 800,
  "source": "Gamebrott.com",
@@ -62,5 +62,7 @@
  "cat": "popular",
  "hook_type": "news",
  "caption_text": "DJMAX RESPECT V resmi kolab sama Zenless Zone Zero lewat DLC musik, dan rencananya rilis tahun 2027. Lagu ZZZ apa yang paling pengen kamu mainin di game rhythm? Tulis di komentar ya!",
- "experiment": null
+ "experiment": null,
+ "music": "assets/audio/pulse-arena.m4a",
+ "music_start": 0
 }
