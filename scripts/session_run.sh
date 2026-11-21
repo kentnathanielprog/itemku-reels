@@ -12,12 +12,13 @@ if git push --dry-run -q origin HEAD:main >/tmp/_pf.log 2>&1; then echo "PUSH: o
 fi
 # Some cloud images ship a broken system Pillow that pip does not override: install into our own folder and put it first on PYTHONPATH (inherited by every python subprocess).
 export PYTHONPATH="$HOME/.pydeps${PYTHONPATH:+:$PYTHONPATH}"
-if ! python3 -c 'import PIL.Image,numpy' 2>/dev/null; then
-  echo "SETUP: memasang Pillow/numpy ke $HOME/.pydeps"; python3 -m pip install --break-system-packages --target "$HOME/.pydeps" --upgrade pillow numpy 2>&1 | tail -4 || true
+PYCHK='import PIL.Image,numpy,PIL;assert tuple(map(int,PIL.__version__.split(".")[:2]))>=(11,0)'   # Debian's 10.2.0 must not count as "installed"
+if ! python3 -c "$PYCHK" 2>/dev/null; then
+  echo "SETUP: memasang Pillow>=11/numpy ke $HOME/.pydeps"; python3 -m pip install --break-system-packages --ignore-installed --target "$HOME/.pydeps" --upgrade 'Pillow>=11,<14' 'numpy>=1.26' 2>&1 | tail -4 || true
 fi
-if ! python3 -c 'import PIL.Image,numpy' 2>/dev/null || ! command -v ffmpeg >/dev/null; then
+if ! python3 -c "$PYCHK" 2>/dev/null || ! command -v ffmpeg >/dev/null; then
   echo "SETUP: memasang dependensi..."; bash scripts/setup.sh 2>&1 | tail -15 || true
-  python3 -c 'import PIL.Image,numpy' 2>/dev/null && command -v ffmpeg >/dev/null || { echo "ABORT: dependensi (Pillow/numpy/ffmpeg) tidak bisa dipasang di sesi ini. Tidak ada yang diproses."; exit 4; }
+  python3 -c "$PYCHK" 2>/dev/null && command -v ffmpeg >/dev/null || { echo "ABORT: dependensi (Pillow/numpy/ffmpeg) tidak bisa dipasang di sesi ini. Tidak ada yang diproses."; exit 4; }
 fi
 save() { git config user.name reels-bot; git config user.email reels-bot@users.noreply.github.com
   git add auto/state short/stories; git diff --cached --quiet || git commit -q -m "state: $MODE $(date -u +%FT%H:%M)"
