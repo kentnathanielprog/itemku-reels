@@ -80,6 +80,7 @@
   "mlbb",
   "roblox",
   "gta",
+  "popular",
   "general"
  ],
  "per_day": 3,
@@ -105,7 +106,16 @@
   "fortnite",
   "minecraft",
   "ubisoft",
-  "baldur"
+  "baldur",
+  "honkai",
+  "call of duty",
+  "delta force",
+  "clash of clans",
+  "brawl stars",
+  "league of legends",
+  "wild rift",
+  "efootball",
+  "elden ring"
  ],
  "max_per_entity_per_day": 1,
  "freshness_override": {
@@ -143,7 +153,8 @@
   "mlbb": "MLBB",
   "roblox": "Roblox",
   "gta": "game",
-  "general": "game"
+  "general": "game",
+  "popular": "game"
  },
  "music_mood": {
   "mlbb": [

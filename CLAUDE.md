@@ -33,6 +33,8 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 - `((highlight))` split across lines used to render raw; lint now rejects it. Numbers glued to units (24GB, 120Hz) are parsed by the verifier.
 - `publish.py --dry-run` must never write state (it once left a fake "publishing" item).
 
+- Categories: mlbb, roblox, gta, **popular** (other popular games: Free Fire, PUBG, Genshin, Valorant, Pokemon, ... keywords in `short/sources.json`) and general. When mlbb/roblox/gta have no fresh news, popular/general fill the day; replacement rounds (max 4) keep the output at 3 when candidates exist.
+
 ## LLM backends (`auto/llm.py`)
 - `api` (default): Anthropic API, needs `ANTHROPIC_API_KEY` + balance.
 - `claude_cli` (path B, used by `produce.yml` via `LLM_BACKEND=claude_cli`): shells out to `claude -p` with `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`, run once in a terminal) = Claude subscription, no API balance, but it consumes subscription limits (about 4k tokens fixed overhead per call; 3 calls/day). Runs in a clean temp dir, tools off (Read only for vision). Probed locally with haiku (JSON + vision OK); not yet proven inside GitHub Actions. Check Anthropic's current terms for automated use of subscription tokens.

@@ -64,6 +64,55 @@
    "https://www.eurogamer.net/news"
   ]
  },
+ "popular": {
+  "keywords": [
+   "free fire",
+   "free-fire",
+   "pubg",
+   "genshin",
+   "honkai",
+   "star rail",
+   "zenless",
+   "valorant",
+   "fortnite",
+   "minecraft",
+   "call of duty",
+   "call-of-duty",
+   "delta force",
+   "clash of clans",
+   "clash royale",
+   "brawl stars",
+   "efootball",
+   "fc mobile",
+   "league of legends",
+   "wild rift",
+   "dota",
+   "counter-strike",
+   "apex legends",
+   "pokemon",
+   "pokémon",
+   "elden ring",
+   "wuthering",
+   "blox fruits",
+   "steam",
+   "switch 2",
+   "ps5",
+   "playstation",
+   "xbox"
+  ],
+  "pages": [
+   "https://www.gamebrott.com/",
+   "https://www.gamedaim.com/",
+   "https://www.dexerto.com/gaming/",
+   "https://www.pcgamesn.com/",
+   "https://www.videogameschronicle.com/category/news/",
+   "https://www.ign.com/news",
+   "https://www.gamesradar.com/",
+   "https://www.eurogamer.net/news",
+   "https://www.kotaku.com/",
+   "https://www.ggrecon.com/articles/"
+  ]
+ },
  "general": {
   "keywords": [],
   "pages": [

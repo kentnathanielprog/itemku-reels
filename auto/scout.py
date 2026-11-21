@@ -49,7 +49,7 @@ def entity(title):
 def found(cat,n):
     out=subprocess.run(['python3',str(BASE/'short'/'find_news.py'),cat,str(n)],capture_output=True,text=True).stdout.splitlines()
     return [tuple(x.rsplit(' | ',1)) for x in out if ' | ' in x]
-def scout(cat,n=5,maxcheck=12):
+def scout(cat,n=5,maxcheck=18):
     res=[];why={}
     for title,url in found(cat,maxcheck):
         try: page=get(url)
