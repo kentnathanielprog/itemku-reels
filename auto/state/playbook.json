@@ -10,18 +10,11 @@
   ]
  },
  "experiments": {
-  "share": 0.2,
-  "active": [
-   {
-    "id": "cta",
-    "variants": {
-     "A": "Cek Itemku buat\nkebutuhan {game} kamu",
-     "B": "Follow Itemku\nuntuk berita game"
-    }
-   }
-  ]
+  "share": 0,
+  "active": []
  },
  "lessons": [],
  "notes": "Learner agent rewrites this weekly. It may NOT override QC rules or the topic denylist.",
- "cat_weights": {}
+ "cat_weights": {},
+ "default_cta": "A"
 }

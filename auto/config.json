@@ -13,7 +13,7 @@
  ],
  "freshness_hours": 168,
  "dup_days": 7,
- "experiment_share": 0.2,
+ "experiment_share": 0,
  "min_images": 1,
  "min_image_width": 1000,
  "denylist": [
@@ -170,8 +170,7 @@
   "vision_model": "claude-haiku-5-5"
  },
  "cta": {
-  "A": "Cek Itemku buat\nkebutuhan {game} kamu",
-  "B": "Follow Itemku\nuntuk berita game"
+  "A": "Cek Itemku buat\nkebutuhan {game} kamu"
  },
  "game_label": {
   "mlbb": "MLBB",

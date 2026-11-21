@@ -43,7 +43,7 @@
   ]
  },
  "cta": {
-  "text": "Follow Itemku\nuntuk berita game",
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
   "img": [
    0
   ]
@@ -58,8 +58,5 @@
  "cat": "popular",
  "hook_type": "number",
  "caption_text": "Buat banyak dev indie, Steam tetap jadi tempat jualan utama, tapi Kernel Hearts punya cerita sebaliknya berkat skin Fortnite. Menurut kalian, Steam atau Epic yang lebih menguntungkan buat dev kecil?",
- "experiment": {
-  "id": "cta",
-  "variant": "B"
- }
+ "experiment": null
 }

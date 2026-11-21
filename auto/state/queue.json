@@ -144,24 +144,6 @@
   "posted_slot": "17:00"
  },
  {
-  "id": "dev-says-their-steam-sales-were-148-ti-1121",
-  "status": "ready",
-  "not_before": "2026-11-23T00:30:00+00:00",
-  "video": "out/short-dev-says-their-steam-sales-were-148-ti-1121/short.mp4",
-  "caption": "Buat banyak dev indie, Steam tetap jadi tempat jualan utama, tapi Kernel Hearts punya cerita sebaliknya berkat skin Fortnite. Menurut kalian, Steam atau Epic yang lebih menguntungkan buat dev kecil?\n\nSumber: GamesRadar+ | Gambar: Ephemera Games\n\n#steam #epicgames #kernelhearts #tinyterraces #gamedev #fortnite #itemku",
-  "cat": "popular",
-  "topic": "Steam vs Epic Store sales for indie devs",
-  "source_url": "https://www.gamesradar.com/games/dev-says-their-steam-sales-were-148-times-larger-than-on-the-epic-games-store-but-another-studio-says-epic-saved-them-a-fortune-that-would-have-gone-into-valves-pockets/",
-  "hook_type": "number",
-  "music": null,
-  "experiment": {
-   "id": "cta",
-   "variant": "B"
-  },
-  "n_images": 1,
-  "posted_slot": "07:30"
- },
- {
   "id": "djmax-respect-v-x-zenless-zone-zero-1121",
   "status": "ready",
   "not_before": "2026-11-21T00:30:00+00:00",
@@ -219,5 +201,20 @@
   "media_id": "18137734573672402",
   "permalink": "https://www.instagram.com/reel/DgADrGKgul6/",
   "posted_at": "2026-11-21T10:51:16.166920+00:00"
+ },
+ {
+  "id": "dev-says-their-steam-sales-were-148-ti-1121",
+  "status": "ready",
+  "not_before": "2026-11-23T00:30:00+00:00",
+  "video": "out/short-dev-says-their-steam-sales-were-148-ti-1121/short.mp4",
+  "caption": "Buat banyak dev indie, Steam tetap jadi tempat jualan utama, tapi Kernel Hearts punya cerita sebaliknya berkat skin Fortnite. Menurut kalian, Steam atau Epic yang lebih menguntungkan buat dev kecil?\n\nSumber: GamesRadar+ | Gambar: Ephemera Games\n\n#steam #epicgames #kernelhearts #tinyterraces #gamedev #fortnite #itemku",
+  "cat": "popular",
+  "topic": "Steam vs Epic Store sales for indie devs",
+  "source_url": "https://www.gamesradar.com/games/dev-says-their-steam-sales-were-148-times-larger-than-on-the-epic-games-store-but-another-studio-says-epic-saved-them-a-fortune-that-would-have-gone-into-valves-pockets/",
+  "hook_type": "number",
+  "music": null,
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "07:30"
  }
 ]
