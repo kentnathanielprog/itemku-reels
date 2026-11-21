@@ -7,17 +7,17 @@
  "mode": "blur",
  "center_y": 800,
  "source": "Gamebrott.com",
- "credit": "Gamebrott",
+ "credit": "Gamebrott.com",
  "hashtags": [
+  "DJMAXRespectV",
   "ZenlessZoneZero",
   "ZZZ",
-  "DJMAXRESPECTV",
-  "gamerhythm",
-  "kolaborasi",
-  "beritagame"
+  "GameRhythm",
+  "DLC",
+  "itemku"
  ],
  "hook": {
-  "text": "Zenless Zone Zero kolab\nsama game rhythm nih\ntunggu namanya",
+  "text": "DJMAX RESPECT V gandeng\nZenless Zone Zero!\nTunggu kapan rilisnya",
   "img": [
    0,
    0
@@ -25,14 +25,14 @@
  },
  "message": [
   {
-   "text": "Game rhythm-nya\nDJMAX RESPECT V,\nbesutan NEOWIZ",
+   "text": "Kolaborasinya berupa DLC\nberisi musik dari\nZenless Zone Zero",
    "img": [
     0,
     0
    ]
   },
   {
-   "text": "DLC-nya berisi musik\ndari Zenless Zone Zero\nmasuk ke DJMAX RESPECT V",
+   "text": "Daftar lagunya belum\ndiumumkan, DLC masih\ndalam pengembangan",
    "img": [
     0,
     0
@@ -40,7 +40,7 @@
   }
  ],
  "gong": {
-  "text": "Masih dikembangkan,\nlagunya belum diumumkan\nbentuknya ((DLC musik))",
+  "text": "DLC-nya dijadwalkan\nrilis tahun [[2027]]",
   "img": [
    0,
    0
@@ -58,12 +58,9 @@
   "gong": 3.9,
   "cta": 2.3
  },
- "topic": "DJMAX RESPECT V x Zenless Zone Zero DLC",
+ "topic": "DJMAX RESPECT V x Zenless Zone Zero DLC collab",
  "cat": "popular",
  "hook_type": "news",
- "caption_text": "Zenless Zone Zero resmi kolab sama DJMAX RESPECT V lewat DLC musik, tapi daftar lagunya belum diumumkan. Lagu ZZZ mana nih yang paling kamu tunggu?",
- "experiment": {
-  "id": "cta",
-  "variant": "A"
- }
+ "caption_text": "DJMAX RESPECT V resmi kolab sama Zenless Zone Zero lewat DLC musik, dan rencananya rilis tahun 2027. Lagu ZZZ apa yang paling pengen kamu mainin di game rhythm? Tulis di komentar ya!",
+ "experiment": null
 }

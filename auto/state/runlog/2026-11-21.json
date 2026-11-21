@@ -1,40 +1,16 @@
 {
  "day": "2026-11-21",
  "ok": [
-  "djmax-respect-v-x-zenless-zone-zero-1121",
-  "gta-6-earns-3-79-billion-in-one-day-as-1121",
-  "hero-counter-estes-mobile-legends-1121"
+  "djmax-respect-v-x-zenless-zone-zero-1121"
  ],
  "calls": [
   [
    "visual",
    {
     "in": 4,
-    "out": 347,
-    "cache_read": 9905,
-    "cache_write": 1988,
-    "usd": 0.0,
-    "list_usd": 0.00067
-   }
-  ],
-  [
-   "visual",
-   {
-    "in": 4,
-    "out": 339,
-    "cache_read": 9920,
-    "cache_write": 1984,
-    "usd": 0.0,
-    "list_usd": 0.00067
-   }
-  ],
-  [
-   "visual",
-   {
-    "in": 4,
-    "out": 367,
-    "cache_read": 9916,
-    "cache_write": 1998,
+    "out": 362,
+    "cache_read": 9897,
+    "cache_write": 1978,
     "usd": 0.0,
     "list_usd": 0.00068
    }
@@ -43,77 +19,11 @@
    "writer",
    {
     "in": 2,
-    "out": 2095,
-    "cache_read": 1521,
-    "cache_write": 6957,
+    "out": 1269,
+    "cache_read": 0,
+    "cache_write": 7683,
     "usd": 0.0,
-    "list_usd": 0.04893
-   }
-  ],
-  [
-   "qc",
-   {
-    "in": 2,
-    "out": 2454,
-    "cache_read": 3035,
-    "cache_write": 5536,
-    "usd": 0.0,
-    "list_usd": 0.09398
-   }
-  ],
-  [
-   "visual",
-   {
-    "in": 4,
-    "out": 598,
-    "cache_read": 10488,
-    "cache_write": 2897,
-    "usd": 0.0,
-    "list_usd": 0.00098
-   }
-  ],
-  [
-   "visual",
-   {
-    "in": 8,
-    "out": 362,
-    "cache_read": 16007,
-    "cache_write": 2186,
-    "usd": 0.0,
-    "list_usd": 0.00078
-   }
-  ],
-  [
-   "writer",
-   {
-    "in": 2,
-    "out": 1198,
-    "cache_read": 3404,
-    "cache_write": 4523,
-    "usd": 0.0,
-    "list_usd": 0.03042
-   }
-  ],
-  [
-   "qc",
-   {
-    "in": 2,
-    "out": 3015,
-    "cache_read": 3035,
-    "cache_write": 4717,
-    "usd": 0.0,
-    "list_usd": 0.09865
-   }
-  ],
-  [
-   "writer",
-   {
-    "in": 2,
-    "out": 444,
-    "cache_read": 3404,
-    "cache_write": 5453,
-    "usd": 0.0,
-    "list_usd": 0.0266
+    "list_usd": 0.04343
    }
   ],
   [
@@ -122,18 +32,18 @@
     "in": 2,
     "out": 2183,
     "cache_read": 3035,
-    "cache_write": 4731,
+    "cache_write": 4515,
     "usd": 0.0,
-    "list_usd": 0.08212
+    "list_usd": 0.0804
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 372,
-    "cache_read": 10069,
-    "cache_write": 2152,
+    "out": 374,
+    "cache_read": 10098,
+    "cache_write": 2180,
     "usd": 0.0,
     "list_usd": 0.00072
    }
@@ -141,15 +51,10 @@
  ],
  "lines": [
   "== produce 2026-11-21 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
-  "  - lewati jujutsu-shenanigans-roblox-deep-di: satu-satunya gambar ditolak (text_card), diganti berita lain",
-  "  berita terpilih: 2",
+  "  berita terpilih: 1",
   "    - [popular/None] DJMAX RESPECT V Gaet Zenless Zone Zero Sebagai DLC Baru (Gamebrott.com, 1 gambar)",
-  "    - [gta/gta] GTA 6 earns $3.79 billion in one day as ‘the biggest entertainment launch in his (VGC, 1 gambar)",
   "  [a0] djmax-respect-v-x-zenless-zone-zero-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [a0] gta-6-earns-3-79-billion-in-one-day-as-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  pengganti (putaran 1): 1 berita",
-  "  [r10] hero-counter-estes-mobile-legends-1121: GAGAL — Gong 'Totalnya [[7]] hero counter Estes di MLBB' makes the list sound complete, as if only",
-  "  [r11] hero-counter-estes-mobile-legends-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "== selesai: 3/3 video siap/antre | 12 panggilan API | 128901 token masuk, 13774 keluar | biaya ~US$0.000"
+  "  ! hanya 1/3 berita lolos setelah 0 putaran pengganti (kandidat habis atau batas putaran tercapai)",
+  "== selesai: 1/3 video siap/antre | 4 panggilan API | 39398 token masuk, 4188 keluar | biaya ~US$0.000"
  ]
 }
