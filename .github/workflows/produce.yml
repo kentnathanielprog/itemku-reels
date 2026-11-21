@@ -20,8 +20,13 @@ jobs:
       - run: bash scripts/setup.sh
       - name: Offline self-test (no API) - stop early if the pipeline itself is broken
         run: bash tests/offline_test.sh
+      - name: Install Claude Code CLI (jalur B: pakai langganan Claude, tanpa saldo API)
+        if: ${{ !inputs.dry_run }}
+        run: npm install -g @anthropic-ai/claude-code
       - name: Produce
-        env: { ANTHROPIC_API_KEY: '${{ secrets.ANTHROPIC_API_KEY }}' }
+        env:
+          LLM_BACKEND: claude_cli
+          CLAUDE_CODE_OAUTH_TOKEN: '${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}'
         run: python3 auto/produce.py ${{ inputs.dry_run && '--dry-run' || '' }}
       - name: Commit state (queue, history, stories, usage log)
         run: |

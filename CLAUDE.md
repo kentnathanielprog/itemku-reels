@@ -4,7 +4,7 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 
 ## Golden rules (do not break)
 1. **Nothing is queued or posted without QC PASS + `verify_evidence.py` OK.** `auto/enqueue.py` refuses otherwise. Never bypass it, never hand-edit `auto/state/queue.json` (only set `status` to `archived`).
-2. **Secrets only as environment variables** (`ANTHROPIC_API_KEY`, `IG_USER_ID`, `IG_ACCESS_TOKEN`). Never print, log, commit or ask for them in chat. `.env` is git-ignored and unreadable here.
+2. **Secrets only as environment variables** (`ANTHROPIC_API_KEY` or `CLAUDE_CODE_OAUTH_TOKEN`, `IG_USER_ID`, `IG_ACCESS_TOKEN`). Never print, log, commit or ask for them in chat. `.env` is git-ignored and unreadable here.
 3. **Kill switch:** `touch auto/STOP` (commit it for CI) or set the repo variable `STOP=1` stops all posting (publish.py checks both). Remove to resume.
 4. **After changing pipeline code run `bash tests/offline_test.sh`** (about 40 s, no network, no API key). All checks must pass before you finish.
 5. **No unreviewed live posting while testing.** Use `python3 auto/publish.py --dry-run`. A live post cannot be deleted through the Graph API.
@@ -32,6 +32,11 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 - Topic cooldown (24 h per entity), queue-aware dedupe, keyword lists kept specific ("m8" matched a car), perishable "redeem code" lists and other stores' deals are denied.
 - `((highlight))` split across lines used to render raw; lint now rejects it. Numbers glued to units (24GB, 120Hz) are parsed by the verifier.
 - `publish.py --dry-run` must never write state (it once left a fake "publishing" item).
+
+## LLM backends (`auto/llm.py`)
+- `api` (default): Anthropic API, needs `ANTHROPIC_API_KEY` + balance.
+- `claude_cli` (path B, used by `produce.yml` via `LLM_BACKEND=claude_cli`): shells out to `claude -p` with `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`, run once in a terminal) = Claude subscription, no API balance, but it consumes subscription limits (about 4k tokens fixed overhead per call; 3 calls/day). Runs in a clean temp dir, tools off (Read only for vision). Probed locally with haiku (JSON + vision OK); not yet proven inside GitHub Actions. Check Anthropic's current terms for automated use of subscription tokens.
+- Offline test: `bash tests/offline_test.sh` stubs the CLI (no network).
 
 ## Status / honest gaps
 - **Not yet proven live:** Claude API calls from `llm.py` (structured output + `fallbacks`; falls back to a plain call if rejected), vision call, Meta Graph publishing + Insights field names, GitHub Actions workflows.

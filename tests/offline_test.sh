@@ -26,6 +26,19 @@ python3 - <<'PY' && ok "gambar buram/kosong/kembar dibuang otomatis" || bad "pem
 import sys; sys.path.insert(0,'auto'); import visual as V
 h,s=V.check_images(['out/test-story/imgs/img1.jpg','out/test-story/imgs/img1.jpg','out/test-story/imgs/img2.jpg']); assert 1 in h and 0 not in h and 2 not in h,(h,s)
 PY
+echo "== backend claude_cli (CLI palsu, tanpa jaringan)"
+STUB=$(mktemp -d); cat > $STUB/claude <<'SH'
+#!/bin/sh
+echo '{"is_error":false,"num_turns":1,"total_cost_usd":0.001,"usage":{"input_tokens":5,"output_tokens":7},"structured_output":{"ok":true,"kata":"halo"}}'
+SH
+chmod +x $STUB/claude
+PATH=$STUB:$PATH LLM_BACKEND=claude_cli CLAUDE_CODE_OAUTH_TOKEN=stub python3 - <<'PY' && ok "backend claude_cli: JSON valid + log pemakaian" || bad "backend claude_cli"
+import sys; sys.path.insert(0,'auto'); import llm
+d,u=llm.call_json('stub','s','u',{"type":"object","required":["ok","kata"]},'claude-haiku-5-5','low'); assert d=={'ok':True,'kata':'halo'} and u['usd']==0.0,(d,u)
+try: llm.call_json('stub','s','u',{"type":"object","required":["hilang"]},'claude-haiku-5-5','low'); raise SystemExit('harus gagal')
+except llm.LLMError: pass
+PY
+rm -rf $STUB
 echo "== producer offline (writer + QC + vision = jawaban tiruan; render + antrean sungguhan)"
 LLM_MOCK_DIR=tests/fixtures/mock python3 auto/produce.py --day 1999-01-01 --picks-file tests/fixtures/picks.json > /tmp/_produce.log 2>&1
 grep -q "LULUS" /tmp/_produce.log && ok "QC PASS + bukti terverifikasi" || bad "produser tidak meluluskan (lihat /tmp/_produce.log)"

@@ -8,7 +8,7 @@ Yang berperan sebagai server adalah **GitHub Actions**: mesin Linux milik GitHub
 | Akun | Untuk apa |
 |---|---|
 | GitHub | menjalankan jadwal + menyimpan kode dan state |
-| Anthropic Console (console.anthropic.com) | `ANTHROPIC_API_KEY` (penulis, QC, pemeriksa visual), ditagih per pemakaian |
+| Langganan Claude (jalur B, tanpa saldo API) | `CLAUDE_CODE_OAUTH_TOKEN` (penulis, QC, pemeriksa visual), memakai batas langganan |
 | Instagram Business/Creator + Meta for Developers | posting Reels via Graph API |
 
 ## 1. Buat repo privat
@@ -33,7 +33,7 @@ Cek akhir: di halaman repo harus terlihat folder `.github`, `auto`, `short`, `sc
 
 **GitHub:** repo -> **Settings** -> **Secrets and variables** -> **Actions**.
 - Tab **Secrets** -> **New repository secret**, tiga kali:
-  - `ANTHROPIC_API_KEY` = kunci dari Console
+  - `CLAUDE_CODE_OAUTH_TOKEN` = token dari perintah `claude setup-token` (jalankan sekali di terminal yang ada Claude Code; login dengan akun langganan Anda, salin token, tempel hanya di kolom secret GitHub, jangan di chat)
   - `IG_USER_ID` = ID akun Instagram profesional (dari langkah 5)
   - `IG_ACCESS_TOKEN` = token jangka panjang (dari langkah 5)
 - Tab **Variables** (opsional): `GRAPH_HOST` (`graph.instagram.com` atau `graph.facebook.com`), `GRAPH_VERSION` (mis. `v21.0`, cek yang terbaru di dokumentasi Meta), dan **`STOP`** (isi `1` kapan saja untuk menghentikan semua posting; hapus/kosongkan untuk melanjutkan).
@@ -81,7 +81,7 @@ Menghentikan: variabel repo `STOP=1` (menghentikan posting), atau **Actions -> w
 | Workflow tidak muncul di tab Actions | Folder `.github/workflows` tidak terunggah (lihat langkah 2C), atau Actions dinonaktifkan di Settings |
 | Jadwal tidak berjalan | Berkas harus ada di cabang utama; cek workflow tidak dalam status Disabled |
 | `git push` ditolak di langkah "Commit state" | Workflow permissions belum *Read and write* (langkah 3) |
-| `ANTHROPIC_API_KEY belum diisi` | Nama secret salah ketik, atau secret dibuat di *Environment*, bukan *Repository secrets* |
+| `CLAUDE_CODE_OAUTH_TOKEN belum diisi` | Nama secret salah ketik, atau secret dibuat di *Environment*, bukan *Repository secrets* |
 | Banyak berita "gagal ambil artikel" | Sebagian situs memblokir IP data center; sistem melewatinya dan memakai kandidat lain |
 | publish: "Tidak ada video jatuh tempo" | Slot belum tiba atau antrean kosong; untuk uji manual centang `force` |
 | publish: video tidak ditemukan | Artifact hanya disimpan 5 hari, atau produce gagal; jalankan produce lagi |
