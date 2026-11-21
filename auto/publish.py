@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Uploader (deterministic, no LLM): posts the next due video from state/queue.json to Instagram Reels via the official Graph API.
 usage: python3 publish.py [--dry-run] [--force]
-env: IG_USER_ID, IG_ACCESS_TOKEN, GRAPH_HOST (default graph.instagram.com), GRAPH_VERSION (default v21.0)
+env: IG_USER_ID, IG_ACCESS_TOKEN, GRAPH_HOST (default graph.facebook.com), GRAPH_VERSION (default v21.0)
 Idempotent: a half-finished post (container created) is resumed, never duplicated. Kill switch: file auto/STOP or env STOP=1.
 !! Endpoint/field names follow Meta's public docs at time of writing - verify against the current Reels publishing docs. !!"""
 import json,os,sys,time,pathlib,datetime as dt,urllib.request,urllib.parse
 ROOT=pathlib.Path(__file__).resolve().parent; BASE=ROOT.parent; ST=ROOT/'state'
 DRY='--dry-run' in sys.argv; FORCE='--force' in sys.argv
-HOST=os.environ.get('GRAPH_HOST','graph.facebook.com')   # Audio API needs Facebook Login host (not Instagram Login); VER=os.environ.get('GRAPH_VERSION','v21.0')
+HOST=os.environ.get('GRAPH_HOST','graph.facebook.com'); VER=os.environ.get('GRAPH_VERSION','v21.0')
 UID=os.environ.get('IG_USER_ID','<IG_USER_ID>'); TOK=os.environ.get('IG_ACCESS_TOKEN','')
 def rj(f): return json.loads((ST/f).read_text())
 def wj(f,d): (ST/f).write_text(json.dumps(d,ensure_ascii=False,indent=1))
