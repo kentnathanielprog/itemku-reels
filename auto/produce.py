@@ -78,12 +78,8 @@ def writer_call(items,prev=None):
     user=json.dumps({'stories':payload},ensure_ascii=False)
     data,u=llm.call_json('writer',WRITER,user,schemas.WRITER,L['writer_model'],L['writer_effort'],8000); USAGE.append(('writer',u)); return data['stories']
 def game_for_cta(it,w):
-    """MLBB/Roblox keep their fixed label. Other stories name the game only if the writer's game_name appears verbatim in the article and the CTA line fits 26 chars."""
-    lab=cfg['game_label'].get(it['cat'],'game')
-    if it['cat'] in ('mlbb','roblox'): return lab
-    g=(w.get('game_name') or '').strip(); hay=(it['art'].get('title','')+' '+it['art'].get('fulltext','')+' '+it['art'].get('clean','')).lower()
-    ok=2<=len(g)<=15 and not g.isdigit() and re.search(r'(?<!\w)'+re.escape(g.lower())+r'(?!\w)',hay) and len(f'kebutuhan {g} kamu')<=26
-    return g if ok else 'game'
+    """CLAUDE.md: the CTA label is ONLY MLBB / Roblox / game. Never name another game: QC rejects it as an itemku product claim (it did on 2026-11-21, killing the whole run)."""
+    return cfg['game_label'].get(it['cat'],'game')
 def cta_for(it,w):
     it['exp']=None; return cfg['cta']['A'].format(game=game_for_cta(it,w))
 def assemble(it,w):

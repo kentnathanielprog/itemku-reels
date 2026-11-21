@@ -2,8 +2,8 @@ S={"type":"string"}
 CAP={"type":"object","properties":{"text":S,"img":{"type":"array","items":{"type":"integer"}}},"required":["text","img"],"additionalProperties":False}
 WRITER={"type":"object","properties":{"stories":{"type":"array","items":{"type":"object","properties":{
   "id":S,"hook":CAP,"message":{"type":"array","items":CAP},"gong":CAP,"credit":S,"hashtags":{"type":"array","items":S},"topic":S,
-  "hook_type":{"type":"string","enum":["number","question","contrast","record","news"]},"caption_text":S,"game_name":S},
-  "required":["id","hook","message","gong","credit","hashtags","topic","hook_type","caption_text","game_name"],"additionalProperties":False}}},
+  "hook_type":{"type":"string","enum":["number","question","contrast","record","news"]},"caption_text":S},
+  "required":["id","hook","message","gong","credit","hashtags","topic","hook_type","caption_text"],"additionalProperties":False}}},
   "required":["stories"],"additionalProperties":False}
 QC={"type":"object","properties":{"reports":{"type":"array","items":{"type":"object","properties":{
   "id":S,"verdict":{"type":"string","enum":["PASS","FAIL"]},

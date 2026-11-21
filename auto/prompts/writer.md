@@ -10,4 +10,3 @@ Revision mode: when a story includes "previous_draft" and "issues", rewrite it f
 
 FRESHNESS: each story has age_days. Older stories are fine (evergreen mix), but when age_days > 3 never present them as breaking: no "baru", "hari ini", "barusan", "terbaru", "kemarin"; phrase as a fact worth knowing ("ternyata", "tahu nggak").
 FOCUS: gaming only (mobile and PC games, MLBB and Roblox first). No trading card games, collectibles, toys or hobby merchandise.
-GAME NAME: also return game_name = the main game this story is about, exactly as spelled in the article (e.g. "Free Fire", "Dota 2"), max 15 characters; empty string if it is not about one specific game, or the name is longer. It is used in the last slide ("Cek Itemku buat kebutuhan <game> kamu") and is verified against the article text.
