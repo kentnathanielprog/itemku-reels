@@ -1,0 +1,72 @@
+{
+ "images": [
+  "out/acer-perkenalkan-predator-atlas-8-hand-1121/imgs/img1.jpg",
+  "out/acer-perkenalkan-predator-atlas-8-hand-1121/imgs/img2.jpg",
+  "out/acer-perkenalkan-predator-atlas-8-hand-1121/imgs/img3.jpg"
+ ],
+ "out": "short-acer-perkenalkan-predator-atlas-8-hand-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Gamedaim",
+ "credit": "Gamedaim",
+ "hashtags": [
+  "PredatorAtlas8",
+  "Acer",
+  "HandheldGaming",
+  "GamingPC",
+  "Windows11",
+  "GamingIndonesia"
+ ],
+ "hook": {
+  "text": "Handheld ini jalanin\nWindows 11 secara penuh\nTunggu angka baterainya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Layarnya 8 inci dengan\nrefresh rate hingga 120Hz",
+   "img": [
+    1,
+    2
+   ]
+  },
+  {
+   "text": "Ditenagai Intel Arc G3\nExtreme dengan RAM 24GB",
+   "img": [
+    2,
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Baterainya berkapasitas\nhingga [[80]] Wh",
+  "img": [
+   0,
+   2
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Acer Predator Atlas 8 handheld gaming with desktop-class performance",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Acer Predator Atlas 8 jalanin Windows 11 secara penuh, dengan layar 8 inci dan baterai hingga 80 Wh. Menurut kamu, handheld kayak gini cocok nggak buat main gim PC?",
+ "experiment": {
+  "id": "cta",
+  "variant": "A"
+ }
+}

@@ -1,129 +1,97 @@
 {
  "day": "2026-11-21",
- "ok": [
-  "update-10-3-terrifier-balance-changes-1121"
- ],
+ "ok": [],
  "calls": [
   [
-   "writer",
+   "visual",
    {
-    "in": 2,
-    "out": 3983,
-    "cache_read": 0,
-    "cache_write": 11018,
+    "in": 4,
+    "out": 306,
+    "cache_read": 9921,
+    "cache_write": 1986,
     "usd": 0.0,
-    "list_usd": 0.08391
-   }
-  ],
-  [
-   "qc",
-   {
-    "in": 2,
-    "out": 5374,
-    "cache_read": 3035,
-    "cache_write": 8427,
-    "usd": 0.0,
-    "list_usd": 0.17551
-   }
-  ],
-  [
-   "writer",
-   {
-    "in": 2,
-    "out": 1929,
-    "cache_read": 3247,
-    "cache_write": 7892,
-    "usd": 0.0,
-    "list_usd": 0.05119
-   }
-  ],
-  [
-   "qc",
-   {
-    "in": 2,
-    "out": 3543,
-    "cache_read": 3035,
-    "cache_write": 6965,
-    "usd": 0.0,
-    "list_usd": 0.1272
-   }
-  ],
-  [
-   "writer",
-   {
-    "in": 2,
-    "out": 1412,
-    "cache_read": 3247,
-    "cache_write": 3630,
-    "usd": 0.0,
-    "list_usd": 0.02897
-   }
-  ],
-  [
-   "qc",
-   {
-    "in": 2,
-    "out": 2270,
-    "cache_read": 3035,
-    "cache_write": 3892,
-    "usd": 0.0,
-    "list_usd": 0.07715
-   }
-  ],
-  [
-   "writer",
-   {
-    "in": 6,
-    "out": 1336,
-    "cache_read": 10929,
-    "cache_write": 5349,
-    "usd": 0.0,
-    "list_usd": 0.03586
-   }
-  ],
-  [
-   "qc",
-   {
-    "in": 2,
-    "out": 2156,
-    "cache_read": 3035,
-    "cache_write": 3879,
-    "usd": 0.0,
-    "list_usd": 0.07477
+    "list_usd": 0.00065
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 1044,
-    "cache_read": 6744,
-    "cache_write": 7990,
+    "out": 266,
+    "cache_read": 9896,
+    "cache_write": 1961,
     "usd": 0.0,
-    "list_usd": 0.00219
+    "list_usd": 0.00062
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1170,
+    "cache_read": 3247,
+    "cache_write": 2775,
+    "usd": 0.0,
+    "list_usd": 0.02313
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1455,
+    "cache_read": 3035,
+    "cache_write": 2969,
+    "usd": 0.0,
+    "list_usd": 0.05347
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 6,
+    "out": 1447,
+    "cache_read": 10138,
+    "cache_write": 4660,
+    "usd": 0.0,
+    "list_usd": 0.03414
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2155,
+    "cache_read": 3035,
+    "cache_write": 2984,
+    "usd": 0.0,
+    "list_usd": 0.06759
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 235,
+    "cache_read": 9878,
+    "cache_write": 1941,
+    "usd": 0.0,
+    "list_usd": 0.0006
    }
   ]
  ],
  "lines": [
   "== produce 2026-11-21 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
-  "  berita terpilih: 3",
-  "    - [general/None] Dead by Daylight confirms Terrifier changes after its new Killer's PTB debut (PCGamesN, 2 gambar)",
-  "    - [mlbb/mlbb] Mobile Legends Raih Esports Mobile Game of the Year di Esports Awards 2026 (medcom.id, 1 gambar)",
-  "    - [roblox/roblox] The 10 Best Roblox Games to Play with Friends: Weekend List (November 20, 2026) (RBLXSTAT, 1 gambar)",
-  "  [a0] update-10-3-terrifier-balance-changes-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [a0] mobile-legends-raih-esports-mobile-gam-1121: GAGAL — Caption 'Kamu nonton M7 kemarin nggak?' uses the stale-prone relative-time word 'kemarin'.",
-  "  [a0] roblox-games-to-play-with-friends-this-1121: GAGAL — Gong 'Pemain aktifnya hampir [[65]] ribu orang' presents a one-time concurrent-player snap",
-  "  [a1] mobile-legends-raih-esports-mobile-gam-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [a1] roblox-games-to-play-with-friends-this-1121: GAGAL — Caption claim 'menurut data RBLXSTAT' cannot be quoted from the article text: the name RBL",
-  "  x roblox-games-to-play-with-friends-this-1121: dibuang setelah 1 revisi",
-  "  pengganti: 1 berita",
-  "  [r0] roblox-updates-and-records-2026-11-19-1121: GAGAL — caption_text has the relative time phrase 'minggu ini'. It is stale-prone in the same way ",
-  "  [r1] roblox-updates-and-records-2026-11-19-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [visual] update-10-3-terrifier-balance-chan: gambar dibuang AI #1:text_card",
-  "  [visual] mobile-legends-raih-esports-mobile: gambar dibuang AI #0:text_card",
-  "  x mobile-legends-raih-esports-mobile: dibuang, tidak ada gambar tersisa",
-  "  [visual] roblox-updates-and-records-2026-11: gambar dibuang AI #0:text_card",
-  "  x roblox-updates-and-records-2026-11: dibuang, tidak ada gambar tersisa",
-  "== selesai: 1/3 video siap/antre | 9 panggilan API | 95373 token masuk, 23047 keluar | biaya ~US$0.000"
+  "  - lewati jujutsu-shenanigans-roblox-deep-di: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-games-to-play-with-friends-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  berita terpilih: 1",
+  "    - [general/None] Acer Perkenalkan Predator Atlas 8, Handheld Gaming dengan Performa Kelas Desktop (Gamedaim, 3 gambar)",
+  "  [a0] acer-perkenalkan-predator-atlas-8-hand-1121: GAGAL — Gong is built on a time-limited launch promo price ('harga khusus' only 'Selama periode pe",
+  "  [a1] acer-perkenalkan-predator-atlas-8-hand-1121: GAGAL — Hook ('Handheld ini') and caption ('handheld kayak gini') call the device a 'handheld', bu",
+  "  x acer-perkenalkan-predator-atlas-8-hand-1121: dibuang setelah 1 revisi",
+  "  - lewati roblox-updates-and-records-2026-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  ! tidak ada kandidat pengganti lagi",
+  "  ! hanya 0/3 berita lolos setelah 1 putaran pengganti (kandidat habis atau batas putaran tercapai)",
+  "== selesai: 0/3 video siap/antre | 7 panggilan API | 68450 token masuk, 7034 keluar | biaya ~US$0.000"
  ]
 }

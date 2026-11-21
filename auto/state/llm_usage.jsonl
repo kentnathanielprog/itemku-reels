@@ -14,3 +14,10 @@
 {"t": 1795246928.0179267, "role": "visual", "model": "claude-haiku-5-5", "backend": "claude_cli", "turns": 6, "in": 4, "out": 1044, "cache_read": 6744, "cache_write": 7990, "usd": 0.0, "list_usd": 0.00219}
 {"t": 1795248961.2093437, "role": "visual", "model": "claude-haiku-5-5", "backend": "claude_cli", "turns": 3, "in": 4, "out": 345, "cache_read": 9800, "cache_write": 1864, "usd": 0.0, "list_usd": 0.00064}
 {"t": 1795248964.2664578, "role": "visual", "model": "claude-haiku-5-5", "backend": "claude_cli", "turns": 3, "in": 4, "out": 297, "cache_read": 9803, "cache_write": 1885, "usd": 0.0, "list_usd": 0.00062}
+{"t": 1795249342.2058802, "role": "visual", "model": "claude-haiku-5-5", "backend": "claude_cli", "turns": 3, "in": 4, "out": 306, "cache_read": 9921, "cache_write": 1986, "usd": 0.0, "list_usd": 0.00065}
+{"t": 1795249348.0997021, "role": "visual", "model": "claude-haiku-5-5", "backend": "claude_cli", "turns": 3, "in": 4, "out": 266, "cache_read": 9896, "cache_write": 1961, "usd": 0.0, "list_usd": 0.00062}
+{"t": 1795249357.9395313, "role": "writer", "model": "claude-sonnet-5-5", "backend": "claude_cli", "turns": 2, "in": 2, "out": 1170, "cache_read": 3247, "cache_write": 2775, "usd": 0.0, "list_usd": 0.02313}
+{"t": 1795249372.0463233, "role": "qc", "model": "claude-opus-5-5", "backend": "claude_cli", "turns": 2, "in": 2, "out": 1455, "cache_read": 3035, "cache_write": 2969, "usd": 0.0, "list_usd": 0.05347}
+{"t": 1795249385.2234387, "role": "writer", "model": "claude-sonnet-5-5", "backend": "claude_cli", "turns": 3, "in": 6, "out": 1447, "cache_read": 10138, "cache_write": 4660, "usd": 0.0, "list_usd": 0.03414}
+{"t": 1795249402.7239764, "role": "qc", "model": "claude-opus-5-5", "backend": "claude_cli", "turns": 2, "in": 2, "out": 2155, "cache_read": 3035, "cache_write": 2984, "usd": 0.0, "list_usd": 0.06759}
+{"t": 1795249406.9869788, "role": "visual", "model": "claude-haiku-5-5", "backend": "claude_cli", "turns": 3, "in": 4, "out": 235, "cache_read": 9878, "cache_write": 1941, "usd": 0.0, "list_usd": 0.0006}
