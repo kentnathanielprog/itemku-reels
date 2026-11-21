@@ -1,1 +1,98 @@
-{"tracks":[],"schema":{"file":"auto/music/x.mp3","title":"","artist":"","genre":"phonk|edm|epic|trap|dnb","bpm":0,"mood":["hype","dark"],"license":"cc0|cc-by|pixabay|yt-audio-library","attribution":"text required by CC-BY, else empty","source_url":"","start":0}}
+{
+ "tracks": [
+  {
+   "file": "assets/audio/pulse-arena.m4a",
+   "title": "Pulse Arena",
+   "genre": "edm",
+   "bpm": 128,
+   "mood": [
+    "hype",
+    "edm",
+    "energetic"
+   ],
+   "artist": "itemku Reels (synthesized)",
+   "license": "CC0-1.0",
+   "attribution": "",
+   "source_url": "short/music_gen.py (original, synthesized in this repo; see assets/audio/LICENSES.md)",
+   "start": 0
+  },
+  {
+   "file": "assets/audio/pixel-jump.m4a",
+   "title": "Pixel Jump",
+   "genre": "chip",
+   "bpm": 120,
+   "mood": [
+    "fun",
+    "upbeat",
+    "playful"
+   ],
+   "artist": "itemku Reels (synthesized)",
+   "license": "CC0-1.0",
+   "attribution": "",
+   "source_url": "short/music_gen.py (original, synthesized in this repo; see assets/audio/LICENSES.md)",
+   "start": 0
+  },
+  {
+   "file": "assets/audio/low-tide.m4a",
+   "title": "Low Tide",
+   "genre": "lofi",
+   "bpm": 84,
+   "mood": [
+    "chill",
+    "calm"
+   ],
+   "artist": "itemku Reels (synthesized)",
+   "license": "CC0-1.0",
+   "attribution": "",
+   "source_url": "short/music_gen.py (original, synthesized in this repo; see assets/audio/LICENSES.md)",
+   "start": 0
+  },
+  {
+   "file": "assets/audio/sunny-lane.m4a",
+   "title": "Sunny Lane",
+   "genre": "pop",
+   "bpm": 110,
+   "mood": [
+    "upbeat",
+    "fun",
+    "bright"
+   ],
+   "artist": "itemku Reels (synthesized)",
+   "license": "CC0-1.0",
+   "attribution": "",
+   "source_url": "short/music_gen.py (original, synthesized in this repo; see assets/audio/LICENSES.md)",
+   "start": 0
+  },
+  {
+   "file": "assets/audio/dark-alley.m4a",
+   "title": "Dark Alley",
+   "genre": "trap",
+   "bpm": 140,
+   "mood": [
+    "dark",
+    "trap",
+    "tense"
+   ],
+   "artist": "itemku Reels (synthesized)",
+   "license": "CC0-1.0",
+   "attribution": "",
+   "source_url": "short/music_gen.py (original, synthesized in this repo; see assets/audio/LICENSES.md)",
+   "start": 0
+  }
+ ],
+ "schema": {
+  "file": "auto/music/x.mp3",
+  "title": "",
+  "artist": "",
+  "genre": "phonk|edm|epic|trap|dnb",
+  "bpm": 0,
+  "mood": [
+   "hype",
+   "dark"
+  ],
+  "license": "cc0|cc-by|pixabay|yt-audio-library",
+  "attribution": "text required by CC-BY, else empty",
+  "source_url": "",
+  "start": 0
+ }
+}
