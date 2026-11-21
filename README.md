@@ -9,7 +9,6 @@ scout (scripts) -> fetch article+images -> WRITER (1 API call, all stories) -> l
 publish.py (cron x3, no LLM) -> Instagram Graph API -> insights.py -> (weekly learner, planned)
 ```
 
-**Tutorial server GitHub (tanpa laptop):** `TUTORIAL_GITHUB.md`.
 
 **Quick start** (needs Python 3.10+, Node 18+): `bash scripts/setup.sh && bash tests/offline_test.sh`, then read `SETUP.md` (Meta developer app, secrets, scheduling) and `CLAUDE.md` (rules for working in this repo with Claude Code).
 
