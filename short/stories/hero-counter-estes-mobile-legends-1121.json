@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/hero-counter-estes-mobile-legends-1121/imgs/img1.jpg"
+ ],
+ "out": "short-hero-counter-estes-mobile-legends-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Gamebrott.com",
+ "credit": "Gamebrott.com",
+ "hashtags": [
+  "mobilelegends",
+  "mlbb",
+  "estes",
+  "countermlbb",
+  "herosupport"
+ ],
+ "hook": {
+  "text": "Kesel sama heal Estes?\nIni 7 counter-nya,\ntunggu daftarnya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Ada Beatrix, Nolan,\nLuo Yi, dan Sora",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Ada juga Aamon, Natalia,\ndan Yin",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Itulah [[7]] hero\ncounter Estes\nversi Gamebrott",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Follow Itemku\nuntuk berita game",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "7 Hero Counter Estes in Mobile Legends",
+ "cat": "mlbb",
+ "hook_type": "question",
+ "caption_text": "Menurut Gamebrott, ada 7 hero yang bisa jadi counter Estes: Beatrix, Nolan, Luo Yi, Sora, Aamon, Natalia, dan Yin. Kamu biasanya pakai hero apa buat ngelawan Estes?",
+ "experiment": {
+  "id": "cta",
+  "variant": "B"
+ }
+}

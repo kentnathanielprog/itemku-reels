@@ -1,0 +1,69 @@
+{
+ "images": [
+  "out/djmax-respect-v-x-zenless-zone-zero-1121/imgs/img1.jpg"
+ ],
+ "out": "short-djmax-respect-v-x-zenless-zone-zero-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Gamebrott.com",
+ "credit": "Gamebrott",
+ "hashtags": [
+  "ZenlessZoneZero",
+  "ZZZ",
+  "DJMAXRESPECTV",
+  "gamerhythm",
+  "kolaborasi",
+  "beritagame"
+ ],
+ "hook": {
+  "text": "Zenless Zone Zero kolab\nsama game rhythm nih\ntunggu namanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Game rhythm-nya\nDJMAX RESPECT V,\nbesutan NEOWIZ",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "DLC-nya berisi musik\ndari Zenless Zone Zero\nmasuk ke DJMAX RESPECT V",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Masih dikembangkan,\nlagunya belum diumumkan\nbentuknya ((DLC musik))",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "DJMAX RESPECT V x Zenless Zone Zero DLC",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Zenless Zone Zero resmi kolab sama DJMAX RESPECT V lewat DLC musik, tapi daftar lagunya belum diumumkan. Lagu ZZZ mana nih yang paling kamu tunggu?",
+ "experiment": {
+  "id": "cta",
+  "variant": "A"
+ }
+}

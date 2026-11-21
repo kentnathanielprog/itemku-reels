@@ -1,195 +1,155 @@
 {
  "day": "2026-11-21",
  "ok": [
-  "pokemon-tcg-flowing-fists-release-date-1121",
-  "talking-point-what-are-you-playing-thi-1121",
-  "dev-says-their-steam-sales-were-148-ti-1121"
+  "djmax-respect-v-x-zenless-zone-zero-1121",
+  "gta-6-earns-3-79-billion-in-one-day-as-1121",
+  "hero-counter-estes-mobile-legends-1121"
  ],
  "calls": [
   [
    "visual",
    {
     "in": 4,
-    "out": 325,
-    "cache_read": 5738,
-    "cache_write": 6060,
+    "out": 347,
+    "cache_read": 9905,
+    "cache_write": 1988,
     "usd": 0.0,
-    "list_usd": 0.00143
+    "list_usd": 0.00067
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 322,
-    "cache_read": 9912,
-    "cache_write": 1974,
+    "out": 339,
+    "cache_read": 9920,
+    "cache_write": 1984,
     "usd": 0.0,
-    "list_usd": 0.00066
+    "list_usd": 0.00067
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 367,
+    "cache_read": 9916,
+    "cache_write": 1998,
+    "usd": 0.0,
+    "list_usd": 0.00068
    }
   ],
   [
    "writer",
    {
     "in": 2,
-    "out": 2937,
-    "cache_read": 0,
-    "cache_write": 9700,
+    "out": 2095,
+    "cache_read": 1521,
+    "cache_write": 6957,
     "usd": 0.0,
-    "list_usd": 0.06817
+    "list_usd": 0.04893
    }
   ],
   [
    "qc",
    {
     "in": 2,
-    "out": 3298,
-    "cache_read": 0,
-    "cache_write": 9996,
-    "usd": 0.0,
-    "list_usd": 0.14594
-   }
-  ],
-  [
-   "writer",
-   {
-    "in": 2,
-    "out": 1201,
-    "cache_read": 3247,
-    "cache_write": 5253,
-    "usd": 0.0,
-    "list_usd": 0.03335
-   }
-  ],
-  [
-   "qc",
-   {
-    "in": 2,
-    "out": 3021,
+    "out": 2454,
     "cache_read": 3035,
-    "cache_write": 4363,
+    "cache_write": 5536,
     "usd": 0.0,
-    "list_usd": 0.09594
+    "list_usd": 0.09398
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 802,
-    "cache_read": 10494,
-    "cache_write": 3199,
+    "out": 598,
+    "cache_read": 10488,
+    "cache_write": 2897,
     "usd": 0.0,
-    "list_usd": 0.00115
+    "list_usd": 0.00098
    }
   ],
   [
    "visual",
    {
-    "in": 4,
-    "out": 263,
-    "cache_read": 9891,
-    "cache_write": 1954,
+    "in": 8,
+    "out": 362,
+    "cache_read": 16007,
+    "cache_write": 2186,
     "usd": 0.0,
-    "list_usd": 0.00062
-   }
-  ],
-  [
-   "visual",
-   {
-    "in": 4,
-    "out": 301,
-    "cache_read": 9878,
-    "cache_write": 1942,
-    "usd": 0.0,
-    "list_usd": 0.00064
-   }
-  ],
-  [
-   "visual",
-   {
-    "in": 4,
-    "out": 650,
-    "cache_read": 9903,
-    "cache_write": 1987,
-    "usd": 0.0,
-    "list_usd": 0.00082
+    "list_usd": 0.00078
    }
   ],
   [
    "writer",
    {
     "in": 2,
-    "out": 1345,
-    "cache_read": 3247,
-    "cache_write": 3794,
+    "out": 1198,
+    "cache_read": 3404,
+    "cache_write": 4523,
     "usd": 0.0,
-    "list_usd": 0.02895
+    "list_usd": 0.03042
    }
   ],
   [
    "qc",
    {
     "in": 2,
-    "out": 2309,
+    "out": 3015,
     "cache_read": 3035,
-    "cache_write": 4046,
+    "cache_write": 4717,
     "usd": 0.0,
-    "list_usd": 0.07916
+    "list_usd": 0.09865
    }
   ],
   [
    "writer",
    {
     "in": 2,
-    "out": 1603,
-    "cache_read": 3247,
-    "cache_write": 4650,
+    "out": 444,
+    "cache_read": 3404,
+    "cache_write": 5453,
     "usd": 0.0,
-    "list_usd": 0.03496
+    "list_usd": 0.0266
    }
   ],
   [
    "qc",
    {
     "in": 2,
-    "out": 2162,
+    "out": 2183,
     "cache_read": 3035,
-    "cache_write": 4050,
+    "cache_write": 4731,
     "usd": 0.0,
-    "list_usd": 0.07626
+    "list_usd": 0.08212
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 994,
-    "cache_read": 10200,
-    "cache_write": 2795,
+    "out": 372,
+    "cache_read": 10069,
+    "cache_write": 2152,
     "usd": 0.0,
-    "list_usd": 0.00116
+    "list_usd": 0.00072
    }
   ]
  ],
  "lines": [
   "== produce 2026-11-21 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
-  "  [visual] pokemon-tcg-flowing-fists-release-: gambar dibuang otomatis #1:blurry",
   "  - lewati jujutsu-shenanigans-roblox-deep-di: satu-satunya gambar ditolak (text_card), diganti berita lain",
   "  berita terpilih: 2",
-  "    - [general/None] What Are You Playing This Weekend? (21st November) (Nintendo Life, 1 gambar)",
-  "    - [popular/None] Pokémon TCG Flowing Fists expansion arrives February 6, 2027 (GGRecon, 2 gambar)",
-  "  [a0] talking-point-what-are-you-playing-thi-1121: GAGAL — Live poll yang masih berjalan (artikel '24 mins ago'): angka 59 suara dan 17 suara hanyala",
-  "  [a0] pokemon-tcg-flowing-fists-release-date-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [a1] talking-point-what-are-you-playing-thi-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [visual] pokemon-tcg-flowing-fists-release-: gambar dibuang AI #1:ad_or_unrelated",
-  "  - lewati roblox-games-to-play-with-friends-: satu-satunya gambar ditolak (text_card), diganti berita lain",
-  "  - lewati roblox-updates-and-records-2026-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
-  "  - lewati pokemon-to-hold-family-focused-tcg: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "    - [popular/None] DJMAX RESPECT V Gaet Zenless Zone Zero Sebagai DLC Baru (Gamebrott.com, 1 gambar)",
+  "    - [gta/gta] GTA 6 earns $3.79 billion in one day as ‘the biggest entertainment launch in his (VGC, 1 gambar)",
+  "  [a0] djmax-respect-v-x-zenless-zone-zero-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a0] gta-6-earns-3-79-billion-in-one-day-as-1121: LULUS (QC PASS + bukti terverifikasi)",
   "  pengganti (putaran 1): 1 berita",
-  "  [r10] dev-says-their-steam-sales-were-148-ti-1121: GAGAL — Gong drops the qualifier 'across PC': the article's 6/3/1 split covers PC copies only (the",
-  "  [r11] dev-says-their-steam-sales-were-148-ti-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [visual] dev-says-their-steam-sales-were-14: gambar dibuang AI #1:off_topic",
-  "== selesai: 3/3 video siap/antre | 15 panggilan API | 150669 token masuk, 21533 keluar | biaya ~US$0.000"
+  "  [r10] hero-counter-estes-mobile-legends-1121: GAGAL — Gong 'Totalnya [[7]] hero counter Estes di MLBB' makes the list sound complete, as if only",
+  "  [r11] hero-counter-estes-mobile-legends-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "== selesai: 3/3 video siap/antre | 12 panggilan API | 128901 token masuk, 13774 keluar | biaya ~US$0.000"
  ]
 }

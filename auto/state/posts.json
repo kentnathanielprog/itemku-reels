@@ -55,5 +55,26 @@
   "n_images": 1,
   "posted_slot": "12:00",
   "video": "out/short-pokemon-tcg-flowing-fists-release-date-1121/short.mp4"
+ },
+ {
+  "id": "hero-counter-estes-mobile-legends-1121",
+  "media_id": "18137734573672402",
+  "permalink": "https://www.instagram.com/reel/DgADrGKgul6/",
+  "posted_at": "2026-11-21T10:51:16.166920+00:00",
+  "cat": "mlbb",
+  "topic": "7 Hero Counter Estes in Mobile Legends",
+  "hook_type": "question",
+  "music": {
+   "audio_id": "1108285910189784",
+   "title": "Knockout",
+   "artist": "Adam Griffith"
+  },
+  "experiment": {
+   "id": "cta",
+   "variant": "B"
+  },
+  "n_images": 1,
+  "posted_slot": "07:30",
+  "video": "out/short-hero-counter-estes-mobile-legends-1121/short.mp4"
  }
 ]
