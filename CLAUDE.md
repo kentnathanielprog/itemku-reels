@@ -23,7 +23,7 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 ## Map
 - `auto/produce.py` - the daily producer (one command). `scout.py` candidates, `llm.py` API wrapper (+ usage log), `schemas.py`, `prompts/` (writer, qc, visual), `verify_evidence.py`, `visual.py`, `enqueue.py`, `publish.py` (Graph API), `insights.py`, `plan.py`, `music.py`, `imagepool.py`, `config.json`, `state/` (queue, history, posts, metrics, playbook, usage log, runlog).
 - `short/` - renderer and tooling: `make_video.py` (new/build/find), `story.py`, `make_short.py` (ffmpeg composition, cached overlays), `render_jobs.js` (one Playwright browser), `overlay_*.html`, `assets/frame_fg.png` (official template), `lint.py`, `qa.py`, `fetch_news.py`, `find_news.py`, `sources.json`, `WORKFLOW.md`.
-- `tests/offline_test.sh` + `tests/make_fixtures.py` - synthetic end-to-end test. `scripts/` - `setup.sh`, `status.py`. `.github/workflows/` - scheduled produce/publish (untested on GitHub).
+- `tests/offline_test.sh` + `tests/make_fixtures.py` - synthetic end-to-end test. `scripts/` - `setup.sh`, `status.py`. Scheduling: Claude cloud scheduled tasks (`scripts/session_run.sh`); the GitHub Actions workflows were removed (they only produced error emails).
 - `auto/agents/*.md` are long-form role specs (reference); the compact prompts actually sent to the API are in `auto/prompts/`.
 
 ## Commands
@@ -40,7 +40,7 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 
 ## LLM backends (`auto/llm.py`)
 - `api` (default): Anthropic API, needs `ANTHROPIC_API_KEY` + balance.
-- `claude_cli` (path B, used by `produce.yml` via `LLM_BACKEND=claude_cli`): shells out to `claude -p` with `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`, run once in a terminal) = Claude subscription, no API balance, but it consumes subscription limits (about 4k tokens fixed overhead per call; 3 calls/day). Runs in a clean temp dir, tools off (Read only for vision). Probed locally with haiku (JSON + vision OK); not yet proven inside GitHub Actions. Check Anthropic's current terms for automated use of subscription tokens.
+- `claude_cli` (path B, set with `LLM_BACKEND=claude_cli`; `session_run.sh produce` uses it with the session's own login): shells out to `claude -p` with `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`, run once in a terminal) = Claude subscription, no API balance, but it consumes subscription limits (about 4k tokens fixed overhead per call; 3 calls/day). Runs in a clean temp dir, tools off (Read only for vision). Probed locally with haiku (JSON + vision OK); not yet proven inside GitHub Actions. Check Anthropic's current terms for automated use of subscription tokens.
 - Offline test: `bash tests/offline_test.sh` stubs the CLI (no network).
 
 ## Music (Instagram Audio API, `auto/ig_audio.py`)
@@ -49,6 +49,6 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 - Opt-in: `config.json -> audio.enabled` (false = silent). NOT verified live: Indonesian availability, resumable upload combined with `audio_configuration`, `is_ads_eligible` (brand account: check before boosting a post).
 
 ## Status / honest gaps
-- **Not yet proven live:** Claude API calls from `llm.py` (structured output + `fallbacks`; falls back to a plain call if rejected), vision call, Meta Graph publishing + Insights field names, GitHub Actions workflows.
+- **Not yet proven live:** Claude API calls from `llm.py` (structured output + `fallbacks`; falls back to a plain call if rejected), vision call, Meta Graph publishing + Insights field names, (GitHub Actions workflows removed).
 - **Not built yet:** weekly learner (`auto/learn.py`; spec in `auto/agents/learner.md`, `playbook.json` already exists), licensed music catalog (empty), visual check of the final rendered video beyond blank-frame detection.
 - **Open decisions:** model per role (`config.json -> llm`, default claude-opus-5-5; claude-sonnet-5-5 / claude-haiku-5-5 are cheaper), run schedule outside a Claude session (recommended) vs Claude cloud scheduled tasks, topic denylist wording, category weights vs general news.

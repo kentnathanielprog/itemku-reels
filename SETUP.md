@@ -31,10 +31,10 @@ Checklist (verify each item against Meta's current docs; names change):
 4. Get `IG_USER_ID` and a long-lived token (about 60 days: **add a refresh reminder**). Store both as secrets/env vars.
 5. Test with `python3 auto/publish.py --dry-run`, then ONE live post on a test account before enabling the schedule. Posts cannot be deleted via API.
 
-> Panduan langkah demi langkah untuk GitHub Actions: `TUTORIAL_GITHUB.md`.
+> GitHub Actions tidak dipakai lagi (workflow dihapus karena hanya menghasilkan email error). Jadwal berjalan lewat scheduled task di cloud Claude (`scripts/session_run.sh`).
 
 ## 5. Scheduling
-**Recommended: GitHub Actions** (`.github/workflows/`, no Claude session = no subscription tokens). Add repo secrets `CLAUDE_CODE_OAUTH_TOKEN` (path B, subscription; or switch `produce.yml` back to `ANTHROPIC_API_KEY` + `LLM_BACKEND=api`), `IG_USER_ID`, `IG_ACCESS_TOKEN` (optional variables `GRAPH_HOST`, `GRAPH_VERSION`). Run **produce** once manually ("Run workflow") and read the log; then **publish** with dry-run on; only then let the cron run. Times (WIB): produce 05:27, publish 07:33 / 12:07 / 17:03. The workflows are untested on GitHub.
+**Current: Claude cloud scheduled tasks** (`scripts/session_run.sh produce|publish`; the old GitHub Actions workflows were removed). Add repo secrets `CLAUDE_CODE_OAUTH_TOKEN` (path B, subscription; or switch `produce.yml` back to `ANTHROPIC_API_KEY` + `LLM_BACKEND=api`), `IG_USER_ID`, `IG_ACCESS_TOKEN` (optional variables `GRAPH_HOST`, `GRAPH_VERSION`). Run **produce** once manually ("Run workflow") and read the log; then **publish** with dry-run on; only then let the cron run. Times (WIB): produce 05:27, publish 07:33 / 12:07 / 17:03. The workflows are untested on GitHub.
 **Alternative: Claude Code cloud scheduled tasks** (each firing opens a full Claude session, which costs subscription tokens):
 - Producer prompt: "Run `python3 auto/produce.py`, commit and push `auto/state` and `short/stories`, report the last 5 output lines."
 - Publisher prompt: "Run `python3 auto/publish.py` then `python3 auto/insights.py`, commit and push `auto/state`, report the permalink or error."
