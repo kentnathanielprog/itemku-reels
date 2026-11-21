@@ -86,5 +86,21 @@ for u in out[:MAXI*5]:
     hashes.append(hh)
     f=D/f'img{len(saved)+1}.jpg'; im.save(f,quality=92); saved.append({'file':str(f),'w':w,'h':h,'url':u})
     if len(saved)>=MAXI: break
+# ---- extra images from topical same-site pages (only when the article itself gave < 3): their og:image, same quality gates, tagged src=related
+if len(saved)<3:
+    import imgextra
+    for ru in imgextra.related_links(scope,url,title,max_n=3):
+        try:
+            rp=get(ru); m=re.search(r'<meta[^>]+(?:property|name)="og:image"[^>]+content="([^"]*)"',rp) or re.search(r'<meta[^>]+content="([^"]*)"[^>]+(?:property|name)="og:image"',rp)
+            if not m: continue
+            u=upgrade(urllib.parse.urljoin(ru,html.unescape(m.group(1)).strip()))
+            if bad.search(u) or not re.search(r'\.(jpe?g|png|webp)',u,re.I) or re.sub(r'[-_]\d+x\d+|\?.*','',u) in seen: continue
+            im=Image.open(io.BytesIO(get(u,True))).convert('RGB'); w,h=im.size
+            if w<800 or not .5<w/h<2.6: continue
+            hh=ahash(im)
+            if any(sum(x!=y for x,y in zip(hh,o))<=12 for o in hashes): continue
+            hashes.append(hh); seen.add(re.sub(r'[-_]\d+x\d+|\?.*','',u)); f=D/f'img{len(saved)+1}.jpg'; im.save(f,quality=92); saved.append({'file':str(f),'w':w,'h':h,'url':u,'src':'related','page':ru})
+        except Exception: continue
+        if len(saved)>=3: break
 json.dump({'url':url,'title':title,'date':date,'site':site,'desc':desc,'summary':summary,'fulltext':flat_all[:40000],'clean':clean_text,'images':saved},open(D.parent/'article.json','w'),ensure_ascii=False,indent=1)
 print(f'TITLE: {title}\nSITE: {site} | DATE: {date[:10]}\nDESC: {desc}\nTEXT: {summary[:700]}\nIMAGES({len(saved)}): '+', '.join(f"{pathlib.Path(s["file"]).name}={s["w"]}x{s["h"]}" for s in saved)+f'\nDIR: {D}')

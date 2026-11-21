@@ -18,6 +18,7 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 - **Every caption ends with the hashtags and always includes `#itemku`** (added by `enqueue.py` if the writer forgot).
 - **Focus:** gaming only, mobile and PC first (MLBB and Roblox get a score bonus via `config.json -> cat_bonus`); no TCG/collectibles/toys/hobby merchandise (denylist); console-only sites are not scouted. Older stories (up to 30 days for MLBB/Roblox) are allowed as an evergreen mix, but the writer must not call them breaking news (`age_days`).
 - **Reel cover is always the frame at second 2**: `publish.py` sends `thumb_offset=2000` (ms) on every container (`config.json -> cover_offset_ms`; Meta ignores it only if a `cover_url` is also sent, so never send one). The template shows the hook text by then.
+- **Images:** one real image is enough (never reject a story only for having a single picture), but prefer 3 so the video is not boring: article images >= 1000 px, then 800-999 px, then the og:image of topical same-site pages (>= 3 shared non-generic words with the title), then the franchise pool. A card that is only text/UI with no real picture is always rejected (vision check). `shots.py` gives every repeat of the same image a different crop and alternating zoom. Code: `auto/imagesel.py`, `short/imgextra.py`; test: `tests/image_rules_test.py`.
 - Video is silent by default (a silent AAC track is added); music only from licensed tracks in `auto/music/catalog.json`.
 
 ## Map

@@ -8,7 +8,7 @@ env: ANTHROPIC_API_KEY (or LLM_MOCK_DIR=auto/mock for an offline test)"""
 import sys,json,subprocess,pathlib,datetime as dt,re,os,time,random
 ROOT=pathlib.Path(__file__).resolve().parent; BASE=ROOT.parent; ST=ROOT/'state'
 sys.path[:0]=[str(ROOT),str(BASE/'short')]
-import llm,schemas,verify_evidence as VE,enqueue as EQ,imagepool,music,visual as V
+import llm,schemas,verify_evidence as VE,enqueue as EQ,imagepool,imagesel,music,visual as V
 from lint import lint
 A=sys.argv[1:]; DRY='--dry-run' in A; NORENDER='--no-render' in A; NOENQ='--no-enqueue' in A
 cfg=json.loads((ROOT/'config.json').read_text()); L=cfg['llm']; pb=json.loads((ST/'playbook.json').read_text())
@@ -53,7 +53,7 @@ def prep(p):
     name=slug(p['url'],p['title']); r=sh('python3','-W','ignore',str(BASE/'short'/'fetch_news.py'),p['url'],name,'6')
     f=BASE/'out'/name/'article.json'
     if r.returncode or not f.exists(): say(f"  - lewati {name}: gagal ambil artikel"); return None
-    art=json.loads(f.read_text()); imgs=[str(pathlib.Path(i['file']).relative_to(BASE)) for i in art['images'] if i['w']>=1000]
+    art=json.loads(f.read_text()); imgs=imagesel.select([{'file':str(pathlib.Path(i['file']).relative_to(BASE)),'w':i['w'],'src':i.get('src')} for i in art['images']],min_images=cfg.get('min_images',1))   # 1 real image is enough; prefer 3 (see auto/imagesel.py)
     if len(imgs)<3 and p.get('entity'): imgs+=imagepool.pool(p['entity'],3-len(imgs),exclude=tuple(imgs))
     if len(imgs)<cfg.get('min_images',1) or len(art.get('fulltext',''))<500: say(f"  - lewati {name}: gambar/teks kurang"); return None
     it={'id':name,'cat':p['cat'],'entity':p.get('entity'),'images':imgs,'art':art,'url':p['url'],'age_h':p.get('age_h')}

@@ -25,22 +25,29 @@ def build(images,dur,cuts,out,max_shot=2.6):
     return len(segs)
 
 
-def build_caps(images,dur,segments,out,max_shot=2.6):
-    """segments: list of (start,end,[image indices] or None). One shot per listed image (equal split); None -> auto cycle.
-    A repeated image automatically gets a different crop (wide / close-up / left / right / top)."""
-    inputs=[];flt=[];labels=[];usage={};k=0;auto=0
-    for p in images: inputs+=['-i',p]
-    plan_=[]
+def shot_plan(n_images,segments,max_shot=2.6):
+    """Pure planning step of build_caps (unit-tested). segments: [(start,end,[image indices] or None)].
+    Returns [(start,end,image_index,(zoom,x,y),'in'|'out')]: the Nth use of the SAME image gets the Nth crop variant (wide / close-up / left / right / top ...),
+    and the zoom direction alternates every shot, so one picture still looks different in every segment."""
+    usage={}; auto=0; plan_=[]
     for a,b,idx in segments:
         if not idx:
-            n=max(1,int(-(-(b-a)//max_shot))); idx=[(auto+j)%len(images) for j in range(n)]; auto+=n
+            n=max(1,int(-(-(b-a)//max_shot))); idx=[(auto+j)%n_images for j in range(n)]; auto+=n
         step=(b-a)/len(idx); plan_+=[(a+j*step,a+(j+1)*step,i) for j,i in enumerate(idx)]
-    frames=[round((b-a)*FPS) for a,b,_ in plan_]; frames[-1]+=round(dur*FPS)-sum(frames)
-    for (a,b,i),fr in zip(plan_,frames):
-        u=usage.get(i,0); usage[i]=u+1; f,px,py=VARIANTS[u%len(VARIANTS)]
-        z="min(1+0.0012*on,1.12)" if k%2==0 else "max(1.12-0.0012*on,1.0)"
+    out=[]
+    for k,(a,b,i) in enumerate(plan_):
+        u=usage.get(i,0); usage[i]=u+1; out.append((a,b,i,VARIANTS[u%len(VARIANTS)],'in' if k%2==0 else 'out'))
+    return out
+def build_caps(images,dur,segments,out,max_shot=2.6):
+    """segments: list of (start,end,[image indices] or None). One shot per listed image (equal split); None -> auto cycle. See shot_plan for the crop/zoom rules."""
+    inputs=[];flt=[];labels=[]
+    for p in images: inputs+=['-i',p]
+    plan_=shot_plan(len(images),segments,max_shot)
+    frames=[round((b-a)*FPS) for a,b,*_ in plan_]; frames[-1]+=round(dur*FPS)-sum(frames)
+    for k,((a,b,i,(f,px,py),zd),fr) in enumerate(zip(plan_,frames)):
+        z="min(1+0.0012*on,1.12)" if zd=='in' else "max(1.12-0.0012*on,1.0)"
         flt.append(f"[{i}:v]crop='min(iw,ih*16/9)':'min(ih,iw*9/16)',crop=w=iw*{f}:h=ih*{f}:x=(iw-ow)*{px}:y=(ih-oh)*{py},scale=1620:-2,"
-                   f"zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={fr}:s=1080x608:fps={FPS},setsar=1[s{k}]"); labels.append(f'[s{k}]'); k+=1
+                   f"zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={fr}:s=1080x608:fps={FPS},setsar=1[s{k}]"); labels.append(f'[s{k}]')
     flt.append(''.join(labels)+f"concat=n={len(labels)}:v=1:a=0")
     subprocess.run(['ffmpeg','-y','-loglevel','error']+inputs+['-filter_complex',';'.join(flt),'-c:v','libx264','-pix_fmt','yuv420p','-crf','17',out],check=True)
-    return k
+    return len(plan_)
