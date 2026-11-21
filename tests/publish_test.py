@@ -74,6 +74,47 @@ def _():
     t=make_tree([item('a')]); before=(t/'auto'/'state'/'queue.json').read_text(); code,out,f=run(t,['--dry-run']); assert code==0,out
     assert not f.calls,f.calls; assert (t/'auto'/'state'/'queue.json').read_text()==before
 
+# ---- (c) burst guard + not_before ---------------------------------------------------------------------------------------------------------
+WIB=dt.timezone(dt.timedelta(hours=7))
+def day_start(): return NOW.astimezone(WIB).replace(hour=0,minute=0,second=0,microsecond=0)
+def today_posts(n):
+    ds=day_start(); return [{'id':f'p{i}','media_id':f'm{i}','posted_at':iso(ds+dt.timedelta(seconds=5*(i+1)))} for i in range(n)]
+@case('burst: 3 posts already today (WIB) -> 4th is held, even with --force')
+def _():
+    if (NOW-day_start()).total_seconds()<30: return
+    t=make_tree([item('a')],posts=today_posts(3)); code,out,f=run(t,['--force']); assert code==0 and 'DITAHAN' in out and 'per hari' in out,out
+    assert not f.calls,f.calls; assert state(t,'queue.json')[0]['status']=='ready'
+@case('burst: --ignore-burst (manual) bypasses the daily cap')
+def _():
+    if (NOW-day_start()).total_seconds()<30: return
+    t=make_tree([item('a')],posts=today_posts(3)); code,out,f=run(t,['--ignore-burst']); assert code==0 and len(posted_calls(f))==1,out
+@case('burst: 2 posts today is still allowed (cap is 3)')
+def _():
+    if (NOW-day_start()).total_seconds()<3700: return      # right after WIB midnight the 60-min gap rule would apply instead
+    t=make_tree([item('a')],posts=today_posts(2)); code,out,f=run(t); assert code==0 and len(posted_calls(f))==1,out
+@case('burst: last post 30 min ago -> held (min gap 60 min)')
+def _():
+    t=make_tree([item('a')],posts=[{'id':'p','media_id':'m','posted_at':iso(NOW-dt.timedelta(minutes=30))}]); code,out,f=run(t); assert 'DITAHAN' in out and 'jarak minimal' in out,out
+    assert not f.calls,f.calls
+@case('burst: last post 61 min ago -> allowed')
+def _():
+    t=make_tree([item('a')],posts=[{'id':'p','media_id':'m','posted_at':iso(NOW-dt.timedelta(minutes=61))}]); code,out,f=run(t); assert len(posted_calls(f))==1,out
+@case('burst: dry-run reports the hold and makes no calls')
+def _():
+    t=make_tree([item('a')],posts=[{'id':'p','media_id':'m','posted_at':iso(NOW-dt.timedelta(minutes=5))}]); code,out,f=run(t,['--dry-run']); assert 'DITAHAN' in out and not f.calls,out
+@case('not_before in the future: refused without --force')
+def _():
+    t=make_tree([item('a',not_before=NOW+dt.timedelta(hours=5))]); code,out,f=run(t); assert code==0 and 'belum tiba' in out and not f.calls,out
+    assert state(t,'queue.json')[0]['status']=='ready'
+@case('not_before in the future: posted with --force (manual)')
+def _():
+    t=make_tree([item('a',not_before=NOW+dt.timedelta(hours=5))]); code,out,f=run(t,['--force']); assert len(posted_calls(f))==1,out
+@case('the 4-posts-in-43-minutes incident cannot repeat: with --force the 2nd post is held by the gap rule')
+def _():
+    t=make_tree([item('a',not_before=NOW+dt.timedelta(days=1)),item('b',not_before=NOW+dt.timedelta(days=1,minutes=1))])
+    c1,o1,f1=run(t,['--force']); assert len(posted_calls(f1))==1,o1
+    c2,o2,f2=run(t,['--force']); assert 'DITAHAN' in o2 and not f2.calls,o2
+
 if __name__=='__main__':
     bad=0
     for n,ok,msg in RES:

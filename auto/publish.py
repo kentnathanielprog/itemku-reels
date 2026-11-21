@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Uploader (deterministic, no LLM): posts the next due video from state/queue.json to Instagram Reels via the official Graph API.
-usage: python3 publish.py [--dry-run] [--force]
+usage: python3 publish.py [--dry-run] [--force] [--ignore-burst] [--id <queue id>]
+  --force = MANUAL ONLY: also post an item whose not_before has not arrived. --ignore-burst = MANUAL ONLY: skip the burst guard.
+  Burst guard (always on otherwise; config.json -> publish_guard, defaults 3/day, 60 min): max 3 posts per WIB day and >= 60 min since the last post.
 env: IG_USER_ID, IG_ACCESS_TOKEN, GRAPH_HOST (default graph.facebook.com), GRAPH_VERSION (default v21.0)
 Idempotent: a half-finished post (container created) is resumed, never duplicated. Kill switch: file auto/STOP or env STOP=1.
 !! Endpoint/field names follow Meta's public docs at time of writing - verify against the current Reels publishing docs. !!"""
 import json,os,sys,time,re,pathlib,datetime as dt,urllib.request,urllib.parse
 ROOT=pathlib.Path(__file__).resolve().parent; BASE=ROOT.parent; ST=ROOT/'state'
-DRY='--dry-run' in sys.argv; FORCE='--force' in sys.argv
+DRY='--dry-run' in sys.argv; FORCE='--force' in sys.argv; IGNORE_BURST='--ignore-burst' in sys.argv
 HOST=os.environ.get('GRAPH_HOST','graph.facebook.com'); VER=os.environ.get('GRAPH_VERSION','v21.0')
 UID=os.environ.get('IG_USER_ID','<IG_USER_ID>'); TOK=os.environ.get('IG_ACCESS_TOKEN','')
 def rj(f): return json.loads((ST/f).read_text())
@@ -33,14 +35,31 @@ def record_posted(q,it,media_id,permalink,when):
     posts=rj('posts.json')
     if media_id not in {x.get('media_id') for x in posts}: posts.append({k:it.get(k) for k in ('id','media_id','permalink','posted_at','cat','topic','hook_type','music','experiment','n_images','posted_slot','video')}); wj('posts.json',posts)
     h=rj('history.json'); h.append({'url':it.get('source_url'),'title':it.get('topic'),'date':when.isoformat(),'cat':it.get('cat')}); wj('history.json',h)
+def burst_block(q,now):
+    """Reason string if posting now would break the burst guard (max per WIB day, min gap since the last post), else None."""
+    g=json.loads((ROOT/'config.json').read_text()).get('publish_guard',{}); mx=int(g.get('max_per_day',3)); gap=int(g.get('min_gap_minutes',60))
+    wib=dt.timezone(dt.timedelta(hours=7)); seen=[]
+    for src in (rj('posts.json'),q):
+        for p in src:
+            if p.get('posted_at') and (src is not q or p.get('status')=='posted'):
+                try: seen.append(dt.datetime.fromisoformat(p['posted_at']))
+                except Exception: pass
+    seen=sorted(set(seen)); today=[x for x in seen if x.astimezone(wib).date()==now.astimezone(wib).date()]
+    if len(today)>=mx: return f'batas {mx} posting per hari (WIB) tercapai: {len(today)} sudah terbit hari ini'
+    if seen and now-seen[-1]<dt.timedelta(minutes=gap): return f'jarak minimal {gap} menit antar posting belum terpenuhi: posting terakhir {int((now-seen[-1]).total_seconds()//60)} menit lalu'
+    return None
 def main():
     if (ROOT/'STOP').exists() or os.environ.get('STOP')=='1': print('STOP aktif: tidak ada posting.'); return 0
     q=rj('queue.json'); now=dt.datetime.now(dt.timezone.utc)
     due=[x for x in q if x['status'] in ('ready','publishing') and (FORCE or dt.datetime.fromisoformat(x['not_before'])<=now)]
-    if not due: print('Tidak ada video jatuh tempo.'); return 0
+    if not due:
+        nxt=sorted((x for x in q if x['status']=='ready'),key=lambda x:x['not_before'])
+        print('Tidak ada video jatuh tempo.'+(f" Berikutnya: {nxt[0]['id']} pada {nxt[0]['not_before']} (belum tiba; --force hanya untuk panggilan manual)." if nxt else '')); return 0
     if '--id' in sys.argv: due=[x for x in due if x['id']==sys.argv[sys.argv.index('--id')+1]]       # post one specific queued item
     if not due: print('Tidak ada video jatuh tempo.'); return 0
     it=sorted(due,key=lambda x:x['not_before'])[0]; vid=BASE/it['video']; caption=it['caption']
+    why=None if IGNORE_BURST else burst_block(q,now)
+    if why: print(f"DITAHAN (guard burst): {why}. Tidak ada yang diposting: {it['id']} tetap di antrean."); return 0
     print(f"posting: {it['id']} ({vid.name}, {vid.stat().st_size/1e6:.1f}MB)")
     if not DRY:
         m=already_on_instagram(it)
