@@ -158,9 +158,14 @@ def finish(passed):
             r=sh('python3',str(BASE/'short'/'make_video.py'),'build',str(sp)); line=[l for l in r.stdout.splitlines() if 'QA' in l]
             if r.returncode or not line or 'OK' not in line[-1]: say(f"  x {it['id']}: render/QA gagal: {(line[-1] if line else r.stderr[-120:])}"); continue
         if not NOENQ:
-            used={x.get('posted_slot') for x in json.loads((ST/'queue.json').read_text()) if x.get('status') in ('ready','publishing') and x['id']!=it['id'] and (x.get('not_before') or '')[:10]==DAY or False}
-            free=[t for t in slots if t not in used] or slots
-            try: EQ.enqueue(str(sp),free[0],DAY)
+            qn=json.loads((ST/'queue.json').read_text()); wib=dt.timezone(dt.timedelta(hours=7)); day0=dt.date.fromisoformat(DAY); slot_day=None
+            for k in range(8):                                   # first day (today, then following days) that still has a free slot
+                dd=(day0+dt.timedelta(days=k)).isoformat()
+                used={x.get('posted_slot') for x in qn if x.get('status') in ('ready','publishing') and x['id']!=it['id'] and dt.datetime.fromisoformat(x['not_before']).astimezone(wib).date().isoformat()==dd}
+                free=[t for t in slots if t not in used]
+                if free: slot_day=dd; break
+            if not slot_day: say(f"  x {it['id']}: antrean 8 hari penuh"); continue
+            try: EQ.enqueue(str(sp),free[0],slot_day)
             except SystemExit as e: say(f"  x {it['id']}: ditolak antrean: {e}"); continue
         ok.append(it)
     return ok

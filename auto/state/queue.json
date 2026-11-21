@@ -49,5 +49,56 @@
   },
   "n_images": 1,
   "posted_slot": "17:00"
+ },
+ {
+  "id": "sakurai-celebrates-kirby-air-riders-fi-1121",
+  "status": "ready",
+  "not_before": "2026-11-22T00:30:00+00:00",
+  "video": "out/short-sakurai-celebrates-kirby-air-riders-fi-1121/short.mp4",
+  "caption": "Sakurai merayakan setahun Kirby Air Riders sambil ngomongin masa depannya sebagai game creator. Menurut kamu, game apa lagi yang masih kamu tunggu dari Sakurai?\n\nSumber: Nintendo Life | Gambar: Nintendo Life\n\n#kirbyairriders #sakurai #nintendoswitch2 #nintendo #gamingnews #itemku",
+  "cat": "general",
+  "topic": "Sakurai reflects on his future as Kirby Air Riders turns one",
+  "source_url": "https://www.nintendolife.com/news/2026/11/sakurai-celebrates-kirby-air-riders-first-anniversary-and-seemingly-ponders-his-future-as-a-game-creator",
+  "hook_type": "news",
+  "music": null,
+  "experiment": {
+   "id": "cta",
+   "variant": "A"
+  },
+  "n_images": 1,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "pokemon-champions-balance-patch-decemb-1121",
+  "status": "ready",
+  "not_before": "2026-11-22T05:00:00+00:00",
+  "video": "out/short-pokemon-champions-balance-patch-decemb-1121/short.mp4",
+  "caption": "Patch balance Pokémon Champions bakal bawa move baru buat para Eeveelution, sementara Rock Slide kena nerf di peluang flinch-nya. Kamu bakal pakai Eeveelution yang mana?\n\nSumber: GGRecon | Gambar: GGRecon\n\n#pokemonchampions #pokemon #eeveelution #balancepatch #nintendoswitch #itemku",
+  "cat": "popular",
+  "topic": "Pokémon Champions balance patch adds Play Rough for Eeveelutions",
+  "source_url": "https://www.ggrecon.com/articles/pokemon-champions-balance-patch-december-2/",
+  "hook_type": "news",
+  "music": null,
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00"
+ },
+ {
+  "id": "7-42-patch-notes-1121",
+  "status": "ready",
+  "not_before": "2026-11-22T10:00:00+00:00",
+  "video": "out/short-7-42-patch-notes-1121/short.mp4",
+  "caption": "Valve rilis patch 7.42 buat Dota 2 yang fokus bikin late game nggak berlarut-larut, mulai dari health hero sampai siege creep dan enam item baru. Menurut kamu, perubahan mana yang paling ngaruh ke meta?\n\nSumber: PCGamesN | Gambar: PCGamesN\n\n#dota2 #dota2patch #patch742 #valve #moba #gamingindonesia",
+  "cat": "popular",
+  "topic": "Dota 2 patch 7.42 targets the late game",
+  "source_url": "https://www.pcgamesn.com/dota-2/7-42-patch-notes",
+  "hook_type": "question",
+  "music": null,
+  "experiment": {
+   "id": "cta",
+   "variant": "B"
+  },
+  "n_images": 3,
+  "posted_slot": "17:00"
  }
 ]

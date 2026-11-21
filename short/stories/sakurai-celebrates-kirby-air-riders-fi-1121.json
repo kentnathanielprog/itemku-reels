@@ -1,0 +1,70 @@
+{
+ "images": [
+  "out/sakurai-celebrates-kirby-air-riders-fi-1121/imgs/img1.jpg"
+ ],
+ "out": "short-sakurai-celebrates-kirby-air-riders-fi-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Nintendo Life",
+ "credit": "Nintendo Life",
+ "hashtags": [
+  "kirbyairriders",
+  "sakurai",
+  "nintendoswitch2",
+  "nintendo",
+  "gamingnews",
+  "itemku"
+ ],
+ "hook": {
+  "text": "Sakurai lagi mikirin\nmasa depannya nih.\ntunggu kutipannya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Kirby Air Riders, game\nexclusive Switch 2,\nmerayakan setahun rilis",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Kata Sakurai, waktu cepat\nberlalu, seberapa banyak\nlagi yang bisa dia bikin?",
+   "img": [
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Tapi sekarang katanya dia\nmasih kerja dengan\n((full throttle))",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Sakurai reflects on his future as Kirby Air Riders turns one",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Sakurai merayakan setahun Kirby Air Riders sambil ngomongin masa depannya sebagai game creator. Menurut kamu, game apa lagi yang masih kamu tunggu dari Sakurai?",
+ "experiment": {
+  "id": "cta",
+  "variant": "A"
+ }
+}

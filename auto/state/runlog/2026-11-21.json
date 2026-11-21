@@ -1,97 +1,161 @@
 {
  "day": "2026-11-21",
- "ok": [],
+ "ok": [
+  "sakurai-celebrates-kirby-air-riders-fi-1121",
+  "pokemon-champions-balance-patch-decemb-1121",
+  "7-42-patch-notes-1121"
+ ],
  "calls": [
   [
    "visual",
    {
-    "in": 4,
-    "out": 306,
-    "cache_read": 9921,
-    "cache_write": 1986,
+    "in": 8,
+    "out": 465,
+    "cache_read": 16043,
+    "cache_write": 2299,
     "usd": 0.0,
-    "list_usd": 0.00065
+    "list_usd": 0.00085
    }
   ],
   [
    "visual",
-   {
-    "in": 4,
-    "out": 266,
-    "cache_read": 9896,
-    "cache_write": 1961,
-    "usd": 0.0,
-    "list_usd": 0.00062
-   }
-  ],
-  [
-   "writer",
-   {
-    "in": 2,
-    "out": 1170,
-    "cache_read": 3247,
-    "cache_write": 2775,
-    "usd": 0.0,
-    "list_usd": 0.02313
-   }
-  ],
-  [
-   "qc",
-   {
-    "in": 2,
-    "out": 1455,
-    "cache_read": 3035,
-    "cache_write": 2969,
-    "usd": 0.0,
-    "list_usd": 0.05347
-   }
-  ],
-  [
-   "writer",
    {
     "in": 6,
-    "out": 1447,
-    "cache_read": 10138,
-    "cache_write": 4660,
+    "out": 456,
+    "cache_read": 16031,
+    "cache_write": 2513,
     "usd": 0.0,
-    "list_usd": 0.03414
+    "list_usd": 0.00089
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 3326,
+    "cache_read": 3247,
+    "cache_write": 4436,
+    "usd": 0.0,
+    "list_usd": 0.05133
    }
   ],
   [
    "qc",
    {
     "in": 2,
-    "out": 2155,
+    "out": 2970,
     "cache_read": 3035,
-    "cache_write": 2984,
+    "cache_write": 4908,
     "usd": 0.0,
-    "list_usd": 0.06759
+    "list_usd": 0.09928
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2055,
+    "cache_read": 3247,
+    "cache_write": 5923,
+    "usd": 0.0,
+    "list_usd": 0.04457
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2200,
+    "cache_read": 3035,
+    "cache_write": 4910,
+    "usd": 0.0,
+    "list_usd": 0.0839
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 235,
-    "cache_read": 9878,
-    "cache_write": 1941,
+    "out": 1052,
+    "cache_read": 10588,
+    "cache_write": 3871,
     "usd": 0.0,
-    "list_usd": 0.0006
+    "list_usd": 0.00141
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 244,
+    "cache_read": 9889,
+    "cache_write": 1951,
+    "usd": 0.0,
+    "list_usd": 0.00061
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 248,
+    "cache_read": 9880,
+    "cache_write": 1945,
+    "usd": 0.0,
+    "list_usd": 0.00061
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1636,
+    "cache_read": 3247,
+    "cache_write": 3500,
+    "usd": 0.0,
+    "list_usd": 0.03069
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2159,
+    "cache_read": 3035,
+    "cache_write": 3752,
+    "usd": 0.0,
+    "list_usd": 0.07381
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 1576,
+    "cache_read": 10280,
+    "cache_write": 3603,
+    "usd": 0.0,
+    "list_usd": 0.00161
    }
   ]
  ],
  "lines": [
   "== produce 2026-11-21 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
+  "  [visual] pokemon-champions-balance-patch-de: gambar dibuang otomatis #2:blurry",
   "  - lewati jujutsu-shenanigans-roblox-deep-di: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  berita terpilih: 2",
+  "    - [general/None] Sakurai Celebrates Kirby Air Riders' First Anniversary And Seemingly Ponders His (Nintendo Life, 1 gambar)",
+  "    - [popular/None] Pokémon Champions balance patch lands on December 2 (GGRecon, 3 gambar)",
+  "  [a0] sakurai-celebrates-kirby-air-riders-fi-1121: GAGAL — Message 2 mistranslates the quote. 'I wonder how much more I'll be able to make' becomes '",
+  "  [a0] pokemon-champions-balance-patch-decemb-1121: GAGAL — Message 1 says 'sekarang bisa belajar Play Rough', but the patch has not landed yet (the a",
+  "  [a1] sakurai-celebrates-kirby-air-riders-fi-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a1] pokemon-champions-balance-patch-decemb-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] pokemon-champions-balance-patch-de: gambar dibuang AI #1:ad_or_unrelated, #2:ad_or_unrelated",
   "  - lewati roblox-games-to-play-with-friends-: satu-satunya gambar ditolak (text_card), diganti berita lain",
-  "  berita terpilih: 1",
-  "    - [general/None] Acer Perkenalkan Predator Atlas 8, Handheld Gaming dengan Performa Kelas Desktop (Gamedaim, 3 gambar)",
-  "  [a0] acer-perkenalkan-predator-atlas-8-hand-1121: GAGAL — Gong is built on a time-limited launch promo price ('harga khusus' only 'Selama periode pe",
-  "  [a1] acer-perkenalkan-predator-atlas-8-hand-1121: GAGAL — Hook ('Handheld ini') and caption ('handheld kayak gini') call the device a 'handheld', bu",
-  "  x acer-perkenalkan-predator-atlas-8-hand-1121: dibuang setelah 1 revisi",
   "  - lewati roblox-updates-and-records-2026-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
-  "  ! tidak ada kandidat pengganti lagi",
-  "  ! hanya 0/3 berita lolos setelah 1 putaran pengganti (kandidat habis atau batas putaran tercapai)",
-  "== selesai: 0/3 video siap/antre | 7 panggilan API | 68450 token masuk, 7034 keluar | biaya ~US$0.000"
+  "  pengganti (putaran 1): 1 berita",
+  "  [r10] 7-42-patch-notes-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] 7-42-patch-notes-1121: gambar dibuang AI #0:ad_or_unrelated, #2:text_card",
+  "== selesai: 3/3 video siap/antre | 12 panggilan API | 135210 token masuk, 18387 keluar | biaya ~US$0.000"
  ]
 }

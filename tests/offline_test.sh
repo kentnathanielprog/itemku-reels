@@ -2,9 +2,9 @@
 # Offline self-test: no network, no API key. Takes ~40 s (one real render). Safe: restores state afterwards.
 set -u; cd "$(dirname "$0")/.."; PASS=0; FAIL=0
 ok(){ echo "  ✓ $1"; PASS=$((PASS+1)); }; bad(){ echo "  ✗ $1"; FAIL=$((FAIL+1)); }
-cp auto/state/queue.json /tmp/_queue_backup.json; cp auto/state/history.json /tmp/_history_backup.json
+cp auto/state/queue.json /tmp/_queue_backup.json; cp auto/state/history.json /tmp/_history_backup.json; cp auto/state/llm_usage.jsonl /tmp/_usage_backup.jsonl 2>/dev/null || rm -f /tmp/_usage_backup.jsonl
 cleanup(){ cp /tmp/_queue_backup.json auto/state/queue.json; cp /tmp/_history_backup.json auto/state/history.json
-  rm -rf out/test-story out/short-test-story short/stories/test-story.json auto/state/runlog/1999-01-01.json 2>/dev/null; rm -f auto/state/llm_usage.jsonl; }
+  rm -rf out/test-story out/short-test-story short/stories/test-story.json auto/state/runlog/1999-01-01.json 2>/dev/null; rm -f auto/state/llm_usage.jsonl; [ -f /tmp/_usage_backup.jsonl ] && cp /tmp/_usage_backup.jsonl auto/state/llm_usage.jsonl; }
 trap cleanup EXIT
 echo "== fixtures"; python3 tests/make_fixtures.py >/dev/null && ok "fixtures dibuat" || { bad "fixtures"; exit 1; }
 echo "== unit checks"

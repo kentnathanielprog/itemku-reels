@@ -1,0 +1,62 @@
+{
+ "images": [
+  "out/pokemon-champions-balance-patch-decemb-1121/imgs/img1.jpg"
+ ],
+ "out": "short-pokemon-champions-balance-patch-decemb-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GGRecon",
+ "credit": "GGRecon",
+ "hashtags": [
+  "pokemonchampions",
+  "pokemon",
+  "eeveelution",
+  "balancepatch",
+  "nintendoswitch",
+  "itemku"
+ ],
+ "hook": {
+  "text": "Pokémon Champions bakal\ndapat patch balance.\ntunggu perubahannya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Eeveelution dari Vaporeon\nsampai Glaceon nanti bakal\nbisa belajar Play Rough",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Sementara itu, Rock Slide\nbakal kena nerf di peluang\nflinch-nya",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Umbreon juga bakal\ndapet ((Wonder Room))",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Pokémon Champions balance patch adds Play Rough for Eeveelutions",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Patch balance Pokémon Champions bakal bawa move baru buat para Eeveelution, sementara Rock Slide kena nerf di peluang flinch-nya. Kamu bakal pakai Eeveelution yang mana?",
+ "experiment": null
+}

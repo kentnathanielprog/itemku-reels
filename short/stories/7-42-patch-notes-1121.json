@@ -1,0 +1,69 @@
+{
+ "images": [
+  "out/7-42-patch-notes-1121/imgs/img2.jpg",
+  "out/7-42-patch-notes-1121/imgs/img4.jpg",
+  "out/7-42-patch-notes-1121/imgs/img5.jpg"
+ ],
+ "out": "short-7-42-patch-notes-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "PCGamesN",
+ "hashtags": [
+  "dota2",
+  "dota2patch",
+  "patch742",
+  "valve",
+  "moba",
+  "gamingindonesia"
+ ],
+ "hook": {
+  "text": "Match Dota 2 sering\nkelamaan? Valve bawa\nsolusinya, tunggu angkanya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Health dasar hero naik\n20%, tapi tambahan per\nStrength turun hampir 10%",
+   "img": [
+    0,
+    1
+   ]
+  },
+  {
+   "text": "Dari menit ke-30, siege\ncreep muncul lebih cepat\nbuat tekan bangunan",
+   "img": [
+    1,
+    2
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Ada [[6]] item baru,\ntermasuk Starforge\ndan Skypiercer",
+  "img": [
+   2
+  ]
+ },
+ "cta": {
+  "text": "Follow Itemku\nuntuk berita game",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Dota 2 patch 7.42 targets the late game",
+ "cat": "popular",
+ "hook_type": "question",
+ "caption_text": "Valve rilis patch 7.42 buat Dota 2 yang fokus bikin late game nggak berlarut-larut, mulai dari health hero sampai siege creep dan enam item baru. Menurut kamu, perubahan mana yang paling ngaruh ke meta?",
+ "experiment": {
+  "id": "cta",
+  "variant": "B"
+ }
+}
