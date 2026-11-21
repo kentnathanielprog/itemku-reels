@@ -1,0 +1,64 @@
+{
+ "images": [
+  "out/update-10-3-terrifier-balance-changes-1121/imgs/img1.jpg"
+ ],
+ "out": "short-update-10-3-terrifier-balance-changes-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "Behaviour Interactive",
+ "hashtags": [
+  "DeadByDaylight",
+  "DBD",
+  "TheTerrifier",
+  "ArtTheClown",
+  "GameNews"
+ ],
+ "hook": {
+  "text": "Art the Clown udah dites\ndi PTB DBD. Apa yang\nberubah? Tunggu ya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Bike Horn radiusnya\njadi lebih besar, Acid\nBottle jadi lebih lambat",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Duct Tape dan Explosive\nGift kena nerf kecil,\nJonathan's Skull dibuff",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Add-on Brooke's Pustule\n((dirework total))",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Dead by Daylight Terrifier changes after PTB",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Behaviour Interactive umumin perubahan buat The Terrifier di Dead by Daylight setelah PTB. Menurut kamu, perubahan mana yang paling pas?",
+ "experiment": {
+  "id": "cta",
+  "variant": "A"
+ }
+}

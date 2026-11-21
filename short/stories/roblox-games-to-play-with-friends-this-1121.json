@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/roblox-games-to-play-with-friends-this-1121/imgs/img1.jpg"
+ ],
+ "out": "short-roblox-games-to-play-with-friends-this-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "RBLXSTAT",
+ "credit": "RBLXSTAT",
+ "hashtags": [
+  "Roblox",
+  "ViolenceDistrict",
+  "RobloxIndonesia",
+  "GameBareng",
+  "MainBareng"
+ ],
+ "hook": {
+  "text": "Game Roblox apa yang lagi\nramai dimainin bareng\nteman? Tunggu angkanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Syaratnya: minimal 6\npemain satu server dan\ndisukai minimal 75%",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Violence District, game\nsurvival, punya 93%\nlike dari pemainnya",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Violence District punya\nrata-rata mingguan\nsekitar [[44]] ribu pemain",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Follow Itemku\nuntuk berita game",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Best Roblox games to play with friends",
+ "cat": "roblox",
+ "hook_type": "number",
+ "caption_text": "Violence District masuk daftar game Roblox yang cocok dimainin bareng teman, menurut data RBLXSTAT. Kamu biasanya main Roblox bareng siapa?",
+ "experiment": {
+  "id": "cta",
+  "variant": "B"
+ }
+}

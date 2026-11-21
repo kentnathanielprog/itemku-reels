@@ -9,14 +9,14 @@
  "source": "medcom.id",
  "credit": "Moonton",
  "hashtags": [
-  "mlbb",
-  "mobilelegends",
-  "esportsawards",
-  "m7",
-  "esports"
+  "MobileLegends",
+  "MLBB",
+  "EsportsAwards",
+  "M7",
+  "Moonton"
  ],
  "hook": {
-  "text": "MLBB menang Esports\nMobile Game of the Year!\nTunggu angkanya",
+  "text": "Mobile Legends menang\npenghargaan di Miami,\ntunggu angka M7-nya",
   "img": [
    0,
    0
@@ -24,14 +24,14 @@
  },
  "message": [
   {
-   "text": "Diumumkan di ajang\nEsports Awards 2026\ndi Miami, Amerika Serikat",
+   "text": "MLBB raih Esports Mobile\nGame of the Year di\nEsports Awards 2026",
    "img": [
     0,
     0
    ]
   },
   {
-   "text": "MLBB juga udah lebih\ndari 1,5 miliar instalasi\ndan 110 juta MAU",
+   "text": "MLBB juga udah punya\nlebih dari 1,5 miliar\ninstalasi, 110 juta MAU",
    "img": [
     0,
     0
@@ -39,14 +39,14 @@
   }
  ],
  "gong": {
-  "text": "Menurut Esports Charts,\nM7 tembus [[5,68]] juta\npenonton puncak",
+  "text": "Menurut Esports Charts,\nM7 catat [[5,68]] juta\nPeak Concurrent Viewers",
   "img": [
    0,
    0
   ]
  },
  "cta": {
-  "text": "Follow Itemku\nuntuk berita game",
+  "text": "Cek Itemku buat\nkebutuhan MLBB kamu",
   "img": [
    0
   ]
@@ -57,12 +57,9 @@
   "gong": 3.9,
   "cta": 2.3
  },
- "topic": "MLBB Wins Esports Mobile Game of the Year",
+ "topic": "MLBB wins Esports Mobile Game of the Year",
  "cat": "mlbb",
  "hook_type": "news",
- "caption_text": "MLBB raih Esports Mobile Game of the Year di Esports Awards 2026, dan menurut Esports Charts, M7 tembus 5,68 juta penonton puncak. Kamu nonton M7 juga nggak?",
- "experiment": {
-  "id": "cta",
-  "variant": "B"
- }
+ "caption_text": "MLBB resmi raih Esports Mobile Game of the Year di Esports Awards 2026. Kamu ikut nonton M7 nggak?",
+ "experiment": null
 }

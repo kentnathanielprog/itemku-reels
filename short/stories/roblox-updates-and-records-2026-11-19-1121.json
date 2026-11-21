@@ -1,0 +1,66 @@
+{
+ "images": [
+  "out/roblox-updates-and-records-2026-11-19-1121/imgs/img1.jpg"
+ ],
+ "out": "short-roblox-updates-and-records-2026-11-19-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "RBLXSTAT",
+ "credit": "RBLXSTAT",
+ "hashtags": [
+  "roblox",
+  "robloxindonesia",
+  "rekorpemain",
+  "gamingnews",
+  "simulator",
+  "itemku"
+ ],
+ "hook": {
+  "text": "Ada game simulasi Roblox\nyang tercatat pecah rekor\nTunggu angkanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Game ini bikinan\nGoofy Chupacabra,\ngenre simulasi",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Rata-rata mingguannya\n301.118 pemain,\nnaik 33%",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Puncaknya tercatat\n[[2474602]] pemain\nbersamaan",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan Roblox kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Roblox simulation game sets all-time concurrent player record",
+ "cat": "roblox",
+ "hook_type": "record",
+ "caption_text": "Menurut data RBLXSTAT, sebuah game simulasi dari Goofy Chupacabra tercatat mencetak rekor 2.474.602 pemain bersamaan. Menurut kamu, game Roblox apa lagi yang bakal nyusul pecah rekor?",
+ "experiment": null
+}
