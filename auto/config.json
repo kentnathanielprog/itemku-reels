@@ -225,7 +225,8 @@
    "roblox",
    "mobile legends",
    "free fire"
-  ]
+  ],
+  "video_url_base": ""
  },
  "cover_offset_ms": 2000
 }

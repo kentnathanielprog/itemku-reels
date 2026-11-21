@@ -30,6 +30,7 @@ def main():
     if not it.get('container'):
         cfg=json.loads((ROOT/'config.json').read_text())
         body={'media_type':'REELS','upload_type':'resumable','caption':caption,'share_to_feed':'true','thumb_offset':str(int(cfg.get('cover_offset_ms',2000))),'access_token':TOK}   # RULE: cover = frame at second 2 (thumb_offset, ms)
+        use_url=False
         if cfg.get('audio',{}).get('enabled'):                                          # trending/mood track from Instagram's Audio API (opt-in until proven live)
             import ig_audio
             def search(q):
@@ -40,13 +41,23 @@ def main():
                     except Exception as e: print(f'  (cari lagu gagal: {type(e).__name__})'); return []
                 return call('GET',u).get('audio',[])
             sel=ig_audio.pick(search,it.get('cat'),cfg,rj('posts.json'))
-            if sel: body['audio_configuration']=ig_audio.config_param(sel); it['music']={k:sel[k] for k in ('audio_id','title','artist')}; print(f"  musik: {sel['title']} - {sel['artist']}")
+            if sel:
+                vb=cfg['audio'].get('video_url_base','').rstrip('/'); url=f"{vb}/{it['video']}" if vb else ''
+                ok_url=False
+                if url:                                                                  # Meta fetches video_url itself: it must be public and really serve the file
+                    try: h=urllib.request.urlopen(urllib.request.Request(url,method='HEAD'),timeout=30); ok_url=h.status==200 and int(h.headers.get('Content-Length','0'))>100000
+                    except Exception as e: print(f'  (video_url tidak bisa diambil: {type(e).__name__})')
+                if ok_url:     # audio_configuration is only documented with video_url, NOT with upload_type=resumable (it was silently ignored there, tested 2026-11-21)
+                    body.pop('upload_type'); body['video_url']=url; body['audio_configuration']=ig_audio.config_param(sel); use_url=True
+                    it['music']={k:sel[k] for k in ('audio_id','title','artist')}; print(f"  musik: {sel['title']} - {sel['artist']} (via video_url)")
+                else: print('  musik: video_url tidak tersedia, diposting senyap lewat unggah bertahap')
             else: print('  musik: tidak ada yang cocok, diposting senyap')
         r=call('POST',base+'/media',body)
         it['container']=r['id']; it['status']='publishing'
         if not DRY: wj('queue.json',q)                      # dry-run must never touch state
-        size=vid.stat().st_size
-        call('POST',r['uri'],headers={'Authorization':f'OAuth {TOK}','offset':'0','file_size':str(size)},raw=None if DRY else vid.read_bytes())
+        if not use_url:
+            size=vid.stat().st_size
+            call('POST',r['uri'],headers={'Authorization':f'OAuth {TOK}','offset':'0','file_size':str(size)},raw=None if DRY else vid.read_bytes())
     for _ in range(60):                                                          # wait until Meta finished processing the video
         s=call('GET',f"https://{HOST}/{VER}/{it['container']}?fields=status_code&access_token={TOK}")
         if s.get('status_code')=='FINISHED': break
