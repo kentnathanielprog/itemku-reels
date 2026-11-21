@@ -1,0 +1,23 @@
+{
+ "_doc": "Guardrails for the Learning Agent. learning/guard.py enforces this file; the agent must not edit policy.json, guard.py, collect.py or analyze.py.",
+ "min_sample": {"per_group": 5, "per_group_for_change": 8, "min_reels_total": 12, "min_age_hours": 48,
+                "note": "A group = Reels sharing one value of one dimension. Below per_group: report as 'sampel kurang', no conclusion. A config change needs per_group_for_change in BOTH compared groups."},
+ "min_effect": {"median_reach_gap_pct": 25, "note": "Median reach of the better group must beat the other by >= 25% before any change; smaller gaps are noise."},
+ "max_changes_per_run": 1,
+ "editable": {
+  "auto/config.json": {
+   "cat_bonus": {"type": "int_map", "keys": ["mlbb", "roblox", "gta", "popular", "general"], "min": -40, "max": 40, "max_step": 5},
+   "slots": {"type": "time_list", "count": 3, "max_shift_minutes": 60, "min_gap_minutes": 180, "earliest": "06:00", "latest": "21:00"}
+  },
+  "auto/state/playbook.json": {
+   "cat_weights": {"type": "int_map", "keys": ["mlbb", "roblox", "gta", "popular", "general"], "min": -2, "max": 2, "max_step": 1, "floor_all_above": -1},
+   "lessons": {"type": "text_list", "max_items": 10, "each_needs": ["evidence n", "metric", "date"]},
+   "version": {"type": "int_bump"},
+   "updated": {"type": "string"}
+  }
+ },
+ "never_touch": ["*.py", "*.sh", "auto/config.json:denylist", "auto/config.json:cta", "auto/config.json:audio", "auto/config.json:llm",
+                 "auto/prompts/*", "auto/agents/*", "auto/STOP", ".github/*", "scripts/*", "auto/state/queue.json", "auto/state/posts.json",
+                 "any schedule/routine flag such as --dry-run"],
+ "hook_and_caption_style": "No pipeline code reads a hook/caption-style config key yet (playbook experiments are not consumed by produce.py). Findings on hook_type and caption style are logged as hypotheses/lessons only until the owner approves a consumer."
+}
