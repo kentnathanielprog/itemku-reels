@@ -2,6 +2,7 @@
 """DAILY PRODUCER - one command. scout -> fetch -> ONE writer call (all stories) -> lint -> ONE QC call (all stories) -> evidence verifier
    -> <= N revision rounds (each = one batched writer call + one batched QC call, only for failed stories) -> render -> QA -> queue.
 No sub-agents, no resumed sessions: every API call is stateless and carries only the article text + draft.
+exit codes: 0 = at least one video queued (or dry-run estimate printed); 2 = LLM error; 3 = 0 candidates; 4 = candidates but 0 videos queued; 1 = crash
 usage: python3 auto/produce.py [--dry-run] [--picks-file f.json] [--no-render] [--no-enqueue] [--day YYYY-MM-DD]
 env: ANTHROPIC_API_KEY (or LLM_MOCK_DIR=auto/mock for an offline test)"""
 import sys,json,subprocess,pathlib,datetime as dt,re,os,time,random
@@ -177,7 +178,7 @@ def main():
     say(f"== produce {DAY} | model penulis {L['writer_model']} / QC {L['qc_model']} | maks revisi {MAXR}")
     items,spare=load_picks(); say(f"  berita terpilih: {len(items)}")
     for it in items: say(f"    - [{it['cat']}/{it.get('entity')}] {it['art'].get('title','')[:80]} ({it['art'].get('site','')}, {len(it['images'])} gambar)")
-    if not items: say('  tidak ada berita layak -> tidak ada posting hari ini'); return 0
+    if not items: say('  GAGAL: 0 kandidat berita (sumber tidak terjangkau, semua ditolak filter, atau tidak ada berita segar). Keluar dengan kode 3 supaya run terlihat gagal.'); return 3
     if DRY:
         wsz=len(WRITER)+sum(len(article_text(i['art']))+400 for i in items); qsz=len(QCP)+sum(len(article_text(i['art']))+1200 for i in items)
         wi,qi=wsz//4,qsz//4; est=llm.cost(L['writer_model'],wi,1800)+llm.cost(L['qc_model'],qi,3000)
@@ -198,6 +199,8 @@ def main():
     ok=finish(passed)
     tot=sum(u['usd'] for _,u in USAGE); tin=sum(u['in']+u['cache_read']+u['cache_write'] for _,u in USAGE); tout=sum(u['out'] for _,u in USAGE)
     say(f"== selesai: {len(ok)}/{cfg['per_day']} video siap/antre | {len(USAGE)} panggilan API | {tin} token masuk, {tout} keluar | biaya ~US${tot:.3f}")
-    (ST/'runlog'/f'{DAY}.json').write_text(json.dumps({'day':DAY,'ok':[i['id'] for i in ok],'calls':[(r,u) for r,u in USAGE],'lines':LOGLINES},ensure_ascii=False,indent=1)); return 0
+    (ST/'runlog'/f'{DAY}.json').write_text(json.dumps({'day':DAY,'ok':[i['id'] for i in ok],'calls':[(r,u) for r,u in USAGE],'lines':LOGLINES},ensure_ascii=False,indent=1))
+    if not ok: say('  GAGAL: ada kandidat tetapi 0 video yang lolos QC/render/antrean. Keluar dengan kode 4.'); return 4
+    return 0
 try: sys.exit(main())
 except llm.LLMError as e: print(f'BERHENTI: {e}'); sys.exit(2)
