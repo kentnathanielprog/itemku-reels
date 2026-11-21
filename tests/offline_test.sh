@@ -56,10 +56,14 @@ echo "== producer offline (writer + QC + vision = jawaban tiruan; render + antre
 LLM_MOCK_DIR=tests/fixtures/mock python3 auto/produce.py --day 1999-01-01 --picks-file tests/fixtures/picks.json > /tmp/_produce.log 2>&1
 grep -q "LULUS" /tmp/_produce.log && ok "QC PASS + bukti terverifikasi" || bad "produser tidak meluluskan (lihat /tmp/_produce.log)"
 [ -f out/short-test-story/short.mp4 ] && ok "video dirender" || bad "video tidak ada"
-python3 - <<'PY' && ok "QA: 1080x1920, tanpa kedipan, senyap, ada trek AAC" || bad "QA video"
-import sys,json,subprocess; sys.path.insert(0,'short'); import qa
-s=json.load(open('short/stories/test-story.json')); I,info=qa.run('out/short-test-story/short.mp4',s); assert not I,I
-st=subprocess.run(['ffprobe','-v','error','-show_entries','stream=codec_type','-of','csv=p=0','out/short-test-story/short.mp4'],capture_output=True,text=True).stdout.split(); assert 'audio' in st and 'video' in st
+python3 - <<'PY' && ok "QA + audio: 1080x1920, tanpa kedipan, AAC 44,1 kHz stereo, terdengar (mean_volume > -50 dB), sekitar -18 LUFS, panjang sama dengan video" || bad "QA video / audio"
+import sys,json,subprocess,re; sys.path.insert(0,'short'); import qa
+v='out/short-test-story/short.mp4'; s=json.load(open('short/stories/test-story.json')); I,info=qa.run(v,s); assert not I,I
+pr=json.loads(subprocess.run(['ffprobe','-v','error','-show_entries','stream=codec_type,codec_name,sample_rate,channels,duration','-of','json',v],capture_output=True,text=True).stdout)['streams']
+a=[x for x in pr if x['codec_type']=='audio']; vd=[x for x in pr if x['codec_type']=='video']; assert a and vd,'harus ada stream audio dan video'
+a=a[0]; assert (a['codec_name'],a['sample_rate'],a['channels'])==('aac','44100',2),a; assert abs(float(a['duration'])-float(vd[0]['duration']))<0.3,(a['duration'],vd[0]['duration'])
+o=subprocess.run(['ffmpeg','-hide_banner','-i',v,'-af','volumedetect','-vn','-f','null','-'],capture_output=True,text=True).stderr; mean=float(re.search(r'mean_volume: (-?[\d.]+)',o).group(1)); assert mean>-50,f'senyap: mean_volume {mean} dB'
+o=subprocess.run(['ffmpeg','-hide_banner','-nostats','-i',v,'-af','ebur128','-vn','-f','null','-'],capture_output=True,text=True).stderr; l=float(re.findall(r'I:\s+(-?[\d.]+) LUFS',o)[-1]); assert -21<=l<=-15,f'loudness {l} LUFS'
 PY
 python3 - <<'PY' && ok "antrean berisi video siap + caption" || bad "antrean"
 import json; q=json.load(open('auto/state/queue.json')); x=[i for i in q if i['id']=='test-story']; assert x and x[0]['status']=='ready' and 'Sumber: TestSite' in x[0]['caption'] and '#itemku' in x[0]['caption'],x

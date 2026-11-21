@@ -89,7 +89,7 @@ def assemble(it,w):
        'cta':{'text':cta_for(it,w),'img':[0]},'timing':{'hook':3,'message':3,'gong':3.9,'cta':2.3},
        'topic':w['topic'],'cat':it['cat'],'hook_type':w['hook_type'],'caption_text':w['caption_text'],'experiment':it.get('exp')}
     it['cta']=s['cta']['text']
-    tr=music.pick(cfg['music_mood'].get(it['cat'],[]))                 # deterministic, no LLM; silent when catalog is empty
+    tr=music.pick(cfg['music_mood'].get(it['cat'],[]))                 # deterministic, no LLM; rotates through assets/audio. An empty catalog -> silent video -> QA (short/qa.py) rejects it
     if tr:
         s['audio']=tr[0]['file']; s['music']=tr[0]['file']; s['music_start']=tr[0].get('start',0)
         if tr[0].get('attribution'): s['caption_text']+='\n'+tr[0]['attribution']

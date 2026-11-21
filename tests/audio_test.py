@@ -52,6 +52,32 @@ def _():
 def _():
     tmp=pathlib.Path(tempfile.mkdtemp(prefix='musictest_')); (tmp/'posts.json').write_text('[]'); (tmp/'playbook.json').write_text('{}'); music.ST=tmp
     assert music.pick(['hype','edm'])[0]['file'].endswith('pulse-arena.m4a'); assert music.pick(['dark','trap'])[0]['file'].endswith('dark-alley.m4a')
+# ---- QA gate + render filter -----------------------------------------------------------------------------------------------------------------
+sys.path.insert(0,str(REPO/'short')); import qa
+def clip(path,audio):
+    cmd=['ffmpeg','-y','-loglevel','error','-f','lavfi','-i','testsrc2=s=1080x1920:r=30:d=3']
+    cmd+=(['-f','lavfi','-i','anullsrc=r=44100:cl=stereo'] if audio=='silent' else ['-f','lavfi','-i','sine=f=440:d=3,volume=0.3'] if audio=='tone' else [])
+    cmd+=['-t','3','-c:v','libx264','-pix_fmt','yuv420p']+(['-c:a','aac','-ar','44100','-ac','2'] if audio else ['-an'])+[str(path)]; subprocess.run(cmd,check=True)
+T=pathlib.Path(tempfile.mkdtemp(prefix='audiotest_'))
+@case('QA rejects the exact bug: an AAC stream full of silence (anullsrc, mean_volume -91 dB)')
+def _(): clip(T/'s.mp4','silent'); I,_i=qa.run(str(T/'s.mp4')); assert any('senyap' in x for x in I),I
+@case('QA rejects a video with no audio stream at all')
+def _(): clip(T/'n.mp4',None); I,_i=qa.run(str(T/'n.mp4')); assert any('stream audio' in x for x in I),I
+@case('QA accepts an audible track (no audio complaint)')
+def _(): clip(T/'a.mp4','tone'); I,_i=qa.run(str(T/'a.mp4')); assert not any('audio' in x for x in I),I
+@case('make_short audio chain (taken from the real source): loops a short track to the video length, fades in/out, 44.1 kHz stereo, audible')
+def _():
+    src=(REPO/'short'/'make_short.py').read_text(); m=re.search(r'filt\.append\((f"\[\{n\}:a\]aresample.*?)\); amap',src); assert m,'audio filter not found in make_short.py'
+    assert "'-stream_loop','-1'" in src
+    dur=8.0; n=1; fo=min(1.5,dur/3); chain=eval(m.group(1)); short=T/'short_track.m4a'
+    subprocess.run(['ffmpeg','-y','-loglevel','error','-f','lavfi','-i','sine=f=330:d=3,volume=0.4','-c:a','aac','-ar','44100','-ac','2',str(short)],check=True)   # 3 s track, 8 s video
+    out=T/'chain.m4a'; subprocess.run(['ffmpeg','-y','-loglevel','error','-f','lavfi','-t',str(dur),'-i','anullsrc','-stream_loop','-1','-ss','0','-t',str(dur),'-i',str(short),'-filter_complex',chain.replace('[1:a]','[1:a]'),'-map','[am]','-c:a','aac','-ar','44100','-ac','2','-t',str(dur),str(out)],check=True)
+    p=probe(str(out)); assert abs(float(p['duration'])-dur)<0.3,p; assert (p['sample_rate'],p['channels'])==('44100',2)
+    def seg(a,b):
+        o=subprocess.run(['ffmpeg','-hide_banner','-ss',str(a),'-t',str(b),'-i',str(out),'-af','volumedetect','-f','null','-'],capture_output=True,text=True).stderr; return float(re.search(r'mean_volume: (-?[\d.]+)',o).group(1))
+    mid=seg(3.5,2.0); start=seg(0,0.15); end=seg(dur-0.15,0.15); assert mid>-50,mid                        # the looped part (3 s -> 8 s) is audible
+    assert start<mid-6 and end<mid-6,(start,mid,end)                                                       # faded in at the start and out at the end
+
 if __name__=='__main__':
     bad=0
     for n,ok,msg in RES: print(('  ✓ ' if ok else '  ✗ ')+n+('' if ok else f'\n      {msg}')); bad+=0 if ok else 1

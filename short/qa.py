@@ -20,18 +20,13 @@ def run(path,story=None):
         _bad,_n=_v.frames_ok(path)
         if _bad: I.append(f'frame footage kosong/gelap: {_bad} dari {_n}')
     except Exception: pass
-    # audio plan
-    def mv(a,b):
-        o=subprocess.run(['ffmpeg','-hide_banner','-ss',str(a),'-t',str(b),'-i',path,'-af','volumedetect','-vn','-f','null','-'],capture_output=True,text=True).stderr
-        m=re.search(r'max_volume: (-?[\d.]+)',o); return float(m.group(1)) if m else -99
-    if story is not None and story.get('audio') in ('sfx','none') and not story.get('sfx_full'):
-        if mv(0,dur)>-50: I.append('video seharusnya senyap tapi ada suara')
-    elif False:
-        T=story.get('timing',{}); cta=0.1+T.get('hook',3)+T.get('message',3)*len(story['message'])+T.get('gong',3.5)
-        def mv(a,b):
-            o=subprocess.run(['ffmpeg','-hide_banner','-ss',str(a),'-t',str(b),'-i',path,'-af','volumedetect','-vn','-f','null','-'],capture_output=True,text=True).stderr
-            m=re.search(r'max_volume: (-?[\d.]+)',o); return float(m.group(1)) if m else -99
-        pre,post=mv(0,cta-0.3),mv(cta,dur-cta)
-        if pre>-50: I.append(f'ada suara sebelum CTA ({pre} dB)')
-        if post<-30: I.append(f'bunyi CTA tidak terdengar ({post} dB)')
+    # audio: every video MUST have an audible track (a silent AAC stream shows up on Instagram as "original audio" with no sound)
+    def volumes():
+        o=subprocess.run(['ffmpeg','-hide_banner','-i',path,'-af','volumedetect','-vn','-f','null','-'],capture_output=True,text=True).stderr
+        m=re.search(r'mean_volume: (-?[\d.]+)',o); x=re.search(r'max_volume: (-?[\d.]+)',o); return (float(m.group(1)) if m else -99.0),(float(x.group(1)) if x else -99.0)
+    if not any(x['codec_type']=='audio' for x in pr): I.append('tidak ada stream audio')
+    else:
+        mean_v,max_v=volumes()
+        if mean_v<=-50: I.append(f'audio senyap (mean_volume {mean_v} dB, harus > -50 dB)')
+        elif max_v>-0.5: I.append(f'audio clipping (max_volume {max_v} dB)')
     return I,f'{dur:.1f}s {size:.1f}MB'

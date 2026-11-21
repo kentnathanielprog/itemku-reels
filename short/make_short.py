@@ -85,12 +85,15 @@ if cfg.get('progress',True):
     filt.append(f"[{cur}][{n}:v]overlay=x='-1080+1080*t/{dur}':y=110:eof_action=pass[vp]"); cur='vp'; n+=1
 aud=cfg.get('audio','keep'); amap=[]
 if aud not in('keep','none'):
-    cmd+=['-ss',str(cfg.get('music_start',0)),'-t',str(dur),'-i',p(aud)]
-    filt.append(f"[{n}:a]afade=t=in:d=0.2,afade=t=out:st={max(dur-0.6,0)}:d=0.6,loudnorm=I=-14:TP=-1.5[am]"); amap=['-map','[am]']
+    # background music: loop if the track is shorter than the video, trim to the video length, 0.8 s fade-in, 1.5 s fade-out, 44.1 kHz stereo.
+    # Tracks are pre-normalised to -18 LUFS (assets/audio, short/music_gen.py), so no loudnorm here (it would pump on a 15 s clip).
+    cmd+=['-stream_loop','-1','-ss',str(cfg.get('music_start',0)),'-t',str(dur),'-i',p(aud)]
+    fo=min(1.5,dur/3)
+    filt.append(f"[{n}:a]aresample=44100,aformat=sample_fmts=fltp:channel_layouts=stereo,afade=t=in:st=0:d=0.8,afade=t=out:st={max(dur-fo,0):.2f}:d={fo:.2f}[am]"); amap=['-map','[am]']
 elif aud=='keep': amap=['-map','0:a?']
 if aud=='none':
     cmd+=['-f','lavfi','-t',str(dur),'-i','anullsrc=r=44100:cl=stereo']; amap=['-map',f'{n}:a']; n+=1   # silent AAC track (Instagram expects an audio stream)
 t_enc=time.time()
-cmd+=['-filter_complex',';'.join(filt),'-map',f'[{cur}]']+amap+['-c:v','libx264','-pix_fmt','yuv420p','-crf','19','-preset','veryfast','-c:a','aac','-b:a','192k','-shortest','-movflags','+faststart',str(d/'short.mp4')]
+cmd+=['-filter_complex',';'.join(filt),'-map',f'[{cur}]']+amap+['-c:v','libx264','-pix_fmt','yuv420p','-crf','19','-preset','veryfast','-c:a','aac','-b:a','192k','-ar','44100','-ac','2','-shortest','-movflags','+faststart',str(d/'short.mp4')]
 sh(*cmd)
 print(f"OK {d/'short.mp4'} | overlays {t_job:.0f}s ({len(jobs)} new, {len(handles)-len(jobs)} cached) | encode {time.time()-t_enc:.0f}s | total {time.time()-T0:.0f}s")
