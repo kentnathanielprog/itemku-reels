@@ -10,7 +10,10 @@ git checkout -q main && git pull -q --ff-only origin main || echo "PERINGATAN: g
 if git push --dry-run -q origin HEAD:main >/tmp/_pf.log 2>&1; then echo "PUSH: ok"; else
   echo "PUSH: GAGAL ($(tail -1 /tmp/_pf.log | cut -c1-160))"; [ $DRY = 1 ] || { echo "ABORT: sesi ini tidak bisa menyimpan state ke GitHub (tambahkan repo ke sumber routine). Tidak ada yang diproses."; exit 3; }
 fi
-[ -d node_modules/playwright ] || bash scripts/setup.sh >/dev/null 2>&1
+if ! python3 -c 'import PIL.Image,numpy' 2>/dev/null || ! command -v ffmpeg >/dev/null; then
+  echo "SETUP: memasang dependensi..."; bash scripts/setup.sh 2>&1 | tail -15 || true
+  python3 -c 'import PIL.Image,numpy' 2>/dev/null && command -v ffmpeg >/dev/null || { echo "ABORT: dependensi (Pillow/numpy/ffmpeg) tidak bisa dipasang di sesi ini. Tidak ada yang diproses."; exit 4; }
+fi
 save() { git config user.name reels-bot; git config user.email reels-bot@users.noreply.github.com
   git add auto/state short/stories; git diff --cached --quiet || git commit -q -m "state: $MODE $(date -u +%FT%H:%M)"
   for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin main && break || sleep 3; done; }
