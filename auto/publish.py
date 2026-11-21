@@ -4,7 +4,7 @@ usage: python3 publish.py [--dry-run] [--force]
 env: IG_USER_ID, IG_ACCESS_TOKEN, GRAPH_HOST (default graph.facebook.com), GRAPH_VERSION (default v21.0)
 Idempotent: a half-finished post (container created) is resumed, never duplicated. Kill switch: file auto/STOP or env STOP=1.
 !! Endpoint/field names follow Meta's public docs at time of writing - verify against the current Reels publishing docs. !!"""
-import json,os,sys,time,pathlib,datetime as dt,urllib.request,urllib.parse
+import json,os,sys,time,re,pathlib,datetime as dt,urllib.request,urllib.parse
 ROOT=pathlib.Path(__file__).resolve().parent; BASE=ROOT.parent; ST=ROOT/'state'
 DRY='--dry-run' in sys.argv; FORCE='--force' in sys.argv
 HOST=os.environ.get('GRAPH_HOST','graph.facebook.com'); VER=os.environ.get('GRAPH_VERSION','v21.0')
@@ -17,6 +17,22 @@ def call(method,url,data=None,headers=None,raw=None):
     req=urllib.request.Request(url,data=body,method=method,headers=headers or {}); 
     try: return json.loads(urllib.request.urlopen(req,timeout=120).read().decode())
     except urllib.error.HTTPError as e: raise SystemExit(f'HTTP {e.code}: {e.read().decode()[:300]}')
+def _norm(s): return re.sub(r'\s+',' ',s or '').strip()
+def already_on_instagram(it):
+    """Idempotency against Instagram itself. If an earlier run posted live but its state push failed, the item is still 'ready' in a fresh container;
+    without this check it would be posted twice. Fails CLOSED: if the account cannot be read, nothing is posted."""
+    try: r=call('GET',f"https://{HOST}/{VER}/{UID}/media?fields=id,caption,permalink,timestamp&limit=30&access_token={TOK}")
+    except SystemExit as e: raise SystemExit(f'ABORT: akun IG tidak bisa diperiksa ({e}); tidak memposting.')
+    except Exception as e: raise SystemExit(f'ABORT: akun IG tidak bisa diperiksa ({type(e).__name__}); tidak memposting.')
+    want=_norm(it['caption'])
+    for m in r.get('data',[]):
+        if _norm(m.get('caption'))==want: return m
+    return None
+def record_posted(q,it,media_id,permalink,when):
+    it.update(status='posted',media_id=media_id,permalink=permalink,posted_at=when.isoformat()); wj('queue.json',q)
+    posts=rj('posts.json')
+    if media_id not in {x.get('media_id') for x in posts}: posts.append({k:it.get(k) for k in ('id','media_id','permalink','posted_at','cat','topic','hook_type','music','experiment','n_images','posted_slot','video')}); wj('posts.json',posts)
+    h=rj('history.json'); h.append({'url':it.get('source_url'),'title':it.get('topic'),'date':when.isoformat(),'cat':it.get('cat')}); wj('history.json',h)
 def main():
     if (ROOT/'STOP').exists() or os.environ.get('STOP')=='1': print('STOP aktif: tidak ada posting.'); return 0
     q=rj('queue.json'); now=dt.datetime.now(dt.timezone.utc)
@@ -26,6 +42,12 @@ def main():
     if not due: print('Tidak ada video jatuh tempo.'); return 0
     it=sorted(due,key=lambda x:x['not_before'])[0]; vid=BASE/it['video']; caption=it['caption']
     print(f"posting: {it['id']} ({vid.name}, {vid.stat().st_size/1e6:.1f}MB)")
+    if not DRY:
+        m=already_on_instagram(it)
+        if m:                                                                    # already live (earlier state push failed): record it, never post again
+            try: when=dt.datetime.fromisoformat(m['timestamp'])
+            except Exception: when=now
+            record_posted(q,it,m['id'],m.get('permalink'),when); print(f"sudah tayang di Instagram, status dipulihkan tanpa posting ulang: {it['id']} {m.get('permalink')}"); return 0
     base=f'https://{HOST}/{VER}/{UID}'
     if not it.get('container'):
         cfg=json.loads((ROOT/'config.json').read_text())
@@ -66,8 +88,6 @@ def main():
     pub=call('POST',base+'/media_publish',{'creation_id':it['container'],'access_token':TOK})
     info=call('GET',f"https://{HOST}/{VER}/{pub['id']}?fields=permalink,timestamp&access_token={TOK}")
     if DRY: print('  [dry-run] selesai, antrean TIDAK diubah.'); return 0
-    it.update(status='posted',media_id=pub['id'],permalink=info.get('permalink'),posted_at=now.isoformat()); wj('queue.json',q)
-    posts=rj('posts.json'); posts.append({k:it.get(k) for k in ('id','media_id','permalink','posted_at','cat','topic','hook_type','music','experiment','n_images','posted_slot','video')}); wj('posts.json',posts)
-    h=rj('history.json'); h.append({'url':it.get('source_url'),'title':it.get('topic'),'date':now.isoformat(),'cat':it.get('cat')}); wj('history.json',h)
+    record_posted(q,it,pub['id'],info.get('permalink'),now)
     print('terkirim:',it['permalink']); return 0
 sys.exit(main())
