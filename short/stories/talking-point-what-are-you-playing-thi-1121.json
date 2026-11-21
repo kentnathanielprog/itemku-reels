@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/talking-point-what-are-you-playing-thi-1121/imgs/img1.jpg"
+ ],
+ "out": "short-talking-point-what-are-you-playing-thi-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Nintendo Life",
+ "credit": "Nintendo Life",
+ "hashtags": [
+  "nintendo",
+  "nintendoswitch2",
+  "ocarinaoftime",
+  "nintendolife",
+  "gaming"
+ ],
+ "hook": {
+  "text": "Weekend ini pembaca\nNintendo Life main apa?\nTunggu angkanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Beberapa anggota tim\nNintendo Life lagi main\nOcarina of Time",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Sejauh ini poll diisi 59\nsuara, boleh pilih\nsampai 5 jawaban",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Sejauh ini Ocarina of Time\n(Switch 2) dapat\n[[17]] suara",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Nintendo Life weekend poll: Ocarina of Time (Switch 2) votes",
+ "cat": "general",
+ "hook_type": "question",
+ "caption_text": "Sejauh ini di poll Nintendo Life, Ocarina of Time (Switch 2) tercatat dapat 17 suara dari 59 suara. Kalau kamu, weekend ini main apa?",
+ "experiment": {
+  "id": "cta",
+  "variant": "A"
+ }
+}

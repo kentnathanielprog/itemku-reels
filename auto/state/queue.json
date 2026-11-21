@@ -116,5 +116,64 @@
   "media_id": "18097559216170138",
   "permalink": "https://www.instagram.com/reel/Df_-0tvkoHA/",
   "posted_at": "2026-11-21T10:08:56.785623+00:00"
+ },
+ {
+  "id": "pokemon-tcg-flowing-fists-release-date-1121",
+  "status": "posted",
+  "not_before": "2026-11-22T05:00:00+00:00",
+  "video": "out/short-pokemon-tcg-flowing-fists-release-date-1121/short.mp4",
+  "caption": "Pokémon TCG Mega Evolution Flowing Fists udah dikonfirmasi dengan lebih dari 110 kartu, dipimpin Mega Lucario Z ex. Kamu paling nunggu kartu yang mana?\n\nSumber: GGRecon | Gambar: GGRecon / The Pokémon Company\n\n#pokemon #pokemontcg #megalucario #flowingfists #kartupokemon",
+  "cat": "popular",
+  "topic": "Pokémon TCG Flowing Fists expansion",
+  "source_url": "https://www.ggrecon.com/articles/pokemon-tcg-flowing-fists-release-date/",
+  "hook_type": "news",
+  "music": {
+   "audio_id": "1579921342191993",
+   "title": "Motive (Instrumental)",
+   "artist": "Giulio Cercato"
+  },
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00",
+  "container": "18098805128189435",
+  "media_id": "18641062681052983",
+  "permalink": "https://www.instagram.com/reel/DgABdyCEY0V/",
+  "posted_at": "2026-11-21T10:31:37.247534+00:00"
+ },
+ {
+  "id": "talking-point-what-are-you-playing-thi-1121",
+  "status": "ready",
+  "not_before": "2026-11-22T10:00:00+00:00",
+  "video": "out/short-talking-point-what-are-you-playing-thi-1121/short.mp4",
+  "caption": "Sejauh ini di poll Nintendo Life, Ocarina of Time (Switch 2) tercatat dapat 17 suara dari 59 suara. Kalau kamu, weekend ini main apa?\n\nSumber: Nintendo Life | Gambar: Nintendo Life\n\n#nintendo #nintendoswitch2 #ocarinaoftime #nintendolife #gaming",
+  "cat": "general",
+  "topic": "Nintendo Life weekend poll: Ocarina of Time (Switch 2) votes",
+  "source_url": "https://www.nintendolife.com/features/talking-point-what-are-you-playing-this-weekend-21st-november",
+  "hook_type": "question",
+  "music": null,
+  "experiment": {
+   "id": "cta",
+   "variant": "A"
+  },
+  "n_images": 1,
+  "posted_slot": "17:00"
+ },
+ {
+  "id": "dev-says-their-steam-sales-were-148-ti-1121",
+  "status": "ready",
+  "not_before": "2026-11-23T00:30:00+00:00",
+  "video": "out/short-dev-says-their-steam-sales-were-148-ti-1121/short.mp4",
+  "caption": "Buat banyak dev indie, Steam tetap jadi tempat jualan utama, tapi Kernel Hearts punya cerita sebaliknya berkat skin Fortnite. Menurut kalian, Steam atau Epic yang lebih menguntungkan buat dev kecil?\n\nSumber: GamesRadar+ | Gambar: Ephemera Games\n\n#steam #epicgames #kernelhearts #tinyterraces #gamedev #fortnite",
+  "cat": "popular",
+  "topic": "Steam vs Epic Store sales for indie devs",
+  "source_url": "https://www.gamesradar.com/games/dev-says-their-steam-sales-were-148-times-larger-than-on-the-epic-games-store-but-another-studio-says-epic-saved-them-a-fortune-that-would-have-gone-into-valves-pockets/",
+  "hook_type": "number",
+  "music": null,
+  "experiment": {
+   "id": "cta",
+   "variant": "B"
+  },
+  "n_images": 1,
+  "posted_slot": "07:30"
  }
 ]

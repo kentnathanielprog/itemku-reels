@@ -37,5 +37,23 @@
   "n_images": 1,
   "posted_slot": "12:00",
   "video": "out/short-pokemon-champions-balance-patch-decemb-1121/short.mp4"
+ },
+ {
+  "id": "pokemon-tcg-flowing-fists-release-date-1121",
+  "media_id": "18641062681052983",
+  "permalink": "https://www.instagram.com/reel/DgABdyCEY0V/",
+  "posted_at": "2026-11-21T10:31:37.247534+00:00",
+  "cat": "popular",
+  "topic": "Pokémon TCG Flowing Fists expansion",
+  "hook_type": "news",
+  "music": {
+   "audio_id": "1579921342191993",
+   "title": "Motive (Instrumental)",
+   "artist": "Giulio Cercato"
+  },
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00",
+  "video": "out/short-pokemon-tcg-flowing-fists-release-date-1121/short.mp4"
  }
 ]

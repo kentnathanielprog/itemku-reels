@@ -1,0 +1,65 @@
+{
+ "images": [
+  "out/dev-says-their-steam-sales-were-148-ti-1121/imgs/img1.jpg"
+ ],
+ "out": "short-dev-says-their-steam-sales-were-148-ti-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GamesRadar+",
+ "credit": "Ephemera Games",
+ "hashtags": [
+  "steam",
+  "epicgames",
+  "kernelhearts",
+  "tinyterraces",
+  "gamedev",
+  "fortnite"
+ ],
+ "hook": {
+  "text": "Tiny Terraces: Steam\nsekitar 148 kali Epic.\nTunggu kasus kebaliknya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Tiny Terraces: $136.195\ndi Steam, $916 di Epic\nselama setahun",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Tapi Kernel Hearts beda:\nkarena skin Fortnite,\nbanyak beli lewat Epic",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Menurut studionya, di PC\nsekitar [[6]] dari 10 kopi\ndi Epic, 3 Steam, 1 Xbox",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Follow Itemku\nuntuk berita game",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Steam vs Epic Store sales for indie devs",
+ "cat": "popular",
+ "hook_type": "number",
+ "caption_text": "Buat banyak dev indie, Steam tetap jadi tempat jualan utama, tapi Kernel Hearts punya cerita sebaliknya berkat skin Fortnite. Menurut kalian, Steam atau Epic yang lebih menguntungkan buat dev kecil?",
+ "experiment": {
+  "id": "cta",
+  "variant": "B"
+ }
+}

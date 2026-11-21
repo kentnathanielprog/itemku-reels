@@ -1,161 +1,195 @@
 {
  "day": "2026-11-21",
  "ok": [
-  "sakurai-celebrates-kirby-air-riders-fi-1121",
-  "pokemon-champions-balance-patch-decemb-1121",
-  "7-42-patch-notes-1121"
+  "pokemon-tcg-flowing-fists-release-date-1121",
+  "talking-point-what-are-you-playing-thi-1121",
+  "dev-says-their-steam-sales-were-148-ti-1121"
  ],
  "calls": [
   [
    "visual",
    {
-    "in": 8,
-    "out": 465,
-    "cache_read": 16043,
-    "cache_write": 2299,
+    "in": 4,
+    "out": 325,
+    "cache_read": 5738,
+    "cache_write": 6060,
     "usd": 0.0,
-    "list_usd": 0.00085
+    "list_usd": 0.00143
    }
   ],
   [
    "visual",
    {
-    "in": 6,
-    "out": 456,
-    "cache_read": 16031,
-    "cache_write": 2513,
+    "in": 4,
+    "out": 322,
+    "cache_read": 9912,
+    "cache_write": 1974,
     "usd": 0.0,
-    "list_usd": 0.00089
+    "list_usd": 0.00066
    }
   ],
   [
    "writer",
    {
     "in": 2,
-    "out": 3326,
-    "cache_read": 3247,
-    "cache_write": 4436,
+    "out": 2937,
+    "cache_read": 0,
+    "cache_write": 9700,
     "usd": 0.0,
-    "list_usd": 0.05133
+    "list_usd": 0.06817
    }
   ],
   [
    "qc",
    {
     "in": 2,
-    "out": 2970,
-    "cache_read": 3035,
-    "cache_write": 4908,
+    "out": 3298,
+    "cache_read": 0,
+    "cache_write": 9996,
     "usd": 0.0,
-    "list_usd": 0.09928
+    "list_usd": 0.14594
    }
   ],
   [
    "writer",
    {
     "in": 2,
-    "out": 2055,
+    "out": 1201,
     "cache_read": 3247,
-    "cache_write": 5923,
+    "cache_write": 5253,
     "usd": 0.0,
-    "list_usd": 0.04457
+    "list_usd": 0.03335
    }
   ],
   [
    "qc",
    {
     "in": 2,
-    "out": 2200,
+    "out": 3021,
     "cache_read": 3035,
-    "cache_write": 4910,
+    "cache_write": 4363,
     "usd": 0.0,
-    "list_usd": 0.0839
+    "list_usd": 0.09594
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 1052,
-    "cache_read": 10588,
-    "cache_write": 3871,
+    "out": 802,
+    "cache_read": 10494,
+    "cache_write": 3199,
     "usd": 0.0,
-    "list_usd": 0.00141
+    "list_usd": 0.00115
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 244,
-    "cache_read": 9889,
-    "cache_write": 1951,
+    "out": 263,
+    "cache_read": 9891,
+    "cache_write": 1954,
     "usd": 0.0,
-    "list_usd": 0.00061
+    "list_usd": 0.00062
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 248,
-    "cache_read": 9880,
-    "cache_write": 1945,
+    "out": 301,
+    "cache_read": 9878,
+    "cache_write": 1942,
     "usd": 0.0,
-    "list_usd": 0.00061
+    "list_usd": 0.00064
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 650,
+    "cache_read": 9903,
+    "cache_write": 1987,
+    "usd": 0.0,
+    "list_usd": 0.00082
    }
   ],
   [
    "writer",
    {
     "in": 2,
-    "out": 1636,
+    "out": 1345,
     "cache_read": 3247,
-    "cache_write": 3500,
+    "cache_write": 3794,
     "usd": 0.0,
-    "list_usd": 0.03069
+    "list_usd": 0.02895
    }
   ],
   [
    "qc",
    {
     "in": 2,
-    "out": 2159,
+    "out": 2309,
     "cache_read": 3035,
-    "cache_write": 3752,
+    "cache_write": 4046,
     "usd": 0.0,
-    "list_usd": 0.07381
+    "list_usd": 0.07916
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1603,
+    "cache_read": 3247,
+    "cache_write": 4650,
+    "usd": 0.0,
+    "list_usd": 0.03496
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2162,
+    "cache_read": 3035,
+    "cache_write": 4050,
+    "usd": 0.0,
+    "list_usd": 0.07626
    }
   ],
   [
    "visual",
    {
     "in": 4,
-    "out": 1576,
-    "cache_read": 10280,
-    "cache_write": 3603,
+    "out": 994,
+    "cache_read": 10200,
+    "cache_write": 2795,
     "usd": 0.0,
-    "list_usd": 0.00161
+    "list_usd": 0.00116
    }
   ]
  ],
  "lines": [
   "== produce 2026-11-21 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
-  "  [visual] pokemon-champions-balance-patch-de: gambar dibuang otomatis #2:blurry",
+  "  [visual] pokemon-tcg-flowing-fists-release-: gambar dibuang otomatis #1:blurry",
   "  - lewati jujutsu-shenanigans-roblox-deep-di: satu-satunya gambar ditolak (text_card), diganti berita lain",
   "  berita terpilih: 2",
-  "    - [general/None] Sakurai Celebrates Kirby Air Riders' First Anniversary And Seemingly Ponders His (Nintendo Life, 1 gambar)",
-  "    - [popular/None] Pokémon Champions balance patch lands on December 2 (GGRecon, 3 gambar)",
-  "  [a0] sakurai-celebrates-kirby-air-riders-fi-1121: GAGAL — Message 2 mistranslates the quote. 'I wonder how much more I'll be able to make' becomes '",
-  "  [a0] pokemon-champions-balance-patch-decemb-1121: GAGAL — Message 1 says 'sekarang bisa belajar Play Rough', but the patch has not landed yet (the a",
-  "  [a1] sakurai-celebrates-kirby-air-riders-fi-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [a1] pokemon-champions-balance-patch-decemb-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [visual] pokemon-champions-balance-patch-de: gambar dibuang AI #1:ad_or_unrelated, #2:ad_or_unrelated",
+  "    - [general/None] What Are You Playing This Weekend? (21st November) (Nintendo Life, 1 gambar)",
+  "    - [popular/None] Pokémon TCG Flowing Fists expansion arrives February 6, 2027 (GGRecon, 2 gambar)",
+  "  [a0] talking-point-what-are-you-playing-thi-1121: GAGAL — Live poll yang masih berjalan (artikel '24 mins ago'): angka 59 suara dan 17 suara hanyala",
+  "  [a0] pokemon-tcg-flowing-fists-release-date-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a1] talking-point-what-are-you-playing-thi-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] pokemon-tcg-flowing-fists-release-: gambar dibuang AI #1:ad_or_unrelated",
   "  - lewati roblox-games-to-play-with-friends-: satu-satunya gambar ditolak (text_card), diganti berita lain",
   "  - lewati roblox-updates-and-records-2026-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati pokemon-to-hold-family-focused-tcg: satu-satunya gambar ditolak (text_card), diganti berita lain",
   "  pengganti (putaran 1): 1 berita",
-  "  [r10] 7-42-patch-notes-1121: LULUS (QC PASS + bukti terverifikasi)",
-  "  [visual] 7-42-patch-notes-1121: gambar dibuang AI #0:ad_or_unrelated, #2:text_card",
-  "== selesai: 3/3 video siap/antre | 12 panggilan API | 135210 token masuk, 18387 keluar | biaya ~US$0.000"
+  "  [r10] dev-says-their-steam-sales-were-148-ti-1121: GAGAL — Gong drops the qualifier 'across PC': the article's 6/3/1 split covers PC copies only (the",
+  "  [r11] dev-says-their-steam-sales-were-148-ti-1121: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] dev-says-their-steam-sales-were-14: gambar dibuang AI #1:off_topic",
+  "== selesai: 3/3 video siap/antre | 15 panggilan API | 150669 token masuk, 21533 keluar | biaya ~US$0.000"
  ]
 }

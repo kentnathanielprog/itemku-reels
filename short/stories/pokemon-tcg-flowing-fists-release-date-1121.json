@@ -1,0 +1,62 @@
+{
+ "images": [
+  "out/pokemon-tcg-flowing-fists-release-date-1121/imgs/img1.jpg"
+ ],
+ "out": "short-pokemon-tcg-flowing-fists-release-date-1121",
+ "audio": "none",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GGRecon",
+ "credit": "GGRecon / The Pokémon Company",
+ "hashtags": [
+  "pokemon",
+  "pokemontcg",
+  "megalucario",
+  "flowingfists",
+  "kartupokemon"
+ ],
+ "hook": {
+  "text": "Ekspansi Pokémon TCG baru\nudah dikonfirmasi nih\nkartu utamanya? Tunggu ya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Mega Evolution Flowing\nFists isinya lebih dari\n110 kartu",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Artwork-nya terinspirasi\nsuasana turnamen, kata\nThe Pokémon Company",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Kartu utamanya:\n((Mega Lucario Z ex))",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Pokémon TCG Flowing Fists expansion",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Pokémon TCG Mega Evolution Flowing Fists udah dikonfirmasi dengan lebih dari 110 kartu, dipimpin Mega Lucario Z ex. Kamu paling nunggu kartu yang mana?",
+ "experiment": null
+}
