@@ -85,7 +85,7 @@
  },
  {
   "id": "7-42-patch-notes-1121",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-22T10:00:00+00:00",
   "video": "out/short-7-42-patch-notes-1121/short.mp4",
   "caption": "Valve rilis patch 7.42 buat Dota 2 yang fokus bikin late game nggak berlarut-larut, mulai dari health hero sampai siege creep dan enam item baru. Menurut kamu, perubahan mana yang paling ngaruh ke meta?\n\nSumber: PCGamesN | Gambar: PCGamesN\n\n#dota2 #dota2patch #patch742 #valve #moba #gamingindonesia",
@@ -93,12 +93,20 @@
   "topic": "Dota 2 patch 7.42 targets the late game",
   "source_url": "https://www.pcgamesn.com/dota-2/7-42-patch-notes",
   "hook_type": "question",
-  "music": null,
+  "music": {
+   "audio_id": "1043691433415099",
+   "title": "Feelings",
+   "artist": "Giulio Cercato"
+  },
   "experiment": {
    "id": "cta",
    "variant": "B"
   },
   "n_images": 3,
-  "posted_slot": "17:00"
+  "posted_slot": "17:00",
+  "container": "18098800718189435",
+  "media_id": "18097559216170138",
+  "permalink": "https://www.instagram.com/reel/Df_-0tvkoHA/",
+  "posted_at": "2026-11-21T10:08:56.785623+00:00"
  }
 ]

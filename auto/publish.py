@@ -22,6 +22,8 @@ def main():
     q=rj('queue.json'); now=dt.datetime.now(dt.timezone.utc)
     due=[x for x in q if x['status'] in ('ready','publishing') and (FORCE or dt.datetime.fromisoformat(x['not_before'])<=now)]
     if not due: print('Tidak ada video jatuh tempo.'); return 0
+    if '--id' in sys.argv: due=[x for x in due if x['id']==sys.argv[sys.argv.index('--id')+1]]       # post one specific queued item
+    if not due: print('Tidak ada video jatuh tempo.'); return 0
     it=sorted(due,key=lambda x:x['not_before'])[0]; vid=BASE/it['video']; caption=it['caption']
     print(f"posting: {it['id']} ({vid.name}, {vid.stat().st_size/1e6:.1f}MB)")
     base=f'https://{HOST}/{VER}/{UID}'
