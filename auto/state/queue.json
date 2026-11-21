@@ -70,7 +70,7 @@
  },
  {
   "id": "pokemon-champions-balance-patch-decemb-1121",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-22T05:00:00+00:00",
   "video": "out/short-pokemon-champions-balance-patch-decemb-1121/short.mp4",
   "caption": "Patch balance Pokémon Champions bakal bawa move baru buat para Eeveelution, sementara Rock Slide kena nerf di peluang flinch-nya. Kamu bakal pakai Eeveelution yang mana?\n\nSumber: GGRecon | Gambar: GGRecon\n\n#pokemonchampions #pokemon #eeveelution #balancepatch #nintendoswitch #itemku",
@@ -78,10 +78,18 @@
   "topic": "Pokémon Champions balance patch adds Play Rough for Eeveelutions",
   "source_url": "https://www.ggrecon.com/articles/pokemon-champions-balance-patch-december-2/",
   "hook_type": "news",
-  "music": null,
+  "music": {
+   "audio_id": "2621187548040675",
+   "title": "Personal (feat. Arnold & Lane)",
+   "artist": "Swell Sound"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "12:00"
+  "posted_slot": "12:00",
+  "container": "18098802521189435",
+  "media_id": "18084194921429859",
+  "permalink": "https://www.instagram.com/reel/Df__77Hj3M2/",
+  "posted_at": "2026-11-21T10:17:44.771247+00:00"
  },
  {
   "id": "7-42-patch-notes-1121",
