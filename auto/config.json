@@ -126,14 +126,14 @@
  ],
  "llm": {
   "backend": "api",
-  "writer_model": "claude-opus-5-5",
+  "writer_model": "claude-sonnet-5-5",
   "qc_model": "claude-opus-5-5",
   "writer_effort": "medium",
-  "qc_effort": "high",
+  "qc_effort": "medium",
   "article_chars": 6000,
   "max_rewrite_rounds": 1,
   "max_replacements": 1,
-  "vision_model": "claude-opus-5-5"
+  "vision_model": "claude-haiku-5-5"
  },
  "cta": {
   "A": "Cek Itemku buat\nkebutuhan {game} kamu",
