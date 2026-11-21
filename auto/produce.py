@@ -56,7 +56,17 @@ def prep(p):
     if len(imgs)<3 and p.get('entity'): imgs+=imagepool.pool(p['entity'],3-len(imgs),exclude=tuple(imgs))
     if len(imgs)<cfg.get('min_images',1) or len(art.get('fulltext',''))<500: say(f"  - lewati {name}: gambar/teks kurang"); return None
     it={'id':name,'cat':p['cat'],'entity':p.get('entity'),'images':imgs,'art':art,'url':p['url']}
-    return it if clean_images(it) else None
+    if not clean_images(it): return None
+    return it if early_screen(it) else None
+def early_screen(it):
+    """Stories with <=1 usable image die if that image is a text card/ad: check it with one cheap vision call BEFORE writer+QC spend tokens."""
+    if not VISION or len(it['images'])>1 or os.environ.get('LLM_MOCK_DIR'): return True
+    blocks=[{"type":"text","text":json.dumps({'id':it['id'],'title':it['art'].get('title',''),'topic':it['art'].get('title',''),'shots':[]},ensure_ascii=False)},{"type":"text","text":f"{it['id']} image 0:"},V.thumb_block(it['images'][0])]
+    try: data,u=llm.call_json('visual',VISP,blocks,schemas.VISUAL,L.get('vision_model',L['qc_model']),'low',1500); USAGE.append(('visual',u))
+    except llm.LLMError as e: say(f"  ! saringan gambar awal dilewati ({str(e)[:60]})"); return True
+    bad=[im for r in data['reports'] for im in r['images'] if im['verdict']=='drop']
+    if bad: say(f"  - lewati {it['id'][:34]}: satu-satunya gambar ditolak ({bad[0]['problem']}), diganti berita lain"); return False
+    return True
 # ---------------- 2. writer / assemble / lint ----------------
 def writer_call(items,prev=None):
     payload=[]
