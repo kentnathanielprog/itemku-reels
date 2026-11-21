@@ -173,17 +173,19 @@ def main():
         wsz=len(WRITER)+sum(len(article_text(i['art']))+400 for i in items); qsz=len(QCP)+sum(len(article_text(i['art']))+1200 for i in items)
         wi,qi=wsz//4,qsz//4; est=llm.cost(L['writer_model'],wi,1800)+llm.cost(L['qc_model'],qi,3000)
         say(f"  DRY-RUN: penulis ~{wi} token masuk, QC ~{qi} token masuk (perkiraan kasar chars/4); biaya satu putaran ~US${est:.3f} (tanpa revisi)"); return 0
-    passed=run_batch(items,'a'); extra=0
+    passed=vision_stage(run_batch(items,'a')); extra=0   # vision runs inside the loop so a story lost to its images is replaced too
     while len(passed)<cfg['per_day'] and spare and extra<int(L.get('max_replacements',1)):
         extra+=1; need=cfg['per_day']-len(passed); cand=[]; 
         for p in spare:
             if len(cand)>=need: break
-            if any(p.get('entity') and p['entity']==q.get('entity') for q in passed): continue
+            if any(p.get('entity') and p['entity']==q.get('entity') for q in passed+cand): continue
+            if sum(1 for q in passed+cand if q['cat']==p['cat'])>=cfg['max_per_cat_per_day']: continue
             x=prep(p) if '--picks-file' not in A else None
             if x: cand.append(x)
         spare=[p for p in spare if p['url'] not in {c['url'] for c in cand}]
-        if cand: say(f"  pengganti: {len(cand)} berita"); passed+=run_batch(cand,'r')
-    passed=vision_stage(passed)
+        if not cand: say("  ! tidak ada kandidat pengganti lagi"); break
+        say(f"  pengganti (putaran {extra}): {len(cand)} berita"); passed+=vision_stage(run_batch(cand,'r'+str(extra)))
+    if len(passed)<cfg['per_day']: say(f"  ! hanya {len(passed)}/{cfg['per_day']} berita lolos setelah {extra} putaran pengganti (kandidat habis atau batas putaran tercapai)")
     ok=finish(passed)
     tot=sum(u['usd'] for _,u in USAGE); tin=sum(u['in']+u['cache_read']+u['cache_write'] for _,u in USAGE); tout=sum(u['out'] for _,u in USAGE)
     say(f"== selesai: {len(ok)}/{cfg['per_day']} video siap/antre | {len(USAGE)} panggilan API | {tin} token masuk, {tout} keluar | biaya ~US${tot:.3f}")

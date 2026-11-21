@@ -132,7 +132,7 @@
   "qc_effort": "medium",
   "article_chars": 6000,
   "max_rewrite_rounds": 1,
-  "max_replacements": 1,
+  "max_replacements": 4,
   "vision_model": "claude-haiku-5-5"
  },
  "cta": {
