@@ -153,7 +153,7 @@
  },
  {
   "id": "djmax-respect-v-x-zenless-zone-zero-1121",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-21T00:30:00+00:00",
   "video": "out/short-djmax-respect-v-x-zenless-zone-zero-1121/short.mp4",
   "caption": "DJMAX RESPECT V resmi kolab sama Zenless Zone Zero lewat DLC musik, dan rencananya rilis tahun 2027. Lagu ZZZ apa yang paling pengen kamu mainin di game rhythm? Tulis di komentar ya!\n\nSumber: Gamebrott.com | Gambar: Gamebrott.com\n\n#DJMAXRespectV #ZenlessZoneZero #ZZZ #GameRhythm #DLC #itemku",
@@ -161,9 +161,17 @@
   "topic": "DJMAX RESPECT V x Zenless Zone Zero DLC collab",
   "source_url": "https://gamebrott.com/djmax-respect-v-x-zenless-zone-zero/",
   "hook_type": "news",
-  "music": "assets/audio/pulse-arena.m4a",
+  "music": {
+   "audio_id": "307595600631148",
+   "title": "Many Birds",
+   "artist": "The Poison Oaks"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "07:30"
+  "posted_slot": "07:30",
+  "container": "18098843069189435",
+  "media_id": "18243902662317487",
+  "permalink": "https://www.instagram.com/reel/DgAUJmZgtoN/",
+  "posted_at": "2026-11-21T13:14:29.375973+00:00"
  }
 ]
