@@ -57,10 +57,15 @@ def main():
         print('Tidak ada video jatuh tempo.'+(f" Berikutnya: {nxt[0]['id']} pada {nxt[0]['not_before']} (belum tiba; --force hanya untuk panggilan manual)." if nxt else '')); return 0
     if '--id' in sys.argv: due=[x for x in due if x['id']==sys.argv[sys.argv.index('--id')+1]]       # post one specific queued item
     if not due: print('Tidak ada video jatuh tempo.'); return 0
-    it=sorted(due,key=lambda x:x['not_before'])[0]; vid=BASE/it['video']; caption=it['caption']
+    it=None; skipped=[]
+    for x in sorted(due,key=lambda x:x['not_before']):                           # oldest first, but an item whose video is missing must not block the queue
+        if (BASE/x['video']).exists() or x.get('container'): it=x; break         # (a resumed 'publishing' item with a container needs no upload)
+        skipped.append(x['id']); print(f"  ! video tidak ada, item dilewati: {x['id']} ({x['video']})")
+    if it is None: print(f'Semua {len(skipped)} item jatuh tempo kehilangan videonya: tidak ada yang diposting. Jalankan media_sync.sh pull atau render ulang.'); return 3
+    vid=BASE/it['video']; caption=it['caption']
     why=None if IGNORE_BURST else burst_block(q,now)
     if why: print(f"DITAHAN (guard burst): {why}. Tidak ada yang diposting: {it['id']} tetap di antrean."); return 0
-    print(f"posting: {it['id']} ({vid.name}, {vid.stat().st_size/1e6:.1f}MB)")
+    print(f"posting: {it['id']} ({vid.name}, {(vid.stat().st_size/1e6 if vid.exists() else 0):.1f}MB)")
     if not DRY:
         m=already_on_instagram(it)
         if m:                                                                    # already live (earlier state push failed): record it, never post again

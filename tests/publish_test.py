@@ -115,6 +115,22 @@ def _():
     c1,o1,f1=run(t,['--force']); assert len(posted_calls(f1))==1,o1
     c2,o2,f2=run(t,['--force']); assert 'DITAHAN' in o2 and not f2.calls,o2
 
+# ---- (d) missing video must not block the queue ---------------------------------------------------------------------------------------------
+@case('missing video: oldest item skipped, next item is posted, exit 0, skipped item stays ready')
+def _():
+    t=make_tree([item('old',not_before=NOW-dt.timedelta(hours=9)),item('new',not_before=NOW-dt.timedelta(hours=1))])
+    (t/'out'/'short-old'/'short.mp4').unlink()
+    code,out,f=run(t); assert code==0 and 'dilewati: old' in out,out; assert len(posted_calls(f))==1
+    st={x['id']:x['status'] for x in state(t,'queue.json')}; assert st=={'old':'ready','new':'posted'},st
+@case('missing video: every due item without a file -> non-zero exit, nothing posted, state unchanged')
+def _():
+    t=make_tree([item('a'),item('b')],videos=False); before=(t/'auto'/'state'/'queue.json').read_text(); code,out,f=run(t)
+    assert code==3,(code,out); assert not [c for c in f.calls if c[0]=='POST'],f.calls; assert (t/'auto'/'state'/'queue.json').read_text()==before
+@case('missing video: dry-run also skips instead of crashing (FileNotFoundError)')
+def _():
+    t=make_tree([item('old',not_before=NOW-dt.timedelta(hours=9)),item('new')]); (t/'out'/'short-old'/'short.mp4').unlink()
+    code,out,f=run(t,['--dry-run']); assert code==0 and 'dilewati: old' in out and 'posting: new' in out,out
+
 if __name__=='__main__':
     bad=0
     for n,ok,msg in RES:
