@@ -4,6 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 MODE=${1:?produce|publish}; shift || true
+DRY=0; for a in "$@"; do [ "$a" = "--dry-run" ] && DRY=1; done      # dry-run must never write or push state
 git checkout -q main && git pull -q --ff-only origin main
 [ -d node_modules/playwright ] || bash scripts/setup.sh >/dev/null 2>&1
 save() { git config user.name reels-bot; git config user.email reels-bot@users.noreply.github.com
@@ -12,9 +13,9 @@ save() { git config user.name reels-bot; git config user.email reels-bot@users.n
 case "$MODE" in
 produce)
   export LLM_BACKEND=claude_cli LLM_CLI_ALLOW_LOCAL_LOGIN=1
-  python3 auto/produce.py "$@"; save; bash scripts/media_sync.sh push;;
+  python3 auto/produce.py "$@"; [ $DRY = 1 ] && exit 0; save; bash scripts/media_sync.sh push;;
 publish)
   bash scripts/media_sync.sh pull
-  python3 auto/publish.py "$@"; python3 auto/insights.py 2>/dev/null || true; save; bash scripts/media_sync.sh push;;
+  python3 auto/publish.py "$@"; [ $DRY = 1 ] && exit 0; python3 auto/insights.py 2>/dev/null || true; save; bash scripts/media_sync.sh push;;
 *) echo "mode?"; exit 2;;
 esac
