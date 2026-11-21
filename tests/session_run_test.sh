@@ -2,7 +2,7 @@
 # Scheduled-run wrapper must refuse manual-only flags (no git or network is touched: the check runs first).
 set -u; cd "$(dirname "$0")/.."; P=0; F=0
 ok(){ echo "  ✓ $1"; P=$((P+1)); }; bad(){ echo "  ✗ $1"; F=$((F+1)); }
-for fl in --force --ignore-burst; do
+for fl in --force --ignore-burst --allow-duplicate; do
   out=$(bash scripts/session_run.sh publish $fl 2>&1); rc=$?
   [ $rc -eq 2 ] && echo "$out" | grep -q "hanya untuk panggilan manual" && ok "session_run.sh publish $fl ditolak (exit 2)" || bad "session_run.sh publish $fl tidak ditolak (rc=$rc)"
 done

@@ -30,9 +30,9 @@ class Fake:
         if url.split('?')[0].endswith('/media_publish'): return out({'id':'M1'})
         if 'fields=permalink,timestamp' in url: return out({'permalink':'https://instagram.com/reel/TEST/','timestamp':iso(NOW)})
         raise AssertionError('unexpected URL '+url)
-def run(tmp,argv=(),fake=None):
+def run(tmp,argv=(),fake=None,env=None):
     fake=fake or Fake(); real=urllib.request.urlopen; urllib.request.urlopen=fake
-    env_old=dict(os.environ); os.environ.update(IG_USER_ID='123',IG_ACCESS_TOKEN='fake-token'); os.environ.pop('STOP',None)
+    env_old=dict(os.environ); os.environ.update(IG_USER_ID='123',IG_ACCESS_TOKEN='fake-token'); os.environ.pop('STOP',None); os.environ.pop('ALLOW_FORCE',None); os.environ.update(env or {})
     sys.argv=['publish.py',*argv]; buf=io.StringIO(); code=0
     import time as _t; sl=_t.sleep; _t.sleep=lambda *_:None
     try:
@@ -130,6 +130,29 @@ def _():
 def _():
     t=make_tree([item('old',not_before=NOW-dt.timedelta(hours=9)),item('new')]); (t/'out'/'short-old'/'short.mp4').unlink()
     code,out,f=run(t,['--dry-run']); assert code==0 and 'dilewati: old' in out and 'posting: new' in out,out
+
+# ---- --allow-duplicate: deliberate one-item replacement repost ----------------------------------------------------------------------------------
+LIVE=lambda: Fake(recent=[{'id':'777','caption':'Caption a\n\n#itemku','permalink':'https://instagram.com/reel/OLD/','timestamp':iso(NOW-dt.timedelta(hours=1))}])
+OLD=[{'id':'a','media_id':'777','posted_at':iso(NOW-dt.timedelta(hours=1))}]
+@case('allow-duplicate: caption already live + ALLOW_FORCE=1 + --id -> posted ONCE as a new Reel, old record kept')
+def _():
+    t=make_tree([item('a',caption='Caption a\n\n#itemku')],posts=OLD); code,out,f=run(t,['--allow-duplicate','--ignore-burst','--id','a'],fake=LIVE(),env={'ALLOW_FORCE':'1'})
+    assert code==0 and len(posted_calls(f))==1 and 'DILEWATI' in out,(code,out); assert not [c for c in f.calls if c[1].endswith('/media') and c[0]=='GET'],'media list must not be read'
+    q=state(t,'queue.json')[0]; assert q['status']=='posted' and q['media_id']=='M1',q; ids=[x['media_id'] for x in state(t,'posts.json')]; assert ids==['777','M1'],ids
+@case('allow-duplicate without ALLOW_FORCE=1 -> refused (exit 2), nothing called')
+def _():
+    t=make_tree([item('a',caption='Caption a\n\n#itemku')],posts=OLD); code,out,f=run(t,['--allow-duplicate','--ignore-burst','--id','a'],fake=LIVE()); assert code==2 and 'ALLOW_FORCE=1' in out and not f.calls,(code,out,f.calls)
+@case('allow-duplicate without --id -> refused (cannot be a blanket bypass)')
+def _():
+    t=make_tree([item('a',caption='Caption a\n\n#itemku')],posts=OLD); code,out,f=run(t,['--allow-duplicate','--ignore-burst'],fake=LIVE(),env={'ALLOW_FORCE':'1'}); assert code==2 and not f.calls,(code,out)
+@case('ALLOW_FORCE=1 alone does NOT disable the duplicate check (the explicit flag is required)')
+def _():
+    t=make_tree([item('a',caption='Caption a\n\n#itemku')],posts=OLD); code,out,f=run(t,['--ignore-burst','--id','a'],fake=LIVE(),env={'ALLOW_FORCE':'1'})
+    assert code==0 and not [c for c in f.calls if c[0]=='POST'] and state(t,'queue.json')[0]['media_id']=='777',out
+@case('allow-duplicate does not lift the burst guard (needs --ignore-burst separately)')
+def _():
+    t=make_tree([item('a',caption='Caption a\n\n#itemku')],posts=[{'id':'p','media_id':'m','posted_at':iso(NOW-dt.timedelta(minutes=5))}]); code,out,f=run(t,['--allow-duplicate','--id','a'],fake=LIVE(),env={'ALLOW_FORCE':'1'})
+    assert 'DITAHAN' in out and not [c for c in f.calls if c[0]=='POST'],out
 
 if __name__=='__main__':
     bad=0

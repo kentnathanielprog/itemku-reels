@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 MODE=${1:?produce|publish}; shift || true
 DRY=0; for a in "$@"; do [ "$a" = "--dry-run" ] && DRY=1; done      # dry-run must never write or push state
-for a in "$@"; do case "$a" in --force|--ignore-burst) [ "${ALLOW_FORCE:-0}" = 1 ] || { echo "ABORT: $a hanya untuk panggilan manual (set ALLOW_FORCE=1); routine terjadwal tidak boleh memakainya."; exit 2; };; esac; done
+for a in "$@"; do case "$a" in --force|--ignore-burst|--allow-duplicate) [ "${ALLOW_FORCE:-0}" = 1 ] || { echo "ABORT: $a hanya untuk panggilan manual (set ALLOW_FORCE=1); routine terjadwal tidak boleh memakainya."; exit 2; };; esac; done
 git checkout -q main && git pull -q --ff-only origin main || { echo "PERINGATAN: git pull gagal"; [ $DRY = 1 ] || { echo "ABORT: state terbaru tidak bisa diambil; memproses dengan state basi bisa memposting dua kali. Tidak ada yang diproses."; exit 3; }; }
 # State only survives if this session can push. Live runs abort (a post that cannot be recorded would be posted again next time); dry-run just reports.
 if git push --dry-run -q origin HEAD:main >/tmp/_pf.log 2>&1; then echo "PUSH: ok"; else

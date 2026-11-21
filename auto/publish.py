@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Uploader (deterministic, no LLM): posts the next due video from state/queue.json to Instagram Reels via the official Graph API.
-usage: python3 publish.py [--dry-run] [--force] [--ignore-burst] [--id <queue id>]
+usage: python3 publish.py [--dry-run] [--force] [--ignore-burst] [--allow-duplicate --id <queue id>] [--id <queue id>]
+  --allow-duplicate = MANUAL, ONE ITEM ONLY: skip the 'caption already live on Instagram' check for the item named by --id (a deliberate replacement repost). Requires env ALLOW_FORCE=1 and --id;
+    it does NOT lift the burst guard or not_before. Scheduled routines cannot use it (scripts/session_run.sh refuses it).
   --force = MANUAL ONLY: also post an item whose not_before has not arrived. --ignore-burst = MANUAL ONLY: skip the burst guard.
   Burst guard (always on otherwise; config.json -> publish_guard, defaults 3/day, 60 min): max 3 posts per WIB day and >= 60 min since the last post.
 env: IG_USER_ID, IG_ACCESS_TOKEN, GRAPH_HOST (default graph.facebook.com), GRAPH_VERSION (default v21.0)
@@ -8,7 +10,7 @@ Idempotent: a half-finished post (container created) is resumed, never duplicate
 !! Endpoint/field names follow Meta's public docs at time of writing - verify against the current Reels publishing docs. !!"""
 import json,os,sys,time,re,pathlib,datetime as dt,urllib.request,urllib.parse
 ROOT=pathlib.Path(__file__).resolve().parent; BASE=ROOT.parent; ST=ROOT/'state'
-DRY='--dry-run' in sys.argv; FORCE='--force' in sys.argv; IGNORE_BURST='--ignore-burst' in sys.argv
+DRY='--dry-run' in sys.argv; FORCE='--force' in sys.argv; IGNORE_BURST='--ignore-burst' in sys.argv; ALLOW_DUP='--allow-duplicate' in sys.argv
 HOST=os.environ.get('GRAPH_HOST','graph.facebook.com'); VER=os.environ.get('GRAPH_VERSION','v21.0')
 UID=os.environ.get('IG_USER_ID','<IG_USER_ID>'); TOK=os.environ.get('IG_ACCESS_TOKEN','')
 def rj(f): return json.loads((ST/f).read_text())
@@ -50,6 +52,7 @@ def burst_block(q,now):
     return None
 def main():
     if (ROOT/'STOP').exists() or os.environ.get('STOP')=='1': print('STOP aktif: tidak ada posting.'); return 0
+    if ALLOW_DUP and (os.environ.get('ALLOW_FORCE')!='1' or '--id' not in sys.argv): print('ABORT: --allow-duplicate hanya untuk panggilan manual: butuh env ALLOW_FORCE=1 dan --id <id item>. Tidak ada yang diposting.'); return 2
     q=rj('queue.json'); now=dt.datetime.now(dt.timezone.utc)
     due=[x for x in q if x['status'] in ('ready','publishing') and (FORCE or dt.datetime.fromisoformat(x['not_before'])<=now)]
     if not due:
@@ -66,7 +69,8 @@ def main():
     why=None if IGNORE_BURST else burst_block(q,now)
     if why: print(f"DITAHAN (guard burst): {why}. Tidak ada yang diposting: {it['id']} tetap di antrean."); return 0
     print(f"posting: {it['id']} ({vid.name}, {(vid.stat().st_size/1e6 if vid.exists() else 0):.1f}MB)")
-    if not DRY:
+    if ALLOW_DUP: print(f"  ! cek duplikat caption DILEWATI untuk {it['id']} (--allow-duplicate, repost pengganti manual)")
+    if not DRY and not ALLOW_DUP:
         m=already_on_instagram(it)
         if m:                                                                    # already live (earlier state push failed): record it, never post again
             try: when=dt.datetime.fromisoformat(m['timestamp'])

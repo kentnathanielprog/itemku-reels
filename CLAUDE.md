@@ -28,6 +28,8 @@ Automated pipeline: finds fresh gaming news -> writes casual Indonesian copy -> 
 - `auto/agents/*.md` are long-form role specs (reference); the compact prompts actually sent to the API are in `auto/prompts/`.
 
 ## Commands
+Manual-only publish flags (refused by scheduled routines unless `ALLOW_FORCE=1`): `--force` (ignore not_before), `--ignore-burst` (skip the 3/day + 60 min guard), `--allow-duplicate --id <id>` (skip the already-live caption check for ONE deliberate repost; also needs `ALLOW_FORCE=1`).
+
 `python3 auto/produce.py --dry-run` (scout + fetch + cost estimate) | `python3 auto/produce.py` (real run) | `python3 auto/produce.py --picks-file f.json` with `LLM_MOCK_DIR=<dir>` (offline) | `python3 short/make_video.py find|new|build` | `python3 scripts/status.py` | slash commands: `/status`, `/produce-dry`, `/offline-test`, `/new-story`.
 
 ## Lessons already learned (do not re-break)
