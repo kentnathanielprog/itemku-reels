@@ -10,6 +10,9 @@ git checkout -q main && git pull -q --ff-only origin main || echo "PERINGATAN: g
 if git push --dry-run -q origin HEAD:main >/tmp/_pf.log 2>&1; then echo "PUSH: ok"; else
   echo "PUSH: GAGAL ($(tail -1 /tmp/_pf.log | cut -c1-160))"; [ $DRY = 1 ] || { echo "ABORT: sesi ini tidak bisa menyimpan state ke GitHub (tambahkan repo ke sumber routine). Tidak ada yang diproses."; exit 3; }
 fi
+# Python deps must import under THIS python3 (system dist-packages may belong to another Python version, e.g. a broken PIL)
+python3 -c "import PIL.Image, numpy, anthropic" 2>/dev/null || python3 -m pip install -q --user --ignore-installed -r requirements.txt 2>&1 | tail -2 || true
+python3 -c "import PIL.Image, numpy, anthropic" || { echo "ABORT: dependensi Python tidak bisa dipasang"; exit 4; }
 [ -d node_modules/playwright ] || bash scripts/setup.sh >/dev/null 2>&1
 save() { git config user.name reels-bot; git config user.email reels-bot@users.noreply.github.com
   git add auto/state short/stories; git diff --cached --quiet || git commit -q -m "state: $MODE $(date -u +%FT%H:%M)"
