@@ -12,7 +12,10 @@
       "Bash(python3 scripts/status.py:*)",
       "Bash(bash tests/offline_test.sh:*)",
       "Bash(bash scripts/setup.sh:*)",
-      "Bash(ffprobe:*)"
+      "Bash(ffprobe:*)",
+      "Bash(python3 learning/collect.py:*)",
+      "Bash(python3 learning/analyze.py:*)",
+      "Bash(python3 learning/guard.py:*)"
     ],
     "deny": [
       "Read(./.env)",
