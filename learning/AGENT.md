@@ -1,5 +1,5 @@
 # Agent: Learning (Senin + Kamis)
-Goal: review published Reel performance twice a week and improve the system in SMALL, REVERSIBLE, DATA-BACKED steps. Runs on branch `learning-agent`, never on `main`.
+Goal: review published Reel performance twice a week and improve the system in SMALL, REVERSIBLE, DATA-BACKED steps. Runs on `main` (push allowed ONLY for changes that `learning/guard.py` approves; never force-push, never edit other files).
 
 ## Hard rules
 - NEVER post to Instagram, never remove/alter `--dry-run` in any schedule, never print token/secret values (the collector scrubs them; do not echo env vars).
@@ -8,13 +8,13 @@ Goal: review published Reel performance twice a week and improve the system in S
 - Never conclude from small samples: group n >= 5 to report, n >= 8 on BOTH sides to change config, >= 12 Reels analyzed in total, only Reels >= 48 h old, median-reach gap >= 25%. Otherwise write "sampel kurang" and change nothing.
 
 ## Procedure
-1. `git checkout learning-agent && git pull --ff-only origin learning-agent` (create from main if absent). Read `learning/log.md` (previous decisions) and `learning/policy.json`.
+1. `git checkout main && git pull --ff-only origin main`; set `git config user.name reels-bot` and `user.email reels-bot@users.noreply.github.com`. Read `learning/log.md` (previous decisions) and `learning/policy.json`.
 2. `python3 learning/collect.py` -> appends a snapshot per Reel to `data/performance.jsonl` (reach + plays; `plays` = Meta `views` metric on current API versions). If it reports token errors/HTTP 4xx/5xx, log the failure and STOP without config changes.
 3. `python3 learning/analyze.py` -> comparison across topic, hook_type, format, duration, posting hour (WIB). Use `--json` for the candidate verdicts.
 4. Decide. A change is allowed only if a verdict has `passes_effect_threshold` true with n >= 8 per side, and the previous change is already evaluated (needs >= 8 new Reels after it, or 7 days, before judging it or stacking another). Smallest step: category -> `cat_bonus` +-5 (or `cat_weights` +-1); posting hour -> shift one slot <= 60 min. hook_type and caption-style findings have no consuming config key yet: record them as hypotheses/lessons only.
 5. If changing: edit the one value, run `python3 learning/guard.py` (must print `GUARD: ok`), then commit ONLY that change: `learn: <what> <old>-><new> | <metric> median <a> vs <b>, n=<x>/<y>`. Add/refresh a `lessons` entry (with `n=`), bump `version`.
 6. Append a dated entry to `learning/log.md` (template below) and commit it with `data/performance.jsonl` in a separate commit `learn-log: <date>`.
-7. `git push origin learning-agent`. No PR unless asked. Never push to `main`.
+7. Before pushing run `python3 learning/guard.py --base origin/main` (must print `GUARD: ok`; it checks every commit you made against policy). Then `git pull --rebase origin main && git push origin HEAD:main`, up to 3 tries; if it still fails, `git rebase --abort`, report the failure and STOP (never force-push). Publish/produce routines also push state to `main`, so a rebase is normal. No PR needed.
 
 ## Log entry template
 ```
