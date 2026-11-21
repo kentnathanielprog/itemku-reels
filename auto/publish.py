@@ -12,7 +12,7 @@ UID=os.environ.get('IG_USER_ID','<IG_USER_ID>'); TOK=os.environ.get('IG_ACCESS_T
 def rj(f): return json.loads((ST/f).read_text())
 def wj(f,d): (ST/f).write_text(json.dumps(d,ensure_ascii=False,indent=1))
 def call(method,url,data=None,headers=None,raw=None):
-    if DRY: print(f'  [dry-run] {method} {url.split("?")[0]}  {json.dumps(data)[:140] if data else ""}'); return {'id':'DRY','uri':'https://rupload.example/DRY','status_code':'FINISHED','permalink':'https://instagram.com/reel/DRY'}
+    if DRY: print(f'  [dry-run] {method} {url.split("?")[0]}  {json.dumps({k:("***" if k=="access_token" else v) for k,v in data.items()})[:140] if data else ""}'); return {'id':'DRY','uri':'https://rupload.example/DRY','status_code':'FINISHED','permalink':'https://instagram.com/reel/DRY'}
     body=raw if raw is not None else (urllib.parse.urlencode(data).encode() if data else None)
     req=urllib.request.Request(url,data=body,method=method,headers=headers or {}); 
     try: return json.loads(urllib.request.urlopen(req,timeout=120).read().decode())
@@ -31,8 +31,11 @@ def main():
         if cfg.get('audio',{}).get('enabled'):                                          # trending/mood track from Instagram's Audio API (opt-in until proven live)
             import ig_audio
             def search(q):
-                if DRY: return [{'audio_id':'DRY','title':'(dry-run)','display_artist':'','duration_in_ms':60000}]
+                if DRY and not TOK: return [{'audio_id':'DRY','title':'(dry-run, tanpa token)','display_artist':'','duration_in_ms':60000}]
                 u=f"https://{HOST}/{VER}/ig_audio?audio_type=music&user_id={UID}&access_token={TOK}"+(f"&search_query={urllib.parse.quote(q)}" if q else '')
+                if DRY:                                                                  # read-only GET is safe in dry-run
+                    try: return json.loads(urllib.request.urlopen(u,timeout=30).read()).get('audio',[])
+                    except Exception as e: print(f'  (cari lagu gagal: {type(e).__name__})'); return []
                 return call('GET',u).get('audio',[])
             sel=ig_audio.pick(search,it.get('cat'),cfg,rj('posts.json'))
             if sel: body['audio_configuration']=ig_audio.config_param(sel); it['music']={k:sel[k] for k in ('audio_id','title','artist')}; print(f"  musik: {sel['title']} - {sel['artist']}")

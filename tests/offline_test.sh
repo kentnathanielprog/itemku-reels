@@ -45,6 +45,9 @@ cfg={'audio':{'queries':{'default':['edm']},'audio_volume':70}}
 res=[{'audio_id':'1','title':'a','duration_in_ms':5000},{'audio_id':'2','title':'b','duration_in_ms':90000},{'audio_id':'3','title':'c','duration_in_ms':90000}]
 posts=[{'music':{'audio_id':'2'}}]
 sel=A.pick(lambda q:res,'mlbb',cfg,posts,rng=random.Random(1)); assert sel and sel['audio_id']=='3',sel
+cfg2={'audio':{'queries':{'default':['edm']},'deny':['official theme','gta','\\bost\\b']}}
+bad_=[{'audio_id':'7','title':'GTA 6 Main Theme','duration_in_ms':90000},{'audio_id':'8','title':'Game (Official Theme Song)','duration_in_ms':90000},{'audio_id':'9','title':'Hype Beat','display_artist':'DJ X','duration_in_ms':90000,'is_ads_eligible':True},{'audio_id':'10','title':'Boss Fight OST','duration_in_ms':90000}]
+assert A.pick(lambda q:bad_,'mlbb',cfg2,[])['audio_id']=='9','filter tema resmi'
 assert A.pick(lambda q:[],'mlbb',cfg,[]) is None
 def boom(q): raise RuntimeError('x')
 assert A.pick(boom,'mlbb',cfg,[]) is None and '"audio_id": "3"' in A.config_param(sel)

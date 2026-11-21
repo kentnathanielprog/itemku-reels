@@ -199,6 +199,32 @@
     "gaming",
     "upbeat"
    ]
-  }
+  },
+  "deny": [
+   "official theme",
+   "theme song",
+   "main theme",
+   "original soundtrack",
+   "soundtrack",
+   "\\bost\\b",
+   "epic version",
+   "cover",
+   "tribute",
+   "8-bit",
+   "lullaby",
+   "karaoke",
+   "instrumental version",
+   "sped up",
+   "slowed",
+   "nightcore",
+   "gta",
+   "grand theft auto",
+   "vice city",
+   "san andreas",
+   "minecraft",
+   "roblox",
+   "mobile legends",
+   "free fire"
+  ]
  }
 }
