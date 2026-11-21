@@ -10,6 +10,11 @@ git checkout -q main && git pull -q --ff-only origin main || echo "PERINGATAN: g
 if git push --dry-run -q origin HEAD:main >/tmp/_pf.log 2>&1; then echo "PUSH: ok"; else
   echo "PUSH: GAGAL ($(tail -1 /tmp/_pf.log | cut -c1-160))"; [ $DRY = 1 ] || { echo "ABORT: sesi ini tidak bisa menyimpan state ke GitHub (tambahkan repo ke sumber routine). Tidak ada yang diproses."; exit 3; }
 fi
+# Some cloud images ship a broken system Pillow that pip does not override: install into our own folder and put it first on PYTHONPATH (inherited by every python subprocess).
+export PYTHONPATH="$HOME/.pydeps${PYTHONPATH:+:$PYTHONPATH}"
+if ! python3 -c 'import PIL.Image,numpy' 2>/dev/null; then
+  echo "SETUP: memasang Pillow/numpy ke $HOME/.pydeps"; python3 -m pip install --break-system-packages --target "$HOME/.pydeps" --upgrade pillow numpy 2>&1 | tail -4 || true
+fi
 if ! python3 -c 'import PIL.Image,numpy' 2>/dev/null || ! command -v ffmpeg >/dev/null; then
   echo "SETUP: memasang dependensi..."; bash scripts/setup.sh 2>&1 | tail -15 || true
   python3 -c 'import PIL.Image,numpy' 2>/dev/null && command -v ffmpeg >/dev/null || { echo "ABORT: dependensi (Pillow/numpy/ffmpeg) tidak bisa dipasang di sesi ini. Tidak ada yang diproses."; exit 4; }
