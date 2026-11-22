@@ -2,7 +2,8 @@
 """DAILY PRODUCER - one command. scout -> fetch -> ONE writer call (all stories) -> lint -> ONE QC call (all stories) -> evidence verifier
    -> <= N revision rounds (each = one batched writer call + one batched QC call, only for failed stories) -> render -> QA -> queue.
 No sub-agents, no resumed sessions: every API call is stateless and carries only the article text + draft.
-exit codes: 0 = at least one video queued (or dry-run estimate printed); 2 = LLM error; 3 = 0 candidates; 4 = candidates but 0 videos queued; 1 = crash
+exit codes: 0 = at least one video queued (or dry-run estimate printed); 2 = LLM error; 3 = 0 candidates (or none could be prepared, even from the spare list); 4 = candidates prepared but 0 videos queued; 1 = crash
+If every top pick fails to prepare (article fetch / image rejected) the run continues with ranked spare candidates (max 12 tries).
 usage: python3 auto/produce.py [--dry-run] [--picks-file f.json] [--no-render] [--no-enqueue] [--day YYYY-MM-DD]
 env: ANTHROPIC_API_KEY (or LLM_MOCK_DIR=auto/mock for an offline test)"""
 import sys,json,subprocess,pathlib,datetime as dt,re,os,time,random
@@ -15,6 +16,7 @@ cfg=json.loads((ROOT/'config.json').read_text()); L=cfg['llm']; pb=json.loads((S
 WRITER=(ROOT/'prompts'/'writer.md').read_text(); QCP=(ROOT/'prompts'/'qc.md').read_text(); VISP=(ROOT/'prompts'/'visual.md').read_text()
 VISION='--no-vision' not in A
 MAXR=min(int(L.get('max_rewrite_rounds',1)),2)                    # hard cap 2
+MAX_SPARE_TRIES=12                                                 # replacement candidates fetched per run at most (each costs a download + maybe a vision call)
 WIB=dt.timezone(dt.timedelta(hours=7)); today=dt.datetime.now(WIB).date().isoformat()
 DAY=A[A.index('--day')+1] if '--day' in A else today
 rng=random.Random(DAY); USAGE=[]; LOGLINES=[]
@@ -48,11 +50,15 @@ def load_picks():
     pick,pool=scout.daily_pick(verbose=True); out=[]
     for p in pick+[]: out.append(prep(p))
     spare=[x for x in pool if x['url'] not in {p['url'] for p in pick}]
+    try: spare.sort(key=lambda x:-scout.score(x,pb))                                   # best-ranked replacement first (category order wasted vision calls on weak Roblox stat cards)
+    except Exception: pass
     return [x for x in out if x],spare
 def prep(p):
     name=slug(p['url'],p['title']); r=sh('python3','-W','ignore',str(BASE/'short'/'fetch_news.py'),p['url'],name,'6')
     f=BASE/'out'/name/'article.json'
-    if r.returncode or not f.exists(): say(f"  - lewati {name}: gagal ambil artikel"); return None
+    if r.returncode or not f.exists():
+        tail=' '.join((r.stderr or r.stdout or '').strip().splitlines()[-2:])[-160:]          # why: keep the last stderr lines (a silent 'gagal ambil artikel' hid the cause on 2026-11-22)
+        say(f"  - lewati {name}: gagal ambil artikel (kode {r.returncode}{': '+tail if tail else ''})"); return None
     art=json.loads(f.read_text()); imgs=imagesel.select([{'file':str(pathlib.Path(i['file']).relative_to(BASE)),'w':i['w'],'src':i.get('src')} for i in art['images']],min_images=cfg.get('min_images',1))   # 1 real image is enough; prefer 3 (see auto/imagesel.py)
     if len(imgs)<3 and p.get('entity'): imgs+=imagepool.pool(p['entity'],3-len(imgs),exclude=tuple(imgs))
     if len(imgs)<cfg.get('min_images',1) or len(art.get('fulltext',''))<500: say(f"  - lewati {name}: gambar/teks kurang"); return None
@@ -174,21 +180,24 @@ def main():
     say(f"== produce {DAY} | model penulis {L['writer_model']} / QC {L['qc_model']} | maks revisi {MAXR}")
     items,spare=load_picks(); say(f"  berita terpilih: {len(items)}")
     for it in items: say(f"    - [{it['cat']}/{it.get('entity')}] {it['art'].get('title','')[:80]} ({it['art'].get('site','')}, {len(it['images'])} gambar)")
-    if not items: say('  GAGAL: 0 kandidat berita (sumber tidak terjangkau, semua ditolak filter, atau tidak ada berita segar). Keluar dengan kode 3 supaya run terlihat gagal.'); return 3
+    if not items and (DRY or not spare): say('  GAGAL: 0 kandidat berita (sumber tidak terjangkau, semua ditolak filter, atau tidak ada berita segar). Keluar dengan kode 3 supaya run terlihat gagal.'); return 3
+    if not items: say(f"  ! tidak ada satu pun berita pilihan yang berhasil disiapkan: mencoba kandidat cadangan ({len(spare)} tersedia, maks {MAX_SPARE_TRIES} percobaan)")
     if DRY:
         wsz=len(WRITER)+sum(len(article_text(i['art']))+400 for i in items); qsz=len(QCP)+sum(len(article_text(i['art']))+1200 for i in items)
         wi,qi=wsz//4,qsz//4; est=llm.cost(L['writer_model'],wi,1800)+llm.cost(L['qc_model'],qi,3000)
         say(f"  DRY-RUN: penulis ~{wi} token masuk, QC ~{qi} token masuk (perkiraan kasar chars/4); biaya satu putaran ~US${est:.3f} (tanpa revisi)"); return 0
+    prepared=len(items); tried=0
     passed=vision_stage(run_batch(items,'a')); extra=0   # vision runs inside the loop so a story lost to its images is replaced too
     while len(passed)<cfg['per_day'] and spare and extra<int(L.get('max_replacements',1)):
         extra+=1; need=cfg['per_day']-len(passed); cand=[]; 
         for p in spare:
-            if len(cand)>=need: break
+            if len(cand)>=need or tried>=MAX_SPARE_TRIES: break
             if any(p.get('entity') and p['entity']==q.get('entity') for q in passed+cand): continue
             if sum(1 for q in passed+cand if q['cat']==p['cat'])>=cfg['max_per_cat_per_day']: continue
-            x=prep(p) if '--picks-file' not in A else None
+            tried+=1; x=prep(p) if '--picks-file' not in A else None
             if x: cand.append(x)
-        spare=[p for p in spare if p['url'] not in {c['url'] for c in cand}]
+        prepared+=len(cand); spare=[p for p in spare if p['url'] not in {c['url'] for c in cand}]
+        if tried>=MAX_SPARE_TRIES and not cand: say(f"  ! batas {MAX_SPARE_TRIES} percobaan kandidat cadangan tercapai"); break
         if not cand: say("  ! tidak ada kandidat pengganti lagi"); break
         say(f"  pengganti (putaran {extra}): {len(cand)} berita"); passed+=vision_stage(run_batch(cand,'r'+str(extra)))
     if len(passed)<cfg['per_day']: say(f"  ! hanya {len(passed)}/{cfg['per_day']} berita lolos setelah {extra} putaran pengganti (kandidat habis atau batas putaran tercapai)")
@@ -196,6 +205,7 @@ def main():
     tot=sum(u['usd'] for _,u in USAGE); tin=sum(u['in']+u['cache_read']+u['cache_write'] for _,u in USAGE); tout=sum(u['out'] for _,u in USAGE)
     say(f"== selesai: {len(ok)}/{cfg['per_day']} video siap/antre | {len(USAGE)} panggilan API | {tin} token masuk, {tout} keluar | biaya ~US${tot:.3f}")
     (ST/'runlog'/f'{DAY}.json').write_text(json.dumps({'day':DAY,'ok':[i['id'] for i in ok],'calls':[(r,u) for r,u in USAGE],'lines':LOGLINES},ensure_ascii=False,indent=1))
+    if not ok and not prepared: say('  GAGAL: tidak ada satu pun berita yang bisa disiapkan (artikel gagal diambil / gambar ditolak). Keluar dengan kode 3.'); return 3
     if not ok: say('  GAGAL: ada kandidat tetapi 0 video yang lolos QC/render/antrean. Keluar dengan kode 4.'); return 4
     return 0
 try: sys.exit(main())
