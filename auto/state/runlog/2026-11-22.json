@@ -1,0 +1,328 @@
+{
+ "day": "2026-11-22",
+ "ok": [
+  "update-reduced-install-size-1122",
+  "gta-6-earns-3-79-billion-in-one-day-as-1122",
+  "dev-says-their-steam-sales-were-148-ti-1122"
+ ],
+ "calls": [
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 258,
+    "cache_read": 5739,
+    "cache_write": 6062,
+    "usd": 0.0,
+    "list_usd": 0.0014
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 323,
+    "cache_read": 9917,
+    "cache_write": 1980,
+    "usd": 0.0,
+    "list_usd": 0.00066
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2273,
+    "cache_read": 0,
+    "cache_write": 6796,
+    "usd": 0.0,
+    "list_usd": 0.04992
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2030,
+    "cache_read": 0,
+    "cache_write": 6873,
+    "usd": 0.0,
+    "list_usd": 0.09559
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1072,
+    "cache_read": 3404,
+    "cache_write": 3072,
+    "usd": 0.0,
+    "list_usd": 0.02335
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1787,
+    "cache_read": 3035,
+    "cache_write": 2826,
+    "usd": 0.0,
+    "list_usd": 0.05896
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 360,
+    "cache_read": 10046,
+    "cache_write": 2129,
+    "usd": 0.0,
+    "list_usd": 0.00071
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 237,
+    "cache_read": 9895,
+    "cache_write": 1960,
+    "usd": 0.0,
+    "list_usd": 0.00061
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 342,
+    "cache_read": 9881,
+    "cache_write": 1945,
+    "usd": 0.0,
+    "list_usd": 0.00066
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 287,
+    "cache_read": 9865,
+    "cache_write": 1928,
+    "usd": 0.0,
+    "list_usd": 0.00063
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 297,
+    "cache_read": 9866,
+    "cache_write": 1930,
+    "usd": 0.0,
+    "list_usd": 0.00063
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 311,
+    "cache_read": 9887,
+    "cache_write": 1951,
+    "usd": 0.0,
+    "list_usd": 0.00064
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 439,
+    "cache_read": 9885,
+    "cache_write": 1968,
+    "usd": 0.0,
+    "list_usd": 0.00071
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2669,
+    "cache_read": 3404,
+    "cache_write": 5017,
+    "usd": 0.0,
+    "list_usd": 0.0471
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1747,
+    "cache_read": 3035,
+    "cache_write": 2465,
+    "usd": 0.0,
+    "list_usd": 0.05528
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1558,
+    "cache_read": 3404,
+    "cache_write": 6261,
+    "usd": 0.0,
+    "list_usd": 0.04097
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 3167,
+    "cache_read": 3035,
+    "cache_write": 5454,
+    "usd": 0.0,
+    "list_usd": 0.10759
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 685,
+    "cache_read": 10168,
+    "cache_write": 2577,
+    "usd": 0.0,
+    "list_usd": 0.00096
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 250,
+    "cache_read": 9895,
+    "cache_write": 1960,
+    "usd": 0.0,
+    "list_usd": 0.00062
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 224,
+    "cache_read": 9876,
+    "cache_write": 1939,
+    "usd": 0.0,
+    "list_usd": 0.0006
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 320,
+    "cache_read": 9867,
+    "cache_write": 1931,
+    "usd": 0.0,
+    "list_usd": 0.00065
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 330,
+    "cache_read": 9873,
+    "cache_write": 1938,
+    "usd": 0.0,
+    "list_usd": 0.00065
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 235,
+    "cache_read": 9891,
+    "cache_write": 1956,
+    "usd": 0.0,
+    "list_usd": 0.00061
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1647,
+    "cache_read": 3404,
+    "cache_write": 3799,
+    "usd": 0.0,
+    "list_usd": 0.03201
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2052,
+    "cache_read": 3035,
+    "cache_write": 4067,
+    "usd": 0.0,
+    "list_usd": 0.07419
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 1405,
+    "cache_read": 10264,
+    "cache_write": 3251,
+    "usd": 0.0,
+    "list_usd": 0.00146
+   }
+  ]
+ ],
+ "lines": [
+  "== produce 2026-11-22 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
+  "  - lewati jujutsu-shenanigans-roblox-deep-di: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  berita terpilih: 2",
+  "    - [popular/None] Steam's go-to FPS training tool just got much smaller and smoother (PCGamesN, 1 gambar)",
+  "    - [gta/gta] GTA 6 keeps crashing on some PS5s with error CE-108255-1, and there’s no fix yet (Eurogamer.net, 2 gambar)",
+  "  [a0] update-reduced-install-size-1122: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a1] gta-6-ps5-crashing-ce-108255-1-error-f-1122: GAGAL — The hook says as a flat fact that 'GTA 6 di PS5 crash dengan error CE-108255-1', so it rea",
+  "  x gta-6-ps5-crashing-ce-108255-1-error-f-1122: dibuang setelah 1 revisi",
+  "  - lewati roblox-games-to-play-with-friends-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-updates-and-records-2026-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati new-roblox-games-2026-11-17-1122: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-games-this-week-2026-11-16-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-weekly-report-2026-11-15-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  [visual] gta-6-earns-3-79-billion-in-one-da: gambar dibuang otomatis #2:duplicate_of_0",
+  "  pengganti (putaran 1): 2 berita",
+  "  [r10] game-trending-saat-ini-di-steam-1122: lint ✗ 1 (tidak perlu QC, langsung revisi)",
+  "  [r10] gta-6-earns-3-79-billion-in-one-day-as-1122: GAGAL — Message 2 pakai superlatif 'tertinggi' tanpa hedge (estimasi/tercatat/menurut/data). Di ar",
+  "  [r11] gta-6-earns-3-79-billion-in-one-day-as-1122: LULUS (QC PASS + bukti terverifikasi)",
+  "  [r11] game-trending-saat-ini-di-steam-1122: GAGAL — Topik sensitif (judi): Slotbound berpusat pada mekanik mesin slot ('memutar mesin slot ber",
+  "  x game-trending-saat-ini-di-steam-1122: dibuang setelah 1 revisi",
+  "  [visual] gta-6-earns-3-79-billion-in-one-da: gambar dibuang AI #1:text_card",
+  "  - lewati roblox-games-to-play-with-friends-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-updates-and-records-2026-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati new-roblox-games-2026-11-17-1122: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-games-this-week-2026-11-16-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-weekly-report-2026-11-15-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  pengganti (putaran 2): 1 berita",
+  "  [r20] dev-says-their-steam-sales-were-148-ti-1122: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] dev-says-their-steam-sales-were-14: gambar dibuang AI #1:off_topic",
+  "== selesai: 3/3 video siap/antre | 26 panggilan API | 264690 token masuk, 26305 keluar | biaya ~US$0.000"
+ ]
+}

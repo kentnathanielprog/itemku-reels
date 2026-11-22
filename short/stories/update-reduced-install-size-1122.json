@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/update-reduced-install-size-1122/imgs/img1.jpg"
+ ],
+ "out": "short-update-reduced-install-size-1122",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "Statespace / PCGamesN",
+ "hashtags": [
+  "aimlabs",
+  "fps",
+  "aimtraining",
+  "steam",
+  "gamingindonesia",
+  "update"
+ ],
+ "hook": {
+  "text": "Install size Aimlabs\nturun drastis nih.\nTunggu angkanya!",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Sebelumnya, Aimlabs\nmakan lebih dari 20GB\ndi penyimpanan kamu",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Update dari Statespace\nini juga bawa performa\nlebih stabil",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Sekarang tinggal di bawah\n[[8]]GB, turun 60%",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Aimlabs update cuts install size by 60%",
+ "cat": "popular",
+ "hook_type": "number",
+ "caption_text": "Aimlabs update dari Statespace bikin install size turun dari lebih dari 20GB jadi di bawah 8GB, dan bisa dimainkan gratis di Steam. Kalian udah pernah coba Aimlabs belum?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

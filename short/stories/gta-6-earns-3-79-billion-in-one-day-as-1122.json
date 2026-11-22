@@ -1,0 +1,64 @@
+{
+ "images": [
+  "out/gta-6-earns-3-79-billion-in-one-day-as-1122/imgs/img1.jpg"
+ ],
+ "out": "short-gta-6-earns-3-79-billion-in-one-day-as-1122",
+ "audio": "assets/audio/dark-alley.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "VGC",
+ "credit": "Rockstar Games",
+ "hashtags": [
+  "GTA6",
+  "RockstarGames",
+  "TakeTwo",
+  "GameNews",
+  "PS5",
+  "Xbox"
+ ],
+ "hook": {
+  "text": "Rockstar buka data\npenjualan hari pertama\nGTA 6. Tunggu angkanya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Menurut Rockstar, GTA 6\ndipesan lebih dari\n32 juta kali",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Di Metacritic, skornya\ntercatat 99 dari 100",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Penjualan ritel hari\npertama menurut Rockstar:\n[[3,79]] miliar dolar",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "GTA 6 day-one sales record claim",
+ "cat": "gta",
+ "hook_type": "number",
+ "caption_text": "Rockstar dan Take-Two mengklaim GTA 6 meraih penjualan ritel hari pertama sebesar 3,79 miliar dolar. Kamu udah ikut main atau masih nunggu, nih?",
+ "experiment": null,
+ "music": "assets/audio/dark-alley.m4a",
+ "music_start": 0
+}

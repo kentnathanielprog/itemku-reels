@@ -1,0 +1,69 @@
+{
+ "images": [
+  "out/gta-6-ps5-crashing-ce-108255-1-error-f-1122/imgs/img1.jpg",
+  "out/gta-6-earns-3-79-billion-in-one-day-as-1121/imgs/img1.jpg"
+ ],
+ "out": "short-gta-6-ps5-crashing-ce-108255-1-error-f-1122",
+ "audio": "assets/audio/dark-alley.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Eurogamer.net",
+ "credit": "Rockstar Games / Eurogamer",
+ "hashtags": [
+  "gta6",
+  "ps5",
+  "rockstargames",
+  "gtavi",
+  "gamingindonesia",
+  "error"
+ ],
+ "hook": {
+  "text": "GTA 6 di PS5 crash\ndengan error CE-108255-1.\ntunggu saran resminya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Satu pemain bilang game\ncrash setelah sekitar\n40 menit main",
+   "img": [
+    1,
+    0
+   ]
+  },
+  {
+   "text": "Rockstar belum bilang\nsoal patch, dan belum\nada fix pasti",
+   "img": [
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Saran PlayStation:\n((update game)) dulu",
+  "img": [
+   1,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "GTA 6 PS5 crash error CE-108255-1",
+ "cat": "gta",
+ "hook_type": "news",
+ "caption_text": "Sebagian pemain GTA 6 di PS5 kena crash dengan error CE-108255-1, dan Rockstar belum kasih kabar soal patch. Saran PlayStation cuma update game dulu. Kamu kena crash juga nggak?",
+ "experiment": null,
+ "music": "assets/audio/dark-alley.m4a",
+ "music_start": 0
+}

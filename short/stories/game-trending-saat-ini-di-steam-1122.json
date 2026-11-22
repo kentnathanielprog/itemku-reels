@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/game-trending-saat-ini-di-steam-1122/imgs/img1.jpg"
+ ],
+ "out": "short-game-trending-saat-ini-di-steam-1122",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Gamebrott.com",
+ "credit": "Gamebrott.com",
+ "hashtags": [
+  "Steam",
+  "GameTrending",
+  "PCGaming",
+  "FootballManager27",
+  "WarhammerSurvivors",
+  "Slotbound"
+ ],
+ "hook": {
+  "text": "Tahu nggak game Steam\nyang masuk trending?\nTunggu judulnya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Ada Football Manager 27,\ngame simulasi manajer\nsepak bola",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Ada juga Warhammer\nSurvivors dengan lebih\ndari 40 karakter",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Dua lainnya: DPS:\nDesktop Pension Squad\ndan ((Slotbound))",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Trending Steam games list",
+ "cat": "popular",
+ "hook_type": "question",
+ "caption_text": "Menurut Gamebrott, ada Football Manager 27, DPS: Desktop Pension Squad, Warhammer Survivors, dan Slotbound di daftar game trending Steam. Kamu paling penasaran sama yang mana?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

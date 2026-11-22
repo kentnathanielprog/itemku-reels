@@ -173,5 +173,50 @@
   "media_id": "18243902662317487",
   "permalink": "https://www.instagram.com/reel/DgAUJmZgtoN/",
   "posted_at": "2026-11-21T13:14:29.375973+00:00"
+ },
+ {
+  "id": "update-reduced-install-size-1122",
+  "status": "ready",
+  "not_before": "2026-11-22T00:30:00+00:00",
+  "video": "out/short-update-reduced-install-size-1122/short.mp4",
+  "caption": "Aimlabs update dari Statespace bikin install size turun dari lebih dari 20GB jadi di bawah 8GB, dan bisa dimainkan gratis di Steam. Kalian udah pernah coba Aimlabs belum?\n\nSumber: PCGamesN | Gambar: Statespace / PCGamesN\n\n#aimlabs #fps #aimtraining #steam #gamingindonesia #update #itemku",
+  "cat": "popular",
+  "topic": "Aimlabs update cuts install size by 60%",
+  "source_url": "https://www.pcgamesn.com/aimlabs/update-reduced-install-size",
+  "hook_type": "number",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "gta-6-earns-3-79-billion-in-one-day-as-1122",
+  "status": "ready",
+  "not_before": "2026-11-22T05:00:00+00:00",
+  "video": "out/short-gta-6-earns-3-79-billion-in-one-day-as-1122/short.mp4",
+  "caption": "Rockstar dan Take-Two mengklaim GTA 6 meraih penjualan ritel hari pertama sebesar 3,79 miliar dolar. Kamu udah ikut main atau masih nunggu, nih?\n\nSumber: VGC | Gambar: Rockstar Games\n\n#GTA6 #RockstarGames #TakeTwo #GameNews #PS5 #Xbox #itemku",
+  "cat": "gta",
+  "topic": "GTA 6 day-one sales record claim",
+  "source_url": "https://www.videogameschronicle.com/news/gta-6-earns-3-79-billion-in-one-day-as-the-biggest-entertainment-launch-in-history/",
+  "hook_type": "number",
+  "music": "assets/audio/dark-alley.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00"
+ },
+ {
+  "id": "dev-says-their-steam-sales-were-148-ti-1122",
+  "status": "ready",
+  "not_before": "2026-11-22T10:00:00+00:00",
+  "video": "out/short-dev-says-their-steam-sales-were-148-ti-1122/short.mp4",
+  "caption": "Buat Tiny Terraces, penjualan di Steam sekitar 148 kali lipat dibanding Epic. Tapi Kernel Hearts malah lebih banyak terjual di Epic gara-gara skin Fortnite. Menurut kamu, toko mana yang lebih menguntungkan buat dev indie?\n\nSumber: GamesRadar+ | Gambar: Ephemera Games / GamesRadar+\n\n#steam #epicgames #fortnite #gamedev #indiegame #kernelhearts #itemku",
+  "cat": "popular",
+  "topic": "Steam vs Epic Games Store sales for indie devs",
+  "source_url": "https://www.gamesradar.com/games/dev-says-their-steam-sales-were-148-times-larger-than-on-the-epic-games-store-but-another-studio-says-epic-saved-them-a-fortune-that-would-have-gone-into-valves-pockets/",
+  "hook_type": "contrast",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "17:00"
  }
 ]
