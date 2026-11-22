@@ -222,7 +222,7 @@
  },
  {
   "id": "dev-says-their-steam-sales-were-148-ti-1122",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-22T10:00:00+00:00",
   "video": "out/short-dev-says-their-steam-sales-were-148-ti-1122/short.mp4",
   "caption": "Buat Tiny Terraces, penjualan di Steam sekitar 148 kali lipat dibanding Epic. Tapi Kernel Hearts malah lebih banyak terjual di Epic gara-gara skin Fortnite. Menurut kamu, toko mana yang lebih menguntungkan buat dev indie?\n\nSumber: GamesRadar+ | Gambar: Ephemera Games / GamesRadar+\n\n#steam #epicgames #fortnite #gamedev #indiegame #kernelhearts #itemku",
@@ -230,9 +230,17 @@
   "topic": "Steam vs Epic Games Store sales for indie devs",
   "source_url": "https://www.gamesradar.com/games/dev-says-their-steam-sales-were-148-times-larger-than-on-the-epic-games-store-but-another-studio-says-epic-saved-them-a-fortune-that-would-have-gone-into-valves-pockets/",
   "hook_type": "contrast",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "365389397717474",
+   "title": "Tango Para Dos",
+   "artist": "Miguel Brignole"
+  },
   "experiment": null,
   "n_images": 2,
-  "posted_slot": "17:00"
+  "posted_slot": "17:00",
+  "container": "18099073829189435",
+  "media_id": "18093723425246732",
+  "permalink": "https://www.instagram.com/reel/DgCjDPuCBwe/",
+  "posted_at": "2026-11-22T10:03:56.059072+00:00"
  }
 ]

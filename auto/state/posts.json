@@ -158,5 +158,23 @@
   "n_images": 1,
   "posted_slot": "12:00",
   "video": "out/short-gta-6-earns-3-79-billion-in-one-day-as-1122/short.mp4"
+ },
+ {
+  "id": "dev-says-their-steam-sales-were-148-ti-1122",
+  "media_id": "18093723425246732",
+  "permalink": "https://www.instagram.com/reel/DgCjDPuCBwe/",
+  "posted_at": "2026-11-22T10:03:56.059072+00:00",
+  "cat": "popular",
+  "topic": "Steam vs Epic Games Store sales for indie devs",
+  "hook_type": "contrast",
+  "music": {
+   "audio_id": "365389397717474",
+   "title": "Tango Para Dos",
+   "artist": "Miguel Brignole"
+  },
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "17:00",
+  "video": "out/short-dev-says-their-steam-sales-were-148-ti-1122/short.mp4"
  }
 ]
