@@ -199,7 +199,7 @@
  },
  {
   "id": "gta-6-earns-3-79-billion-in-one-day-as-1122",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-22T05:00:00+00:00",
   "video": "out/short-gta-6-earns-3-79-billion-in-one-day-as-1122/short.mp4",
   "caption": "Rockstar dan Take-Two mengklaim GTA 6 meraih penjualan ritel hari pertama sebesar 3,79 miliar dolar. Kamu udah ikut main atau masih nunggu, nih?\n\nSumber: VGC | Gambar: Rockstar Games\n\n#GTA6 #RockstarGames #TakeTwo #GameNews #PS5 #Xbox #itemku",
@@ -207,10 +207,18 @@
   "topic": "GTA 6 day-one sales record claim",
   "source_url": "https://www.videogameschronicle.com/news/gta-6-earns-3-79-billion-in-one-day-as-the-biggest-entertainment-launch-in-history/",
   "hook_type": "number",
-  "music": "assets/audio/dark-alley.m4a",
+  "music": {
+   "audio_id": "393903371411311",
+   "title": "The Nerve",
+   "artist": "Elad Marish"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "12:00"
+  "posted_slot": "12:00",
+  "container": "18099024248189435",
+  "media_id": "18344366419260879",
+  "permalink": "https://www.instagram.com/reel/DgCBLGSDvMD/",
+  "posted_at": "2026-11-22T05:07:55.613290+00:00"
  },
  {
   "id": "dev-says-their-steam-sales-were-148-ti-1122",
