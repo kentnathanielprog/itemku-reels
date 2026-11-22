@@ -122,5 +122,23 @@
   "n_images": 1,
   "posted_slot": "07:30",
   "video": "out/short-djmax-respect-v-x-zenless-zone-zero-1121/short.mp4"
+ },
+ {
+  "id": "update-reduced-install-size-1122",
+  "media_id": "18126910246927915",
+  "permalink": "https://www.instagram.com/reel/DgBv89YDWDW/",
+  "posted_at": "2026-11-22T02:37:27.793034+00:00",
+  "cat": "popular",
+  "topic": "Aimlabs update cuts install size by 60%",
+  "hook_type": "number",
+  "music": {
+   "audio_id": "326419273084628",
+   "title": "Revival",
+   "artist": "Austin Cannon"
+  },
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "07:30",
+  "video": "out/short-update-reduced-install-size-1122/short.mp4"
  }
 ]

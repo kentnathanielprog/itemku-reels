@@ -176,7 +176,7 @@
  },
  {
   "id": "update-reduced-install-size-1122",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-22T00:30:00+00:00",
   "video": "out/short-update-reduced-install-size-1122/short.mp4",
   "caption": "Aimlabs update dari Statespace bikin install size turun dari lebih dari 20GB jadi di bawah 8GB, dan bisa dimainkan gratis di Steam. Kalian udah pernah coba Aimlabs belum?\n\nSumber: PCGamesN | Gambar: Statespace / PCGamesN\n\n#aimlabs #fps #aimtraining #steam #gamingindonesia #update #itemku",
@@ -184,10 +184,18 @@
   "topic": "Aimlabs update cuts install size by 60%",
   "source_url": "https://www.pcgamesn.com/aimlabs/update-reduced-install-size",
   "hook_type": "number",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "326419273084628",
+   "title": "Revival",
+   "artist": "Austin Cannon"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "07:30"
+  "posted_slot": "07:30",
+  "container": "18098996747189435",
+  "media_id": "18126910246927915",
+  "permalink": "https://www.instagram.com/reel/DgBv89YDWDW/",
+  "posted_at": "2026-11-22T02:37:27.793034+00:00"
  },
  {
   "id": "gta-6-earns-3-79-billion-in-one-day-as-1122",
