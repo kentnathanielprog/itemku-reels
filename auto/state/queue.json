@@ -245,7 +245,7 @@
  },
  {
   "id": "game-trending-saat-ini-di-steam-1123",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-23T00:30:00+00:00",
   "video": "out/short-game-trending-saat-ini-di-steam-1123/short.mp4",
   "caption": "Ada 10 game yang lagi trending di Steam, dan nomor 1 di daftarnya adalah Melvor Idle 2 yang terinspirasi RuneScape. Kamu udah coba yang mana nih?\n\nSumber: Gamebrott.com | Gambar: Gamebrott.com\n\n#steam #gamepc #gametrending #melvoridle2 #gaming #itemku",
@@ -253,10 +253,18 @@
   "topic": "Trending Steam games list led by Melvor Idle 2",
   "source_url": "https://gamebrott.com/game-trending-saat-ini-di-steam/",
   "hook_type": "number",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "1082299394231369",
+   "title": "Sunset Glitter Engine",
+   "artist": "Magnetic Sirens"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "07:30"
+  "posted_slot": "07:30",
+  "container": "18099348908189435",
+  "media_id": "18029641127868942",
+  "permalink": "https://www.instagram.com/reel/DgFH1IRjKf2/",
+  "posted_at": "2026-11-23T10:03:49.847664+00:00"
  },
  {
   "id": "new-idle-arpg-zizaran-1123",
