@@ -1,0 +1,66 @@
+{
+ "images": [
+  "out/from-scoffing-chips-to-snapmatic-sh-tp-1124/imgs/img1.jpg",
+  "out/from-scoffing-chips-to-snapmatic-sh-tp-1124/imgs/img2.jpg"
+ ],
+ "out": "short-from-scoffing-chips-to-snapmatic-sh-tp-1124",
+ "audio": "assets/audio/dark-alley.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GamesRadar+",
+ "credit": "Rockstar Games",
+ "hashtags": [
+  "GTA6",
+  "RockstarGames",
+  "Snapmatic",
+  "GamesRadar",
+  "gaming"
+ ],
+ "hook": {
+  "text": "Detail kecil GTA 6 yang\nbisa kamu lewatin.\nTunggu yang terakhir",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Ngemil di GTA 6 bisa\nkasih buff health,\nstamina, dan focus",
+   "img": [
+    1
+   ]
+  },
+  {
+   "text": "Snapmatic isinya meme\nyang mirip medsos\nasli",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "((Lampu sein)) bisa\ndinyalain pakai DPad,\nmati sendiri pas belok",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "GTA 6 small details players might miss",
+ "cat": "gta",
+ "hook_type": "news",
+ "caption_text": "Menurut GamesRadar+, GTA 6 penuh detail kecil, dari ngemil yang kasih buff sampai lampu sein yang bisa dinyalain pakai DPad. Menurut kamu, detail mana yang paling kamu tunggu?",
+ "experiment": null,
+ "music": "assets/audio/dark-alley.m4a",
+ "music_start": 0
+}

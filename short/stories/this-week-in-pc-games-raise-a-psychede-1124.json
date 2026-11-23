@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/this-week-in-pc-games-raise-a-psychede-1124/imgs/img1.jpg"
+ ],
+ "out": "short-this-week-in-pc-games-raise-a-psychede-1124",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Rock Paper Shotgun",
+ "credit": "Yotsuba Interactive",
+ "hashtags": [
+  "PCGaming",
+  "NewGames",
+  "EarlyAccess",
+  "Stellaris",
+  "gaming"
+ ],
+ "hook": {
+  "text": "Ada game PC baru\nyang bikin kamu jualan\nkomputer. Tunggu daftarnya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "PC Store Together,\nsim jualan toko\nkomputer",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Double Whammy: siang\nurus toko gitar custom,\npas senggang jadi senjata",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Satu lagi:\n((Escape the Baby Alarm))\npuzzle soal ibu baru",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "New PC games to look out for",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Menurut Rock Paper Shotgun, ada game PC baru kayak PC Store Together, Double Whammy, sampai Escape the Baby Alarm. Kamu paling penasaran sama yang mana?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

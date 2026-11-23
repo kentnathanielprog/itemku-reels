@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/nvidia-reinstates-jensen-huang-as-ceo--1124/imgs/img1.jpg",
+  "out/nvidia-reinstates-jensen-huang-as-ceo--1124/imgs/img3.jpg"
+ ],
+ "out": "short-nvidia-reinstates-jensen-huang-as-ceo--1124",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Dexerto",
+ "credit": "Nvidia / Dexerto",
+ "hashtags": [
+  "Nvidia",
+  "JensenHuang",
+  "GPU",
+  "BeritaTeknologi",
+  "Gaming"
+ ],
+ "hook": {
+  "text": "Jensen Huang balik jadi\nCEO Nvidia setelah mundur.\nTunggu alasannya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Dewan direksi Nvidia\nsepakat bulat memanggil\nJensen Huang kembali",
+   "img": [
+    1,
+    0
+   ]
+  },
+  {
+   "text": "Posisinya sempat dipegang\nCFO Colette Kress\nsecara sementara",
+   "img": [
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Tapi investigasinya\n((masih jalan)) sampai\nsekarang",
+  "img": [
+   1,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Nvidia reinstates Jensen Huang as CEO",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Jensen Huang resmi balik jadi CEO Nvidia setelah dewan direksi memutuskan bersama, tapi investigasi independen soal isu keamanan nasional masih berjalan. Menurut kamu, keputusan ini bakal berdampak ke dunia gaming nggak?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

@@ -295,5 +295,50 @@
   "experiment": null,
   "n_images": 1,
   "posted_slot": "17:00"
+ },
+ {
+  "id": "from-scoffing-chips-to-snapmatic-sh-tp-1124",
+  "status": "ready",
+  "not_before": "2026-11-24T00:30:00+00:00",
+  "video": "out/short-from-scoffing-chips-to-snapmatic-sh-tp-1124/short.mp4",
+  "caption": "Menurut GamesRadar+, GTA 6 penuh detail kecil, dari ngemil yang kasih buff sampai lampu sein yang bisa dinyalain pakai DPad. Menurut kamu, detail mana yang paling kamu tunggu?\n\nSumber: GamesRadar+ | Gambar: Rockstar Games\n\n#GTA6 #RockstarGames #Snapmatic #GamesRadar #gaming #itemku",
+  "cat": "gta",
+  "topic": "GTA 6 small details players might miss",
+  "source_url": "https://www.gamesradar.com/games/grand-theft-auto/from-scoffing-chips-to-snapmatic-sh-tposts-gta-6-is-filled-with-brilliant-little-details-here-are-our-favorites/",
+  "hook_type": "news",
+  "music": "assets/audio/dark-alley.m4a",
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "ezio-actor-assassins-creed-2-remake-1124",
+  "status": "ready",
+  "not_before": "2026-11-24T05:00:00+00:00",
+  "video": "out/short-ezio-actor-assassins-creed-2-remake-1124/short.mp4",
+  "caption": "Roger Craig Smith, pengisi suara Ezio, bilang dia pasti semangat banget kalau ada remake AC 2, meski dia sendiri belum tahu rencana Ubisoft. Kalau ada remake AC 2, kalian mau nggak?\n\nSumber: PCGamesN | Gambar: PCGamesN\n\n#AssassinsCreed #Ezio #AC2Remake #Ubisoft #GamingNews #itemku",
+  "cat": "general",
+  "topic": "Ezio's voice actor wants an Assassin's Creed 2 remake",
+  "source_url": "https://www.pcgamesn.com/assassins-creed-black-flag-resynced/ezio-actor-assassins-creed-2-remake",
+  "hook_type": "question",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "12:00"
+ },
+ {
+  "id": "activision-banjo-kazooie-job-listing-1124",
+  "status": "ready",
+  "not_before": "2026-11-24T10:00:00+00:00",
+  "video": "out/short-activision-banjo-kazooie-job-listing-1124/short.mp4",
+  "caption": "Activision lagi buka lowongan di LinkedIn dan nyebut Banjo-Kazooie sebagai salah satu franchise-nya. Tapi lowongannya nggak bilang game premium yang dikerjain itu game Banjo, dan Activision belum umumin apa-apa. Menurut kamu, Banjo bakal balik nggak?\n\nSumber: GGRecon | Gambar: GGRecon\n\n#BanjoKazooie #Activision #Rare #Xbox #GamingNews #itemku",
+  "cat": "general",
+  "topic": "Activision job listing names Banjo-Kazooie among its franchises",
+  "source_url": "https://www.ggrecon.com/articles/activision-banjo-kazooie-job-listing/",
+  "hook_type": "news",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "17:00"
  }
 ]

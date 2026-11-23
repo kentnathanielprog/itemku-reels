@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/steam-machine-price-increase-1124/imgs/img1.jpg"
+ ],
+ "out": "short-steam-machine-price-increase-1124",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "Valve / PCGamesN",
+ "hashtags": [
+  "SteamMachine",
+  "Valve",
+  "Steam",
+  "PCGaming",
+  "GamingNews"
+ ],
+ "hook": {
+  "text": "Harga Steam Machine\nbisa naik? Valve kasih\nsinyal, tunggu alasannya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Semua reservasi Steam\nMachine 512GB udah\nterpenuhi",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Versi 2TB beda cerita:\npermintaan masih lebih\nbanyak dari produksi",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Valve belum tahu\n((harga unit tambahan))\nkarena biaya memori naik",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Valve warns Steam Machine price could rise due to memory costs",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Valve bilang biaya memori dan storage naik di level yang belum pernah terjadi, jadi harga unit tambahan Steam Machine masih belum jelas. Menurut kamu harganya bakal naik nggak?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

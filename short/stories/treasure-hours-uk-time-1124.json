@@ -1,0 +1,69 @@
+{
+ "images": [
+  "out/treasure-hours-uk-time-1124/imgs/img1.jpg",
+  "out/treasure-hours-uk-time-1124/imgs/img2.jpg"
+ ],
+ "out": "short-treasure-hours-uk-time-1124",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GGRecon",
+ "credit": "GGRecon",
+ "hashtags": [
+  "Fortnite",
+  "TreasureHours",
+  "FortniteChapter7",
+  "Gaming",
+  "VBucks"
+ ],
+ "hook": {
+  "text": "Treasure Hours Fortnite\ntiap Sabtu selama season,\ntunggu angkanya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Treasure Hours jalan tiap\nSabtu selama season\nTreasure Hunters ini",
+   "img": [
+    1,
+    0
+   ]
+  },
+  {
+   "text": "Drop-nya dinaikin dan\nsenjata mingguan Captain\nada di awal tiap match",
+   "img": [
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Menurut GameRant, Weekly\nGold Outfit jadi [[7,5]]\nkali lebih mungkin drop",
+  "img": [
+   1,
+   0,
+   1
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Fortnite Treasure Hours weekly boosted drops",
+ "cat": "popular",
+ "hook_type": "number",
+ "caption_text": "Selama season ini, Treasure Hours di Fortnite jalan tiap Sabtu dengan drop yang dinaikin, dan menurut GameRant peluang Weekly Gold Outfit jadi 7,5 kali lebih besar. Kalian bakal ikut main nggak?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

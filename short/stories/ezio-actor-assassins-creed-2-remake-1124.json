@@ -1,0 +1,66 @@
+{
+ "images": [
+  "out/ezio-actor-assassins-creed-2-remake-1124/imgs/img1.jpg",
+  "out/ezio-actor-assassins-creed-2-remake-1124/imgs/img3.jpg"
+ ],
+ "out": "short-ezio-actor-assassins-creed-2-remake-1124",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "PCGamesN",
+ "hashtags": [
+  "AssassinsCreed",
+  "Ezio",
+  "AC2Remake",
+  "Ubisoft",
+  "GamingNews"
+ ],
+ "hook": {
+  "text": "Pengisi suara Ezio mau\nbalik di remake AC 2?\nini jawabannya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Roger Craig Smith bilang\nbakal semangat banget\nkalau dapat kesempatan",
+   "img": [
+    1
+   ]
+  },
+  {
+   "text": "Tapi dia bilang lagi\nnggak ngerjain proyek\napa pun soal ini",
+   "img": [
+    1,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Dia berharap ada rencana\nsaat AC 2 genap\n[[20]] tahun di 2029",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Ezio's voice actor wants an Assassin's Creed 2 remake",
+ "cat": "general",
+ "hook_type": "question",
+ "caption_text": "Roger Craig Smith, pengisi suara Ezio, bilang dia pasti semangat banget kalau ada remake AC 2, meski dia sendiri belum tahu rencana Ubisoft. Kalau ada remake AC 2, kalian mau nggak?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

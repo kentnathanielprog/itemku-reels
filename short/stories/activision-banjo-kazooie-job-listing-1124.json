@@ -1,0 +1,63 @@
+{
+ "images": [
+  "out/activision-banjo-kazooie-job-listing-1124/imgs/img1.jpg"
+ ],
+ "out": "short-activision-banjo-kazooie-job-listing-1124",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GGRecon",
+ "credit": "GGRecon",
+ "hashtags": [
+  "BanjoKazooie",
+  "Activision",
+  "Rare",
+  "Xbox",
+  "GamingNews"
+ ],
+ "hook": {
+  "text": "Banjo-Kazooie muncul di\nlowongan Activision.\nTunggu angkanya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Lowongan Project Manager\nEmerging Franchises itu\nsebut Banjo Kazooie",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Rare, studio pembuat\nBanjo-Kazooie, sekarang\ndi bawah Activision",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Fans udah nunggu game\nbaru selama [[18]] tahun\ntapi belum ada konfirmasi",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Activision job listing names Banjo-Kazooie among its franchises",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Activision lagi buka lowongan di LinkedIn dan nyebut Banjo-Kazooie sebagai salah satu franchise-nya. Tapi lowongannya nggak bilang game premium yang dikerjain itu game Banjo, dan Activision belum umumin apa-apa. Menurut kamu, Banjo bakal balik nggak?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

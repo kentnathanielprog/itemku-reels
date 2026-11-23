@@ -1,0 +1,69 @@
+{
+ "images": [
+  "out/kpop-demon-hunters-world-tour-ticket-s-1124/imgs/img1.jpg",
+  "out/kpop-demon-hunters-world-tour-ticket-s-1124/imgs/img2.jpg",
+  "out/kpop-demon-hunters-world-tour-ticket-s-1124/imgs/img3.jpg"
+ ],
+ "out": "short-kpop-demon-hunters-world-tour-ticket-s-1124",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Kotaku",
+ "credit": "Netflix / Kotaku",
+ "hashtags": [
+  "KPopDemonHunters",
+  "Netflix",
+  "GoldenWorldTour",
+  "Huntrx",
+  "Fortnite"
+ ],
+ "hook": {
+  "text": "Tur KPop Demon Hunters\nkatanya sepi peminat.\nTunggu angkanya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Menurut Kotaku, tiket\nGolden World Tour udah\ndijual, tapi terlihat sepi",
+   "img": [
+    1,
+    2
+   ]
+  },
+  {
+   "text": "Kursi atas Prudential\nCenter lebih dari 130\ndolar, belum biaya layanan",
+   "img": [
+    2,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Dari 3 paket VIP, yang\ntermahal lebih dari seribu\ndolar: ((Golden VIP))",
+  "img": [
+   0,
+   2
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "KPop Demon Hunters world tour tickets look sparse",
+ "cat": "popular",
+ "hook_type": "contrast",
+ "caption_text": "Menurut Kotaku, tiket tur dunia KPop Demon Hunters kelihatan sepi, padahal filmnya tercatat paling banyak ditonton di Netflix. Menurut kamu harganya kemahalan nggak?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}
