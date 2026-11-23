@@ -1,0 +1,64 @@
+{
+ "images": [
+  "out/you-can-now-order-the-steam-machine-wi-1123/imgs/img1.jpg"
+ ],
+ "out": "short-you-can-now-order-the-steam-machine-wi-1123",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GamesRadar+",
+ "credit": "Valve / GamesRadar+",
+ "hashtags": [
+  "SteamMachine",
+  "Valve",
+  "SteamController",
+  "PCGaming",
+  "GamingNews"
+ ],
+ "hook": {
+  "text": "Steam Machine udah bisa\ndibeli tanpa reservasi.\nTapi cuma satu versi",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Valve bilang model 512GB\nudah masuk add to cart\ntanpa waitlist lagi",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Model 2TB masih kena\nkendala pasokan komponen,\nmemori dan storage",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Valve sendiri belum tahu\nstok dan harga 2TB:\n((belum jelas))",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Steam Machine 512GB now available without reservation",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Steam Machine model 512GB udah bisa dibeli tanpa waitlist, sedangkan model 2TB masih terkendala pasokan komponen menurut Valve. Kamu tertarik ambil yang 512GB atau nunggu 2TB?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

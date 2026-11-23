@@ -1,0 +1,69 @@
+{
+ "images": [
+  "out/new-idle-arpg-zizaran-1123/imgs/img1.jpg",
+  "out/new-idle-arpg-zizaran-1123/imgs/img2.jpg"
+ ],
+ "out": "short-new-idle-arpg-zizaran-1123",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "PCGamesN",
+ "hashtags": [
+  "blastheim",
+  "pathofexile",
+  "zizaran",
+  "arpg",
+  "idlegame",
+  "gamingnews"
+ ],
+ "hook": {
+  "text": "Streamer Path of Exile\numumin ARPG buatannya.\nTunggu harga incarannya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Namanya Blastheim, ARPG\nidle ala Nordik buat\nlayar kedua",
+   "img": [
+    0,
+    1
+   ]
+  },
+  {
+   "text": "Zizaran pegang lebih\ndari 20% proyek dan hak\nveto soal monetisasi",
+   "img": [
+    1,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Harga incarannya sekitar\n[[5]] dolar, tanpa\npay-to-win",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Blastheim idle ARPG by Zizaran",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Zizaran lagi bikin Blastheim, ARPG idle yang pengen dijual murah, sekitar 5 dolar. Kamu tertarik nyobain nggak? Tulis di komen!",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

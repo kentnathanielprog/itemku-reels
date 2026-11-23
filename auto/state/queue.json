@@ -242,5 +242,50 @@
   "media_id": "18093723425246732",
   "permalink": "https://www.instagram.com/reel/DgCjDPuCBwe/",
   "posted_at": "2026-11-22T10:03:56.059072+00:00"
+ },
+ {
+  "id": "game-trending-saat-ini-di-steam-1123",
+  "status": "ready",
+  "not_before": "2026-11-23T00:30:00+00:00",
+  "video": "out/short-game-trending-saat-ini-di-steam-1123/short.mp4",
+  "caption": "Ada 10 game yang lagi trending di Steam, dan nomor 1 di daftarnya adalah Melvor Idle 2 yang terinspirasi RuneScape. Kamu udah coba yang mana nih?\n\nSumber: Gamebrott.com | Gambar: Gamebrott.com\n\n#steam #gamepc #gametrending #melvoridle2 #gaming #itemku",
+  "cat": "popular",
+  "topic": "Trending Steam games list led by Melvor Idle 2",
+  "source_url": "https://gamebrott.com/game-trending-saat-ini-di-steam/",
+  "hook_type": "number",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "new-idle-arpg-zizaran-1123",
+  "status": "ready",
+  "not_before": "2026-11-23T05:00:00+00:00",
+  "video": "out/short-new-idle-arpg-zizaran-1123/short.mp4",
+  "caption": "Zizaran lagi bikin Blastheim, ARPG idle yang pengen dijual murah, sekitar 5 dolar. Kamu tertarik nyobain nggak? Tulis di komen!\n\nSumber: PCGamesN | Gambar: PCGamesN\n\n#blastheim #pathofexile #zizaran #arpg #idlegame #gamingnews #itemku",
+  "cat": "general",
+  "topic": "Blastheim idle ARPG by Zizaran",
+  "source_url": "https://www.pcgamesn.com/blastheim/new-idle-arpg-zizaran",
+  "hook_type": "news",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "12:00"
+ },
+ {
+  "id": "you-can-now-order-the-steam-machine-wi-1123",
+  "status": "ready",
+  "not_before": "2026-11-23T10:00:00+00:00",
+  "video": "out/short-you-can-now-order-the-steam-machine-wi-1123/short.mp4",
+  "caption": "Steam Machine model 512GB udah bisa dibeli tanpa waitlist, sedangkan model 2TB masih terkendala pasokan komponen menurut Valve. Kamu tertarik ambil yang 512GB atau nunggu 2TB?\n\nSumber: GamesRadar+ | Gambar: Valve / GamesRadar+\n\n#SteamMachine #Valve #SteamController #PCGaming #GamingNews #itemku",
+  "cat": "popular",
+  "topic": "Steam Machine 512GB now available without reservation",
+  "source_url": "https://www.gamesradar.com/hardware/desktop-pc/you-can-now-order-the-steam-machine-without-a-reservation-but-the-2tb-model-could-see-further-price-increases-in-the-new-year/",
+  "hook_type": "news",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "17:00"
  }
 ]

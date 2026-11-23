@@ -1,0 +1,208 @@
+{
+ "day": "2026-11-23",
+ "ok": [
+  "game-trending-saat-ini-di-steam-1123",
+  "new-idle-arpg-zizaran-1123",
+  "you-can-now-order-the-steam-machine-wi-1123"
+ ],
+ "calls": [
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 426,
+    "cache_read": 5762,
+    "cache_write": 6085,
+    "usd": 0.0,
+    "list_usd": 0.00149
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 290,
+    "cache_read": 9887,
+    "cache_write": 1951,
+    "usd": 0.0,
+    "list_usd": 0.00063
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2723,
+    "cache_read": 0,
+    "cache_write": 8739,
+    "usd": 0.0,
+    "list_usd": 0.06219
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 3507,
+    "cache_read": 0,
+    "cache_write": 8840,
+    "usd": 0.0,
+    "list_usd": 0.14087
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 491,
+    "cache_read": 3404,
+    "cache_write": 3737,
+    "usd": 0.0,
+    "list_usd": 0.0202
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2024,
+    "cache_read": 3035,
+    "cache_write": 2813,
+    "usd": 0.0,
+    "list_usd": 0.0636
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 807,
+    "cache_read": 10075,
+    "cache_write": 2158,
+    "usd": 0.0,
+    "list_usd": 0.00094
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 3556,
+    "cache_read": 3404,
+    "cache_write": 4779,
+    "usd": 0.0,
+    "list_usd": 0.05502
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 3023,
+    "cache_read": 3035,
+    "cache_write": 5232,
+    "usd": 0.0,
+    "list_usd": 0.10293
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1290,
+    "cache_read": 3404,
+    "cache_write": 4631,
+    "usd": 0.0,
+    "list_usd": 0.03177
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1860,
+    "cache_read": 3035,
+    "cache_write": 4018,
+    "usd": 0.0,
+    "list_usd": 0.06996
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 889,
+    "cache_read": 10130,
+    "cache_write": 2537,
+    "usd": 0.0,
+    "list_usd": 0.00105
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 265,
+    "cache_read": 9919,
+    "cache_write": 1984,
+    "usd": 0.0,
+    "list_usd": 0.00063
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1335,
+    "cache_read": 3404,
+    "cache_write": 3615,
+    "usd": 0.0,
+    "list_usd": 0.02815
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2359,
+    "cache_read": 3035,
+    "cache_write": 3859,
+    "usd": 0.0,
+    "list_usd": 0.07867
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 784,
+    "cache_read": 10142,
+    "cache_write": 2547,
+    "usd": 0.0,
+    "list_usd": 0.001
+   }
+  ]
+ ],
+ "lines": [
+  "== produce 2026-11-23 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
+  "  - lewati roblox-weekly-report-2026-11-22-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  berita terpilih: 2",
+  "    - [popular/None] 10 Game Trending Saat Ini yang Populer di Steam - 23 November 2026 (Gamebrott.com, 1 gambar)",
+  "    - [gta/gta] Rockstar explains why GTA 6's Jason barely says a word, and it’s all down to Ste (Eurogamer.net, 3 gambar)",
+  "  [a0] game-trending-saat-ini-di-steam-1123: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a0] gta-6-jason-steve-mcqueen-army-rangers-1123: GAGAL — Hook menjanjikan 'nama aktor di baliknya' (kesannya pengisi suara/pemeran Jason), tapi gon",
+  "  [a1] gta-6-jason-steve-mcqueen-army-rangers-1123: GAGAL — Message 1 bilang 'sejak awal'. Artikel cuma bilang 'that's by design' (sengaja). Soal wakt",
+  "  x gta-6-jason-steve-mcqueen-army-rangers-1123: dibuang setelah 1 revisi",
+  "  [visual] treasure-hours-uk-time-1123: gambar dibuang otomatis #2:blurry",
+  "  pengganti (putaran 1): 2 berita",
+  "  [r10] treasure-hours-uk-time-1123: GAGAL — 'jalan tiap sabtu' (message 1 dan caption) membuat Treasure Hours terdengar permanen, pada",
+  "  [r10] new-idle-arpg-zizaran-1123: LULUS (QC PASS + bukti terverifikasi)",
+  "  [r11] treasure-hours-uk-time-1123: GAGAL — Optional: write 'Sabtu' with a capital S in message[0] to match the caption.",
+  "  x treasure-hours-uk-time-1123: dibuang setelah 1 revisi",
+  "  - lewati jujutsu-shenanigans-roblox-deep-di: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  pengganti (putaran 2): 1 berita",
+  "  [r20] you-can-now-order-the-steam-machine-wi-1123: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] you-can-now-order-the-steam-machin: gambar dibuang AI #1:ad_or_unrelated",
+  "== selesai: 3/3 video siap/antre | 16 panggilan API | 149240 token masuk, 25629 keluar | biaya ~US$0.000"
+ ]
+}

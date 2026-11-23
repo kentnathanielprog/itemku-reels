@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/game-trending-saat-ini-di-steam-1123/imgs/img1.jpg"
+ ],
+ "out": "short-game-trending-saat-ini-di-steam-1123",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Gamebrott.com",
+ "credit": "Gamebrott.com",
+ "hashtags": [
+  "steam",
+  "gamepc",
+  "gametrending",
+  "melvoridle2",
+  "gaming",
+  "itemku"
+ ],
+ "hook": {
+  "text": "10 game lagi trending\ndi Steam, tunggu judul\nurutan pertamanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Ada Here Comes the Horde\nyang punya 30 level\nmelawan gerombolan undead",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Ada juga Dungeonbound,\nroguelike autobattler\nsoal inventaris dan build",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Di daftar nomor 1 ada\n((Melvor Idle 2))\nterinspirasi RuneScape",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Trending Steam games list led by Melvor Idle 2",
+ "cat": "popular",
+ "hook_type": "number",
+ "caption_text": "Ada 10 game yang lagi trending di Steam, dan nomor 1 di daftarnya adalah Melvor Idle 2 yang terinspirasi RuneScape. Kamu udah coba yang mana nih?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}
