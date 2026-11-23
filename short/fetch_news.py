@@ -103,4 +103,4 @@ if len(saved)<3:
         except Exception: continue
         if len(saved)>=3: break
 json.dump({'url':url,'title':title,'date':date,'site':site,'desc':desc,'summary':summary,'fulltext':flat_all[:40000],'clean':clean_text,'images':saved},open(D.parent/'article.json','w'),ensure_ascii=False,indent=1)
-print(f'TITLE: {title}\nSITE: {site} | DATE: {date[:10]}\nDESC: {desc}\nTEXT: {summary[:700]}\nIMAGES({len(saved)}): '+', '.join(f"{pathlib.Path(s["file"]).name}={s["w"]}x{s["h"]}" for s in saved)+f'\nDIR: {D}')
+print(f'TITLE: {title}\nSITE: {site} | DATE: {date[:10]}\nDESC: {desc}\nTEXT: {summary[:700]}\nIMAGES({len(saved)}): '+', '.join(f"{pathlib.Path(s['file']).name}={s['w']}x{s['h']}" for s in saved)+f'\nDIR: {D}')
