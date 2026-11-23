@@ -21,6 +21,7 @@ if ! python3 -c "$PYCHK" 2>/dev/null || ! command -v ffmpeg >/dev/null; then
   echo "SETUP: memasang dependensi..."; bash scripts/setup.sh 2>&1 | tail -15 || true
   python3 -c "$PYCHK" 2>/dev/null && command -v ffmpeg >/dev/null || { echo "ABORT: dependensi (Pillow/numpy/ffmpeg) tidak bisa dipasang di sesi ini. Tidak ada yang diproses."; exit 4; }
 fi
+python3 scripts/syntax_check.py || { echo "ABORT: ada berkas .py yang tidak bisa dikompilasi oleh Python di sesi ini (lihat daftar di atas). Tidak ada yang diproses."; exit 6; }   # e.g. a 3.12-only f-string on the cloud's 3.11
 . scripts/state_save.sh
 finish() { save_state "$MODE" || { echo "ABORT: state tidak tersimpan ke GitHub setelah 3 percobaan. Jangan jalankan ulang sebelum dicek: item yang sudah tayang dipulihkan otomatis oleh publish.py lewat pemeriksaan akun IG."; exit 5; }; bash scripts/media_sync.sh push; }
 case "$MODE" in
