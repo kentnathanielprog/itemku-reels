@@ -1,0 +1,71 @@
+{
+ "images": [
+  "out/new-steam-game-adds-multiplayer-miniga-1125/imgs/img1.jpg",
+  "out/new-steam-game-adds-multiplayer-miniga-1125/imgs/img2.jpg",
+  "out/new-steam-game-adds-multiplayer-miniga-1125/imgs/img3.jpg"
+ ],
+ "out": "short-new-steam-game-adds-multiplayer-miniga-1125",
+ "audio": "assets/audio/pulse-arena.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Dexerto",
+ "credit": "Dexerto",
+ "hashtags": [
+  "steam",
+  "INTERNET4",
+  "gameupcoming",
+  "minigame",
+  "coop",
+  "gaming"
+ ],
+ "hook": {
+  "text": "Jelajah internet sambil\nmain minigame bareng\nteman? Tunggu judulnya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Game Steam yang bakal\nbisa dimainin bareng\nteman-teman sekaligus",
+   "img": [
+    1,
+    2
+   ]
+  },
+  {
+   "text": "Ada Wikipedia Challenge,\nResearch Battle, sampai\nminigame mancing",
+   "img": [
+    2,
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Game co-op browser:\n((INTERNET4))",
+  "img": [
+   0,
+   2
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "INTERNET4 upcoming Steam multiplayer browser minigames",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Ada game Steam yang bakal rilis, INTERNET4, yang bikin kamu dan teman-teman bisa main minigame sambil jelajah internet bareng. Kamu mau coba Wikipedia Challenge atau mancing dulu?",
+ "experiment": null,
+ "music": "assets/audio/pulse-arena.m4a",
+ "music_start": 0
+}

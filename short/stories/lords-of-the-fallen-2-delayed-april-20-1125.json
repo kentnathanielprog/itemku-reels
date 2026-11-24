@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/lords-of-the-fallen-2-delayed-april-20-1125/imgs/img1.jpg"
+ ],
+ "out": "short-lords-of-the-fallen-2-delayed-april-20-1125",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Eurogamer.net",
+ "credit": "CI Games",
+ "hashtags": [
+  "lordsofthefallen2",
+  "lotf2",
+  "soulslike",
+  "cigames",
+  "gaming"
+ ],
+ "hook": {
+  "text": "Lords of the Fallen 2\nundur lagi, nih.\nTunggu bulannya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Sebelumnya, game ini\nditarget rilis Q1 2027",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "CEO CI Games bilang\ntanggal pastinya\nbakal diumumkan segera",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Rilisnya jadi\n((April 2027))",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Lords of the Fallen 2 delayed to April 2027",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Lords of the Fallen 2 resmi diundur ke April 2027, dan tanggal pastinya bakal diumumkan segera. Kamu masih sabar nunggu atau udah capek sama delay-nya?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

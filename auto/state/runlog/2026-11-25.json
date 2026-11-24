@@ -1,0 +1,276 @@
+{
+ "day": "2026-11-25",
+ "ok": [
+  "you-are-still-taking-100-of-the-risk-w-1125",
+  "lords-of-the-fallen-2-delayed-april-20-1125"
+ ],
+ "calls": [
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 315,
+    "cache_read": 5761,
+    "cache_write": 6066,
+    "usd": 0.0,
+    "list_usd": 0.00143
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2287,
+    "cache_read": 0,
+    "cache_write": 7562,
+    "usd": 0.0,
+    "list_usd": 0.05312
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 3401,
+    "cache_read": 0,
+    "cache_write": 7619,
+    "usd": 0.0,
+    "list_usd": 0.12898
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2061,
+    "cache_read": 3404,
+    "cache_write": 5889,
+    "usd": 0.0,
+    "list_usd": 0.04451
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2913,
+    "cache_read": 3035,
+    "cache_write": 4618,
+    "usd": 0.0,
+    "list_usd": 0.09582
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 2360,
+    "cache_read": 10702,
+    "cache_write": 4337,
+    "usd": 0.0,
+    "list_usd": 0.00215
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 776,
+    "cache_read": 9894,
+    "cache_write": 1977,
+    "usd": 0.0,
+    "list_usd": 0.00088
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 346,
+    "cache_read": 9895,
+    "cache_write": 1978,
+    "usd": 0.0,
+    "list_usd": 0.00067
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1795,
+    "cache_read": 3404,
+    "cache_write": 4483,
+    "usd": 0.0,
+    "list_usd": 0.03623
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 3201,
+    "cache_read": 3035,
+    "cache_write": 4919,
+    "usd": 0.0,
+    "list_usd": 0.10399
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1749,
+    "cache_read": 3404,
+    "cache_write": 5667,
+    "usd": 0.0,
+    "list_usd": 0.0405
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2575,
+    "cache_read": 3035,
+    "cache_write": 4915,
+    "usd": 0.0,
+    "list_usd": 0.09144
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 403,
+    "cache_read": 10070,
+    "cache_write": 2153,
+    "usd": 0.0,
+    "list_usd": 0.00073
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 364,
+    "cache_read": 9862,
+    "cache_write": 1944,
+    "usd": 0.0,
+    "list_usd": 0.00067
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1322,
+    "cache_read": 3404,
+    "cache_write": 2284,
+    "usd": 0.0,
+    "list_usd": 0.0227
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 430,
+    "cache_read": 3404,
+    "cache_write": 2811,
+    "usd": 0.0,
+    "list_usd": 0.01589
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1589,
+    "cache_read": 3035,
+    "cache_write": 2518,
+    "usd": 0.0,
+    "list_usd": 0.05254
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 288,
+    "cache_read": 9871,
+    "cache_write": 1935,
+    "usd": 0.0,
+    "list_usd": 0.00063
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 278,
+    "cache_read": 9888,
+    "cache_write": 1952,
+    "usd": 0.0,
+    "list_usd": 0.00063
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 309,
+    "cache_read": 9920,
+    "cache_write": 1984,
+    "usd": 0.0,
+    "list_usd": 0.00065
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 272,
+    "cache_read": 9898,
+    "cache_write": 1962,
+    "usd": 0.0,
+    "list_usd": 0.00063
+   }
+  ]
+ ],
+ "lines": [
+  "== produce 2026-11-25 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
+  "  - lewati new-roblox-games-2026-11-24-1125: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  berita terpilih: 2",
+  "    - [popular/None] New Steam game adds multiplayer minigames to the entire internet - Dexerto (Dexerto, 3 gambar)",
+  "    - [general/None] \"You are still taking 100% of the risk\" – Why Cairn dev The Game Bakers backs se (GamesIndustry.biz, 3 gambar)",
+  "  [a0] new-steam-game-adds-multiplayer-miniga-1125: GAGAL — Hook 'Seluruh internet jadi arena minigame' overstates the article. The article only says ",
+  "  [a0] you-are-still-taking-100-of-the-risk-w-1125: GAGAL — Message[1] 'Kalau 50% atau 70% pendapatan ke publisher, dana buat risiko kurang' is Leprin",
+  "  [a1] new-steam-game-adds-multiplayer-miniga-1125: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a1] you-are-still-taking-100-of-the-risk-w-1125: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] new-steam-game-adds-multiplayer-mi: gambar dibuang AI #0:ad_or_unrelated, #1:text_card, #2:ad_or_unrelated",
+  "  x new-steam-game-adds-multiplayer-mi: dibuang, tidak ada gambar tersisa",
+  "  [visual] you-are-still-taking-100-of-the-ri: gambar dibuang AI #2:ad_or_unrelated",
+  "  - lewati steam-awards-nominations-are-open-now--1125: gambar/teks kurang",
+  "  - lewati cyberpunk-2s-development-team-has-: satu-satunya gambar ditolak (ad_or_unrelated), diganti berita lain",
+  "  pengganti (putaran 1): 2 berita",
+  "  [r10] chris-greeley-interview-worlds-2026-1125: GAGAL — VERIFIER: angka 4e+06 di video tidak didukung kutipan bukti (atau turunan terverifikasi)",
+  "  [r10] lords-of-the-fallen-2-delayed-april-20-1125: GAGAL — Stale-prone relative phrase 'bulan depan' in message 2 ('tanggal pastinya keluar bulan dep",
+  "  [r11] chris-greeley-interview-worlds-2026-1125: GAGAL — VERIFIER: angka 4e+06 di video tidak didukung kutipan bukti (atau turunan terverifikasi)",
+  "  [r11] lords-of-the-fallen-2-delayed-april-20-1125: LULUS (QC PASS + bukti terverifikasi)",
+  "  x chris-greeley-interview-worlds-2026-1125: dibuang setelah 1 revisi",
+  "  - lewati steam-awards-nominations-are-open-now--1125: gambar/teks kurang",
+  "  pengganti (putaran 2): 1 berita",
+  "  [r20] steam-machine-price-increase-1125: lint ✗ 2 (tidak perlu QC, langsung revisi)",
+  "  [r21] steam-machine-price-increase-1125: GAGAL — VERIFIER: angka 2 di video tidak didukung kutipan bukti (atau turunan terverifikasi)",
+  "  x steam-machine-price-increase-1125: dibuang setelah 1 revisi",
+  "  - lewati steam-awards-nominations-are-open-now--1125: gambar/teks kurang",
+  "  - lewati roblox-games-this-week-2026-11-23-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-weekly-report-2026-11-22-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati jujutsu-shenanigans-roblox-deep-di: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati roblox-games-to-play-with-friends-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati ranking-game-call-of-duty-1125: gambar/teks kurang",
+  "  ! batas 12 percobaan kandidat cadangan tercapai",
+  "  ! hanya 2/3 berita lolos setelah 3 putaran pengganti (kandidat habis atau batas putaran tercapai)",
+  "== selesai: 2/3 video siap/antre | 21 panggilan API | 204556 token masuk, 29034 keluar | biaya ~US$0.000"
+ ]
+}

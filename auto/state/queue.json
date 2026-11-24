@@ -364,5 +364,35 @@
   "media_id": "17904436836386447",
   "permalink": "https://www.instagram.com/reel/DgHsvixDQUw/",
   "posted_at": "2026-11-24T10:03:59.826072+00:00"
+ },
+ {
+  "id": "you-are-still-taking-100-of-the-risk-w-1125",
+  "status": "ready",
+  "not_before": "2026-11-25T00:30:00+00:00",
+  "video": "out/short-you-are-still-taking-100-of-the-risk-w-1125/short.mp4",
+  "caption": "Menurut Audrey Leprince, co-founder The Game Bakers, self-publishing adalah jalan buat dev indie biar tetap berkelanjutan, dan komunitas itu alat marketing nomor satu. Menurut kamu, lebih enak self-publishing atau gandeng publisher?\n\nSumber: GamesIndustry.biz | Gambar: The Game Bakers / GamesIndustry.biz\n\n#Cairn #TheGameBakers #indiegame #selfpublishing #gamedev #gaming #itemku",
+  "cat": "general",
+  "topic": "Cairn dev backs self-publishing for indie developers",
+  "source_url": "https://www.gamesindustry.biz/you-are-still-taking-100-of-the-risk-why-cairn-dev-the-game-bakers-backs-self-publishing-for-all-but-the-smallest-developers",
+  "hook_type": "number",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "lords-of-the-fallen-2-delayed-april-20-1125",
+  "status": "ready",
+  "not_before": "2026-11-25T05:00:00+00:00",
+  "video": "out/short-lords-of-the-fallen-2-delayed-april-20-1125/short.mp4",
+  "caption": "Lords of the Fallen 2 resmi diundur ke April 2027, dan tanggal pastinya bakal diumumkan segera. Kamu masih sabar nunggu atau udah capek sama delay-nya?\n\nSumber: Eurogamer.net | Gambar: CI Games\n\n#lordsofthefallen2 #lotf2 #soulslike #cigames #gaming #itemku",
+  "cat": "general",
+  "topic": "Lords of the Fallen 2 delayed to April 2027",
+  "source_url": "https://www.eurogamer.net/lords-of-the-fallen-2-delayed-april-2027",
+  "hook_type": "news",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00"
  }
 ]

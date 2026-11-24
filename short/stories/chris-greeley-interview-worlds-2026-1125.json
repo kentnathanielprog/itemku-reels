@@ -1,0 +1,70 @@
+{
+ "images": [
+  "out/chris-greeley-interview-worlds-2026-1125/imgs/img1.jpg",
+  "out/chris-greeley-interview-worlds-2026-1125/imgs/img2.jpg",
+  "out/chris-greeley-interview-worlds-2026-1125/imgs/img3.jpg"
+ ],
+ "out": "short-chris-greeley-interview-worlds-2026-1125",
+ "audio": "assets/audio/pulse-arena.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "PCGamesN",
+ "hashtags": [
+  "leagueoflegends",
+  "lol",
+  "worlds",
+  "esports",
+  "riotgames",
+  "valorant"
+ ],
+ "hook": {
+  "text": "Esports lagi 'winter',\nkok Riot masih kuat?\nTunggu angkanya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Riot punya kantor regional\ndi LA, Jerman, Korea,\ndan Asia Tenggara",
+   "img": [
+    1,
+    2
+   ]
+  },
+  {
+   "text": "Menurut Chris Greeley,\nitu 'superpower' mereka",
+   "img": [
+    2,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Final Worlds LoL ditonton\nlebih dari ((4 juta))\npenonton",
+  "img": [
+   0,
+   2
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "How Riot keeps League of Legends esports alive",
+ "cat": "popular",
+ "hook_type": "contrast",
+ "caption_text": "Di tengah 'esports winter', final Worlds LoL masih ditonton lebih dari 4 juta penonton. Menurut Chris Greeley dari Riot, kuncinya ada di kantor regional. Menurut kamu, apa alasan LoL esports masih kuat?",
+ "experiment": null,
+ "music": "assets/audio/pulse-arena.m4a",
+ "music_start": 0
+}

@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/you-are-still-taking-100-of-the-risk-w-1125/imgs/img1.jpg",
+  "out/you-are-still-taking-100-of-the-risk-w-1125/imgs/img2.jpg"
+ ],
+ "out": "short-you-are-still-taking-100-of-the-risk-w-1125",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GamesIndustry.biz",
+ "credit": "The Game Bakers / GamesIndustry.biz",
+ "hashtags": [
+  "Cairn",
+  "TheGameBakers",
+  "indiegame",
+  "selfpublishing",
+  "gamedev",
+  "gaming"
+ ],
+ "hook": {
+  "text": "Kasih 50% atau 70% ke\npublisher? Kata dev Cairn,\ntunggu kuncinya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Menurut Audrey Leprince,\nkomunitas itu alat\nmarketing nomor satu",
+   "img": [
+    1
+   ]
+  },
+  {
+   "text": "Katanya, kalau 50-70%\npendapatan ke publisher,\ndana buat risiko kurang",
+   "img": [
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Kunci indie menurut dia:\n((self-publishing))",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Cairn dev backs self-publishing for indie developers",
+ "cat": "general",
+ "hook_type": "number",
+ "caption_text": "Menurut Audrey Leprince, co-founder The Game Bakers, self-publishing adalah jalan buat dev indie biar tetap berkelanjutan, dan komunitas itu alat marketing nomor satu. Menurut kamu, lebih enak self-publishing atau gandeng publisher?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}
