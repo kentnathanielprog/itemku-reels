@@ -298,7 +298,7 @@
  },
  {
   "id": "from-scoffing-chips-to-snapmatic-sh-tp-1124",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-24T00:30:00+00:00",
   "video": "out/short-from-scoffing-chips-to-snapmatic-sh-tp-1124/short.mp4",
   "caption": "Menurut GamesRadar+, GTA 6 penuh detail kecil, dari ngemil yang kasih buff sampai lampu sein yang bisa dinyalain pakai DPad. Menurut kamu, detail mana yang paling kamu tunggu?\n\nSumber: GamesRadar+ | Gambar: Rockstar Games\n\n#GTA6 #RockstarGames #Snapmatic #GamesRadar #gaming #itemku",
@@ -306,10 +306,18 @@
   "topic": "GTA 6 small details players might miss",
   "source_url": "https://www.gamesradar.com/games/grand-theft-auto/from-scoffing-chips-to-snapmatic-sh-tposts-gta-6-is-filled-with-brilliant-little-details-here-are-our-favorites/",
   "hook_type": "news",
-  "music": "assets/audio/dark-alley.m4a",
+  "music": {
+   "audio_id": "434275513989636",
+   "title": "Toxic Rust",
+   "artist": "Austin Woodward"
+  },
   "experiment": null,
   "n_images": 2,
-  "posted_slot": "07:30"
+  "posted_slot": "07:30",
+  "container": "18099506645189435",
+  "media_id": "18086325953707234",
+  "permalink": "https://www.instagram.com/reel/DgGrZnrjWTr/",
+  "posted_at": "2026-11-24T00:33:53.415458+00:00"
  },
  {
   "id": "ezio-actor-assassins-creed-2-remake-1124",
