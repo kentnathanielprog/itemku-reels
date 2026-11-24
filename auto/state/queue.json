@@ -321,7 +321,7 @@
  },
  {
   "id": "ezio-actor-assassins-creed-2-remake-1124",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-24T05:00:00+00:00",
   "video": "out/short-ezio-actor-assassins-creed-2-remake-1124/short.mp4",
   "caption": "Roger Craig Smith, pengisi suara Ezio, bilang dia pasti semangat banget kalau ada remake AC 2, meski dia sendiri belum tahu rencana Ubisoft. Kalau ada remake AC 2, kalian mau nggak?\n\nSumber: PCGamesN | Gambar: PCGamesN\n\n#AssassinsCreed #Ezio #AC2Remake #Ubisoft #GamingNews #itemku",
@@ -329,10 +329,18 @@
   "topic": "Ezio's voice actor wants an Assassin's Creed 2 remake",
   "source_url": "https://www.pcgamesn.com/assassins-creed-black-flag-resynced/ezio-actor-assassins-creed-2-remake",
   "hook_type": "question",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "1744948239772680",
+   "title": "Greatness",
+   "artist": "Jordan Olmos"
+  },
   "experiment": null,
   "n_images": 2,
-  "posted_slot": "12:00"
+  "posted_slot": "12:00",
+  "container": "18099552902189435",
+  "media_id": "18000384365833203",
+  "permalink": "https://www.instagram.com/reel/DgHK0jjERJ0/",
+  "posted_at": "2026-11-24T05:08:26.817675+00:00"
  },
  {
   "id": "activision-banjo-kazooie-job-listing-1124",
