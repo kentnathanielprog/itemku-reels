@@ -230,5 +230,23 @@
   "n_images": 2,
   "posted_slot": "12:00",
   "video": "out/short-ezio-actor-assassins-creed-2-remake-1124/short.mp4"
+ },
+ {
+  "id": "activision-banjo-kazooie-job-listing-1124",
+  "media_id": "17904436836386447",
+  "permalink": "https://www.instagram.com/reel/DgHsvixDQUw/",
+  "posted_at": "2026-11-24T10:03:59.826072+00:00",
+  "cat": "general",
+  "topic": "Activision job listing names Banjo-Kazooie among its franchises",
+  "hook_type": "news",
+  "music": {
+   "audio_id": "621125636732129",
+   "title": "Dystopia",
+   "artist": "Sam Marshall"
+  },
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "17:00",
+  "video": "out/short-activision-banjo-kazooie-job-listing-1124/short.mp4"
  }
 ]

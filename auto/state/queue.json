@@ -344,7 +344,7 @@
  },
  {
   "id": "activision-banjo-kazooie-job-listing-1124",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-24T10:00:00+00:00",
   "video": "out/short-activision-banjo-kazooie-job-listing-1124/short.mp4",
   "caption": "Activision lagi buka lowongan di LinkedIn dan nyebut Banjo-Kazooie sebagai salah satu franchise-nya. Tapi lowongannya nggak bilang game premium yang dikerjain itu game Banjo, dan Activision belum umumin apa-apa. Menurut kamu, Banjo bakal balik nggak?\n\nSumber: GGRecon | Gambar: GGRecon\n\n#BanjoKazooie #Activision #Rare #Xbox #GamingNews #itemku",
@@ -352,9 +352,17 @@
   "topic": "Activision job listing names Banjo-Kazooie among its franchises",
   "source_url": "https://www.ggrecon.com/articles/activision-banjo-kazooie-job-listing/",
   "hook_type": "news",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "621125636732129",
+   "title": "Dystopia",
+   "artist": "Sam Marshall"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "17:00"
+  "posted_slot": "17:00",
+  "container": "18099599240189435",
+  "media_id": "17904436836386447",
+  "permalink": "https://www.instagram.com/reel/DgHsvixDQUw/",
+  "posted_at": "2026-11-24T10:03:59.826072+00:00"
  }
 ]
