@@ -1,0 +1,64 @@
+{
+ "images": [
+  "out/youd-be-nuts-to-take-on-all-of-that-in-1126/imgs/img1.jpg"
+ ],
+ "out": "short-youd-be-nuts-to-take-on-all-of-that-in-1126",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GamesIndustry.biz",
+ "credit": "Playground Games/Xbox Game Studios",
+ "hashtags": [
+  "fable",
+  "playgroundgames",
+  "xbox",
+  "gamingnews",
+  "rpg",
+  "forzahorizon"
+ ],
+ "hook": {
+  "text": "Bikin Fable ternyata nggak\nsesimpel itu. Tunggu\nangkanya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Playground bikin Fable\npakai engine yang biasa\ndipakai game balap",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Cerita, humor, combat,\nquest, dunia Albion, dan\nsimulasinya",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Total ada [[6]] hal yang\nharus benar menurut\nRalph Fulton",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Fable's six must-get-right pillars at Playground Games",
+ "cat": "general",
+ "hook_type": "number",
+ "caption_text": "Ternyata menurut Ralph Fulton dari Playground Games, ada 6 hal yang wajib benar di Fable, dan game ini dibikin pakai engine yang dirancang untuk game balap. Kamu paling nunggu bagian yang mana dari Fable?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

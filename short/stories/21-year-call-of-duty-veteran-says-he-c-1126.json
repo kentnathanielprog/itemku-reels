@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/21-year-call-of-duty-veteran-says-he-c-1126/imgs/img1.jpg"
+ ],
+ "out": "short-21-year-call-of-duty-veteran-says-he-c-1126",
+ "audio": "assets/audio/pulse-arena.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "VGC",
+ "credit": "VGC",
+ "hashtags": [
+  "callofduty",
+  "treyarch",
+  "gamedev",
+  "gamingnews",
+  "phk",
+  "gdc"
+ ],
+ "hook": {
+  "text": "Veteran Call of Duty ini\nnggak rekomendasiin karier\ndev. Tunggu angkanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Gavin Goslin 21 tahun di\nTreyarch dan garap 13\ngame Call of Duty",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Survei GDC: 81% responden\nkhawatir soal masa depan\ndi industri",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Sebanyak [[34]] persen\nresponden kena PHK dalam\n2 tahun terakhir",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Call of Duty veteran can no longer recommend game dev career",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Veteran Call of Duty, Gavin Goslin, bilang dia nggak lagi rekomendasiin karier di game development. Menurut survei GDC, 34% responden kena PHK dalam 2 tahun terakhir. Menurut kamu, industri game masih layak dijadiin karier nggak?",
+ "experiment": null,
+ "music": "assets/audio/pulse-arena.m4a",
+ "music_start": 0
+}

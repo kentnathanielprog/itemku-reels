@@ -410,5 +410,50 @@
   "media_id": "18131359333852966",
   "permalink": "https://www.instagram.com/reel/DgJvlYFFT05/",
   "posted_at": "2026-11-25T05:08:10.745645+00:00"
+ },
+ {
+  "id": "no-one-gets-left-behind-cdpr-says-the--1126",
+  "status": "ready",
+  "not_before": "2026-11-26T00:30:00+00:00",
+  "video": "out/short-no-one-gets-left-behind-cdpr-says-the--1126/short.mp4",
+  "caption": "CDPR bilang kerja sama marketing dengan Sony nggak ada hubungannya sama eksklusivitas, dan The Witcher 4 tetap rilis di PS5, Xbox, dan PC barengan. Kamu bakal main di platform apa?\n\nSumber: VGC | Gambar: VGC\n\n#Witcher4 #CDPR #PlayStation #Xbox #gaming #itemku",
+  "cat": "general",
+  "topic": "The Witcher 4 Stays Multiplatform Despite Sony Deal",
+  "source_url": "https://www.videogameschronicle.com/news/no-one-gets-left-behind-cdpr-says-the-witcher-4-will-launch-on-xbox-day-one-despite-sony-agreement/",
+  "hook_type": "contrast",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "youd-be-nuts-to-take-on-all-of-that-in-1126",
+  "status": "ready",
+  "not_before": "2026-11-26T05:00:00+00:00",
+  "video": "out/short-youd-be-nuts-to-take-on-all-of-that-in-1126/short.mp4",
+  "caption": "Ternyata menurut Ralph Fulton dari Playground Games, ada 6 hal yang wajib benar di Fable, dan game ini dibikin pakai engine yang dirancang untuk game balap. Kamu paling nunggu bagian yang mana dari Fable?\n\nSumber: GamesIndustry.biz | Gambar: Playground Games/Xbox Game Studios\n\n#fable #playgroundgames #xbox #gamingnews #rpg #forzahorizon #itemku",
+  "cat": "general",
+  "topic": "Fable's six must-get-right pillars at Playground Games",
+  "source_url": "https://www.gamesindustry.biz/youd-be-nuts-to-take-on-all-of-that-in-the-first-project-and-yet-here-we-are-how-playground-is-finally-making-good-on-an-all-new-fable",
+  "hook_type": "number",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00"
+ },
+ {
+  "id": "cd-projekt-red-says-the-witcher-4-will-1126",
+  "status": "ready",
+  "not_before": "2026-11-26T10:00:00+00:00",
+  "video": "out/short-cd-projekt-red-says-the-witcher-4-will-1126/short.mp4",
+  "caption": "Co-CEO CD Projekt Red bilang Witcher 4 bakal bikin lompatan sebanding GTA 5 ke GTA 6 dari Witcher 3. Menurut kamu, bisa nggak mereka mewujudkannya?\n\nSumber: Dexerto | Gambar: Dexerto\n\n#TheWitcher4 #CDProjektRed #GTA6 #Witcher #BeritaGame #Gaming #itemku",
+  "cat": "gta",
+  "topic": "Witcher 4 to be as big a leap as GTA 5 to GTA 6",
+  "source_url": "https://www.dexerto.com/gaming/cd-projekt-red-says-the-witcher-4-will-be-as-big-a-leap-as-gta-6-was-from-gta-5-3431248/",
+  "hook_type": "question",
+  "music": "assets/audio/dark-alley.m4a",
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "17:00"
  }
 ]

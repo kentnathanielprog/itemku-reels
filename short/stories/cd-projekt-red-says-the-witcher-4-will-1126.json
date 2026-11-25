@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/cd-projekt-red-says-the-witcher-4-will-1126/imgs/img1.jpg",
+  "out/cd-projekt-red-says-the-witcher-4-will-1126/imgs/img2.jpg"
+ ],
+ "out": "short-cd-projekt-red-says-the-witcher-4-will-1126",
+ "audio": "assets/audio/dark-alley.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Dexerto",
+ "credit": "Dexerto",
+ "hashtags": [
+  "TheWitcher4",
+  "CDProjektRed",
+  "GTA6",
+  "Witcher",
+  "BeritaGame",
+  "Gaming"
+ ],
+ "hook": {
+  "text": "Witcher 4 diklaim lompat\nsejauh GTA 5 ke GTA 6.\nKok bisa?",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Co-CEO Michal Nowakowski\nbilang lompatannya bakal\nsebanding sama Rockstar",
+   "img": [
+    1
+   ]
+  },
+  {
+   "text": "Targetnya: tampilan jauh\nlebih bagus dan hampir\nsemua sisi game membaik",
+   "img": [
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Soalnya sejak Witcher 3\nudah lewat [[11]] tahun",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Witcher 4 to be as big a leap as GTA 5 to GTA 6",
+ "cat": "gta",
+ "hook_type": "question",
+ "caption_text": "Co-CEO CD Projekt Red bilang Witcher 4 bakal bikin lompatan sebanding GTA 5 ke GTA 6 dari Witcher 3. Menurut kamu, bisa nggak mereka mewujudkannya?",
+ "experiment": null,
+ "music": "assets/audio/dark-alley.m4a",
+ "music_start": 0
+}

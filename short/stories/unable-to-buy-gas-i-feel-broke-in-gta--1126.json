@@ -1,0 +1,69 @@
+{
+ "images": [
+  "out/unable-to-buy-gas-i-feel-broke-in-gta--1126/imgs/img1.jpg",
+  "out/unable-to-buy-gas-i-feel-broke-in-gta--1126/imgs/img6.jpg",
+  "out/unable-to-buy-gas-i-feel-broke-in-gta--1126/imgs/img2.jpg"
+ ],
+ "out": "short-unable-to-buy-gas-i-feel-broke-in-gta--1126",
+ "audio": "assets/audio/dark-alley.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GamesRadar+",
+ "credit": "Rockstar Games",
+ "hashtags": [
+  "GTA6",
+  "RockstarGames",
+  "ViceCity",
+  "gaming",
+  "GTAIndonesia"
+ ],
+ "hook": {
+  "text": "Di GTA 6 kamu bisa\nkehabisan duit buat bensin\nTunggu angkanya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Di GTA 6 kamu ngurus\nbensin dan kondisi mesin\nmobil sendiri",
+   "img": [
+    1,
+    2
+   ]
+  },
+  {
+   "text": "Ada juga akun BuckMe\nbareng Lucia: bisa nabung\ntapi nggak bisa tarik",
+   "img": [
+    2,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Penulis GamesRadar+ cuma\nsisa [[10]] dolar, nggak\ncukup beli baju baru",
+  "img": [
+   0,
+   2
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "GTA 6 Money Finally Matters",
+ "cat": "gta",
+ "hook_type": "number",
+ "caption_text": "Menurut GamesRadar+, uang di GTA 6 kerasa penting banget, dari isi bensin sampai beli baju baru. Menurut kamu, mekanik begini bikin seru atau ribet?",
+ "experiment": null,
+ "music": "assets/audio/dark-alley.m4a",
+ "music_start": 0
+}

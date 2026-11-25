@@ -1,0 +1,246 @@
+{
+ "day": "2026-11-26",
+ "ok": [
+  "no-one-gets-left-behind-cdpr-says-the--1126",
+  "youd-be-nuts-to-take-on-all-of-that-in-1126",
+  "cd-projekt-red-says-the-witcher-4-will-1126"
+ ],
+ "calls": [
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 596,
+    "cache_read": 5755,
+    "cache_write": 6078,
+    "usd": 0.0,
+    "list_usd": 0.00157
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 343,
+    "cache_read": 9923,
+    "cache_write": 2006,
+    "usd": 0.0,
+    "list_usd": 0.00067
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 4043,
+    "cache_read": 0,
+    "cache_write": 9606,
+    "usd": 0.0,
+    "list_usd": 0.07886
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 4105,
+    "cache_read": 0,
+    "cache_write": 9955,
+    "usd": 0.0,
+    "list_usd": 0.16175
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1531,
+    "cache_read": 3404,
+    "cache_write": 6893,
+    "usd": 0.0,
+    "list_usd": 0.04323
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2204,
+    "cache_read": 3035,
+    "cache_write": 3974,
+    "usd": 0.0,
+    "list_usd": 0.07649
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 399,
+    "cache_read": 10129,
+    "cache_write": 2212,
+    "usd": 0.0,
+    "list_usd": 0.00074
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 283,
+    "cache_read": 9880,
+    "cache_write": 1961,
+    "usd": 0.0,
+    "list_usd": 0.00063
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 414,
+    "cache_read": 9903,
+    "cache_write": 1987,
+    "usd": 0.0,
+    "list_usd": 0.0007
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2755,
+    "cache_read": 3404,
+    "cache_write": 4835,
+    "usd": 0.0,
+    "list_usd": 0.04723
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2570,
+    "cache_read": 3035,
+    "cache_write": 5323,
+    "usd": 0.0,
+    "list_usd": 0.0946
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 123,
+    "cache_read": 3404,
+    "cache_write": 3677,
+    "usd": 0.0,
+    "list_usd": 0.01628
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 1819,
+    "cache_read": 10225,
+    "cache_write": 3088,
+    "usd": 0.0,
+    "list_usd": 0.00163
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 8,
+    "out": 524,
+    "cache_read": 15987,
+    "cache_write": 2329,
+    "usd": 0.0,
+    "list_usd": 0.00089
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1547,
+    "cache_read": 3404,
+    "cache_write": 2416,
+    "usd": 0.0,
+    "list_usd": 0.02548
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2431,
+    "cache_read": 3035,
+    "cache_write": 2649,
+    "usd": 0.0,
+    "list_usd": 0.07043
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 493,
+    "cache_read": 3404,
+    "cache_write": 3396,
+    "usd": 0.0,
+    "list_usd": 0.01886
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1914,
+    "cache_read": 3035,
+    "cache_write": 2648,
+    "usd": 0.0,
+    "list_usd": 0.06008
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 803,
+    "cache_read": 10247,
+    "cache_write": 2958,
+    "usd": 0.0,
+    "list_usd": 0.0011
+   }
+  ]
+ ],
+ "lines": [
+  "== produce 2026-11-26 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
+  "  berita terpilih: 3",
+  "    - [popular/call of duty] You're making Captain Price proud with your Call of Duty: Modern Warfare clips (GamesRadar+, 1 gambar)",
+  "    - [general/xbox] ‘No one gets left behind’: CDPR says The Witcher 4 will launch on Xbox day one,  (VGC, 1 gambar)",
+  "    - [gta/gta] Unable to buy gas, I feel broke in GTA 6 – for the first time, money matters (GamesRadar+, 3 gambar)",
+  "  [a0] youre-making-captain-price-proud-with--1126: GAGAL — The source is sponsored content: 'GamesRadar+ created this content as part of a paid partn",
+  "  [a0] no-one-gets-left-behind-cdpr-says-the--1126: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a0] unable-to-buy-gas-i-feel-broke-in-gta--1126: GAGAL — The hook 'uang bisa bikin nggak bisa isi bensin' is garbled and illogical: it says money s",
+  "  [a1] unable-to-buy-gas-i-feel-broke-in-gta--1126: GAGAL — VERIFIER: angka 10 di video tidak didukung kutipan bukti (atau turunan terverifikasi)",
+  "  x youre-making-captain-price-proud-with--1126: dibuang setelah 1 revisi",
+  "  x unable-to-buy-gas-i-feel-broke-in-gta--1126: dibuang setelah 1 revisi",
+  "  [visual] steam-is-pitting-10-years-of-game-: gambar dibuang otomatis #1:blurry",
+  "  - lewati steam-is-pitting-10-years-of-game-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  pengganti (putaran 1): 2 berita",
+  "  [r10] 21-year-call-of-duty-veteran-says-he-c-1126: GAGAL — Sensitive topic: the whole story is about layoffs (PHK). The gong and caption are built on",
+  "  [r10] youd-be-nuts-to-take-on-all-of-that-in-1126: LULUS (QC PASS + bukti terverifikasi)",
+  "  x 21-year-call-of-duty-veteran-says-he-c-1126: dibuang setelah 1 revisi",
+  "  [visual] youd-be-nuts-to-take-on-all-of-tha: gambar dibuang AI #1:off_topic, #2:ad_or_unrelated",
+  "  [visual] steam-is-pitting-10-years-of-game-: gambar dibuang otomatis #1:blurry",
+  "  - lewati steam-is-pitting-10-years-of-game-: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  pengganti (putaran 2): 1 berita",
+  "  [r20] cd-projekt-red-says-the-witcher-4-will-1126: GAGAL — The gong 'Witcher 3 ke 4 udah lewat [[11]] tahun' is misleading. It reads as an 11-year ga",
+  "  [r21] cd-projekt-red-says-the-witcher-4-will-1126: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] cd-projekt-red-says-the-witcher-4-: gambar dibuang AI #2:ad_or_unrelated",
+  "== selesai: 3/3 video siap/antre | 19 panggilan API | 189258 token masuk, 28897 keluar | biaya ~US$0.000"
+ ]
+}

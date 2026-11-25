@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/youre-making-captain-price-proud-with--1126/imgs/img1.jpg"
+ ],
+ "out": "short-youre-making-captain-price-proud-with--1126",
+ "audio": "assets/audio/pulse-arena.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GamesRadar+",
+ "credit": "GamesRadar+",
+ "hashtags": [
+  "CallOfDuty",
+  "ModernWarfare4",
+  "CODClips",
+  "GamesRadar",
+  "gaming"
+ ],
+ "hook": {
+  "text": "5 klip Modern Warfare 4\npilihan GamesRadar+\nisinya apa? Tunggu ya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Ada kill dadakan lewat\nkereta, plus momen\nair drop dari pemain",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Ada juga kill 4-in-1\nyang dikirim langsung\noleh para pemain",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Total ada [[5]] klip\npilihan GamesRadar+",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Modern Warfare 4 Player Clips Picked by GamesRadar+",
+ "cat": "popular",
+ "hook_type": "number",
+ "caption_text": "GamesRadar+ milih 5 klip favorit dari pemain Modern Warfare 4, mulai dari kill dari kereta sampai kill 4-in-1. Menurut kamu, klip mana yang paling keren?",
+ "experiment": null,
+ "music": "assets/audio/pulse-arena.m4a",
+ "music_start": 0
+}

@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/no-one-gets-left-behind-cdpr-says-the--1126/imgs/img1.jpg"
+ ],
+ "out": "short-no-one-gets-left-behind-cdpr-says-the--1126",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "VGC",
+ "credit": "VGC",
+ "hashtags": [
+  "Witcher4",
+  "CDPR",
+  "PlayStation",
+  "Xbox",
+  "gaming"
+ ],
+ "hook": {
+  "text": "Witcher 4 gandeng Sony,\nXbox gimana nasibnya?\nTunggu jawaban CDPR",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "CDPR bikin kerja sama\nmarketing dengan Sony\nuntuk The Witcher 4",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Bukan soal eksklusif.\nThe Witcher 4 tetap ada\ndi Xbox Series X/S dan PC",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Kata CEO CDPR: semua\nplatform rilis barengan,\n((multiplatform))",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "The Witcher 4 Stays Multiplatform Despite Sony Deal",
+ "cat": "general",
+ "hook_type": "contrast",
+ "caption_text": "CDPR bilang kerja sama marketing dengan Sony nggak ada hubungannya sama eksklusivitas, dan The Witcher 4 tetap rilis di PS5, Xbox, dan PC barengan. Kamu bakal main di platform apa?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}
