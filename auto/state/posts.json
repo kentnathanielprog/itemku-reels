@@ -248,5 +248,23 @@
   "n_images": 1,
   "posted_slot": "17:00",
   "video": "out/short-activision-banjo-kazooie-job-listing-1124/short.mp4"
+ },
+ {
+  "id": "you-are-still-taking-100-of-the-risk-w-1125",
+  "media_id": "17968077576238659",
+  "permalink": "https://www.instagram.com/reel/DgJQNgEiH4o/",
+  "posted_at": "2026-11-25T00:34:00.960346+00:00",
+  "cat": "general",
+  "topic": "Cairn dev backs self-publishing for indie developers",
+  "hook_type": "number",
+  "music": {
+   "audio_id": "1150693053395073",
+   "title": "Trust",
+   "artist": "Dhruv Goel"
+  },
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "07:30",
+  "video": "out/short-you-are-still-taking-100-of-the-risk-w-1125/short.mp4"
  }
 ]

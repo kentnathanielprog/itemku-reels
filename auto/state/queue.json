@@ -367,7 +367,7 @@
  },
  {
   "id": "you-are-still-taking-100-of-the-risk-w-1125",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-25T00:30:00+00:00",
   "video": "out/short-you-are-still-taking-100-of-the-risk-w-1125/short.mp4",
   "caption": "Menurut Audrey Leprince, co-founder The Game Bakers, self-publishing adalah jalan buat dev indie biar tetap berkelanjutan, dan komunitas itu alat marketing nomor satu. Menurut kamu, lebih enak self-publishing atau gandeng publisher?\n\nSumber: GamesIndustry.biz | Gambar: The Game Bakers / GamesIndustry.biz\n\n#Cairn #TheGameBakers #indiegame #selfpublishing #gamedev #gaming #itemku",
@@ -375,10 +375,18 @@
   "topic": "Cairn dev backs self-publishing for indie developers",
   "source_url": "https://www.gamesindustry.biz/you-are-still-taking-100-of-the-risk-why-cairn-dev-the-game-bakers-backs-self-publishing-for-all-but-the-smallest-developers",
   "hook_type": "number",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "1150693053395073",
+   "title": "Trust",
+   "artist": "Dhruv Goel"
+  },
   "experiment": null,
   "n_images": 2,
-  "posted_slot": "07:30"
+  "posted_slot": "07:30",
+  "container": "18099776126189435",
+  "media_id": "17968077576238659",
+  "permalink": "https://www.instagram.com/reel/DgJQNgEiH4o/",
+  "posted_at": "2026-11-25T00:34:00.960346+00:00"
  },
  {
   "id": "lords-of-the-fallen-2-delayed-april-20-1125",
