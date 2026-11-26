@@ -459,7 +459,7 @@
  },
  {
   "id": "cd-projekt-red-says-the-witcher-4-will-1126",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-26T10:00:00+00:00",
   "video": "out/short-cd-projekt-red-says-the-witcher-4-will-1126/short.mp4",
   "caption": "Co-CEO CD Projekt Red bilang Witcher 4 bakal bikin lompatan sebanding GTA 5 ke GTA 6 dari Witcher 3. Menurut kamu, bisa nggak mereka mewujudkannya?\n\nSumber: Dexerto | Gambar: Dexerto\n\n#TheWitcher4 #CDProjektRed #GTA6 #Witcher #BeritaGame #Gaming #itemku",
@@ -467,9 +467,17 @@
   "topic": "Witcher 4 to be as big a leap as GTA 5 to GTA 6",
   "source_url": "https://www.dexerto.com/gaming/cd-projekt-red-says-the-witcher-4-will-be-as-big-a-leap-as-gta-6-was-from-gta-5-3431248/",
   "hook_type": "question",
-  "music": "assets/audio/dark-alley.m4a",
+  "music": {
+   "audio_id": "534836465627737",
+   "title": "Midnight Dreamer",
+   "artist": "Giulio Cercato"
+  },
   "experiment": null,
   "n_images": 2,
-  "posted_slot": "17:00"
+  "posted_slot": "17:00",
+  "container": "18100111271189435",
+  "media_id": "18056832638613402",
+  "permalink": "https://www.instagram.com/reel/DgM2PYzAJJY/",
+  "posted_at": "2026-11-26T10:03:58.329380+00:00"
  }
 ]

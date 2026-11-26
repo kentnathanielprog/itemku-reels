@@ -320,5 +320,23 @@
   "n_images": 1,
   "posted_slot": "12:00",
   "video": "out/short-youd-be-nuts-to-take-on-all-of-that-in-1126/short.mp4"
+ },
+ {
+  "id": "cd-projekt-red-says-the-witcher-4-will-1126",
+  "media_id": "18056832638613402",
+  "permalink": "https://www.instagram.com/reel/DgM2PYzAJJY/",
+  "posted_at": "2026-11-26T10:03:58.329380+00:00",
+  "cat": "gta",
+  "topic": "Witcher 4 to be as big a leap as GTA 5 to GTA 6",
+  "hook_type": "question",
+  "music": {
+   "audio_id": "534836465627737",
+   "title": "Midnight Dreamer",
+   "artist": "Giulio Cercato"
+  },
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "17:00",
+  "video": "out/short-cd-projekt-red-says-the-witcher-4-will-1126/short.mp4"
  }
 ]
