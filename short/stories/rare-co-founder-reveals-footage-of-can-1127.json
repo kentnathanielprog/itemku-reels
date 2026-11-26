@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/rare-co-founder-reveals-footage-of-can-1127/imgs/img1.jpg"
+ ],
+ "out": "short-rare-co-founder-reveals-footage-of-can-1127",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "VGC",
+ "credit": "VGC",
+ "hashtags": [
+  "Conker64",
+  "Rare",
+  "Nintendo64",
+  "ConkersBadFurDay",
+  "GameRetro"
+ ],
+ "hook": {
+  "text": "Co-founder Rare pamer\ngame Conker yang batal\ntunggu buktinya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Tim Stamper, co-founder\nRare, upload video di\nYouTube soal Conker 64",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Ada build dari 1998 di\ncartridge Nintendo 64\nyang dia tunjukin",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Gayanya mirip\nBanjo-Kazooie, cikal\nbakal ((Bad Fur Day))",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Rare co-founder shows cancelled Conker 64",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Tim Stamper, co-founder Rare, upload video yang ngebahas dokumen dan build awal Conker 64 yang batal. Menurut kamu, game ini bakal seru nggak kalau dirilis?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

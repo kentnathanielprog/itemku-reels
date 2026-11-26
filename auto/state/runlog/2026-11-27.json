@@ -1,0 +1,271 @@
+{
+ "day": "2026-11-27",
+ "ok": [
+  "rare-co-founder-reveals-footage-of-can-1127",
+  "genesis-crystals-battle-pass-genshin-i-1127",
+  "chris-greeley-interview-worlds-2026-1127"
+ ],
+ "calls": [
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 311,
+    "cache_read": 5758,
+    "cache_write": 6061,
+    "usd": 0.0,
+    "list_usd": 0.00143
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 233,
+    "cache_read": 9904,
+    "cache_write": 1988,
+    "usd": 0.0,
+    "list_usd": 0.00061
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2932,
+    "cache_read": 0,
+    "cache_write": 7898,
+    "usd": 0.0,
+    "list_usd": 0.06092
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 2835,
+    "cache_read": 0,
+    "cache_write": 7956,
+    "usd": 0.0,
+    "list_usd": 0.12036
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 813,
+    "cache_read": 3404,
+    "cache_write": 6099,
+    "usd": 0.0,
+    "list_usd": 0.03287
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 3608,
+    "cache_read": 3035,
+    "cache_write": 4915,
+    "usd": 0.0,
+    "list_usd": 0.1121
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 1132,
+    "cache_read": 10205,
+    "cache_write": 2862,
+    "usd": 0.0,
+    "list_usd": 0.00124
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 334,
+    "cache_read": 9855,
+    "cache_write": 1939,
+    "usd": 0.0,
+    "list_usd": 0.00065
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 334,
+    "cache_read": 9884,
+    "cache_write": 1967,
+    "usd": 0.0,
+    "list_usd": 0.00066
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 429,
+    "cache_read": 9904,
+    "cache_write": 1987,
+    "usd": 0.0,
+    "list_usd": 0.00071
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 3971,
+    "cache_read": 3404,
+    "cache_write": 4668,
+    "usd": 0.0,
+    "list_usd": 0.05873
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 3501,
+    "cache_read": 3035,
+    "cache_write": 5330,
+    "usd": 0.0,
+    "list_usd": 0.11327
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1076,
+    "cache_read": 3404,
+    "cache_write": 6840,
+    "usd": 0.0,
+    "list_usd": 0.03846
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1666,
+    "cache_read": 3035,
+    "cache_write": 2467,
+    "usd": 0.0,
+    "list_usd": 0.05367
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 431,
+    "cache_read": 10071,
+    "cache_write": 2152,
+    "usd": 0.0,
+    "list_usd": 0.00075
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 315,
+    "cache_read": 9869,
+    "cache_write": 1933,
+    "usd": 0.0,
+    "list_usd": 0.00064
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 2037,
+    "cache_read": 3404,
+    "cache_write": 5612,
+    "usd": 0.0,
+    "list_usd": 0.04316
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 3359,
+    "cache_read": 3035,
+    "cache_write": 6040,
+    "usd": 0.0,
+    "list_usd": 0.11611
+   }
+  ],
+  [
+   "writer",
+   {
+    "in": 2,
+    "out": 1404,
+    "cache_read": 3404,
+    "cache_write": 4702,
+    "usd": 0.0,
+    "list_usd": 0.03319
+   }
+  ],
+  [
+   "qc",
+   {
+    "in": 2,
+    "out": 1665,
+    "cache_read": 3035,
+    "cache_write": 3708,
+    "usd": 0.0,
+    "list_usd": 0.06358
+   }
+  ],
+  [
+   "visual",
+   {
+    "in": 4,
+    "out": 1645,
+    "cache_read": 10646,
+    "cache_write": 3974,
+    "usd": 0.0,
+    "list_usd": 0.00172
+   }
+  ]
+ ],
+ "lines": [
+  "== produce 2026-11-27 | model penulis claude-sonnet-5-5 / QC claude-opus-5-5 | maks revisi 1",
+  "  - lewati roblox-updates-and-records-2026-11: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  berita terpilih: 2",
+  "    - [popular/None] 12 Astonishing Indie Games To Buy Or Wishlist This Thanksgiving Day (Kotaku, 3 gambar)",
+  "    - [general/None] EA removes some live service fluff from Skate and ends seasonal structure \"in fa (Eurogamer.net, 1 gambar)",
+  "  [a0] indie-games-pc-steam-wishlist-thanksgi-1127: GAGAL — The gong and caption say '12 game indie', but the number 12 is not in the article. The art",
+  "  [a0] ea-removes-live-service-skate-seasons-1127: GAGAL — The gong uses the superlative 'pertama' with no hedge (menurut/kata). The claim is backed ",
+  "  [a1] indie-games-pc-steam-wishlist-thanksgi-1127: LULUS (QC PASS + bukti terverifikasi)",
+  "  [a1] ea-removes-live-service-skate-seasons-1127: GAGAL — Message 2 ada referensi waktu di layar ('dibuang akhir tahun') — gampang basi setelah Dese",
+  "  x ea-removes-live-service-skate-seasons-1127: dibuang setelah 1 revisi",
+  "  [visual] indie-games-pc-steam-wishlist-than: gambar dibuang AI #0:graphic_content, #1:ad_or_unrelated, #2:ad_or_unrelated",
+  "  x indie-games-pc-steam-wishlist-than: dibuang, tidak ada gambar tersisa",
+  "  pengganti (putaran 1): 3 berita",
+  "  [r10] free-epic-games-store-1127: GAGAL — Sensitive topic: the whole story is a giveaway/promo from another store (Epic Games Store ",
+  "  [r10] rare-co-founder-reveals-footage-of-can-1127: GAGAL — Wrong attribution in the hook: 'Rare akhirnya pamer' credits the studio. The article says ",
+  "  [r10] 21-year-call-of-duty-veteran-says-he-c-1127: GAGAL — Sensitive topic: the story is built around layoffs and job insecurity (forced exit from Tr",
+  "  [r11] rare-co-founder-reveals-footage-of-can-1127: LULUS (QC PASS + bukti terverifikasi)",
+  "  x free-epic-games-store-1127: dibuang setelah 1 revisi",
+  "  x 21-year-call-of-duty-veteran-says-he-c-1127: dibuang setelah 1 revisi",
+  "  - lewati new-roblox-games-2026-11-24-1127: satu-satunya gambar ditolak (text_card), diganti berita lain",
+  "  - lewati steam-awards-nominations-are-open-now--1127: gambar/teks kurang",
+  "  pengganti (putaran 2): 2 berita",
+  "  [r20] genesis-crystals-battle-pass-genshin-i-1127: LULUS (QC PASS + bukti terverifikasi)",
+  "  [r20] chris-greeley-interview-worlds-2026-1127: GAGAL — Angka 4 juta hanya ada dalam bentuk kata ('over four million viewers') dan artikel tidak j",
+  "  [r21] chris-greeley-interview-worlds-2026-1127: LULUS (QC PASS + bukti terverifikasi)",
+  "  [visual] genesis-crystals-battle-pass-gensh: gambar dibuang AI #1:ad_or_unrelated",
+  "  [visual] chris-greeley-interview-worlds-202: gambar dibuang AI #0:off_topic",
+  "== selesai: 3/3 video siap/antre | 21 panggilan API | 209449 token masuk, 34031 keluar | biaya ~US$0.000"
+ ]
+}

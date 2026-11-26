@@ -479,5 +479,50 @@
   "media_id": "18056832638613402",
   "permalink": "https://www.instagram.com/reel/DgM2PYzAJJY/",
   "posted_at": "2026-11-26T10:03:58.329380+00:00"
+ },
+ {
+  "id": "rare-co-founder-reveals-footage-of-can-1127",
+  "status": "ready",
+  "not_before": "2026-11-27T00:30:00+00:00",
+  "video": "out/short-rare-co-founder-reveals-footage-of-can-1127/short.mp4",
+  "caption": "Tim Stamper, co-founder Rare, upload video yang ngebahas dokumen dan build awal Conker 64 yang batal. Menurut kamu, game ini bakal seru nggak kalau dirilis?\n\nSumber: VGC | Gambar: VGC\n\n#Conker64 #Rare #Nintendo64 #ConkersBadFurDay #GameRetro #itemku",
+  "cat": "general",
+  "topic": "Rare co-founder shows cancelled Conker 64",
+  "source_url": "https://www.videogameschronicle.com/news/rare-co-founder-reveals-footage-of-cancelled-conker-64/",
+  "hook_type": "news",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "genesis-crystals-battle-pass-genshin-i-1127",
+  "status": "ready",
+  "not_before": "2026-11-27T05:00:00+00:00",
+  "video": "out/short-genesis-crystals-battle-pass-genshin-i-1127/short.mp4",
+  "caption": "Ternyata Welkin Moon kasih 300 Genesis Crystals di awal, lalu 90 Primogems per hari selama 30 hari. Kamu tim Welkin Moon, Genesis Crystals, atau Battle Pass?\n\nSumber: Gamedaim | Gambar: Gamedaim\n\n#GenshinImpact #WelkinMoon #GenesisCrystals #Primogems #BattlePass #Gamedaim #itemku",
+  "cat": "general",
+  "topic": "Genshin Impact Welkin Moon vs Genesis Crystals vs Battle Pass",
+  "source_url": "https://gamedaim.com/gaming/genesis-crystals-battle-pass-genshin-impact/",
+  "hook_type": "question",
+  "music": "assets/audio/pixel-jump.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00"
+ },
+ {
+  "id": "chris-greeley-interview-worlds-2026-1127",
+  "status": "ready",
+  "not_before": "2026-11-27T10:00:00+00:00",
+  "video": "out/short-chris-greeley-interview-worlds-2026-1127/short.mp4",
+  "caption": "Menurut PCGamesN, esports lagi di masa 'esports winter', tapi laga LOUD vs Vitality di Valorant Champions ditonton 1,5 juta orang. Menurut kamu, esports lagi turun atau masih kuat?\n\nSumber: PCGamesN | Gambar: PCGamesN\n\n#Valorant #ValorantChampions #LeagueOfLegends #Esports #Riot #Worlds2026 #itemku",
+  "cat": "popular",
+  "topic": "Riot esports through the esports winter",
+  "source_url": "https://www.pcgamesn.com/league-of-legends/chris-greeley-interview-worlds-2026",
+  "hook_type": "contrast",
+  "music": "assets/audio/pulse-arena.m4a",
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "17:00"
  }
 ]

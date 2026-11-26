@@ -1,0 +1,67 @@
+{
+ "images": [
+  "out/ea-removes-live-service-skate-seasons-1127/imgs/img1.jpg"
+ ],
+ "out": "short-ea-removes-live-service-skate-seasons-1127",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Eurogamer.net",
+ "credit": "EA / Full Circle",
+ "hashtags": [
+  "skate",
+  "ea",
+  "fullcircle",
+  "gamingnews",
+  "earlyaccess"
+ ],
+ "hook": {
+  "text": "EA ubah cara update Skate\ndan ada yang dibuang,\ntunggu apa aja",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Season kelima jadi yang\nterakhir, diganti update\nrutin dan gesit",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Battle pass skate.Pass\ndibuang akhir tahun, mata\nuang Tix juga pensiun",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Kata EA, ((0.33.1))\njadi update pertama\ntanpa season",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Skate drops seasons and battle pass",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "Skate bakal ninggalin sistem season dan battle pass, diganti update rutin. Mata uang Tix juga dipensiunkan. Menurut kamu langkah ini bikin game-nya makin bagus nggak?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

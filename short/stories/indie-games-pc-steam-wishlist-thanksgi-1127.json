@@ -1,0 +1,71 @@
+{
+ "images": [
+  "out/indie-games-pc-steam-wishlist-thanksgi-1127/imgs/img1.jpg",
+  "out/indie-games-pc-steam-wishlist-thanksgi-1127/imgs/img2.jpg",
+  "out/indie-games-pc-steam-wishlist-thanksgi-1127/imgs/img3.jpg"
+ ],
+ "out": "short-indie-games-pc-steam-wishlist-thanksgi-1127",
+ "audio": "assets/audio/pulse-arena.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Kotaku",
+ "credit": "Kotaku",
+ "hashtags": [
+  "indiegame",
+  "steam",
+  "wishlist",
+  "gamingnews",
+  "kotaku"
+ ],
+ "hook": {
+  "text": "Kotaku milih game\nindie yang jarang\ndilirik, cek ini!",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Ada Geometry Rift,\nbullet hell roguelite\nrasa Vampire Survivors",
+   "img": [
+    1,
+    2
+   ]
+  },
+  {
+   "text": "Bumpers and Dragons\ngabungin pachinko\ndengan dungeon crawling",
+   "img": [
+    2,
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Masih banyak\n((game indie)) lain\nyang bisa di-wishlist",
+  "img": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Kotaku indie games to wishlist",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Kotaku ngumpulin deretan game indie yang bisa kamu wishlist di Steam, dari Geometry Rift sampai Bumpers and Dragons. Kamu bakal wishlist yang mana?",
+ "experiment": null,
+ "music": "assets/audio/pulse-arena.m4a",
+ "music_start": 0
+}

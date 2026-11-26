@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/chris-greeley-interview-worlds-2026-1127/imgs/img2.jpg",
+  "out/chris-greeley-interview-worlds-2026-1127/imgs/img3.jpg"
+ ],
+ "out": "short-chris-greeley-interview-worlds-2026-1127",
+ "audio": "assets/audio/pulse-arena.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "PCGamesN",
+ "hashtags": [
+  "Valorant",
+  "ValorantChampions",
+  "LeagueOfLegends",
+  "Esports",
+  "Riot",
+  "Worlds2026"
+ ],
+ "hook": {
+  "text": "Katanya esports lagi\n'musim dingin', tunggu\nangka Valorant Champions",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Menurut PCGamesN, esports\npasca-Covid lagi masuk\n'esports winter'",
+   "img": [
+    0,
+    1
+   ]
+  },
+  {
+   "text": "Menurut PCGamesN, Riot\nkelihatannya tetap kuat\ndi tengah kondisi itu",
+   "img": [
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "LOUD vs Vitality di\nValorant Champions ditonton\n[[1,5]] juta orang",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Riot esports through the esports winter",
+ "cat": "popular",
+ "hook_type": "contrast",
+ "caption_text": "Menurut PCGamesN, esports lagi di masa 'esports winter', tapi laga LOUD vs Vitality di Valorant Champions ditonton 1,5 juta orang. Menurut kamu, esports lagi turun atau masih kuat?",
+ "experiment": null,
+ "music": "assets/audio/pulse-arena.m4a",
+ "music_start": 0
+}

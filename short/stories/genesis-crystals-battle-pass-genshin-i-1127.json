@@ -1,0 +1,64 @@
+{
+ "images": [
+  "out/genesis-crystals-battle-pass-genshin-i-1127/imgs/img1.jpg"
+ ],
+ "out": "short-genesis-crystals-battle-pass-genshin-i-1127",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Gamedaim",
+ "credit": "Gamedaim",
+ "hashtags": [
+  "GenshinImpact",
+  "WelkinMoon",
+  "GenesisCrystals",
+  "Primogems",
+  "BattlePass",
+  "Gamedaim"
+ ],
+ "hook": {
+  "text": "Welkin Moon kasih berapa\nPrimogems per hari?\ntunggu angkanya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Pas dibeli, Welkin Moon\nlangsung kasih 300\nGenesis Crystals",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Menurut HoYoverse, harian\nyang kelewat nggak bisa\ndiklaim kembali",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Habis itu [[90]] Primogems\nper hari selama 30 hari",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Genshin Impact Welkin Moon vs Genesis Crystals vs Battle Pass",
+ "cat": "general",
+ "hook_type": "question",
+ "caption_text": "Ternyata Welkin Moon kasih 300 Genesis Crystals di awal, lalu 90 Primogems per hari selama 30 hari. Kamu tim Welkin Moon, Genesis Crystals, atau Battle Pass?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}
