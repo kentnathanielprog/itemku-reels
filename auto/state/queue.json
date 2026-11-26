@@ -436,7 +436,7 @@
  },
  {
   "id": "youd-be-nuts-to-take-on-all-of-that-in-1126",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-26T05:00:00+00:00",
   "video": "out/short-youd-be-nuts-to-take-on-all-of-that-in-1126/short.mp4",
   "caption": "Ternyata menurut Ralph Fulton dari Playground Games, ada 6 hal yang wajib benar di Fable, dan game ini dibikin pakai engine yang dirancang untuk game balap. Kamu paling nunggu bagian yang mana dari Fable?\n\nSumber: GamesIndustry.biz | Gambar: Playground Games/Xbox Game Studios\n\n#fable #playgroundgames #xbox #gamingnews #rpg #forzahorizon #itemku",
@@ -444,10 +444,18 @@
   "topic": "Fable's six must-get-right pillars at Playground Games",
   "source_url": "https://www.gamesindustry.biz/youd-be-nuts-to-take-on-all-of-that-in-the-first-project-and-yet-here-we-are-how-playground-is-finally-making-good-on-an-all-new-fable",
   "hook_type": "number",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "513299068230948",
+   "title": "Club Seoul",
+   "artist": "Sugartapes"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "12:00"
+  "posted_slot": "12:00",
+  "container": "18100075109189435",
+  "media_id": "18380223490245356",
+  "permalink": "https://www.instagram.com/reel/DgMUZivikdO/",
+  "posted_at": "2026-11-26T05:08:18.095347+00:00"
  },
  {
   "id": "cd-projekt-red-says-the-witcher-4-will-1126",
