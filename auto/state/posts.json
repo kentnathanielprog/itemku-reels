@@ -338,5 +338,23 @@
   "n_images": 2,
   "posted_slot": "17:00",
   "video": "out/short-cd-projekt-red-says-the-witcher-4-will-1126/short.mp4"
+ },
+ {
+  "id": "rare-co-founder-reveals-footage-of-can-1127",
+  "media_id": "18114624296608392",
+  "permalink": "https://www.instagram.com/reel/DgOZ3DRlckD/",
+  "posted_at": "2026-11-27T00:34:17.902572+00:00",
+  "cat": "general",
+  "topic": "Rare co-founder shows cancelled Conker 64",
+  "hook_type": "news",
+  "music": {
+   "audio_id": "763322736704251",
+   "title": "Game Time",
+   "artist": "half.cool"
+  },
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "07:30",
+  "video": "out/short-rare-co-founder-reveals-footage-of-can-1127/short.mp4"
  }
 ]

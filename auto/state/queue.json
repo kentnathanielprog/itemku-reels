@@ -482,7 +482,7 @@
  },
  {
   "id": "rare-co-founder-reveals-footage-of-can-1127",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-27T00:30:00+00:00",
   "video": "out/short-rare-co-founder-reveals-footage-of-can-1127/short.mp4",
   "caption": "Tim Stamper, co-founder Rare, upload video yang ngebahas dokumen dan build awal Conker 64 yang batal. Menurut kamu, game ini bakal seru nggak kalau dirilis?\n\nSumber: VGC | Gambar: VGC\n\n#Conker64 #Rare #Nintendo64 #ConkersBadFurDay #GameRetro #itemku",
@@ -490,10 +490,18 @@
   "topic": "Rare co-founder shows cancelled Conker 64",
   "source_url": "https://www.videogameschronicle.com/news/rare-co-founder-reveals-footage-of-cancelled-conker-64/",
   "hook_type": "news",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "763322736704251",
+   "title": "Game Time",
+   "artist": "half.cool"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "07:30"
+  "posted_slot": "07:30",
+  "container": "18100275647189435",
+  "media_id": "18114624296608392",
+  "permalink": "https://www.instagram.com/reel/DgOZ3DRlckD/",
+  "posted_at": "2026-11-27T00:34:17.902572+00:00"
  },
  {
   "id": "genesis-crystals-battle-pass-genshin-i-1127",
