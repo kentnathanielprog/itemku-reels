@@ -374,5 +374,23 @@
   "n_images": 1,
   "posted_slot": "12:00",
   "video": "out/short-genesis-crystals-battle-pass-genshin-i-1127/short.mp4"
+ },
+ {
+  "id": "chris-greeley-interview-worlds-2026-1127",
+  "media_id": "18024584555728116",
+  "permalink": "https://www.instagram.com/reel/DgPbHaYHTAn/",
+  "posted_at": "2026-11-27T10:04:23.508512+00:00",
+  "cat": "popular",
+  "topic": "Riot esports through the esports winter",
+  "hook_type": "contrast",
+  "music": {
+   "audio_id": "3679159392392793",
+   "title": "Luxe Motion",
+   "artist": "Giulio Cercato"
+  },
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "17:00",
+  "video": "out/short-chris-greeley-interview-worlds-2026-1127/short.mp4"
  }
 ]

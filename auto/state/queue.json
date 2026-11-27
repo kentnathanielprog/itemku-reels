@@ -528,7 +528,7 @@
  },
  {
   "id": "chris-greeley-interview-worlds-2026-1127",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-27T10:00:00+00:00",
   "video": "out/short-chris-greeley-interview-worlds-2026-1127/short.mp4",
   "caption": "Menurut PCGamesN, esports lagi di masa 'esports winter', tapi laga LOUD vs Vitality di Valorant Champions ditonton 1,5 juta orang. Menurut kamu, esports lagi turun atau masih kuat?\n\nSumber: PCGamesN | Gambar: PCGamesN\n\n#Valorant #ValorantChampions #LeagueOfLegends #Esports #Riot #Worlds2026 #itemku",
@@ -536,9 +536,17 @@
   "topic": "Riot esports through the esports winter",
   "source_url": "https://www.pcgamesn.com/league-of-legends/chris-greeley-interview-worlds-2026",
   "hook_type": "contrast",
-  "music": "assets/audio/pulse-arena.m4a",
+  "music": {
+   "audio_id": "3679159392392793",
+   "title": "Luxe Motion",
+   "artist": "Giulio Cercato"
+  },
   "experiment": null,
   "n_images": 2,
-  "posted_slot": "17:00"
+  "posted_slot": "17:00",
+  "container": "18100364042189435",
+  "media_id": "18024584555728116",
+  "permalink": "https://www.instagram.com/reel/DgPbHaYHTAn/",
+  "posted_at": "2026-11-27T10:04:23.508512+00:00"
  }
 ]
