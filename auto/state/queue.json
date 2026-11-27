@@ -505,7 +505,7 @@
  },
  {
   "id": "genesis-crystals-battle-pass-genshin-i-1127",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-27T05:00:00+00:00",
   "video": "out/short-genesis-crystals-battle-pass-genshin-i-1127/short.mp4",
   "caption": "Ternyata Welkin Moon kasih 300 Genesis Crystals di awal, lalu 90 Primogems per hari selama 30 hari. Kamu tim Welkin Moon, Genesis Crystals, atau Battle Pass?\n\nSumber: Gamedaim | Gambar: Gamedaim\n\n#GenshinImpact #WelkinMoon #GenesisCrystals #Primogems #BattlePass #Gamedaim #itemku",
@@ -513,10 +513,18 @@
   "topic": "Genshin Impact Welkin Moon vs Genesis Crystals vs Battle Pass",
   "source_url": "https://gamedaim.com/gaming/genesis-crystals-battle-pass-genshin-impact/",
   "hook_type": "question",
-  "music": "assets/audio/pixel-jump.m4a",
+  "music": {
+   "audio_id": "497518643975940",
+   "title": "We Fly High",
+   "artist": "Giulio Cercato"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "12:00"
+  "posted_slot": "12:00",
+  "container": "18100319570189435",
+  "media_id": "17916231513580562",
+  "permalink": "https://www.instagram.com/reel/DgO5RKmDKQ_/",
+  "posted_at": "2026-11-27T05:08:00.814961+00:00"
  },
  {
   "id": "chris-greeley-interview-worlds-2026-1127",
