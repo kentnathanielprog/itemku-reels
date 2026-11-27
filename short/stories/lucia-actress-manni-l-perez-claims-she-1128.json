@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/lucia-actress-manni-l-perez-claims-she-1128/imgs/img1.jpg",
+  "out/github-microsoft-ps5-anyps5-emulation--1128/imgs/img3.jpg"
+ ],
+ "out": "short-lucia-actress-manni-l-perez-claims-she-1128",
+ "audio": "assets/audio/dark-alley.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "VGC",
+ "credit": "Rockstar Games / VGC",
+ "hashtags": [
+  "GTA6",
+  "Lucia",
+  "MannilPerez",
+  "Rockstar",
+  "GameAwards",
+  "gaming"
+ ],
+ "hook": {
+  "text": "Pemeran Lucia di GTA 6\nudah kerja sama Rockstar\nberapa lama? tunggu ya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Semua aktor GTA 6 kena\nNDA selama pengembangan",
+   "img": [
+    1
+   ]
+  },
+  {
+   "text": "Fans udah nebak peran\nPerez sejak trailer\npertama keluar",
+   "img": [
+    1,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Perez bilang udah jadi\nLucia selama\n((hampir satu dekade))",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Lucia actress says she worked on GTA 6 for almost a decade",
+ "cat": "gta",
+ "hook_type": "question",
+ "caption_text": "Ternyata pemeran Lucia di GTA 6, Manni L. Perez, bilang udah menggarap karakternya hampir satu dekade, sementara semua aktor GTA 6 terikat NDA selama pengembangan. Kamu suka nggak sama karakter Lucia?",
+ "experiment": null,
+ "music": "assets/audio/dark-alley.m4a",
+ "music_start": 0
+}

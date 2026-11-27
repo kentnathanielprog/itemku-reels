@@ -1,0 +1,64 @@
+{
+ "images": [
+  "out/golden-week-free-golden-jonesy-1128/imgs/img1.jpg"
+ ],
+ "out": "short-golden-week-free-golden-jonesy-1128",
+ "audio": "assets/audio/pulse-arena.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "GGRecon",
+ "credit": "Epic Games / GGRecon",
+ "hashtags": [
+  "Fortnite",
+  "GoldenJonesy",
+  "GoldenWeek",
+  "TwitchDrops",
+  "Chapter7",
+  "Gaming"
+ ],
+ "hook": {
+  "text": "Golden Jonesy di Fortnite\nbisa didapat gratis,\ntunggu caranya",
+  "img": [
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Caranya lewat Twitch Drops\nselama sekitar dua hari\npas event akhir Chapter 7",
+   "img": [
+    0
+   ]
+  },
+  {
+   "text": "Selama Golden Week, item\nGold lama balik ke chest",
+   "img": [
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Menurut Epic, peluang\nchest dari 1 banding 62\njadi 1 banding [[21]]",
+  "img": [
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Fortnite Golden Jonesy free via Twitch Drops",
+ "cat": "popular",
+ "hook_type": "news",
+ "caption_text": "Golden Jonesy bisa didapat gratis lewat Twitch Drops, dan menurut Epic, Golden Week bikin peluang dapat treasure di chest naik dari 1 banding 62 jadi 1 banding 21 (belum termasuk duplikat yang udah kamu punya). Kalian bakal ikutan nonton buat dapetin skin-nya nggak?",
+ "experiment": null,
+ "music": "assets/audio/pulse-arena.m4a",
+ "music_start": 0
+}

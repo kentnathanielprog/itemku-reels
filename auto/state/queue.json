@@ -548,5 +548,50 @@
   "media_id": "18024584555728116",
   "permalink": "https://www.instagram.com/reel/DgPbHaYHTAn/",
   "posted_at": "2026-11-27T10:04:23.508512+00:00"
+ },
+ {
+  "id": "update-thanksgiving-patch-notes-traini-1128",
+  "status": "ready",
+  "not_before": "2026-11-28T00:30:00+00:00",
+  "video": "out/short-update-thanksgiving-patch-notes-traini-1128/short.mp4",
+  "caption": "Valve baru ngeluarin update Deadlock dengan ratusan perubahan, mulai dari health hero sampai bonus first kill. Menurut kamu perubahan mana yang paling kerasa? Komen di bawah!\n\nSumber: PCGamesN | Gambar: PCGamesN / Valve\n\n#Deadlock #Valve #patchnotes #gaming #MOBA #itemku",
+  "cat": "popular",
+  "topic": "Deadlock massive balance update with training drills",
+  "source_url": "https://www.pcgamesn.com/deadlock/update-thanksgiving-patch-notes-training-tools",
+  "hook_type": "number",
+  "music": "assets/audio/pulse-arena.m4a",
+  "experiment": null,
+  "n_images": 3,
+  "posted_slot": "07:30"
+ },
+ {
+  "id": "golden-week-free-golden-jonesy-1128",
+  "status": "ready",
+  "not_before": "2026-11-28T05:00:00+00:00",
+  "video": "out/short-golden-week-free-golden-jonesy-1128/short.mp4",
+  "caption": "Golden Jonesy bisa didapat gratis lewat Twitch Drops, dan menurut Epic, Golden Week bikin peluang dapat treasure di chest naik dari 1 banding 62 jadi 1 banding 21 (belum termasuk duplikat yang udah kamu punya). Kalian bakal ikutan nonton buat dapetin skin-nya nggak?\n\nSumber: GGRecon | Gambar: Epic Games / GGRecon\n\n#Fortnite #GoldenJonesy #GoldenWeek #TwitchDrops #Chapter7 #Gaming #itemku",
+  "cat": "popular",
+  "topic": "Fortnite Golden Jonesy free via Twitch Drops",
+  "source_url": "https://www.ggrecon.com/articles/fortnite-golden-week-free-golden-jonesy/",
+  "hook_type": "news",
+  "music": "assets/audio/pulse-arena.m4a",
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00"
+ },
+ {
+  "id": "lucia-actress-manni-l-perez-claims-she-1128",
+  "status": "ready",
+  "not_before": "2026-11-28T10:00:00+00:00",
+  "video": "out/short-lucia-actress-manni-l-perez-claims-she-1128/short.mp4",
+  "caption": "Ternyata pemeran Lucia di GTA 6, Manni L. Perez, bilang udah menggarap karakternya hampir satu dekade, sementara semua aktor GTA 6 terikat NDA selama pengembangan. Kamu suka nggak sama karakter Lucia?\n\nSumber: VGC | Gambar: Rockstar Games / VGC\n\n#GTA6 #Lucia #MannilPerez #Rockstar #GameAwards #gaming #itemku",
+  "cat": "gta",
+  "topic": "Lucia actress says she worked on GTA 6 for almost a decade",
+  "source_url": "https://www.videogameschronicle.com/news/lucia-actress-manni-l-perez-claims-she-worked-on-gta-6-for-almost-a-decade/",
+  "hook_type": "question",
+  "music": "assets/audio/dark-alley.m4a",
+  "experiment": null,
+  "n_images": 2,
+  "posted_slot": "17:00"
  }
 ]

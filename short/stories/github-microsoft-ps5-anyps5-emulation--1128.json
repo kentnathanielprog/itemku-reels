@@ -1,0 +1,71 @@
+{
+ "images": [
+  "out/github-microsoft-ps5-anyps5-emulation--1128/imgs/img2.jpg",
+  "out/github-microsoft-ps5-anyps5-emulation--1128/imgs/img3.jpg",
+  "out/github-microsoft-ps5-anyps5-emulation--1128/imgs/img4.jpg"
+ ],
+ "out": "short-github-microsoft-ps5-anyps5-emulation--1128",
+ "audio": "assets/audio/dark-alley.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Kotaku",
+ "credit": "Kotaku",
+ "hashtags": [
+  "GTA6",
+  "GitHub",
+  "AnyPS5",
+  "PS5",
+  "emulator",
+  "gaming"
+ ],
+ "hook": {
+  "text": "GitHub posting soal\nemulator PS5, lalu\ndihapus. Tunggu angkanya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Postingan X-nya rayain\nAnyPS5, emulator PS5\nyang ramai pas GTA 6 rilis",
+   "img": [
+    1,
+    2
+   ]
+  },
+  {
+   "text": "Mereka juga nanya:\nganti tempat game jalan,\nmelanggar hukum nggak?",
+   "img": [
+    2,
+    0,
+    1
+   ]
+  }
+ ],
+ "gong": {
+  "text": "AnyPS5 tembus\n[[58]] ribu bintang\ndi GitHub",
+  "img": [
+   0,
+   2
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "GitHub deletes post celebrating AnyPS5 PS5 emulator after GTA 6 launch",
+ "cat": "gta",
+ "hook_type": "news",
+ "caption_text": "GitHub sempat posting soal emulator PS5 AnyPS5 yang tembus 58 ribu bintang, terus postingannya dihapus. Menurut kamu, ganti tempat game jalan itu melanggar hukum nggak?",
+ "experiment": null,
+ "music": "assets/audio/dark-alley.m4a",
+ "music_start": 0
+}

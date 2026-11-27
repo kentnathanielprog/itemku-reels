@@ -1,0 +1,68 @@
+{
+ "images": [
+  "out/sea-of-sorrow-release-date-1128/imgs/img1.jpg"
+ ],
+ "out": "short-sea-of-sorrow-release-date-1128",
+ "audio": "assets/audio/pixel-jump.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "PCGamesN",
+ "credit": "Team Cherry",
+ "hashtags": [
+  "Silksong",
+  "HollowKnight",
+  "SeaOfSorrow",
+  "TeamCherry",
+  "gaming",
+  "itemku"
+ ],
+ "hook": {
+  "text": "DLC Silksong ternyata\nudah dapet kabar baru\ntunggu bagian akhirnya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "message": [
+  {
+   "text": "Sea of Sorrow udah\ndapet tanggal rilis resmi\nbalik ke Pharloom",
+   "img": [
+    0,
+    0
+   ]
+  },
+  {
+   "text": "Di trailer ada battle,\nlingkungan baru, dan\nkayaknya ada mancing",
+   "img": [
+    0,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "DLC-nya ((gratis))\nbuat yang punya game\nutamanya",
+  "img": [
+   0,
+   0
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "Silksong Sea of Sorrow DLC release news",
+ "cat": "general",
+ "hook_type": "news",
+ "caption_text": "DLC Sea of Sorrow buat Hollow Knight: Silksong udah dapet tanggal rilis resmi dan gratis buat pemilik game utamanya. Kamu udah siap balik ke Pharloom belum?",
+ "experiment": null,
+ "music": "assets/audio/pixel-jump.m4a",
+ "music_start": 0
+}

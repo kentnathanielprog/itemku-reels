@@ -1,0 +1,71 @@
+{
+ "images": [
+  "out/gta-5s-michael-actor-hits-back-at-clai-1128/imgs/img1.jpg",
+  "out/gta-5s-michael-actor-hits-back-at-clai-1128/imgs/img2.jpg",
+  "out/gta-5s-michael-actor-hits-back-at-clai-1128/imgs/img3.jpg"
+ ],
+ "out": "short-gta-5s-michael-actor-hits-back-at-clai-1128",
+ "audio": "assets/audio/dark-alley.m4a",
+ "mode": "blur",
+ "center_y": 800,
+ "source": "Dexerto",
+ "credit": "Rockstar Games / Dexerto",
+ "hashtags": [
+  "GTA6",
+  "GTAVI",
+  "Lucia",
+  "Jason",
+  "RockstarGames",
+  "Gaming"
+ ],
+ "hook": {
+  "text": "GTA 6 dilaporkan udah\nraup duit gede dari\npre-order, tunggu angkanya",
+  "img": [
+   0,
+   1
+  ]
+ },
+ "message": [
+  {
+   "text": "Lucia dan Jason jadi\ndua protagonis GTA 6\nyang bisa dimainkan",
+   "img": [
+    1,
+    2
+   ]
+  },
+  {
+   "text": "Menurut Dexerto, GTA 6\nsejajar di posisi review\nterbaik sepanjang masa",
+   "img": [
+    2,
+    0
+   ]
+  }
+ ],
+ "gong": {
+  "text": "Dilaporkan tembus lebih\ndari [[750]] juta dolar\ndari pre-order aja",
+  "img": [
+   0,
+   2,
+   1
+  ]
+ },
+ "cta": {
+  "text": "Cek Itemku buat\nkebutuhan game kamu",
+  "img": [
+   0
+  ]
+ },
+ "timing": {
+  "hook": 3,
+  "message": 3,
+  "gong": 3.9,
+  "cta": 2.3
+ },
+ "topic": "GTA 6 reportedly tops $750 million in pre-orders",
+ "cat": "gta",
+ "hook_type": "number",
+ "caption_text": "GTA 6 dilaporkan udah tembus lebih dari 750 juta dolar dari pre-order aja. Kalian udah pre-order belum?",
+ "experiment": null,
+ "music": "assets/audio/dark-alley.m4a",
+ "music_start": 0
+}
