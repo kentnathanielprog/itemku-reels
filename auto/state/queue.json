@@ -597,7 +597,7 @@
  },
  {
   "id": "lucia-actress-manni-l-perez-claims-she-1128",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-28T10:00:00+00:00",
   "video": "out/short-lucia-actress-manni-l-perez-claims-she-1128/short.mp4",
   "caption": "Ternyata pemeran Lucia di GTA 6, Manni L. Perez, bilang udah menggarap karakternya hampir satu dekade, sementara semua aktor GTA 6 terikat NDA selama pengembangan. Kamu suka nggak sama karakter Lucia?\n\nSumber: VGC | Gambar: Rockstar Games / VGC\n\n#GTA6 #Lucia #MannilPerez #Rockstar #GameAwards #gaming #itemku",
@@ -605,9 +605,17 @@
   "topic": "Lucia actress says she worked on GTA 6 for almost a decade",
   "source_url": "https://www.videogameschronicle.com/news/lucia-actress-manni-l-perez-claims-she-worked-on-gta-6-for-almost-a-decade/",
   "hook_type": "question",
-  "music": "assets/audio/dark-alley.m4a",
+  "music": {
+   "audio_id": "695365862122360",
+   "title": "Let's Go",
+   "artist": "Giulio Cercato"
+  },
   "experiment": null,
   "n_images": 2,
-  "posted_slot": "17:00"
+  "posted_slot": "17:00",
+  "container": "18100612952189435",
+  "media_id": "18056146004812618",
+  "permalink": "https://www.instagram.com/reel/DgR_zMrCVW8/",
+  "posted_at": "2026-11-28T10:03:45.299875+00:00"
  }
 ]
