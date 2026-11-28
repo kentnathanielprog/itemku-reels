@@ -551,7 +551,7 @@
  },
  {
   "id": "update-thanksgiving-patch-notes-traini-1128",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-28T00:30:00+00:00",
   "video": "out/short-update-thanksgiving-patch-notes-traini-1128/short.mp4",
   "caption": "Valve baru ngeluarin update Deadlock dengan ratusan perubahan, mulai dari health hero sampai bonus first kill. Menurut kamu perubahan mana yang paling kerasa? Komen di bawah!\n\nSumber: PCGamesN | Gambar: PCGamesN / Valve\n\n#Deadlock #Valve #patchnotes #gaming #MOBA #itemku",
@@ -559,10 +559,18 @@
   "topic": "Deadlock massive balance update with training drills",
   "source_url": "https://www.pcgamesn.com/deadlock/update-thanksgiving-patch-notes-training-tools",
   "hook_type": "number",
-  "music": "assets/audio/pulse-arena.m4a",
+  "music": {
+   "audio_id": "546771675662388",
+   "title": "Catch Vibes",
+   "artist": "Kiri T"
+  },
   "experiment": null,
   "n_images": 3,
-  "posted_slot": "07:30"
+  "posted_slot": "07:30",
+  "container": "18100523729189435",
+  "media_id": "18361120249171560",
+  "permalink": "https://www.instagram.com/reel/DgQ-lN-mfpe/",
+  "posted_at": "2026-11-28T00:33:52.997672+00:00"
  },
  {
   "id": "golden-week-free-golden-jonesy-1128",

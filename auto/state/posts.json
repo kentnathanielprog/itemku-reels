@@ -392,5 +392,23 @@
   "n_images": 2,
   "posted_slot": "17:00",
   "video": "out/short-chris-greeley-interview-worlds-2026-1127/short.mp4"
+ },
+ {
+  "id": "update-thanksgiving-patch-notes-traini-1128",
+  "media_id": "18361120249171560",
+  "permalink": "https://www.instagram.com/reel/DgQ-lN-mfpe/",
+  "posted_at": "2026-11-28T00:33:52.997672+00:00",
+  "cat": "popular",
+  "topic": "Deadlock massive balance update with training drills",
+  "hook_type": "number",
+  "music": {
+   "audio_id": "546771675662388",
+   "title": "Catch Vibes",
+   "artist": "Kiri T"
+  },
+  "experiment": null,
+  "n_images": 3,
+  "posted_slot": "07:30",
+  "video": "out/short-update-thanksgiving-patch-notes-traini-1128/short.mp4"
  }
 ]
