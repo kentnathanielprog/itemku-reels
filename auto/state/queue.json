@@ -574,7 +574,7 @@
  },
  {
   "id": "golden-week-free-golden-jonesy-1128",
-  "status": "ready",
+  "status": "posted",
   "not_before": "2026-11-28T05:00:00+00:00",
   "video": "out/short-golden-week-free-golden-jonesy-1128/short.mp4",
   "caption": "Golden Jonesy bisa didapat gratis lewat Twitch Drops, dan menurut Epic, Golden Week bikin peluang dapat treasure di chest naik dari 1 banding 62 jadi 1 banding 21 (belum termasuk duplikat yang udah kamu punya). Kalian bakal ikutan nonton buat dapetin skin-nya nggak?\n\nSumber: GGRecon | Gambar: Epic Games / GGRecon\n\n#Fortnite #GoldenJonesy #GoldenWeek #TwitchDrops #Chapter7 #Gaming #itemku",
@@ -582,10 +582,18 @@
   "topic": "Fortnite Golden Jonesy free via Twitch Drops",
   "source_url": "https://www.ggrecon.com/articles/fortnite-golden-week-free-golden-jonesy/",
   "hook_type": "news",
-  "music": "assets/audio/pulse-arena.m4a",
+  "music": {
+   "audio_id": "5767754050013287",
+   "title": "Bass",
+   "artist": "Tony Dark Eyes"
+  },
   "experiment": null,
   "n_images": 1,
-  "posted_slot": "12:00"
+  "posted_slot": "12:00",
+  "container": "18100565546189435",
+  "media_id": "18119795423591838",
+  "permalink": "https://www.instagram.com/reel/DgRd-wyEWMM/",
+  "posted_at": "2026-11-28T05:08:12.787015+00:00"
  },
  {
   "id": "lucia-actress-manni-l-perez-claims-she-1128",

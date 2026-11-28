@@ -410,5 +410,23 @@
   "n_images": 3,
   "posted_slot": "07:30",
   "video": "out/short-update-thanksgiving-patch-notes-traini-1128/short.mp4"
+ },
+ {
+  "id": "golden-week-free-golden-jonesy-1128",
+  "media_id": "18119795423591838",
+  "permalink": "https://www.instagram.com/reel/DgRd-wyEWMM/",
+  "posted_at": "2026-11-28T05:08:12.787015+00:00",
+  "cat": "popular",
+  "topic": "Fortnite Golden Jonesy free via Twitch Drops",
+  "hook_type": "news",
+  "music": {
+   "audio_id": "5767754050013287",
+   "title": "Bass",
+   "artist": "Tony Dark Eyes"
+  },
+  "experiment": null,
+  "n_images": 1,
+  "posted_slot": "12:00",
+  "video": "out/short-golden-week-free-golden-jonesy-1128/short.mp4"
  }
 ]
